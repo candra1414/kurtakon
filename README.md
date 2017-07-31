@@ -1,0 +1,2 @@
+# kurtakon
+tempat nulis
