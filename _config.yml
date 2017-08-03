@@ -1,12 +1,14 @@
 # Site settings
 title: KurTakon
-email: your-email@domain.com
+email: kiki.candra.ms@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  .... KurTakon ... 
-  Takonlah sebelum takon itu dilarang...
+  KurTakon__ <br>
+  Takonlah sebelum takon itu dilarang.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://kurtakon.com" # the base hostname & protocol for your site
+url: "http://kurtakon" # the base hostname & protocol for your site
+urlimg: "http://127.0.0.1:4000/asset/img/" # the base hostname & protocol for your site
 
 
 # Build settings
 markdown: kramdown
+

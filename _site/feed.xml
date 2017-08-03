@@ -2,23 +2,174 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>KurTakon</title>
-    <description>.... KurTakon ...  Takonlah sebelum takon itu dilarang...
+    <description>KurTakon__ &lt;br&gt; Takonlah sebelum takon itu dilarang.
 </description>
-    <link>http://kurtakon.com/</link>
-    <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Aug 2017 11:43:48 +0700</pubDate>
-    <lastBuildDate>Thu, 03 Aug 2017 11:43:48 +0700</lastBuildDate>
+    <link>http://127.0.0.1:4000/</link>
+    <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 03 Aug 2017 17:47:44 +0700</pubDate>
+    <lastBuildDate>Thu, 03 Aug 2017 17:47:44 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
         <title>Apa itu Markdown ?</title>
         <description>&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt;  adalah tools yang digunakan untuk mengkonversi text menjadi &lt;strong&gt;html&lt;/strong&gt; dengan berbagai format pada konten web .&lt;/p&gt;
 
-&lt;p&gt;Markdown dibuat dengan ekstensi &lt;strong&gt;.md&lt;/strong&gt; atau &lt;strong&gt;.markdown&lt;/strong&gt; , sehingga ingin membuat file markdown harus disimpan dengan contoh : &lt;em&gt;contoh.md&lt;/em&gt; atau &lt;em&gt;contoh.markdown&lt;/em&gt;  .&lt;/p&gt;
+&lt;p&gt;Markdown dibuat dengan ekstensi &lt;strong&gt;.md&lt;/strong&gt; atau &lt;strong&gt;.markdown&lt;/strong&gt; , sehingga jika ingin membuat file markdown harus disimpan dengan contoh : &lt;em&gt;contoh.md&lt;/em&gt; atau &lt;em&gt;contoh.markdown&lt;/em&gt;  .
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bagaimana-contoh-penulisan-pada-markdown-&quot;&gt;Bagaimana contoh penulisan pada Markdown ?&lt;/h3&gt;
+
+&lt;p&gt;Berikut ini contoh penulisan standar code pada markdown :&lt;/p&gt;
+&lt;table class=&quot;table table-border&quot;&gt;
+&lt;tr&gt;
+&lt;th style=&quot;width:300px&quot;&gt;Markdown&lt;/th&gt;
+&lt;th style=&quot;width:300px&quot;&gt;HTML&lt;/th&gt;
+&lt;th style=&quot;width:300px&quot;&gt;Hasil&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt; #Heading &lt;/td&gt;
+    &lt;td&gt;
+        &lt;xmp&gt; &lt;h1&gt;Heading&lt;/h1&gt;&lt;/xmp&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+    &lt;h1&gt; Heading &lt;/h1&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt; ##Heading &lt;/td&gt;
+    &lt;td&gt;
+        &lt;xmp&gt; &lt;h2&gt;Heading&lt;/h2&gt;&lt;/xmp&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+    &lt;h2&gt; Heading &lt;/h2&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt; ###Heading &lt;/td&gt;
+    &lt;td&gt;
+        &lt;xmp&gt; &lt;h3&gt;Heading&lt;/h3&gt;&lt;/xmp&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+    &lt;h3&gt; Heading &lt;/h3&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt; 
+         &lt;p&gt; Lorem ipsum dolor sit
+     amet, consectetur 
+    adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore
+     et dolore magna aliqua.
+     Ut enim ad minim veniam.
+    &lt;/p&gt; 
+    ---
+    &lt;p&gt; Lorem ipsum dolor sit amet,
+         consectetur adipisicing elit,
+          sed do eiusmod
+        tempor incididunt ut labore
+         et dolore magna
+         aliqua.&lt;/p&gt;
+     &lt;/td&gt;
+    &lt;td&gt;
+&lt;xmp&gt; &lt;p&gt; Lorem ipsum dolor sit
+amet, consectetur 
+adipisicing elit, sed do eiusmod
+tempor incididunt ut labore
+et dolore magna aliqua.
+Ut enim ad minim veniam.
+&lt;/p&gt; &lt;/xmp&gt;
+&lt;xmp&gt;    &lt;p&gt; Lorem ipsum dolor sit amet,
+consectetur adipisicing elit,
+sed do eiusmod
+tempor incididunt ut labore
+et dolore magna
+aliqua.&lt;/p&gt;&lt;/xmp&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;p&gt; Lorem ipsum dolor sit
+     amet, consectetur 
+    adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore
+     et dolore magna aliqua.
+     Ut enim ad minim veniam.
+    &lt;/p&gt; 
+    &lt;p&gt; Lorem ipsum dolor sit amet,
+         consectetur adipisicing elit,
+          sed do eiusmod
+        tempor incididunt ut labore
+         et dolore magna
+         aliqua.&lt;/p&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt; _italic_, *italic*, __bold__, **bold**, `monospace`.&lt;/td&gt;
+    &lt;td&gt;
+&lt;xmp&gt;&lt;i&gt;italic&lt;/i&gt;,
+&lt;em&gt;italic&lt;/em&gt;,
+&lt;b&gt;bold&lt;/b&gt;,
+&lt;strong&gt;bold&lt;/strong&gt;, 
+&lt;code&gt;monospace&lt;/code&gt;.
+&lt;/xmp&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+   &lt;p&gt;&lt;i&gt;italic&lt;/i&gt;, &lt;em&gt;italic&lt;/em&gt;, &lt;b&gt;bold&lt;/b&gt;, &lt;strong&gt;bold&lt;/strong&gt;, &lt;code&gt;monospace&lt;/code&gt;.&lt;/p&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Membuat list angka :&lt;br /&gt;
+1. satu &lt;br /&gt;
+2. dua &lt;br /&gt;
+3. tiga &lt;br /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;xmp&gt;&lt;ol&gt;
+&lt;li&gt;satu&lt;/li&gt;
+&lt;li&gt;dua&lt;/li&gt;
+&lt;li&gt;tiga&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/xmp&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;br /&gt;
+&lt;ol&gt;
+&lt;li&gt;satu&lt;/li&gt;
+&lt;li&gt;dua&lt;/li&gt;
+&lt;li&gt;tiga&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Membuat list bullet :&lt;br /&gt;
+* satu &lt;br /&gt;
+* dua &lt;br /&gt;
+* tiga &lt;br /&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;xmp&gt;&lt;ul&gt;
+&lt;li&gt;satu&lt;/li&gt;
+&lt;li&gt;dua&lt;/li&gt;
+&lt;li&gt;tiga&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/xmp&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;satu&lt;/li&gt;
+&lt;li&gt;dua&lt;/li&gt;
+&lt;li&gt;tiga&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
 </description>
         <pubDate>Wed, 02 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/markdown/2017/08/02/artikel-1.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/markdown/2017/08/02/artikel-1.html</guid>
+        <link>http://127.0.0.1:4000/markdown/2017/08/02/artikel-1.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/markdown/2017/08/02/artikel-1.html</guid>
         
         
         <category>markdown</category>
@@ -32,8 +183,8 @@
 &lt;p&gt;&lt;b&gt; Trimakasih … &lt;/b&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 01 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/jekyll/update/2017/08/01/welcome.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/jekyll/update/2017/08/01/welcome.html</guid>
+        <link>http://127.0.0.1:4000/jekyll/update/2017/08/01/welcome.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/jekyll/update/2017/08/01/welcome.html</guid>
         
         
         <category>jekyll</category>

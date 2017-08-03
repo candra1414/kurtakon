@@ -9,4 +9,155 @@ __Markdown__  adalah tools yang digunakan untuk mengkonversi text menjadi __html
 
 
 
-Markdown dibuat dengan ekstensi __.md__ atau __.markdown__ , sehingga ingin membuat file markdown harus disimpan dengan contoh : _contoh.md_ atau _contoh.markdown_  .
+Markdown dibuat dengan ekstensi __.md__ atau __.markdown__ , sehingga jika ingin membuat file markdown harus disimpan dengan contoh : _contoh.md_ atau _contoh.markdown_  .
+<br>
+<br>
+
+###Bagaimana contoh penulisan pada Markdown ?
+
+Berikut ini contoh penulisan standar code pada markdown :
+<table class="table table-border">
+<tr>
+<th style="width:300px">Markdown</th>
+<th style="width:300px">HTML</th>
+<th style="width:300px">Hasil</th>
+</tr>
+<tr>
+    <td> #Heading </td>
+    <td>
+        <xmp> <h1>Heading</h1></xmp>
+    </td>
+    <td>
+    <h1> Heading </h1>
+    </td>
+</tr>
+<tr>
+    <td> ##Heading </td>
+    <td>
+        <xmp> <h2>Heading</h2></xmp>
+    </td>
+    <td>
+    <h2> Heading </h2>
+    </td>
+</tr>
+<tr>
+    <td> ###Heading </td>
+    <td>
+        <xmp> <h3>Heading</h3></xmp>
+    </td>
+    <td>
+    <h3> Heading </h3>
+    </td>
+</tr>
+<tr>
+    <td> 
+         <p> Lorem ipsum dolor sit
+     amet, consectetur 
+    adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore
+     et dolore magna aliqua.
+     Ut enim ad minim veniam.
+    </p> 
+    ---
+    <p> Lorem ipsum dolor sit amet,
+         consectetur adipisicing elit,
+          sed do eiusmod
+        tempor incididunt ut labore
+         et dolore magna
+         aliqua.</p>
+     </td>
+    <td>
+<xmp> <p> Lorem ipsum dolor sit
+amet, consectetur 
+adipisicing elit, sed do eiusmod
+tempor incididunt ut labore
+et dolore magna aliqua.
+Ut enim ad minim veniam.
+</p> </xmp>
+<xmp>    <p> Lorem ipsum dolor sit amet,
+consectetur adipisicing elit,
+sed do eiusmod
+tempor incididunt ut labore
+et dolore magna
+aliqua.</p></xmp>
+    </td>
+    <td>
+      <p> Lorem ipsum dolor sit
+     amet, consectetur 
+    adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore
+     et dolore magna aliqua.
+     Ut enim ad minim veniam.
+    </p> 
+    <p> Lorem ipsum dolor sit amet,
+         consectetur adipisicing elit,
+          sed do eiusmod
+        tempor incididunt ut labore
+         et dolore magna
+         aliqua.</p>
+    </td>
+</tr>
+<tr>
+    <td> _italic_, *italic*, __bold__, **bold**, `monospace`.</td>
+    <td>
+<xmp><i>italic</i>,
+<em>italic</em>,
+<b>bold</b>,
+<strong>bold</strong>, 
+<code>monospace</code>.
+</xmp>
+    </td>
+    <td>
+   <p><i>italic</i>, <em>italic</em>, <b>bold</b>, <strong>bold</strong>, <code>monospace</code>.</p>
+    </td>
+</tr>
+<tr>
+<td>
+Membuat list angka :<br>
+1. satu <br>
+2. dua <br>
+3. tiga <br>
+</td>
+<td>
+<xmp><ol>
+<li>satu</li>
+<li>dua</li>
+<li>tiga</li>
+</ol>
+</xmp>
+</td>
+<td>
+<br>
+<ol>
+<li>satu</li>
+<li>dua</li>
+<li>tiga</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td>
+Membuat list bullet :<br>
+* satu <br>
+* dua <br>
+* tiga <br>
+</td>
+<td>
+<xmp><ul>
+<li>satu</li>
+<li>dua</li>
+<li>tiga</li>
+</ul>
+</xmp>
+</td>
+<td>
+<br>
+<ul>
+<li>satu</li>
+<li>dua</li>
+<li>tiga</li>
+</ul>
+</td>
+</tr>
+</table>
+
