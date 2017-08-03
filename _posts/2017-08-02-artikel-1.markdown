@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Apa itu Markdown ?"
+date:   2017-08-02 14:06:58
+categories: markdown
+---
+
+__Markdown__  adalah tools yang digunakan untuk mengkonversi text menjadi __html__ dengan berbagai format pada konten web .
+
+
+
+Markdown dibuat dengan ekstensi __.md__ atau __.markdown__ , sehingga ingin membuat file markdown harus disimpan dengan contoh : _contoh.md_ atau _contoh.markdown_  .

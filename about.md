@@ -1,11 +1,14 @@
 ---
 layout: page
-title: About
+title: KurTakon?
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+1. Apa itu KurTakon?
+   -  Kurtakon dari bahasa jawa yang di artikan cuma bertanya.
+2. Kenapa harus Kurtakon?
+    - Cuma lagi kepirikan ajah.
+3. Apa tujuan Kurtakon ?
+     - Buat menampung pertanyaan dari saya dan di jawab saya kemudian di tulis (*kalau bisa). Kalau tidak bisa cari dulu dan kalau salah mohon dimaafkan.
+4. Apa isi Kurtakon?
+     - Seperti jawaban di atas cuma tulisan. <Enter>

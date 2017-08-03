@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Selamat datang"
+date:   2017-08-01 14:06:58
+categories: jekyll update
+---
+
+
+
+
+<b>Selamat membaca dan semoga bermanfaat.</b>
+
+
+
+
+<b> Trimakasih ... </b>
