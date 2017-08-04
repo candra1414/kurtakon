@@ -2,13 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>KurTakon</title>
-    <description>KurTakon__ &lt;br&gt; Takonlah sebelum takon itu dilarang.
+    <description>Quote : &lt;br&gt; Takonlah sebelum takon itu dilarang.
 </description>
-    <link>http://127.0.0.1:4000/</link>
-    <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Aug 2017 17:47:44 +0700</pubDate>
-    <lastBuildDate>Thu, 03 Aug 2017 17:47:44 +0700</lastBuildDate>
+    <link>http://kurtakon/</link>
+    <atom:link href="http://kurtakon/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 04 Aug 2017 08:23:53 +0700</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 08:23:53 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</title>
+        <description>&lt;p&gt;Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan &lt;strong&gt;ctrl+z&lt;/strong&gt; untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika penulis akan mejalankan kembali akan muncul&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;ss&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;no&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;already&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Pada pertama kali akan bertanya-tanya apa maksud &lt;strong&gt;error&lt;/strong&gt; diatas, ternyata error tersebut dikarenakan masih ada &lt;strong&gt;port&lt;/strong&gt; yang berjalan untuk proses tersebut. Untuk itu harus mematikan terlebih dahulu sebelum menjalankan kembali.&lt;/p&gt;
+
+&lt;h3 id=&quot;bagaimana-mengetahui-port-berjalan-&quot;&gt;Bagaimana mengetahui port berjalan ?&lt;/h3&gt;
+
+&lt;p&gt;Untuk mengetahui proses yang berjalan cukup mudah. Kita masukan sintak pada terminal&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ps&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Namun sintak diatas akan memuncul banyak proses yang berjalan dan akan membingunkan proses mana yang akan di hentikan.
+Untuk memudahkan kita dapat mencarinya dengan menambah &lt;strong&gt;grep&lt;/strong&gt; dan nama prosesnya.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ps&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-2.png&quot; alt=&quot;alt text&quot; title=&quot;Porses Berjalan&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah mengetahui proses yang berjalan kita bisa melihat proses masih pada PID &lt;strong&gt;4980&lt;/strong&gt; . Untuk mematikannya dengan menggunakan  sintak &lt;strong&gt;kill -9 PID&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4980&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 04 Aug 2017 06:06:58 +0700</pubDate>
+        <link>http://kurtakon/jekyll/2017/08/04/artikel-1.html</link>
+        <guid isPermaLink="true">http://kurtakon/jekyll/2017/08/04/artikel-1.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
     
       <item>
         <title>Apa itu Markdown ?</title>
@@ -166,10 +201,11 @@ Membuat list bullet :&lt;br /&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
 
+&lt;p&gt;&lt;em&gt;Sumber:  &lt;a href=&quot;https://en.wikipedia.org/wiki/Markdown&quot;&gt;Wikipedia&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 02 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://127.0.0.1:4000/markdown/2017/08/02/artikel-1.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/markdown/2017/08/02/artikel-1.html</guid>
+        <link>http://kurtakon/markdown/2017/08/02/artikel-1.html</link>
+        <guid isPermaLink="true">http://kurtakon/markdown/2017/08/02/artikel-1.html</guid>
         
         
         <category>markdown</category>
@@ -183,13 +219,9 @@ Membuat list bullet :&lt;br /&gt;
 &lt;p&gt;&lt;b&gt; Trimakasih … &lt;/b&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 01 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://127.0.0.1:4000/jekyll/update/2017/08/01/welcome.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000/jekyll/update/2017/08/01/welcome.html</guid>
+        <link>http://kurtakon/2017/08/01/welcome.html</link>
+        <guid isPermaLink="true">http://kurtakon/2017/08/01/welcome.html</guid>
         
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     

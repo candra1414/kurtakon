@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?"
+date:   2017-08-03 23:06:58
+categories: Jekyll
+---
+
+Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan __ctrl+z__ untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika penulis akan mejalankan kembali akan muncul 
+
+{% highlight ruby%}
+Error:  Address already in use - bind(2)
+{% endhighlight %}
+
+Pada pertama kali akan bertanya-tanya apa maksud __error__ diatas, ternyata error tersebut dikarenakan masih ada __port__ yang berjalan untuk proses tersebut. Untuk itu harus mematikan terlebih dahulu sebelum menjalankan kembali.
+
+###Bagaimana mengetahui port berjalan ?
+
+Untuk mengetahui proses yang berjalan cukup mudah. Kita masukan sintak pada terminal
+
+{% highlight ruby%}
+$ ps aux
+{% endhighlight %}
+Namun sintak diatas akan memuncul banyak proses yang berjalan dan akan membingunkan proses mana yang akan di hentikan.
+Untuk memudahkan kita dapat mencarinya dengan menambah __grep__ dan nama prosesnya.
+
+{% highlight ruby%}
+$ ps aux | grep jekyll
+{% endhighlight %}
+
+![alt text][logo]
+
+[logo]:{{site.urlimg}}/img-2.png "Porses Berjalan"
+
+Setelah mengetahui proses yang berjalan kita bisa melihat proses masih pada PID __4980__ . Untuk mematikannya dengan menggunakan  sintak __kill -9 PID__ 
+
+{% highlight ruby%}
+$ kill -9 4980
+{% endhighlight %}

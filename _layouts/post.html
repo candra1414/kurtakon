@@ -11,5 +11,17 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
+  <div class="row">
+	  <div class=" pull-left">
+		{% if page.previous %}
+		  <a href="{{ page.previous.url }}" class="btn btn-primary" title="{{ page.previous.title }}"> << Previous</a>
+		{% endif %}
+	  </div>
+	<div class="pull-right">
+	{% if page.next %}
+	  <a href="{{ page.next.url }}" class="btn btn-primary" title="{{ page.next.title }}">Next >></a>
+	{% endif %}
+	</div>
+  </div>
 
 </div>

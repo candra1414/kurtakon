@@ -2,7 +2,7 @@
 layout: post
 title:  "Apa itu Markdown ?"
 date:   2017-08-02 14:06:58
-categories: markdown
+categories: Markdown
 ---
 
 __Markdown__  adalah tools yang digunakan untuk mengkonversi text menjadi __html__ dengan berbagai format pada konten web .
@@ -161,3 +161,5 @@ Membuat list bullet :<br>
 </tr>
 </table>
 
+
+_Sumber:  <a href="https://en.wikipedia.org/wiki/Markdown">Wikipedia</a>_
