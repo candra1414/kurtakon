@@ -6,9 +6,60 @@
 </description>
     <link>http://kurtakon/</link>
     <atom:link href="http://kurtakon/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Aug 2017 08:23:53 +0700</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 08:23:53 +0700</lastBuildDate>
+    <pubDate>Mon, 07 Aug 2017 14:19:56 +0700</pubDate>
+    <lastBuildDate>Mon, 07 Aug 2017 14:19:56 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana Membuat Google Analytic pada Jekyll?</title>
+        <description>&lt;p&gt;Pada awalnya saya bertanya &lt;strong&gt;Bagaimana mengetahui jumlah pengujung pada Website?&lt;/strong&gt; .Disini saya memcoba fasilitas &lt;strong&gt;Google&lt;/strong&gt; yaitu  &lt;strong&gt;Google Analytic&lt;/strong&gt;. Pada percobaan kali ini saya menggunakan &lt;strong&gt;Jekyll&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Tahap 1&lt;/p&gt;
+
+&lt;p&gt;Pertama kita harus membuka &lt;a href=&quot;https://analytics.google.com&quot;&gt;https://analytics.google.com&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;Tahap 2&lt;/p&gt;
+
+&lt;p&gt;Setelah terbuka akan muncul gambar dibawah ini klik &lt;strong&gt;sigh up&lt;/strong&gt;
+&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-3.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman pertama&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tahap 3&lt;/p&gt;
+
+&lt;p&gt;Setelah terbuka akan muncul gambar dibawah ini. Isikan data yang diperlukan.
+&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-4.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman Kedua&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Setelah itu kita akan mendapatkan id misal &lt;strong&gt;xxxxxxx&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;p&gt;Tahap 4&lt;/p&gt;
+
+&lt;p&gt;Pada file  &lt;strong&gt;_config.yml&lt;/strong&gt;  tambahakan&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;google_analytics : UA-xxxxxxx [id yang didapat dari google]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tahap 5&lt;/p&gt;
+
+&lt;p&gt;Masukan js code pada google di simpan dengan nama &lt;strong&gt;analytics.html&lt;/strong&gt; pada folder &lt;strong&gt;_inculde&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-5.png&quot; alt=&quot;alt text&quot; title=&quot;file&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tahap 6&lt;/p&gt;
+
+&lt;p&gt;Pada halaman &lt;strong&gt;_include/head.html&lt;/strong&gt;  masukan (&lt;strong&gt;include&lt;/strong&gt;) halaman &lt;strong&gt;analytics.html&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-6.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 07 Aug 2017 20:06:58 +0700</pubDate>
+        <link>http://kurtakon/jekyll/2017/08/07/artikel-1.html</link>
+        <guid isPermaLink="true">http://kurtakon/jekyll/2017/08/07/artikel-1.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</title>

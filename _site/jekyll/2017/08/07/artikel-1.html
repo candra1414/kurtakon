@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Selamat datang</title>
-  <meta name="description" content="Selamat membaca dan semoga bermanfaat.">
+  <title>Bagaimana Membuat Google Analytic pada Jekyll?</title>
+  <meta name="description" content="Pada awalnya saya bertanya Bagaimana mengetahui jumlah pengujung pada Website? .Disini saya memcoba fasilitas Google yaitu  Google Analytic. Pada percobaan k...">
 	
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://kurtakon/2017/08/01/welcome.html">
+  <link rel="canonical" href="http://kurtakon/jekyll/2017/08/07/artikel-1.html">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="http://kurtakon/feed.xml" />
 </head>
 
@@ -57,23 +57,59 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Selamat datang</h1>
-    <p class="post-meta">Aug 1, 2017</p>
+    <h1 class="post-title">Bagaimana Membuat Google Analytic pada Jekyll?</h1>
+    <p class="post-meta">Aug 7, 2017</p>
   </header>
 
   <article class="post-content">
-    <p><b>Selamat membaca dan semoga bermanfaat.</b></p>
+    <p>Pada awalnya saya bertanya <strong>Bagaimana mengetahui jumlah pengujung pada Website?</strong> .Disini saya memcoba fasilitas <strong>Google</strong> yaitu  <strong>Google Analytic</strong>. Pada percobaan kali ini saya menggunakan <strong>Jekyll</strong>.</p>
 
-<p><b> Trimakasih … </b></p>
+<hr />
+
+<p>Tahap 1</p>
+
+<p>Pertama kita harus membuka <a href="https://analytics.google.com">https://analytics.google.com</a> .</p>
+
+<p>Tahap 2</p>
+
+<p>Setelah terbuka akan muncul gambar dibawah ini klik <strong>sigh up</strong>
+<img src="http://127.0.0.1:4000/asset/img//img-3.png" alt="alt text" title="Halaman pertama" /></p>
+
+<p>Tahap 3</p>
+
+<p>Setelah terbuka akan muncul gambar dibawah ini. Isikan data yang diperlukan.
+<img src="http://127.0.0.1:4000/asset/img//img-4.png" alt="alt text" title="Halaman Kedua" /></p>
+
+<p>Setelah itu kita akan mendapatkan id misal <strong>xxxxxxx</strong> .</p>
+
+<p>Tahap 4</p>
+
+<p>Pada file  <strong>_config.yml</strong>  tambahakan</p>
+
+<pre><code>google_analytics : UA-xxxxxxx [id yang didapat dari google]
+</code></pre>
+
+<p>Tahap 5</p>
+
+<p>Masukan js code pada google di simpan dengan nama <strong>analytics.html</strong> pada folder <strong>_inculde</strong> .</p>
+
+<p><img src="http://127.0.0.1:4000/asset/img//img-5.png" alt="alt text" title="file" /></p>
+
+<p>Tahap 6</p>
+
+<p>Pada halaman <strong>_include/head.html</strong>  masukan (<strong>include</strong>) halaman <strong>analytics.html</strong>.</p>
+
+<p><img src="http://127.0.0.1:4000/asset/img//img-6.png" alt="alt text" title="Include html" /></p>
+
 
   </article>
   <div class="row">
 	  <div class=" pull-left">
 		
+		  <a href="/jekyll/2017/08/04/artikel-1.html" class="btn btn-primary" title="Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?"> << Previous</a>
+		
 	  </div>
 	<div class="pull-right">
-	
-	  <a href="/markdown/2017/08/02/artikel-1.html" class="btn btn-primary" title="Apa itu Markdown ?">Next >></a>
 	
 	</div>
   </div>

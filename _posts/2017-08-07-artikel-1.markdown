@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "Bagaimana Membuat Google Analytic pada Jekyll?"
+date:   2017-08-07 13:06:58
+categories: Jekyll
+---
+
+
+
+Pada awalnya saya bertanya **Bagaimana mengetahui jumlah pengujung pada Website?** .Disini saya memcoba fasilitas **Google** yaitu  **Google Analytic**. Pada percobaan kali ini saya menggunakan **Jekyll**.
+
+
+---
+
+
+Tahap 1
+
+Pertama kita harus membuka [https://analytics.google.com](https://analytics.google.com) .
+
+Tahap 2
+    
+Setelah terbuka akan muncul gambar dibawah ini klik **sigh up**
+![alt text][gambar1]
+
+[gambar1]:{{site.urlimg}}/img-3.png "Halaman pertama" 
+
+
+Tahap 3
+
+Setelah terbuka akan muncul gambar dibawah ini. Isikan data yang diperlukan.
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}/img-4.png "Halaman Kedua"
+
+Setelah itu kita akan mendapatkan id misal **xxxxxxx** .
+
+
+Tahap 4
+
+Pada file  **_config.yml**  tambahakan 
+
+    google_analytics : UA-xxxxxxx [id yang didapat dari google]
+
+Tahap 5
+
+Masukan js code pada google di simpan dengan nama **analytics.html** pada folder **_inculde** .
+
+![alt text][gambar3]
+
+[gambar3]:{{site.urlimg}}/img-5.png "file"
+
+Tahap 6
+    
+Pada halaman **_include/head.html**  masukan (**include**) halaman **analytics.html**.
+
+
+![alt text][gambar4]
+
+[gambar4]:{{site.urlimg}}/img-6.png "Include html"
+
+
+
