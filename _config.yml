@@ -13,3 +13,5 @@ urlimg: "http://127.0.0.1:4000/asset/img/" # the base hostname & protocol for yo
 markdown: kramdown
 
 include: ['.htaccess']
+# Google services
+google_analytics: UA-104179765-1
