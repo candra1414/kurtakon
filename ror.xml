@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://kurtakon.com/</title>
+  <link>https://kurtakon.com/</link>
+
+<item>
+     <link>https://kurtakon.com/</link>
+     <title>KurTakon</title>
+     <description>Quote : <br</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kurtakon.com/about/</link>
+     <title>KurTakon?</title>
+     <description>Quote : <br</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kurtakon.com/jekyll/2017/08/07/artikel-1.html</link>
+     <title>Bagaimana Membuat Google Analytic pada Jekyll?</title>
+     <description>Pada awalnya saya bertanya Bagaimana mengetahui jumlah pengujung pada Website? .Disini saya memcoba fasilitas Google yaitu  Google Analytic. Pada percobaan k...</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kurtakon.com/jekyll/2017/08/03/artikel-1.html</link>
+     <title>Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</title>
+     <description>Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan ctrl+z untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika pe...</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kurtakon.com/markdown/2017/08/02/artikel-1.html</link>
+     <title>Apa itu Markdown ?</title>
+     <description>Markdown  adalah tools yang digunakan untuk mengkonversi text menjadi html dengan berbagai format pada konten web .</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://kurtakon.com/2017/08/01/welcome.html</link>
+     <title>Selamat datang</title>
+     <description>Selamat membaca dan semoga bermanfaat.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
