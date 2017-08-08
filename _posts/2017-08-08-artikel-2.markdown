@@ -8,7 +8,7 @@ categories: Jekyll
 Seperti pada artikel sebelumnya membahas [**'Apa itu Jekyll?'** ](https://kurtakon.com/jekyll/2017/08/08/artikel-1.html) . Kali ini akan membahas **Bagaimana cara menginstall Jekyll?**. Sebelum melakukan install ada beberapa syarat yang dibutukan.
 
 
-####Apa syarat sebelum install Jekyll?####
+####**Apa syarat sebelum install Jekyll?**####
 
 1. Sistem operasi berbasis GNU/Linux, Unix, atau macOS.
 2. Ruby version 2.1 (minimal).
@@ -20,9 +20,9 @@ Syarat khusus untuk Jekyll versi 2 dan sebelumnya :
 2. Python 2.7.
 
 
----
 
-####Cara Install Jekyll####
+
+####**Cara Install Jekyll**####
 
 Pertama **Ruby** harus diinstall,jika belum terinstall masukan sitak dibawah ini :
 
@@ -55,7 +55,8 @@ Untuk mengetahui versi **jekyll** yang telah terinstall dapat dengan masukan sin
 $ jekyll -v 
 {% endhighlight %}
 
-###Bagaimana membuat website dengan Jekyll?###
+
+###**Bagaimana membuat website dengan Jekyll?**###
 
 Cara membuat website dengan **Jekyll**
 
@@ -63,7 +64,8 @@ Cara membuat website dengan **Jekyll**
 $ jekyll new blog_saya
 {% endhighlight %}
 
-###Bagaimana menjalankan website dengan Jekyll?###
+
+###**Bagaimana menjalankan website dengan Jekyll?**###
 
 Cara menjalakan website dengan masuk ke dalam direktori yang dibuat
 {% highlight py%}
@@ -87,7 +89,7 @@ Configuration file: /home/kiki/blog_saya/_config.yml
 
 {% endhighlight %}
 
-###Bagaimana tamplan awal website dengan Jekyll?###
+###**Bagaimana tamplan awal website dengan Jekyll?**###
 
 Berikut ini tampilan defaut menggunakan **Jekyll**. Setalah itu anda dapat memodifikasi tampilan sesuai dengan keinginan anda.
 
