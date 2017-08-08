@@ -17,7 +17,7 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
 Jekyll dapat berjalan dengan sistem operasi berbasis GNU/Linux, Unix, atau macOS. Jekyll merupakan aplikasi berbasis **Ruby**.
 
 
-####**Apa Kelebihanya?**####
+**Apa Kelebihanya?**
 
 1. Simpel
 2. Static
@@ -25,16 +25,16 @@ Jekyll dapat berjalan dengan sistem operasi berbasis GNU/Linux, Unix, atau macOS
 
 
 
-####**Kenapa Jekyll Simpel?**####
+**Kenapa Jekyll Simpel?**
 
 Karena Jekyll tidak membutuhkan _database_ , _comment_, _moderator_  untuk diinstall seperti apache2 atau nginx. Jekyll hanya berisikan content yang dibuat.
 
-####**Kenapa Static menjadi kelebihan Jekyll ?**#### 
+**Kenapa Static menjadi kelebihan Jekyll ?**
 
 Jekyll menggunakan [markdown](http://kurtakon.com/markdown/2017/08/02/artikel-1.html) (atau Textile), Liquid, dalam mebuat website. Sehingga kita hanya membuat file dengan markdown dan seluruh HTML & CSS  akan digenerate menjadi website static.
 
 
-#### **Blog-aware ?**####
+**Blog-aware ?**
 
 Pada Jekyll sudah terdapat fasilitas _permalinks_, _categories_, _pages_, _posts_, dan pengaturan tampilan sehingga jika ingin menggukanya hanya perlu memangginya saja.
 

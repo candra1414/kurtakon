@@ -13,7 +13,7 @@ Error:  Address already in use - bind(2)
 
 Pada pertama kali akan bertanya-tanya apa maksud __error__ diatas, ternyata error tersebut dikarenakan masih ada __port__ yang berjalan untuk proses tersebut. Untuk itu harus mematikan terlebih dahulu sebelum menjalankan kembali.
 
-###Bagaimana mengetahui port berjalan ?
+**Bagaimana mengetahui port berjalan ?**
 
 Untuk mengetahui proses yang berjalan cukup mudah. Kita masukan sintak pada terminal
 

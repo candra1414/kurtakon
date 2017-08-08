@@ -6,15 +6,15 @@
 </description>
     <link>http://kurtakon.com/</link>
     <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Aug 2017 15:36:43 +0700</pubDate>
-    <lastBuildDate>Tue, 08 Aug 2017 15:36:43 +0700</lastBuildDate>
+    <pubDate>Tue, 08 Aug 2017 15:41:32 +0700</pubDate>
+    <lastBuildDate>Tue, 08 Aug 2017 15:41:32 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
         <title>Bagaimana cara menginstall Jekyll?</title>
         <description>&lt;p&gt;Seperti pada artikel sebelumnya membahas &lt;a href=&quot;https://kurtakon.com/jekyll/2017/08/08/artikel-1.html&quot;&gt;&lt;strong&gt;‘Apa itu Jekyll?’&lt;/strong&gt; &lt;/a&gt; . Kali ini akan membahas &lt;strong&gt;Bagaimana cara menginstall Jekyll?&lt;/strong&gt;. Sebelum melakukan install ada beberapa syarat yang dibutukan.&lt;/p&gt;
 
-&lt;h4 id=&quot;apa-syarat-sebelum-install-jekyll&quot;&gt;&lt;strong&gt;Apa syarat sebelum install Jekyll?&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Apa syarat sebelum install Jekyll?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Sistem operasi berbasis GNU/Linux, Unix, atau macOS.&lt;/li&gt;
@@ -52,13 +52,13 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;bagaimana-membuat-website-dengan-jekyll&quot;&gt;&lt;strong&gt;Bagaimana membuat website dengan Jekyll?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bagaimana membuat website dengan Jekyll?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Cara membuat website dengan &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blog_saya&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;bagaimana-menjalankan-website-dengan-jekyll&quot;&gt;&lt;strong&gt;Bagaimana menjalankan website dengan Jekyll?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bagaimana menjalankan website dengan Jekyll?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Cara menjalakan website dengan masuk ke dalam direktori yang dibuat&lt;/p&gt;
 
@@ -108,7 +108,7 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
 
 &lt;p&gt;Jekyll dapat berjalan dengan sistem operasi berbasis GNU/Linux, Unix, atau macOS. Jekyll merupakan aplikasi berbasis &lt;strong&gt;Ruby&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h4 id=&quot;apa-kelebihanya&quot;&gt;&lt;strong&gt;Apa Kelebihanya?&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Apa Kelebihanya?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Simpel&lt;/li&gt;
@@ -116,15 +116,15 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
   &lt;li&gt;Blog-aware&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;kenapa-jekyll-simpel&quot;&gt;&lt;strong&gt;Kenapa Jekyll Simpel?&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Kenapa Jekyll Simpel?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Karena Jekyll tidak membutuhkan &lt;em&gt;database&lt;/em&gt; , &lt;em&gt;comment&lt;/em&gt;, &lt;em&gt;moderator&lt;/em&gt;  untuk diinstall seperti apache2 atau nginx. Jekyll hanya berisikan content yang dibuat.&lt;/p&gt;
 
-&lt;h4 id=&quot;kenapa-static-menjadi-kelebihan-jekyll-&quot;&gt;&lt;strong&gt;Kenapa Static menjadi kelebihan Jekyll ?&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Kenapa Static menjadi kelebihan Jekyll ?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Jekyll menggunakan &lt;a href=&quot;http://kurtakon.com/markdown/2017/08/02/artikel-1.html&quot;&gt;markdown&lt;/a&gt; (atau Textile), Liquid, dalam mebuat website. Sehingga kita hanya membuat file dengan markdown dan seluruh HTML &amp;amp; CSS  akan digenerate menjadi website static.&lt;/p&gt;
 
-&lt;h4 id=&quot;blog-aware-&quot;&gt;&lt;strong&gt;Blog-aware ?&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Blog-aware ?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Pada Jekyll sudah terdapat fasilitas &lt;em&gt;permalinks&lt;/em&gt;, &lt;em&gt;categories&lt;/em&gt;, &lt;em&gt;pages&lt;/em&gt;, &lt;em&gt;posts&lt;/em&gt;, dan pengaturan tampilan sehingga jika ingin menggukanya hanya perlu memangginya saja.&lt;/p&gt;
 
@@ -198,7 +198,7 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
 
 &lt;p&gt;Pada pertama kali akan bertanya-tanya apa maksud &lt;strong&gt;error&lt;/strong&gt; diatas, ternyata error tersebut dikarenakan masih ada &lt;strong&gt;port&lt;/strong&gt; yang berjalan untuk proses tersebut. Untuk itu harus mematikan terlebih dahulu sebelum menjalankan kembali.&lt;/p&gt;
 
-&lt;h3 id=&quot;bagaimana-mengetahui-port-berjalan-&quot;&gt;Bagaimana mengetahui port berjalan ?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bagaimana mengetahui port berjalan ?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Untuk mengetahui proses yang berjalan cukup mudah. Kita masukan sintak pada terminal&lt;/p&gt;
 
