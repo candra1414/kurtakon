@@ -5,8 +5,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Quote : <br>
   Takonlah sebelum takon itu dilarang.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://kurtakon" # the base hostname & protocol for your site
-urlimg: "https://kurtakon/asset/img/" # the base hostname & protocol for your site
+url: "http://kurtakon.com" # the base hostname & protocol for your site
+urlimg: "http://kurtakon.com/asset/img/" # the base hostname & protocol for your site
 
 
 # Build settings
