@@ -89,7 +89,7 @@ Configuration file: /home/kiki/blog_saya/_config.yml
 
 {% endhighlight %}
 
-###**Bagaimana tamplan awal website dengan Jekyll?**###
+**Bagaimana tamplan awal website dengan Jekyll?**
 
 Berikut ini tampilan defaut menggunakan **Jekyll**. Setalah itu anda dapat memodifikasi tampilan sesuai dengan keinginan anda.
 

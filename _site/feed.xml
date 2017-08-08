@@ -6,8 +6,8 @@
 </description>
     <link>http://kurtakon.com/</link>
     <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Aug 2017 15:41:32 +0700</pubDate>
-    <lastBuildDate>Tue, 08 Aug 2017 15:41:32 +0700</lastBuildDate>
+    <pubDate>Tue, 08 Aug 2017 15:43:13 +0700</pubDate>
+    <lastBuildDate>Tue, 08 Aug 2017 15:43:13 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -78,7 +78,7 @@
     &lt;span class=&quot;n&quot;&gt;Server&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;127.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;Server&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;running&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;press&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;bagaimana-tamplan-awal-website-dengan-jekyll&quot;&gt;&lt;strong&gt;Bagaimana tamplan awal website dengan Jekyll?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bagaimana tamplan awal website dengan Jekyll?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Berikut ini tampilan defaut menggunakan &lt;strong&gt;Jekyll&lt;/strong&gt;. Setalah itu anda dapat memodifikasi tampilan sesuai dengan keinginan anda.&lt;/p&gt;
 
