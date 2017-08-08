@@ -6,9 +6,140 @@
 </description>
     <link>http://kurtakon.com/</link>
     <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Aug 2017 08:26:35 +0700</pubDate>
-    <lastBuildDate>Tue, 08 Aug 2017 08:26:35 +0700</lastBuildDate>
+    <pubDate>Tue, 08 Aug 2017 15:27:45 +0700</pubDate>
+    <lastBuildDate>Tue, 08 Aug 2017 15:27:45 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana cara menginstall Jekyll?</title>
+        <description>&lt;p&gt;Seperti pada artikel sebelumnya membahas &lt;a href=&quot;https://kurtakon.com/jekyll/2017/08/08/artikel-1.html&quot;&gt;&lt;strong&gt;‘Apa itu Jekyll?’&lt;/strong&gt; &lt;/a&gt; . Kali ini akan membahas &lt;strong&gt;Bagaimana cara menginstall Jekyll?&lt;/strong&gt;. Sebelum melakukan install ada beberapa syarat yang dibutukan.&lt;/p&gt;
+
+&lt;h4 id=&quot;apa-syarat-sebelum-install-jekyll&quot;&gt;Apa syarat sebelum install Jekyll?&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sistem operasi berbasis GNU/Linux, Unix, atau macOS.&lt;/li&gt;
+  &lt;li&gt;Ruby version 2.1 (minimal).&lt;/li&gt;
+  &lt;li&gt;RubyGems.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Syarat khusus untuk Jekyll versi 2 dan sebelumnya :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;NodeJS.&lt;/li&gt;
+  &lt;li&gt;Python 2.7.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;cara-install-jekyll&quot;&gt;Cara Install Jekyll&lt;/h4&gt;
+
+&lt;p&gt;Pertama &lt;strong&gt;Ruby&lt;/strong&gt; harus diinstall,jika belum terinstall masukan sitak dibawah ini :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Jika sudah terinstall maka anda dapat menginstall Jekyll.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buider&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Jika anda menemukan error karena versi &lt;strong&gt;ruby&lt;/strong&gt; yang tidak sesuai.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;n&quot;&gt;ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;installing&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;liquid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requires&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ruby&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Anda dapat mencoba dengan versi &lt;strong&gt;jekyll&lt;/strong&gt; dibawahnya seperti dengan sintak dibawah ini :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.5&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Untuk mengetahui versi &lt;strong&gt;jekyll&lt;/strong&gt; yang telah terinstall dapat dengan masukan sintak dibawah ini :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bagaimana-membuat-website-dengan-jekyll&quot;&gt;Bagaimana membuat website dengan Jekyll?&lt;/h3&gt;
+
+&lt;p&gt;Cara membuat website dengan &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blog_saya&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bagaimana-menjalankan-website-dengan-jekyll&quot;&gt;Bagaimana menjalankan website dengan Jekyll?&lt;/h3&gt;
+
+&lt;p&gt;Cara menjalakan website dengan masuk ke dalam direktori yang dibuat&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blog_saya&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Kemudian jalakan jekyll&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serve&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kiki&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blog_saya&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yml&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kiki&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blog_saya&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;Destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kiki&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blog_saya&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_site&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Generating&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; 
+                    &lt;span class=&quot;n&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;Auto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;regeneration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;/home/kiki/blog_saya&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kiki&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blog_saya&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yml&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Server&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;127.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Server&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;running&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;press&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bagaimana-tamplan-awal-website-dengan-jekyll&quot;&gt;Bagaimana tamplan awal website dengan Jekyll?&lt;/h3&gt;
+
+&lt;p&gt;Berikut ini tampilan defaut menggunakan &lt;strong&gt;Jekyll&lt;/strong&gt;. Setalah itu anda dapat memodifikasi tampilan sesuai dengan keinginan anda.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-7.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Sumber&lt;/em&gt; :&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Aug 2017 06:06:58 +0700</pubDate>
+        <link>http://kurtakon.com/jekyll/2017/08/09/artikel-2.html</link>
+        <guid isPermaLink="true">http://kurtakon.com/jekyll/2017/08/09/artikel-2.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Apa itu Jekyll?</title>
+        <description>&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;  is a simple, blog-aware, static site generator for personal, project, or organization sites.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Maksudnya Jekyll dapat merubah &lt;em&gt;plain text&lt;/em&gt; menjadi &lt;em&gt;static website&lt;/em&gt;.
+Website yang dihasilkan cukup sederhana untuk sekedar dijadikan blog.
+Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan Jekyll  pada host projek, blog, atau website dari server &lt;strong&gt;GitHub&lt;/strong&gt; dengan &lt;strong&gt;gratis&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Jekyll dapat berjalan dengan sistem operasi berbasis GNU/Linux, Unix, atau macOS. Jekyll merupakan aplikasi berbasis &lt;strong&gt;Ruby&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;apa-kelebihanya&quot;&gt;Apa Kelebihanya?&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Simpel&lt;/li&gt;
+  &lt;li&gt;Static&lt;/li&gt;
+  &lt;li&gt;Blog-aware&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;kenapa-jekyll-simpel&quot;&gt;Kenapa Jekyll Simpel?&lt;/h4&gt;
+
+&lt;p&gt;Karena Jekyll tidak membutuhkan &lt;em&gt;database&lt;/em&gt; , &lt;em&gt;comment&lt;/em&gt;, &lt;em&gt;moderator&lt;/em&gt;  untuk diinstall seperti apache2 atau nginx. Jekyll hanya berisikan content yang dibuat.&lt;/p&gt;
+
+&lt;h4 id=&quot;kenapa-static-menjadi-kelebihan-jekyll&quot;&gt;Kenapa Static menjadi kelebihan Jekyll?&lt;/h4&gt;
+
+&lt;p&gt;Jekyll menggunakan &lt;a href=&quot;http://kurtakon.com/markdown/2017/08/02/artikel-1.html&quot;&gt;markdown&lt;/a&gt; (atau Textile), Liquid, dalam mebuat website. Sehingga kita hanya membuat file dengan markdown dan seluruh HTML &amp;amp; CSS  akan digenerate menjadi website static.&lt;/p&gt;
+
+&lt;h4 id=&quot;blog-aware-&quot;&gt;Blog-aware ?&lt;/h4&gt;
+
+&lt;p&gt;Pada Jekyll sudah terdapat fasilitas &lt;em&gt;permalinks&lt;/em&gt;, &lt;em&gt;categories&lt;/em&gt;, &lt;em&gt;pages&lt;/em&gt;, &lt;em&gt;posts&lt;/em&gt;, dan pengaturan tampilan sehingga jika ingin menggukanya hanya perlu memangginya saja.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Sumber&lt;/em&gt; :&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Aug 2017 20:06:58 +0700</pubDate>
+        <link>http://kurtakon.com/jekyll/2017/08/08/artikel-1.html</link>
+        <guid isPermaLink="true">http://kurtakon.com/jekyll/2017/08/08/artikel-1.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana Menggunakan Google Analytic pada Jekyll?</title>
@@ -23,12 +154,12 @@
 &lt;p&gt;Tahap 2&lt;/p&gt;
 
 &lt;p&gt;Setelah terbuka akan muncul gambar dibawah ini klik &lt;strong&gt;sigh up&lt;/strong&gt;
-&lt;img src=&quot;http://kurtakon.com/asset/img//img-3.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman pertama&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-3.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman pertama&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tahap 3&lt;/p&gt;
 
 &lt;p&gt;Setelah terbuka akan muncul gambar dibawah ini. Isikan data yang diperlukan.
-&lt;img src=&quot;http://kurtakon.com/asset/img//img-4.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman Kedua&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-4.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman Kedua&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Setelah itu kita akan mendapatkan id misal &lt;strong&gt;xxxxxxx&lt;/strong&gt; .&lt;/p&gt;
 
@@ -43,13 +174,13 @@
 
 &lt;p&gt;Masukan js code pada google di simpan dengan nama &lt;strong&gt;analytics.html&lt;/strong&gt; pada folder &lt;strong&gt;_inculde&lt;/strong&gt; .&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://kurtakon.com/asset/img//img-5.png&quot; alt=&quot;alt text&quot; title=&quot;file&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-5.png&quot; alt=&quot;alt text&quot; title=&quot;file&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tahap 6&lt;/p&gt;
 
 &lt;p&gt;Pada halaman &lt;strong&gt;_include/head.html&lt;/strong&gt;  masukan (&lt;strong&gt;include&lt;/strong&gt;) halaman &lt;strong&gt;analytics.html&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://kurtakon.com/asset/img//img-6.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-6.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 07 Aug 2017 20:06:58 +0700</pubDate>
@@ -80,7 +211,7 @@ Untuk memudahkan kita dapat mencarinya dengan menambah &lt;strong&gt;grep&lt;/st
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ps&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://kurtakon.com/asset/img//img-2.png&quot; alt=&quot;alt text&quot; title=&quot;Porses Berjalan&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-2.png&quot; alt=&quot;alt text&quot; title=&quot;Porses Berjalan&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Setelah mengetahui proses yang berjalan kita bisa melihat proses masih pada PID &lt;strong&gt;4980&lt;/strong&gt; . Untuk mematikannya dengan menggunakan  sintak &lt;strong&gt;kill -9 PID&lt;/strong&gt;&lt;/p&gt;
 

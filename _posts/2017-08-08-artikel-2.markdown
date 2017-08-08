@@ -1,0 +1,99 @@
+---
+layout: post
+title:  "Bagaimana cara menginstall Jekyll?"
+date:   2017-08-08 23:06:58
+categories: Jekyll
+---
+
+Seperti pada artikel sebelumnya membahas [**'Apa itu Jekyll?'** ](https://kurtakon.com/jekyll/2017/08/08/artikel-1.html) . Kali ini akan membahas **Bagaimana cara menginstall Jekyll?**. Sebelum melakukan install ada beberapa syarat yang dibutukan.
+
+
+####Apa syarat sebelum install Jekyll?####
+
+1. Sistem operasi berbasis GNU/Linux, Unix, atau macOS.
+2. Ruby version 2.1 (minimal).
+3. RubyGems.
+
+Syarat khusus untuk Jekyll versi 2 dan sebelumnya :
+
+1. NodeJS.
+2. Python 2.7.
+
+
+---
+
+####Cara Install Jekyll####
+
+Pertama **Ruby** harus diinstall,jika belum terinstall masukan sitak dibawah ini :
+
+{% highlight py%}
+$ apt-get install ruby
+{% endhighlight %}
+
+Jika sudah terinstall maka anda dapat menginstall Jekyll.
+
+{% highlight py%}
+$ gem install jekyll buider
+{% endhighlight %}
+
+Jika anda menemukan error karena versi **ruby** yang tidak sesuai.
+
+{% highlight py%}
+ERROR:  Error installing jekyll:
+    liquid requires Ruby version >= 2.1.0.
+{% endhighlight %}
+
+Anda dapat mencoba dengan versi **jekyll** dibawahnya seperti dengan sintak dibawah ini :
+
+{% highlight py%}
+$ gem install jekyll -v 2.5
+{% endhighlight %}
+
+Untuk mengetahui versi **jekyll** yang telah terinstall dapat dengan masukan sintak dibawah ini :
+
+{% highlight py%}
+$ jekyll -v 
+{% endhighlight %}
+
+###Bagaimana membuat website dengan Jekyll?###
+
+Cara membuat website dengan **Jekyll**
+
+{% highlight py%}
+$ jekyll new blog_saya
+{% endhighlight %}
+
+###Bagaimana menjalankan website dengan Jekyll?###
+
+Cara menjalakan website dengan masuk ke dalam direktori yang dibuat
+{% highlight py%}
+$ cd blog_saya
+{% endhighlight %}
+
+Kemudian jalakan jekyll
+{% highlight py%}
+$ jekyll serve
+
+Configuration file: /home/kiki/blog_saya/_config.yml
+            Source: /home/kiki/blog_saya
+       Destination: /home/kiki/blog_saya/_site
+      Generating... 
+                    done.
+ Auto-regeneration: enabled for '/home/kiki/blog_saya'
+Configuration file: /home/kiki/blog_saya/_config.yml
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+
+
+{% endhighlight %}
+
+###Bagaimana tamplan awal website dengan Jekyll?###
+
+Berikut ini tampilan defaut menggunakan **Jekyll**. Setalah itu anda dapat memodifikasi tampilan sesuai dengan keinginan anda.
+
+![alt text][gambar4]
+
+[gambar4]:{{site.urlimg}}/img-7.png "Include html"
+
+
+_Sumber_ :[https://jekyllrb.com/](https://jekyllrb.com/)

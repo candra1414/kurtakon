@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "Apa itu Jekyll?"
+date:   2017-08-08 13:06:58
+categories: Jekyll
+---
+
+---
+**Jekyll**  is a simple, blog-aware, static site generator for personal, project, or organization sites.
+
+---
+
+Maksudnya Jekyll dapat merubah _plain text_ menjadi _static website_.
+Website yang dihasilkan cukup sederhana untuk sekedar dijadikan blog.
+Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan Jekyll  pada host projek, blog, atau website dari server **GitHub** dengan **gratis**.
+
+Jekyll dapat berjalan dengan sistem operasi berbasis GNU/Linux, Unix, atau macOS. Jekyll merupakan aplikasi berbasis **Ruby**.
+
+####Apa Kelebihanya?####
+
+1. Simpel
+2. Static
+3. Blog-aware
+
+####Kenapa Jekyll Simpel?####
+
+Karena Jekyll tidak membutuhkan _database_ , _comment_, _moderator_  untuk diinstall seperti apache2 atau nginx. Jekyll hanya berisikan content yang dibuat.
+
+####Kenapa Static menjadi kelebihan Jekyll?#### 
+
+Jekyll menggunakan [markdown](http://kurtakon.com/markdown/2017/08/02/artikel-1.html) (atau Textile), Liquid, dalam mebuat website. Sehingga kita hanya membuat file dengan markdown dan seluruh HTML & CSS  akan digenerate menjadi website static.
+
+#### Blog-aware ?####
+
+Pada Jekyll sudah terdapat fasilitas _permalinks_, _categories_, _pages_, _posts_, dan pengaturan tampilan sehingga jika ingin menggukanya hanya perlu memangginya saja.
+
+
+
+
+_Sumber_ :[https://jekyllrb.com/](https://jekyllrb.com/)

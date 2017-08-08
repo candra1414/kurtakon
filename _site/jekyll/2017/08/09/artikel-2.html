@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Bagaimana cara menginstall Jekyll?</title>
+  <meta name="description" content="Seperti pada artikel sebelumnya membahas ‘Apa itu Jekyll?’  . Kali ini akan membahas Bagaimana cara menginstall Jekyll?. Sebelum melakukan install ada bebera...">
+	
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://kurtakon.com/jekyll/2017/08/09/artikel-2.html">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="http://kurtakon.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">KurTakon</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">KurTakon?</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Bagaimana cara menginstall Jekyll?</h1>
+    <p class="post-meta">Aug 9, 2017</p>
+  </header>
+
+  <article class="post-content">
+    <p>Seperti pada artikel sebelumnya membahas <a href="https://kurtakon.com/jekyll/2017/08/08/artikel-1.html"><strong>‘Apa itu Jekyll?’</strong> </a> . Kali ini akan membahas <strong>Bagaimana cara menginstall Jekyll?</strong>. Sebelum melakukan install ada beberapa syarat yang dibutukan.</p>
+
+<h4 id="apa-syarat-sebelum-install-jekyll">Apa syarat sebelum install Jekyll?</h4>
+
+<ol>
+  <li>Sistem operasi berbasis GNU/Linux, Unix, atau macOS.</li>
+  <li>Ruby version 2.1 (minimal).</li>
+  <li>RubyGems.</li>
+</ol>
+
+<p>Syarat khusus untuk Jekyll versi 2 dan sebelumnya :</p>
+
+<ol>
+  <li>NodeJS.</li>
+  <li>Python 2.7.</li>
+</ol>
+
+<hr />
+
+<h4 id="cara-install-jekyll">Cara Install Jekyll</h4>
+
+<p>Pertama <strong>Ruby</strong> harus diinstall,jika belum terinstall masukan sitak dibawah ini :</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby</span></code></pre></div>
+
+<p>Jika sudah terinstall maka anda dapat menginstall Jekyll.</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">buider</span></code></pre></div>
+
+<p>Jika anda menemukan error karena versi <strong>ruby</strong> yang tidak sesuai.</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">ERROR</span><span class="p">:</span>  <span class="n">Error</span> <span class="n">installing</span> <span class="n">jekyll</span><span class="p">:</span>
+    <span class="n">liquid</span> <span class="n">requires</span> <span class="n">Ruby</span> <span class="n">version</span> <span class="o">&gt;=</span> <span class="mf">2.1</span><span class="o">.</span><span class="mf">0.</span></code></pre></div>
+
+<p>Anda dapat mencoba dengan versi <strong>jekyll</strong> dibawahnya seperti dengan sintak dibawah ini :</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="o">-</span><span class="n">v</span> <span class="mf">2.5</span></code></pre></div>
+
+<p>Untuk mengetahui versi <strong>jekyll</strong> yang telah terinstall dapat dengan masukan sintak dibawah ini :</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">jekyll</span> <span class="o">-</span><span class="n">v</span></code></pre></div>
+
+<h3 id="bagaimana-membuat-website-dengan-jekyll">Bagaimana membuat website dengan Jekyll?</h3>
+
+<p>Cara membuat website dengan <strong>Jekyll</strong></p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">jekyll</span> <span class="n">new</span> <span class="n">blog_saya</span></code></pre></div>
+
+<h3 id="bagaimana-menjalankan-website-dengan-jekyll">Bagaimana menjalankan website dengan Jekyll?</h3>
+
+<p>Cara menjalakan website dengan masuk ke dalam direktori yang dibuat</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">cd</span> <span class="n">blog_saya</span></code></pre></div>
+
+<p>Kemudian jalakan jekyll</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">jekyll</span> <span class="n">serve</span>
+
+<span class="n">Configuration</span> <span class="nb">file</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kiki</span><span class="o">/</span><span class="n">blog_saya</span><span class="o">/</span><span class="n">_config</span><span class="o">.</span><span class="n">yml</span>
+            <span class="n">Source</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kiki</span><span class="o">/</span><span class="n">blog_saya</span>
+       <span class="n">Destination</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kiki</span><span class="o">/</span><span class="n">blog_saya</span><span class="o">/</span><span class="n">_site</span>
+      <span class="n">Generating</span><span class="o">...</span> 
+                    <span class="n">done</span><span class="o">.</span>
+ <span class="n">Auto</span><span class="o">-</span><span class="n">regeneration</span><span class="p">:</span> <span class="n">enabled</span> <span class="k">for</span> <span class="s">&#39;/home/kiki/blog_saya&#39;</span>
+<span class="n">Configuration</span> <span class="nb">file</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kiki</span><span class="o">/</span><span class="n">blog_saya</span><span class="o">/</span><span class="n">_config</span><span class="o">.</span><span class="n">yml</span>
+    <span class="n">Server</span> <span class="n">address</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">4000</span><span class="o">/</span>
+  <span class="n">Server</span> <span class="n">running</span><span class="o">...</span> <span class="n">press</span> <span class="n">ctrl</span><span class="o">-</span><span class="n">c</span> <span class="n">to</span> <span class="n">stop</span><span class="o">.</span></code></pre></div>
+
+<h3 id="bagaimana-tamplan-awal-website-dengan-jekyll">Bagaimana tamplan awal website dengan Jekyll?</h3>
+
+<p>Berikut ini tampilan defaut menggunakan <strong>Jekyll</strong>. Setalah itu anda dapat memodifikasi tampilan sesuai dengan keinginan anda.</p>
+
+<p><img src="http://127.0.0.1:4000/asset/img//img-7.png" alt="alt text" title="Include html" /></p>
+
+<p><em>Sumber</em> :<a href="https://jekyllrb.com/">https://jekyllrb.com/</a></p>
+
+  </article>
+  <div class="row">
+	  <div class=" pull-left">
+		
+		  <a href="/jekyll/2017/08/08/artikel-1.html" class="btn btn-primary" title="Apa itu Jekyll?"> << Previous</a>
+		
+	  </div>
+	<div class="pull-right">
+	
+	</div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"><foo>&#169;</foo> 2017 KurTakon</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+         
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Quote : <br> Takonlah sebelum takon itu dilarang.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
