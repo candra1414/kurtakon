@@ -6,12 +6,12 @@
 </description>
     <link>http://kurtakon.com/</link>
     <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Aug 2017 08:17:04 +0700</pubDate>
-    <lastBuildDate>Tue, 08 Aug 2017 08:17:04 +0700</lastBuildDate>
+    <pubDate>Tue, 08 Aug 2017 08:26:35 +0700</pubDate>
+    <lastBuildDate>Tue, 08 Aug 2017 08:26:35 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
-        <title>Bagaimana Membuat Google Analytic pada Jekyll?</title>
+        <title>Bagaimana Menggunakan Google Analytic pada Jekyll?</title>
         <description>&lt;p&gt;Pada awalnya saya bertanya &lt;strong&gt;Bagaimana mengetahui jumlah pengujung pada Website?&lt;/strong&gt; .Disini saya memcoba fasilitas &lt;strong&gt;Google&lt;/strong&gt; yaitu  &lt;strong&gt;Google Analytic&lt;/strong&gt;. Pada percobaan kali ini saya menggunakan &lt;strong&gt;Jekyll&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;

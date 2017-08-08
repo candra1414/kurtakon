@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bagaimana Membuat Google Analytic pada Jekyll?"
+title:  "Bagaimana Menggunakan Google Analytic pada Jekyll?"
 date:   2017-08-07 13:06:58
 categories: Jekyll
 ---
