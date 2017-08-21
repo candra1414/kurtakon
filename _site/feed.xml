@@ -6,8 +6,8 @@
 </description>
     <link>http://kurtakon.com/</link>
     <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Aug 2017 15:43:13 +0700</pubDate>
-    <lastBuildDate>Tue, 08 Aug 2017 15:43:13 +0700</lastBuildDate>
+    <pubDate>Mon, 21 Aug 2017 17:44:45 +0700</pubDate>
+    <lastBuildDate>Mon, 21 Aug 2017 17:44:45 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -82,7 +82,7 @@
 
 &lt;p&gt;Berikut ini tampilan defaut menggunakan &lt;strong&gt;Jekyll&lt;/strong&gt;. Setalah itu anda dapat memodifikasi tampilan sesuai dengan keinginan anda.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-7.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kurtakon.com/asset/img//img-7.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Sumber&lt;/em&gt; :&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -152,12 +152,12 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
 &lt;p&gt;Tahap 2&lt;/p&gt;
 
 &lt;p&gt;Setelah terbuka akan muncul gambar dibawah ini klik &lt;strong&gt;sigh up&lt;/strong&gt;
-&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-3.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman pertama&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://kurtakon.com/asset/img//img-3.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman pertama&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tahap 3&lt;/p&gt;
 
 &lt;p&gt;Setelah terbuka akan muncul gambar dibawah ini. Isikan data yang diperlukan.
-&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-4.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman Kedua&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://kurtakon.com/asset/img//img-4.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman Kedua&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Setelah itu kita akan mendapatkan id misal &lt;strong&gt;xxxxxxx&lt;/strong&gt; .&lt;/p&gt;
 
@@ -172,13 +172,13 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
 
 &lt;p&gt;Masukan js code pada google di simpan dengan nama &lt;strong&gt;analytics.html&lt;/strong&gt; pada folder &lt;strong&gt;_inculde&lt;/strong&gt; .&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-5.png&quot; alt=&quot;alt text&quot; title=&quot;file&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kurtakon.com/asset/img//img-5.png&quot; alt=&quot;alt text&quot; title=&quot;file&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tahap 6&lt;/p&gt;
 
 &lt;p&gt;Pada halaman &lt;strong&gt;_include/head.html&lt;/strong&gt;  masukan (&lt;strong&gt;include&lt;/strong&gt;) halaman &lt;strong&gt;analytics.html&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-6.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kurtakon.com/asset/img//img-6.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 07 Aug 2017 20:06:58 +0700</pubDate>
@@ -209,7 +209,7 @@ Untuk memudahkan kita dapat mencarinya dengan menambah &lt;strong&gt;grep&lt;/st
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ps&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-2.png&quot; alt=&quot;alt text&quot; title=&quot;Porses Berjalan&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kurtakon.com/asset/img//img-2.png&quot; alt=&quot;alt text&quot; title=&quot;Porses Berjalan&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Setelah mengetahui proses yang berjalan kita bisa melihat proses masih pada PID &lt;strong&gt;4980&lt;/strong&gt; . Untuk mematikannya dengan menggunakan  sintak &lt;strong&gt;kill -9 PID&lt;/strong&gt;&lt;/p&gt;
 
