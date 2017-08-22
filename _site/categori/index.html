@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Bagaimana Menggunakan Google Analytic pada Jekyll?</title>
-  <meta name="description" content="Pada awalnya saya bertanya Bagaimana mengetahui jumlah pengujung pada Website? .Disini saya memcoba fasilitas Google yaitu  Google Analytic. Pada percobaan k...">
+  <title>Kategori</title>
+  <meta name="description" content="Quote : <br> Takonlah sebelum takon itu dilarang.
+">
 	
   <link rel="stylesheet" href="/css/main.css">
   <script type="text/javascript" src="/asset/js/bootstrap.js"></script>
-  <link rel="canonical" href="http://kurtakon.com/jekyll/2017/08/07/artikel-1.html">
+  <link rel="canonical" href="http://kurtakon.com/categori/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="http://kurtakon.com/feed.xml" />
 </head>
 
@@ -62,64 +63,136 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Bagaimana Menggunakan Google Analytic pada Jekyll?</h1>
-    <p class="post-meta">Aug 7, 2017</p>
+    <h1 class="post-title">Kategori</h1>
   </header>
 
   <article class="post-content">
-    <p>Pada awalnya saya bertanya <strong>Bagaimana mengetahui jumlah pengujung pada Website?</strong> .Disini saya memcoba fasilitas <strong>Google</strong> yaitu  <strong>Google Analytic</strong>. Pada percobaan kali ini saya menggunakan <strong>Jekyll</strong>.</p>
+    <div class="row">
+<div class="col-md-4 pull-right">
+<ul>
+    
+    
+     <li>
+        <a href="/categori/#git">
+                Git (1)
+        </a>
+     </li>
+    
+     <li>
+        <a href="/categori/#jekyll">
+                Jekyll (4)
+        </a>
+     </li>
+    
+     <li>
+        <a href="/categori/#markdown">
+                Markdown (1)
+        </a>
+     </li>
+    
+     <li>
+        <a href="/categori/#sublime-text">
+                Sublime text (1)
+        </a>
+     </li>
+    
+</ul>
+  
+</div>
 
-<hr />
+  <div class="col-md-8">
+    
 
-<p>Tahap 1</p>
+<div id="markdown"> 
+  <h3>Markdown</h3>
+  <ul>
+    
+    
+      
+      
+      <li><a href="http://kurtakon.com/markdown/2017/08/02/artikel-1.html">Apa itu Markdown ?<span class="entry-date"></span></a></li>
+      
+      
+    
+    
+    
+  </ul>
+  
+</div>
 
-<p>Pertama kita harus membuka <a href="https://analytics.google.com">https://analytics.google.com</a> .</p>
+<div id="jekyll"> 
+  <h3>Jekyll</h3>
+  <ul>
+    
+    
+      
+      
+      <li><a href="http://kurtakon.com/jekyll/2017/08/09/artikel-2.html">Bagaimana cara menginstall Jekyll?<span class="entry-date"></span></a></li>
+      
+      
+    
+      
+      
+      <li><a href="http://kurtakon.com/jekyll/2017/08/08/artikel-1.html">Apa itu Jekyll?<span class="entry-date"></span></a></li>
+      
+      
+    
+      
+      
+      <li><a href="http://kurtakon.com/jekyll/2017/08/07/artikel-1.html">Bagaimana Menggunakan Google Analytic pada Jekyll?<span class="entry-date"></span></a></li>
+      
+      
+    
+      
+      
+      <li><a href="http://kurtakon.com/jekyll/2017/08/04/artikel-1.html">Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?<span class="entry-date"></span></a></li>
+      
+      
+    
+    
+    
+  </ul>
+  
+</div>
 
-<p>Tahap 2</p>
+<div id="git"> 
+  <h3>Git</h3>
+  <ul>
+    
+    
+      
+      
+      <li><a href="http://kurtakon.com/git/sublime-text/2017/08/22/artikel-1.html">Bagaimana menginstal paket Git dengan Sublime Text ?<span class="entry-date"></span></a></li>
+      
+      
+    
+    
+    
+  </ul>
+  
+</div>
 
-<p>Setelah terbuka akan muncul gambar dibawah ini klik <strong>sigh up</strong>
-<img src="http://kurtakon.com/asset/img//img-3.png" alt="alt text" title="Halaman pertama" /></p>
+<div id="sublime-text"> 
+  <h3>Sublime text</h3>
+  <ul>
+    
+    
+      
+      
+      <li><a href="http://kurtakon.com/git/sublime-text/2017/08/22/artikel-1.html">Bagaimana menginstal paket Git dengan Sublime Text ?<span class="entry-date"></span></a></li>
+      
+      
+    
+    
+    
+  </ul>
+  
+</div>
 
-<p>Tahap 3</p>
-
-<p>Setelah terbuka akan muncul gambar dibawah ini. Isikan data yang diperlukan.
-<img src="http://kurtakon.com/asset/img//img-4.png" alt="alt text" title="Halaman Kedua" /></p>
-
-<p>Setelah itu kita akan mendapatkan id misal <strong>xxxxxxx</strong> .</p>
-
-<p>Tahap 4</p>
-
-<p>Pada file  <strong>_config.yml</strong>  tambahakan</p>
-
-<pre><code>google_analytics : UA-xxxxxxx [id yang didapat dari google]
-</code></pre>
-
-<p>Tahap 5</p>
-
-<p>Masukan js code pada google di simpan dengan nama <strong>analytics.html</strong> pada folder <strong>_inculde</strong> .</p>
-
-<p><img src="http://kurtakon.com/asset/img//img-5.png" alt="alt text" title="file" /></p>
-
-<p>Tahap 6</p>
-
-<p>Pada halaman <strong>_include/head.html</strong>  masukan (<strong>include</strong>) halaman <strong>analytics.html</strong>.</p>
-
-<p><img src="http://kurtakon.com/asset/img//img-6.png" alt="alt text" title="Include html" /></p>
-
+  </div>
+</div>
 
   </article>
-  <div class="row">
-	  <div class=" pull-left">
-		
-		  <a href="/jekyll/2017/08/04/artikel-1.html" class="btn btn-primary btn-flat" title="Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?"> << Previous</a>
-		
-	  </div>
-	<div class="pull-right">
-	
-	  <a href="/jekyll/2017/08/08/artikel-1.html" class="btn btn-primary btn-flat" title="Apa itu Jekyll?">Next >></a>
-	
-	</div>
-  </div>
 
 </div>
 

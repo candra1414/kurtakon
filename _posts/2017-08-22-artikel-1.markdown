@@ -2,7 +2,7 @@
 layout: post
 title:  "Bagaimana menginstal paket Git dengan Sublime Text ?"
 date:   2017-08-22 14:06:58
-categories: Git Sublime
+categories: [Git, Sublime-Text]
 ---
 Bagi penggunakan text editor Sublime Text dan penggunakan Git pasti bertanya **Apakah ada paket untuk git pada Sublime Text?** Jawabannya **Ada**.
 Yee.. senang bukan tanpa harus buka terminal bisa melakukan kerjaan menggunakan satu aplikasi saja.
