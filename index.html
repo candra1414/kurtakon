@@ -16,8 +16,10 @@ layout: default
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <div>
           {{ post.excerpt }}
-          <a href="{{ post.url }}" class="pull-right btn btn-sm btn-warning">More..</a>
+          <a href="{{ post.url }}" class="pull-right btn btn-sm btn-danger btn-flat">More..</a>
         </div>
+        <br>
+          <hr>
       </li>
     {% endfor %}
   </ul>

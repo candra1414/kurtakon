@@ -6,12 +6,12 @@
 </description>
     <link>http://kurtakon.com/</link>
     <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Aug 2017 10:44:27 +0700</pubDate>
-    <lastBuildDate>Tue, 22 Aug 2017 10:44:27 +0700</lastBuildDate>
+    <pubDate>Tue, 22 Aug 2017 21:43:23 +0700</pubDate>
+    <lastBuildDate>Tue, 22 Aug 2017 21:43:23 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
-        <title>Bagamana menginstall paket Git dengan Sublime Text ?</title>
+        <title>Bagaimana menginstal paket Git dengan Sublime Text ?</title>
         <description>&lt;p&gt;Bagi penggunakan text editor Sublime Text dan penggunakan Git pasti bertanya &lt;strong&gt;Apakah ada paket untuk git pada Sublime Text?&lt;/strong&gt; Jawabannya &lt;strong&gt;Ada&lt;/strong&gt;.
 Yee.. senang bukan tanpa harus buka terminal bisa melakukan kerjaan menggunakan satu aplikasi saja.&lt;/p&gt;
 
