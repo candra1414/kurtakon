@@ -6,9 +6,58 @@
 </description>
     <link>http://kurtakon.com/</link>
     <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Aug 2017 17:44:45 +0700</pubDate>
-    <lastBuildDate>Mon, 21 Aug 2017 17:44:45 +0700</lastBuildDate>
+    <pubDate>Tue, 22 Aug 2017 10:35:15 +0700</pubDate>
+    <lastBuildDate>Tue, 22 Aug 2017 10:35:15 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagamana menginstal paket Git dengan Sublime Text ?</title>
+        <description>&lt;p&gt;Bagi penggunakan text editor Sublime Text dan penggunakan Git pasti bertanya &lt;strong&gt;Apakah ada paket untuk git pada Sublime Text?&lt;/strong&gt; Jawabannya &lt;strong&gt;Ada&lt;/strong&gt;.
+Yee.. senang bukan tanpa harus buka terminal bisa melakukan kerjaan menggunakan satu aplikasi saja.&lt;/p&gt;
+
+&lt;p&gt;Akan tertapi akan timbul pertanyaan
+&lt;strong&gt;Bagamana menginstal paket Git dengan Sublime Text?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Cara Install paket git cukup mudah&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;pertama buka &lt;em&gt;Package Control&lt;/em&gt;, caranya bisa klik &lt;em&gt;Preferences&lt;/em&gt;, &lt;em&gt;Package Control&lt;/em&gt; atau menggunakan shortcut keyboard (Command+Shift+p pada OS X, Control+Shift+p pada Linux/Windows).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pilih &lt;em&gt;Package Control:Install Package&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Setelah muncul tulis git dan pilih package yang akan di install.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bagaimana-menjalankan-git-dengan-mudah-pada-sublime-text&quot;&gt;Bagaimana menjalankan git dengan mudah pada Sublime Text?&lt;/h3&gt;
+
+&lt;p&gt;Sebenarnya cukup mudah menjalankan git sublime, hampir sama dengan mengunakan terminal.Untuk menjalankan git telah terpasang bisa klik Tools atau membuka Package Control dan tulis git. Disana akan terlihat tools yang bisa digunakan.&lt;/p&gt;
+
+&lt;h2 id=&quot;apa-keenakannya-menggunakan-git-pada-sublime-text&quot;&gt;Apa keenakannya menggunakan Git pada Sublime Text?&lt;/h2&gt;
+
+&lt;p&gt;Ini menurut pendapat dan pengalaman pribadi ya…
+Kalau menurut saya lebih enak karena seperti dikatakan di atas hanya menggukan satu aplikasi saja tidak perlu membuka terminal. Maklum saya terbisa menggunakan terminal langsung.&lt;/p&gt;
+
+&lt;p&gt;Kedua, lebih tervisual. &lt;strong&gt;Kenapa lebih tervisual?&lt;/strong&gt; Karena saya terbiasa menggunakan terminal jadi jika lupa code nya harus help, tapi menggunakan ini klik tools/git sudah terlihat tools yang bisa di gunakan atau membuka dengan Package Control dan menulis Git sudah keluar code untuk fungsi git sendiri.&lt;/p&gt;
+
+&lt;p&gt;Selain itu, Pada saat menjalankan git akan seperti text biasa pada tampilan sublime text biasa jadi lebih enak dilihat.&lt;/p&gt;
+
+&lt;p&gt;Mungkin itu saya yang dapat disampaikan, hanya menjawab pertanyaan yang ada dipikirkan saya. Nanti kalau ada lagi dan saya coba cari jawabanya baru di tulis lagi.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 22 Aug 2017 21:06:58 +0700</pubDate>
+        <link>http://kurtakon.com/git/sublime/2017/08/22/artikel-1.html</link>
+        <guid isPermaLink="true">http://kurtakon.com/git/sublime/2017/08/22/artikel-1.html</guid>
+        
+        
+        <category>git</category>
+        
+        <category>sublime</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana cara menginstall Jekyll?</title>
