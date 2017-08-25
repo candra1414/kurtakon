@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Bagaimana cara Install Yii2 pada Linux dengan Composer?</title>
+  <meta name="description" content="Yii merupakan akromin dari Yes It is. Yii merupakan Framework php dengan konsep MVC.Sebelum Yii2 terlahir dulu terkenal adanya Yii 1.1 . Berdasarkan pengalam...">
+	
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="text/javascript" src="/asset/js/bootstrap.js"></script>
+  <link rel="canonical" href="http://kurtakon.com/composer/yii/2017/08/24/artikel-2.html">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="http://kurtakon.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header bg-black navbar navbar-fixed-top">
+
+  <div class="wrapper">
+
+    <a class="site-title" style="color:#fff" href="/">KurTakon</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" style="color:#ddd" href="/about/">KurTakon?</a>
+          
+        
+          
+          <a class="page-link" style="color:#ddd" href="/categori/">Kategori</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+    <div class="page-content">
+      <div class="wrapper" style="min-height: 416px; padding-top:50px">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Bagaimana cara Install Yii2 pada Linux dengan Composer?</h1>
+    <p class="post-meta">Aug 24, 2017</p>
+  </header>
+
+  <article class="post-content">
+    <p>Yii merupakan akromin dari <strong>Yes It is</strong>. Yii merupakan Framework php dengan konsep MVC.
+Sebelum Yii2 terlahir dulu terkenal adanya Yii 1.1 . Berdasarkan pengalaman saya terdapat perbedaan mulai cara install, code, dan pemanggilan fungsinya pada Yii 1.1 dengan Yii2.</p>
+
+<p>Untuk kali ini saya hanya mebahas <strong>Bagaimana cara Install Yii2 pada Linux dengan Composer?</strong>.</p>
+
+<p>Tahap awal menginstall Yii2 :</p>
+
+<ol>
+  <li>Anda harus  <a href="https://kurtakon.com/composer/2017/08/24/artikel-1.html"><strong>install composer</strong> </a> terlebih dahulu.</li>
+  <li>Memiliki akun Github. <strong>Kenapa harus memiliki akun Github?</strong> Karena pada saat install Yii2 anda akan diminta memasukan token Gihub jika anda mengintall untuk pertama kali.</li>
+  <li>Memasang plugin Yii pada composer</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">composer</span> <span class="k">global</span> <span class="n">require</span> <span class="s">&quot;fxp/composer-asset-plugin:^1.2.0&quot;</span></code></pre></div>
+
+<p>Sebelum menginstal Yii2 anda  harus memperhatikan bahwa ada 2 jenis Yii2 :</p>
+
+<ol>
+  <li>Basic
+    <ul>
+      <li>Basic hanya berisikan 1 apliakasi saja.</li>
+      <li>Basic dapat digunakan untuk apliasi simpel yang usernya tidak perlu tampilan beda untuk hak aksesnya.</li>
+    </ul>
+  </li>
+  <li>Advanced
+    <ul>
+      <li>Advance memiliki 2 aplikasi sekaligus yaitu Backend dan Frontend.</li>
+      <li>Advance bisa digunakan jika usernya banyak dan memiliki hak akses serta tampilan funsi tampilan yang berbeda-beda.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Cara Mendownload :</p>
+
+<ul>
+  <li>Basic</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">composer</span> <span class="n">create</span><span class="o">-</span><span class="n">project</span> <span class="n">yiisoft</span><span class="o">/</span><span class="n">yii2</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">basic</span> <span class="n">basic</span> <span class="mf">2.0</span><span class="o">.</span><span class="mi">12</span>
+
+<span class="c">## Akan muncul :</span>
+<span class="n">Installing</span> <span class="n">yiisoft</span><span class="o">/</span><span class="n">yii2</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">basic</span> <span class="p">(</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">12</span><span class="p">)</span>
+  <span class="o">-</span> <span class="n">Installing</span> <span class="n">yiisoft</span><span class="o">/</span><span class="n">yii2</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">basic</span> <span class="p">(</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">12</span><span class="p">):</span> <span class="n">Downloading</span> <span class="p">(</span><span class="mi">100</span><span class="o">%</span><span class="p">)</span>         
+<span class="n">Created</span> <span class="n">project</span> <span class="ow">in</span> <span class="n">basic</span>
+<span class="n">Loading</span> <span class="n">composer</span> <span class="n">repositories</span> <span class="k">with</span> <span class="n">package</span> <span class="n">information</span>
+<span class="n">Updating</span> <span class="n">dependencies</span> <span class="p">(</span><span class="n">including</span> <span class="n">require</span><span class="o">-</span><span class="n">dev</span><span class="p">)</span>
+<span class="n">Reading</span> <span class="n">bower</span><span class="o">.</span><span class="n">json</span> <span class="n">of</span> <span class="n">bower</span><span class="o">-</span><span class="n">asset</span><span class="o">/</span><span class="n">jquery</span> <span class="p">(</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>       
+<span class="n">Could</span> <span class="ow">not</span> <span class="n">fetch</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">repos</span><span class="o">/</span><span class="n">jquery</span><span class="o">/</span><span class="n">jquery</span><span class="o">-</span><span class="n">dist</span><span class="o">/</span><span class="n">commits</span><span class="o">/</span><span class="mi">1472290917</span><span class="n">f17af05e98007136096784f9051fab</span><span class="p">,</span> <span class="n">please</span> <span class="n">create</span> <span class="n">a</span> <span class="n">GitHub</span> <span class="n">OAuth</span> <span class="n">token</span> <span class="n">to</span> <span class="n">go</span> <span class="n">over</span> <span class="n">the</span> <span class="n">API</span> <span class="n">rate</span> <span class="n">limit</span>
+<span class="n">Head</span> <span class="n">to</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">settings</span><span class="o">/</span><span class="n">tokens</span><span class="o">/</span><span class="n">new</span><span class="err">?</span><span class="n">scopes</span><span class="o">=</span><span class="n">repo</span><span class="o">&amp;</span><span class="n">description</span><span class="o">=</span><span class="c">###</span>
+<span class="n">to</span> <span class="n">retrieve</span> <span class="n">a</span> <span class="n">token</span><span class="o">.</span> <span class="n">It</span> <span class="n">will</span> <span class="n">be</span> <span class="n">stored</span> <span class="ow">in</span> <span class="s">&quot;.../.config/composer/auth.json&quot;</span> <span class="k">for</span> <span class="n">future</span> <span class="n">use</span> <span class="n">by</span> <span class="n">Composer</span><span class="o">.</span>
+<span class="n">Token</span> <span class="p">(</span><span class="n">hidden</span><span class="p">):</span>  <span class="c">#masukan token github anda</span></code></pre></div>
+
+<ul>
+  <li>Advance</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">composer</span> <span class="n">create</span><span class="o">-</span><span class="n">project</span> <span class="n">yiisoft</span><span class="o">/</span><span class="n">yii2</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">advanced</span> <span class="n">advanced</span> <span class="mf">2.0</span><span class="o">.</span><span class="mi">12</span>
+
+<span class="c">## Akan muncul :</span>
+<span class="n">Installing</span> <span class="n">yiisoft</span><span class="o">/</span><span class="n">yii2</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">advanced</span> <span class="p">(</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">12</span><span class="p">)</span>
+  <span class="o">-</span> <span class="n">Installing</span> <span class="n">yiisoft</span><span class="o">/</span><span class="n">yii2</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">advanced</span> <span class="p">(</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">12</span><span class="p">):</span> <span class="n">Downloading</span> <span class="p">(</span><span class="mi">100</span><span class="o">%</span><span class="p">)</span>         
+<span class="n">Created</span> <span class="n">project</span> <span class="ow">in</span> <span class="n">advanced</span>
+<span class="n">Loading</span> <span class="n">composer</span> <span class="n">repositories</span> <span class="k">with</span> <span class="n">package</span> <span class="n">information</span>
+<span class="n">Updating</span> <span class="n">dependencies</span> <span class="p">(</span><span class="n">including</span> <span class="n">require</span><span class="o">-</span><span class="n">dev</span><span class="p">)</span>
+<span class="n">Reading</span> <span class="n">bower</span><span class="o">.</span><span class="n">json</span> <span class="n">of</span> <span class="n">bower</span><span class="o">-</span><span class="n">asset</span><span class="o">/</span><span class="n">jquery</span> <span class="p">(</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>       
+<span class="n">Could</span> <span class="ow">not</span> <span class="n">fetch</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">repos</span><span class="o">/</span><span class="n">jquery</span><span class="o">/</span><span class="n">jquery</span><span class="o">-</span><span class="n">dist</span><span class="o">/</span><span class="n">commits</span><span class="o">/</span><span class="mi">1472290917</span><span class="n">f17af05e98007136096784f9051fab</span><span class="p">,</span> <span class="n">please</span> <span class="n">create</span> <span class="n">a</span> <span class="n">GitHub</span> <span class="n">OAuth</span> <span class="n">token</span> <span class="n">to</span> <span class="n">go</span> <span class="n">over</span> <span class="n">the</span> <span class="n">API</span> <span class="n">rate</span> <span class="n">limit</span>
+<span class="n">Head</span> <span class="n">to</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">settings</span><span class="o">/</span><span class="n">tokens</span><span class="o">/</span><span class="n">new</span><span class="err">?</span><span class="n">scopes</span><span class="o">=</span><span class="n">repo</span><span class="o">&amp;</span><span class="n">description</span><span class="o">=</span><span class="c">###</span>
+<span class="n">to</span> <span class="n">retrieve</span> <span class="n">a</span> <span class="n">token</span><span class="o">.</span> <span class="n">It</span> <span class="n">will</span> <span class="n">be</span> <span class="n">stored</span> <span class="ow">in</span> <span class="s">&quot;.../.config/composer/auth.json&quot;</span> <span class="k">for</span> <span class="n">future</span> <span class="n">use</span> <span class="n">by</span> <span class="n">Composer</span><span class="o">.</span>
+<span class="n">Token</span> <span class="p">(</span><span class="n">hidden</span><span class="p">):</span> <span class="c">#masukan token github anda</span></code></pre></div>
+
+<ul>
+  <li>Tampilan awal Basic</li>
+</ul>
+
+<p><img src="http://127.0.0.1:4000/asset/img/img-9.png" alt="alt text" title="frontend" /></p>
+
+<p>Ada perbedaan pada advance anda tidak bisa langsung menggunakan dan muncul tampilan atas anda harus melakukan menginisiali aplikasi anda agar berjalan. pada saat meinisialisasi akan menggenerate file dan konfigurasi yang akan digunakan pada aplikasi.
+.</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="o">./</span><span class="n">init</span></code></pre></div>
+
+<p>Pada saat inisialisasi ada akan diminta memilih jenis aplikasi yang akan digunakan . Ada <strong>Developent</strong> dan <strong>Production</strong>.</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">Yii</span> <span class="n">Application</span> <span class="n">Initialization</span> <span class="n">Tool</span> <span class="n">v1</span><span class="o">.</span><span class="mi">0</span>
+
+<span class="n">Which</span> <span class="n">environment</span> <span class="n">do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">the</span> <span class="n">application</span> <span class="n">to</span> <span class="n">be</span> <span class="n">initialized</span> <span class="ow">in</span><span class="err">?</span>
+
+  <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="n">Development</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">Production</span>
+
+  <span class="n">Your</span> <span class="n">choice</span> <span class="p">[</span><span class="mi">0</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="ow">or</span> <span class="s">&quot;q&quot;</span> <span class="n">to</span> <span class="n">quit</span><span class="p">]</span></code></pre></div>
+
+<p>Karena akan digunakan untuk memgedevelop program jadi saya pilih <strong>Development</strong>.</p>
+
+<p>Hasil tampilan awal <strong>Advance</strong>
+- Tampilan awal pada frontend, tidak jauh berbada dengan <strong>Basic</strong></p>
+
+<p><img src="http://127.0.0.1:4000/asset/img/img-10.png" alt="alt text" title="frontend" /></p>
+
+<ul>
+  <li>Tampilan pada awal backend.</li>
+</ul>
+
+<p><img src="http://127.0.0.1:4000/asset/img/img-11.png" alt="alt text" title="backend" /></p>
+
+<p><em>Sumber</em> :<a href="http://www.yiiframework.com/download/">https://www.yiiframework.com</a></p>
+
+  </article>
+  <div class="row">
+	  <div class=" pull-left">
+		
+		  <a href="/composer/2017/08/24/artikel-1.html" class="btn btn-primary btn-flat" title="Bagaimana cara Install Composer pada Linux?"> << Previous</a>
+		
+	  </div>
+	<div class="pull-right">
+	
+	</div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer bg-black">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"><foo>&#169;</foo> 2017 KurTakon</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+         
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Quote : <br> Takonlah sebelum takon itu dilarang.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

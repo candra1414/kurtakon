@@ -1,0 +1,84 @@
+---
+layout: post
+title:  "Bagaimana cara Install Composer pada Linux?"
+date:   2017-08-24 14:06:58
+categories: composer
+---
+
+Composer adalah tools untuk manajemen projek anda berbasis PHP.
+Anda dapat membuat library dan mengelola projek anda seperti intall, update paket yang ada. Jadi ibaratnya ada paket tools lain yang akan dimasukan ke dalam aplikasi anda, anda bisa memilih paket yang dibutuhan dan anda dapat mengintallnya.
+
+Cara install commpser cukup mudah bisa download lansung atau lewat terminal.  
+
+{% highlight py%}
+$ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+$ ls
+composer-setup.php
+{% endhighlight %}
+
+Untuk Mengecek file benar
+{% highlight py%}
+
+$  php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7af
+f8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+{% endhighlight %}
+Hasil jika benar
+
+{% highlight py%}
+
+Installer verified
+
+{% endhighlight %}
+
+Setelah itu download composernya
+
+{% highlight py%}
+
+$ php composer-setup.php 
+All settings correct for using Composer
+Downloading...
+
+Composer (version 1.5.1) successfully installed to: *****/composer.phar
+Use it: php composer.phar
+{% endhighlight %}
+
+
+Untuk menjalankanya 
+
+{% highlight py%}
+$ php composer.phar
+{% endhighlight %}
+
+akan muncul :
+
+![alt text][gambar4]
+
+[gambar4]:{{site.urlimg}}img-8.png "view composer"
+
+
+Baik lah tinggal hapus link __composer-setup.php__ sebelumya karena sudah tidak digunakan.
+
+{% highlight py%}
+$ php -r "unlink('composer-setup.php');"
+{% endhighlight %}
+
+
+__Bagaimana agar composer bisa digunakan dimana saja dan tanpa menambahkan php ?__
+
+Agar bisa digunakan dimana saja dalam arti bukan di direktori ini anda harus memindahnya ke dalam direktori bin atau pada saat pertama install langsung ke direktori bin.
+
+{% highlight py%}
+$ composer.phar
+{% endhighlight %}
+
+Kita bisa mengganti nama file agar pada saat pemanggilan tidak perlu  __composer.phar__ pada saat install misal hanya __composer__ saja, yaitu dengan script dibawah ini. 
+
+{% highlight py%}
+$ php composer-setup.php --filename=composer
+{% endhighlight %}
+
+
+
+
+_Sumber_ :[https://getcomposer.org](https://getcomposer.org)

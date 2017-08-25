@@ -1,0 +1,113 @@
+---
+layout: post
+title:  "Bagaimana cara Install Yii2 pada Linux dengan Composer?"
+date:   2017-08-24 14:06:58
+categories: [composer,yii]
+---
+
+Yii merupakan akromin dari __Yes It is__. Yii merupakan Framework php dengan konsep MVC.
+Sebelum Yii2 terlahir dulu terkenal adanya Yii 1.1 . Berdasarkan pengalaman saya terdapat perbedaan mulai cara install, code, dan pemanggilan fungsinya pada Yii 1.1 dengan Yii2.
+
+
+Untuk kali ini saya hanya mebahas __Bagaimana cara Install Yii2 pada Linux dengan Composer?__.
+
+Tahap awal menginstall Yii2 :
+
+1. Anda harus  [**install composer** ](https://kurtakon.com/composer/2017/08/24/artikel-1.html) terlebih dahulu.
+2. Memiliki akun Github. __Kenapa harus memiliki akun Github?__ Karena pada saat install Yii2 anda akan diminta memasukan token Gihub jika anda mengintall untuk pertama kali.
+3. Memasang plugin Yii pada composer
+{% highlight py%}
+$ composer global require "fxp/composer-asset-plugin:^1.2.0"
+{% endhighlight %}
+
+Sebelum menginstal Yii2 anda  harus memperhatikan bahwa ada 2 jenis Yii2 :
+
+1. Basic
+    - Basic hanya berisikan 1 apliakasi saja.  
+    - Basic dapat digunakan untuk apliasi simpel yang usernya tidak perlu tampilan beda untuk hak aksesnya.
+2. Advanced
+    - Advance memiliki 2 aplikasi sekaligus yaitu Backend dan Frontend.
+    - Advance bisa digunakan jika usernya banyak dan memiliki hak akses serta tampilan funsi tampilan yang berbeda-beda.
+
+
+Cara Mendownload :
+
+- Basic
+{% highlight py%}
+$ composer create-project yiisoft/yii2-app-basic basic 2.0.12
+
+## Akan muncul :
+Installing yiisoft/yii2-app-basic (2.0.12)
+  - Installing yiisoft/yii2-app-basic (2.0.12): Downloading (100%)         
+Created project in basic
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Reading bower.json of bower-asset/jquery (1.11.3)       
+Could not fetch https://api.github.com/repos/jquery/jquery-dist/commits/1472290917f17af05e98007136096784f9051fab, please create a GitHub OAuth token to go over the API rate limit
+Head to https://github.com/settings/tokens/new?scopes=repo&description=###
+to retrieve a token. It will be stored in ".../.config/composer/auth.json" for future use by Composer.
+Token (hidden):  #masukan token github anda
+
+{% endhighlight %}
+- Advance
+{% highlight py%}
+$ composer create-project yiisoft/yii2-app-advanced advanced 2.0.12
+
+## Akan muncul :
+Installing yiisoft/yii2-app-advanced (2.0.12)
+  - Installing yiisoft/yii2-app-advanced (2.0.12): Downloading (100%)         
+Created project in advanced
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Reading bower.json of bower-asset/jquery (1.11.3)       
+Could not fetch https://api.github.com/repos/jquery/jquery-dist/commits/1472290917f17af05e98007136096784f9051fab, please create a GitHub OAuth token to go over the API rate limit
+Head to https://github.com/settings/tokens/new?scopes=repo&description=###
+to retrieve a token. It will be stored in ".../.config/composer/auth.json" for future use by Composer.
+Token (hidden): #masukan token github anda
+
+{% endhighlight %}
+
+- Tampilan awal Basic
+
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}img-9.png "frontend"
+
+
+
+Ada perbedaan pada advance anda tidak bisa langsung menggunakan dan muncul tampilan atas anda harus melakukan menginisiali aplikasi anda agar berjalan. pada saat meinisialisasi akan menggenerate file dan konfigurasi yang akan digunakan pada aplikasi.
+.
+{% highlight py%}
+$ php ./init
+{% endhighlight %}
+
+Pada saat inisialisasi ada akan diminta memilih jenis aplikasi yang akan digunakan . Ada __Developent__ dan __Production__.
+{% highlight py%}
+Yii Application Initialization Tool v1.0
+
+Which environment do you want the application to be initialized in?
+
+  [0] Development
+  [1] Production
+
+  Your choice [0-1, or "q" to quit] 
+
+{% endhighlight %}
+
+Karena akan digunakan untuk memgedevelop program jadi saya pilih __Development__.
+
+Hasil tampilan awal __Advance__
+- Tampilan awal pada frontend, tidak jauh berbada dengan __Basic__
+
+![alt text][gambar3]
+
+[gambar3]:{{site.urlimg}}img-10.png "frontend"
+
+
+- Tampilan pada awal backend.
+
+![alt text][gambar4]
+
+[gambar4]:{{site.urlimg}}img-11.png "backend"
+
+_Sumber_ :[https://www.yiiframework.com](http://www.yiiframework.com/download/)

@@ -36,7 +36,6 @@ title: Kategori
     {% assign pages_list = nil %}
     {% assign group = nil %}
   </ul>
-  
 </div>
 {% endfor %}
   </div>
