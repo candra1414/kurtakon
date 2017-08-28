@@ -35,7 +35,7 @@ class m170828_231501_coba extends Migration
 }
 {% endhighlight %}
 
-Penulisan nama class dengan format m<YYMMDD_HHMMSS>_<Name>
+Penulisan nama class dengan format m __YYMMDD_HHMMSS__  __Name__
 dan untuk penulisan nama file sama dengan nama class ditambah __.php__
 
 Cara melakukan migrasi database silahkan buka terminal, masuk pada projek anda dan tulis script dibawah ini.
