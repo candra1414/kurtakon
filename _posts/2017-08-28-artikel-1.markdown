@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "Bagaimana Membuat Migrasi Tabel Database Pada Yii2?"
+date:   2017-08-28 14:06:58
+categories: Yii
+---
+ 
+Pada yii terdapat fasilitas migrate database dari file php ke database mysql.
+Letaknya biasa pada consol/migrations/.
+
+{% highlight php%}
+
+use yii\db\Migration;
+
+class m170828_231501_coba extends Migration
+{
+    public function up(){
+        $tableOptions = null;
+        if ($this->db->driverName === 'mysql') {
+            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
+        }
+
+        $this->createTable('{ { %coba} } ', [
+        'id_coba' => $this->primaryKey(),
+        'data' => $this->string()->notNull()->unique(),
+        'data_sub' => $this->string(32)->notNull(),
+
+        ], $tableOptions);
+    }
+
+    public function down()
+    {
+        $this->dropTable('{ { %coba } }');
+    }
+}
+{% endhighlight %}
+
+Penulisan nama class dengan format m<YYMMDD_HHMMSS>_<Name>
+dan untuk penulisan nama file sama dengan nama class ditambah __.php__
+
+Cara melakukan migrasi database silahkan buka terminal, masuk pada projek anda dan tulis script dibawah ini.
+{% highlight py%}
+$php yii migrate
+{% endhighlight %}
+ Akan muncul pilihan file yang bisa anda migrasi ke database
+
+{% highlight py%}
+Yii Migration Tool (based on Yii v2.0.12)
+
+Total 1 new migration to be applied:
+    m170828_231501_coba
+
+Apply the above migration? (yes|no) [no]:
+{% endhighlight %}
+
+ Ketika kita tulis __Yes__ maka akan tergenerate databse
+
+{% highlight py%}
+
+
+*** applying m170828_231501_coba
+    > create table { { %coba } } ... done (time: 0.105s)
+*** applied m170828_231501_coba (time: 0.239s)
+
+
+1 migration was applied.
+
+Migrated up successfully.
+{% endhighlight %}
+
+Tabel __coba__ berhasil di buat seperti dibawah ini.
+
+![alt text][gambar]
+
+[gambar]:{{site.urlimg}}img-12.png "view tabel coba"
+
+

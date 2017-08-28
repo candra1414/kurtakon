@@ -6,9 +6,79 @@
 </description>
     <link>http://kurtakon.com/</link>
     <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 25 Aug 2017 11:33:26 +0700</pubDate>
-    <lastBuildDate>Fri, 25 Aug 2017 11:33:26 +0700</lastBuildDate>
+    <pubDate>Mon, 28 Aug 2017 23:28:43 +0700</pubDate>
+    <lastBuildDate>Mon, 28 Aug 2017 23:28:43 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana Membuat Migrasi Tabel Database Pada Yii2?</title>
+        <description>&lt;p&gt;Pada yii terdapat fasilitas migrate database dari file php ke database mysql.
+Letaknya biasa pada consol/migrations/.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;use yii\db\Migration;&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;class m170828_231501_coba extends Migration&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    public function up(){&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        $tableOptions = null;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        if ($this-&amp;gt;db-&amp;gt;driverName === &amp;#39;mysql&amp;#39;) {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;            $tableOptions = &amp;#39;CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB&amp;#39;;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        }&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;        $this-&amp;gt;createTable(&amp;#39;{ { %coba} } &amp;#39;, [&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        &amp;#39;id_coba&amp;#39; =&amp;gt; $this-&amp;gt;primaryKey(),&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        &amp;#39;data&amp;#39; =&amp;gt; $this-&amp;gt;string()-&amp;gt;notNull()-&amp;gt;unique(),&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        &amp;#39;data_sub&amp;#39; =&amp;gt; $this-&amp;gt;string(32)-&amp;gt;notNull(),&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;        ], $tableOptions);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
+
+&lt;span class=&quot;x&quot;&gt;    public function down()&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;        $this-&amp;gt;dropTable(&amp;#39;{ { %coba } }&amp;#39;);&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Penulisan nama class dengan format m&lt;YYMMDD_HHMMSS&gt;_&lt;Name&gt;
+dan untuk penulisan nama file sama dengan nama class ditambah __.php__&lt;/Name&gt;&lt;/YYMMDD_HHMMSS&gt;&lt;/p&gt;
+
+&lt;p&gt;Cara melakukan migrasi database silahkan buka terminal, masuk pada projek anda dan tulis script dibawah ini.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;php&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;yii&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;migrate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Akan muncul pilihan file yang bisa anda migrasi ke database&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;n&quot;&gt;Yii&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Migration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Tool&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;based&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Yii&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Total&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;migration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applied&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;m170828_231501_coba&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Apply&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;above&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;migration&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ketika kita tulis &lt;strong&gt;Yes&lt;/strong&gt; maka akan tergenerate databse&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;o&quot;&gt;***&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applying&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m170828_231501_coba&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;coba&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.105&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;***&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applied&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m170828_231501_coba&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.239&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;migration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;was&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applied&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Migrated&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;up&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;successfully&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tabel &lt;strong&gt;coba&lt;/strong&gt; berhasil di buat seperti dibawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-12.png&quot; alt=&quot;alt text&quot; title=&quot;view tabel coba&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 28 Aug 2017 21:06:58 +0700</pubDate>
+        <link>http://kurtakon.com/yii/2017/08/28/artikel-1.html</link>
+        <guid isPermaLink="true">http://kurtakon.com/yii/2017/08/28/artikel-1.html</guid>
+        
+        
+        <category>yii</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana cara Install Yii2 pada Linux dengan Composer?</title>
