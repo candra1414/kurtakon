@@ -56,7 +56,8 @@ categories: [Jekyll,Disqus]
 
 Jika berhasil maka akan muncul seperti gambar dibawah ini.
 
-[alt text][gambar]
+
+![alt text][gambar]
 
 [gambar]:{{site.urlimg}}img-13.png "view disqus"
 
