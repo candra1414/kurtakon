@@ -11,8 +11,9 @@
 	
   <link rel="stylesheet" href="/css/main.css">
   <script type="text/javascript" src="/asset/js/bootstrap.js"></script>
-  <link rel="canonical" href="http://kurtakon.com/jekyll/2017/08/04/artikel-1.html">
-  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="http://kurtakon.com/feed.xml" />
+  <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
+  <link rel="canonical" href="https://kurtakon.com/jekyll/2017/08/04/artikel-1.html">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
 </head>
 
 
@@ -62,9 +63,9 @@
 
   <header class="post-header">
     <h1 class="post-title">Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</h1>
-    <p class="post-meta">Aug 4, 2017</p>
+    <p class="post-meta">Aug 4, 2017  • <a href="/jekyll/2017/08/04/artikel-1.html#disqus_thread">0 Comments</a></p>
+	
   </header>
-
   <article class="post-content">
     <p>Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan <strong>ctrl+z</strong> untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika penulis akan mejalankan kembali akan muncul</p>
 
@@ -83,11 +84,32 @@ Untuk memudahkan kita dapat mencarinya dengan menambah <strong>grep</strong> dan
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">ps</span> <span class="n">aux</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">jekyll</span></code></pre></div>
 
-<p><img src="http://127.0.0.1:4000/asset/img//img-2.png" alt="alt text" title="Porses Berjalan" /></p>
+<p><img src="https://kurtakon.com/asset/img//img-2.png" alt="alt text" title="Porses Berjalan" /></p>
 
 <p>Setelah mengetahui proses yang berjalan kita bisa melihat proses masih pada PID <strong>4980</strong> . Untuk mematikannya dengan menggunakan  sintak <strong>kill -9 PID</strong></p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="mi">4980</span></code></pre></div>
+
+
+  	
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url =  "https://kurtakon.com/jekyll/2017/08/04/artikel-1.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/jekyll/2017/08/04/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kurtakon-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
 
 
   </article>

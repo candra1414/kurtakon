@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Bagaimana menginstal paket Git dengan Sublime Text ?"
 date:   2017-08-22 14:06:58
 categories: [Git, Sublime-Text]
@@ -22,13 +23,13 @@ Cara Install paket git cukup mudah
 - Setelah muncul tulis git dan pilih package yang akan di install.
 
 
-###Bagaimana menjalankan git dengan mudah pada Sublime Text?
+### Bagaimana menjalankan git dengan mudah pada Sublime Text?
 
 
 Sebenarnya cukup mudah menjalankan git sublime, hampir sama dengan mengunakan terminal.Untuk menjalankan git telah terpasang bisa klik Tools atau membuka Package Control dan tulis git. Disana akan terlihat tools yang bisa digunakan.
 
 
-##Apa keenakannya menggunakan Git pada Sublime Text?
+## Apa keenakannya menggunakan Git pada Sublime Text?
 
 Ini menurut pendapat dan pengalaman pribadi ya...
 Kalau menurut saya lebih enak karena seperti dikatakan di atas hanya menggukan satu aplikasi saja tidak perlu membuka terminal. Maklum saya terbisa menggunakan terminal langsung. 

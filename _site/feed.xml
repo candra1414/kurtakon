@@ -4,11 +4,83 @@
     <title>KurTakon</title>
     <description>Quote : &lt;br&gt; Takonlah sebelum takon itu dilarang.
 </description>
-    <link>http://kurtakon.com/</link>
-    <atom:link href="http://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Aug 2017 23:41:51 +0700</pubDate>
-    <lastBuildDate>Mon, 28 Aug 2017 23:41:51 +0700</lastBuildDate>
+    <link>https://kurtakon.com/</link>
+    <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 30 Aug 2017 14:53:44 +0700</pubDate>
+    <lastBuildDate>Wed, 30 Aug 2017 14:53:44 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana Memasang Disqus Pada Jekyll?</title>
+        <description>&lt;p&gt;Bagipengguna website static yang tidak memiliki database akan kesulitan membuat komentar. Seperti memasang komentar pada web yang dibuat dengan &lt;a href=&quot;https://kurtakon.com/jekyll/2017/08/08/artikel-1.html&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt; &lt;/a&gt;. Salah satu alternatif kita bisa menggunakan disqus. Akan tetapi &lt;strong&gt;Bagaimana Memasang Disqus Pada Jekyll ?&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Petama, kita harus memiliki akun pada  &lt;a href=&quot;https://disqus.com&quot;&gt;&lt;strong&gt;disqus&lt;/strong&gt; &lt;/a&gt;. 
+Kedua, memasangnya pada aplikasi &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Membuat file pada _incudes misal diberinama disqus.html.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{ % if page.comments % }
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;disqus_thread&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;disqus_config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://namaweb.com { { page.url } } &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// diganti dengan PAGE_URL&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;identifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;{ { page.id } } &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// diganti dengan  PAGE_IDENTIFIER&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// DON&amp;#39;T EDIT BELOW THIS LINE&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;https://nama-aplikasi-disqus.disqus.com/embed.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;---&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dari&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Disqus&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data-timestamp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})();&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;noscript&amp;gt;&lt;/span&gt;Please enable JavaScript to view the &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://disqus.com/?ref_noscript&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;comments powered by Disqus.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;&lt;/span&gt;
+                                
+    { % endif % }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Masukan inculde file &lt;strong&gt;disqus.html&lt;/strong&gt; pada  post.html pada folder _layouts.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{ % include disqus.html % }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Masukan &lt;strong&gt;comments: true&lt;/strong&gt; pada header artikel.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;layout: post
+title:  &amp;quot;Bagaimana Memasang Disqus Pada Jekyll?&amp;quot;
+comments: true
+date:   2017-08-30 14:06:58
+categories: [Jekyll,Disqus]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Jika kita ingin mengetahui jumlah komentar untuk halaman yang dibuka. 
+- tambahkan file dibawah ini pada header.html untuk memanggil javascript dari disqus.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dsq-count-scr&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;//SHORTNAME.disqus.com/count.js&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;silahkan masukan script dibawah ini pada _layouts/post.html untuk menampilkan jumlahnya.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;https://namaweb.com { { post.url } } #disqus_thread&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Comments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/a&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;{ % endif % }&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 30 Aug 2017 21:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/jekyll/disqus/2017/08/30/artikel-1.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/jekyll/disqus/2017/08/30/artikel-1.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>disqus</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana Membuat Migrasi Tabel Database Pada Yii2?</title>
@@ -68,12 +140,12 @@ dan untuk penulisan nama file sama dengan nama class ditambah &lt;strong&gt;.php
 
 &lt;p&gt;Tabel &lt;strong&gt;coba&lt;/strong&gt; berhasil di buat seperti dibawah ini.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-12.png&quot; alt=&quot;alt text&quot; title=&quot;view tabel coba&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-12.png&quot; alt=&quot;alt text&quot; title=&quot;view tabel coba&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 28 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/yii/2017/08/28/artikel-1.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/yii/2017/08/28/artikel-1.html</guid>
+        <link>https://kurtakon.com/yii/2017/08/28/artikel-1.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/yii/2017/08/28/artikel-1.html</guid>
         
         
         <category>yii</category>
@@ -156,7 +228,7 @@ Sebelum Yii2 terlahir dulu terkenal adanya Yii 1.1 . Berdasarkan pengalaman saya
   &lt;li&gt;Tampilan awal Basic&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-9.png&quot; alt=&quot;alt text&quot; title=&quot;frontend&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-9.png&quot; alt=&quot;alt text&quot; title=&quot;frontend&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ada perbedaan pada advance anda tidak bisa langsung menggunakan dan muncul tampilan atas anda harus melakukan menginisiali aplikasi anda agar berjalan. pada saat meinisialisasi akan menggenerate file dan konfigurasi yang akan digunakan pada aplikasi.
 .&lt;/p&gt;
@@ -179,19 +251,19 @@ Sebelum Yii2 terlahir dulu terkenal adanya Yii 1.1 . Berdasarkan pengalaman saya
 &lt;p&gt;Hasil tampilan awal &lt;strong&gt;Advance&lt;/strong&gt;
 - Tampilan awal pada frontend, tidak jauh berbada dengan &lt;strong&gt;Basic&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-10.png&quot; alt=&quot;alt text&quot; title=&quot;frontend&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-10.png&quot; alt=&quot;alt text&quot; title=&quot;frontend&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tampilan pada awal backend.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-11.png&quot; alt=&quot;alt text&quot; title=&quot;backend&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-11.png&quot; alt=&quot;alt text&quot; title=&quot;backend&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Sumber&lt;/em&gt; :&lt;a href=&quot;http://www.yiiframework.com/download/&quot;&gt;https://www.yiiframework.com&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 24 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/composer/yii/2017/08/24/artikel-2.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/composer/yii/2017/08/24/artikel-2.html</guid>
+        <link>https://kurtakon.com/composer/yii/2017/08/24/artikel-2.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/composer/yii/2017/08/24/artikel-2.html</guid>
         
         
         <category>composer</category>
@@ -236,7 +308,7 @@ Anda dapat membuat library dan mengelola projek anda seperti intall, update pake
 
 &lt;p&gt;akan muncul :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-8.png&quot; alt=&quot;alt text&quot; title=&quot;view composer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-8.png&quot; alt=&quot;alt text&quot; title=&quot;view composer&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Baik lah tinggal hapus link &lt;strong&gt;composer-setup.php&lt;/strong&gt; sebelumya karena sudah tidak digunakan.&lt;/p&gt;
 
@@ -255,8 +327,8 @@ Anda dapat membuat library dan mengelola projek anda seperti intall, update pake
 &lt;p&gt;&lt;em&gt;Sumber&lt;/em&gt; :&lt;a href=&quot;https://getcomposer.org&quot;&gt;https://getcomposer.org&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 24 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/composer/2017/08/24/artikel-1.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/composer/2017/08/24/artikel-1.html</guid>
+        <link>https://kurtakon.com/composer/2017/08/24/artikel-1.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/composer/2017/08/24/artikel-1.html</guid>
         
         
         <category>composer</category>
@@ -302,8 +374,8 @@ Kalau menurut saya lebih enak karena seperti dikatakan di atas hanya menggukan s
 
 </description>
         <pubDate>Tue, 22 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/git/sublime-text/2017/08/22/artikel-1.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/git/sublime-text/2017/08/22/artikel-1.html</guid>
+        <link>https://kurtakon.com/git/sublime-text/2017/08/22/artikel-1.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/git/sublime-text/2017/08/22/artikel-1.html</guid>
         
         
         <category>git</category>
@@ -384,13 +456,13 @@ Kalau menurut saya lebih enak karena seperti dikatakan di atas hanya menggukan s
 
 &lt;p&gt;Berikut ini tampilan defaut menggunakan &lt;strong&gt;Jekyll&lt;/strong&gt;. Setalah itu anda dapat memodifikasi tampilan sesuai dengan keinginan anda.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-7.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img//img-7.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Sumber&lt;/em&gt; :&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 09 Aug 2017 06:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/jekyll/2017/08/09/artikel-2.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/jekyll/2017/08/09/artikel-2.html</guid>
+        <link>https://kurtakon.com/jekyll/2017/08/09/artikel-2.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/jekyll/2017/08/09/artikel-2.html</guid>
         
         
         <category>jekyll</category>
@@ -433,8 +505,8 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
 &lt;p&gt;&lt;em&gt;Sumber&lt;/em&gt; :&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 08 Aug 2017 20:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/jekyll/2017/08/08/artikel-1.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/jekyll/2017/08/08/artikel-1.html</guid>
+        <link>https://kurtakon.com/jekyll/2017/08/08/artikel-1.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/jekyll/2017/08/08/artikel-1.html</guid>
         
         
         <category>jekyll</category>
@@ -454,12 +526,12 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
 &lt;p&gt;Tahap 2&lt;/p&gt;
 
 &lt;p&gt;Setelah terbuka akan muncul gambar dibawah ini klik &lt;strong&gt;sigh up&lt;/strong&gt;
-&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-3.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman pertama&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://kurtakon.com/asset/img//img-3.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman pertama&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tahap 3&lt;/p&gt;
 
 &lt;p&gt;Setelah terbuka akan muncul gambar dibawah ini. Isikan data yang diperlukan.
-&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-4.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman Kedua&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://kurtakon.com/asset/img//img-4.png&quot; alt=&quot;alt text&quot; title=&quot;Halaman Kedua&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Setelah itu kita akan mendapatkan id misal &lt;strong&gt;xxxxxxx&lt;/strong&gt; .&lt;/p&gt;
 
@@ -474,18 +546,18 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
 
 &lt;p&gt;Masukan js code pada google di simpan dengan nama &lt;strong&gt;analytics.html&lt;/strong&gt; pada folder &lt;strong&gt;_inculde&lt;/strong&gt; .&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-5.png&quot; alt=&quot;alt text&quot; title=&quot;file&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img//img-5.png&quot; alt=&quot;alt text&quot; title=&quot;file&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tahap 6&lt;/p&gt;
 
 &lt;p&gt;Pada halaman &lt;strong&gt;_include/head.html&lt;/strong&gt;  masukan (&lt;strong&gt;include&lt;/strong&gt;) halaman &lt;strong&gt;analytics.html&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-6.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img//img-6.png&quot; alt=&quot;alt text&quot; title=&quot;Include html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 07 Aug 2017 20:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/jekyll/2017/08/07/artikel-1.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/jekyll/2017/08/07/artikel-1.html</guid>
+        <link>https://kurtakon.com/jekyll/2017/08/07/artikel-1.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/jekyll/2017/08/07/artikel-1.html</guid>
         
         
         <category>jekyll</category>
@@ -511,7 +583,7 @@ Untuk memudahkan kita dapat mencarinya dengan menambah &lt;strong&gt;grep&lt;/st
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ps&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img//img-2.png&quot; alt=&quot;alt text&quot; title=&quot;Porses Berjalan&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img//img-2.png&quot; alt=&quot;alt text&quot; title=&quot;Porses Berjalan&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Setelah mengetahui proses yang berjalan kita bisa melihat proses masih pada PID &lt;strong&gt;4980&lt;/strong&gt; . Untuk mematikannya dengan menggunakan  sintak &lt;strong&gt;kill -9 PID&lt;/strong&gt;&lt;/p&gt;
 
@@ -519,8 +591,8 @@ Untuk memudahkan kita dapat mencarinya dengan menambah &lt;strong&gt;grep&lt;/st
 
 </description>
         <pubDate>Fri, 04 Aug 2017 06:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/jekyll/2017/08/04/artikel-1.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/jekyll/2017/08/04/artikel-1.html</guid>
+        <link>https://kurtakon.com/jekyll/2017/08/04/artikel-1.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/jekyll/2017/08/04/artikel-1.html</guid>
         
         
         <category>jekyll</category>
@@ -686,24 +758,11 @@ Membuat list bullet :&lt;br /&gt;
 &lt;p&gt;&lt;em&gt;Sumber:  &lt;a href=&quot;https://en.wikipedia.org/wiki/Markdown&quot;&gt;Wikipedia&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 02 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/markdown/2017/08/02/artikel-1.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/markdown/2017/08/02/artikel-1.html</guid>
+        <link>https://kurtakon.com/markdown/2017/08/02/artikel-1.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/markdown/2017/08/02/artikel-1.html</guid>
         
         
         <category>markdown</category>
-        
-      </item>
-    
-      <item>
-        <title>Selamat datang</title>
-        <description>&lt;p&gt;&lt;b&gt;Selamat membaca dan semoga bermanfaat.&lt;/b&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt; Trimakasih … &lt;/b&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 01 Aug 2017 21:06:58 +0700</pubDate>
-        <link>http://kurtakon.com/2017/08/01/welcome.html</link>
-        <guid isPermaLink="true">http://kurtakon.com/2017/08/01/welcome.html</guid>
-        
         
       </item>
     

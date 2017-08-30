@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Bagaimana Membuat Migrasi Tabel Database Pada Yii2?"
+comments: true
 date:   2017-08-28 14:06:58
 categories: Yii
 ---

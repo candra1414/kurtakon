@@ -1,0 +1,74 @@
+---
+layout: post
+title:  "Bagaimana Memasang Disqus Pada Jekyll?"
+comments: true
+date:   2017-08-30 14:06:58
+categories: [Jekyll,Disqus]
+---
+
+Bagipengguna website static yang tidak memiliki database akan kesulitan membuat komentar. Seperti memasang komentar pada web yang dibuat dengan [**Jekyll** ](https://kurtakon.com/jekyll/2017/08/08/artikel-1.html). Salah satu alternatif kita bisa menggunakan disqus. Akan tetapi __Bagaimana Memasang Disqus Pada Jekyll ?__.
+
+Petama, kita harus memiliki akun pada  [**disqus** ](https://disqus.com). 
+Kedua, memasangnya pada aplikasi __Jekyll__
+
+- Membuat file pada _incudes misal diberinama disqus.html.
+{% highlight html%}
+    { % if page.comments % }
+    <div id="disqus_thread"></div>
+    <script>
+
+    var disqus_config = function () {
+    this.page.url =  "https://namaweb.com { { page.url } } ";  // diganti dengan PAGE_URL
+    this.page.identifier = "{ { page.id } } "; // diganti dengan  PAGE_IDENTIFIER
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://nama-aplikasi-disqus.disqus.com/embed.js'; <--- dari Disqus
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
+    { % endif % }
+
+{% endhighlight %}
+    
+- Masukan inculde file __disqus.html__ pada  post.html pada folder _layouts.
+
+{% highlight html%}
+
+    { % include disqus.html % }
+
+{% endhighlight %}
+
+- Masukan __comments: true__ pada header artikel.
+   
+
+{% highlight html%}
+layout: post
+title:  "Bagaimana Memasang Disqus Pada Jekyll?"
+comments: true
+date:   2017-08-30 14:06:58
+categories: [Jekyll,Disqus]
+{% endhighlight %}
+
+
+Jika kita ingin mengetahui jumlah komentar untuk halaman yang dibuka. 
+- tambahkan file dibawah ini pada header.html untuk memanggil javascript dari disqus.
+{% highlight html%}
+
+<script id="dsq-count-scr" src="//SHORTNAME.disqus.com/count.js" async></script>
+{% endhighlight %}
+-  silahkan masukan script dibawah ini pada _layouts/post.html untuk menampilkan jumlahnya.
+{% highlight ruby%}
+
+{ % if page.comments % } 
+     <a href="https://namaweb.com { { post.url } } #disqus_thread">0 Comments </a>
+{ % endif % }
+{% endhighlight %}
+
+
+
+

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Bagaimana cara menginstall Jekyll?"
 date:   2017-08-08 23:06:58
 categories: Jekyll
