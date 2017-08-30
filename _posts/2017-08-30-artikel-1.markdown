@@ -54,6 +54,13 @@ date:   2017-08-30 14:06:58
 categories: [Jekyll,Disqus]
 {% endhighlight %}
 
+Jika berhasil maka akan muncul seperti gambar dibawah ini.
+
+[alt text][gambar]
+
+[gambar]:{{site.urlimg}}img-13.png "view disqus"
+
+
 
 Jika kita ingin mengetahui jumlah komentar untuk halaman yang dibuka. 
 - tambahkan file dibawah ini pada header.html untuk memanggil javascript dari disqus.

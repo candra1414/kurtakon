@@ -6,8 +6,8 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Aug 2017 14:53:44 +0700</pubDate>
-    <lastBuildDate>Wed, 30 Aug 2017 14:53:44 +0700</lastBuildDate>
+    <pubDate>Wed, 30 Aug 2017 14:56:01 +0700</pubDate>
+    <lastBuildDate>Wed, 30 Aug 2017 14:56:01 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -56,6 +56,10 @@ title:  &amp;quot;Bagaimana Memasang Disqus Pada Jekyll?&amp;quot;
 comments: true
 date:   2017-08-30 14:06:58
 categories: [Jekyll,Disqus]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Jika berhasil maka akan muncul seperti gambar dibawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://kurtakon.com/asset/img/img-13.png&quot; title=&quot;view disqus&quot;&gt;alt text&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Jika kita ingin mengetahui jumlah komentar untuk halaman yang dibuka. 
 - tambahkan file dibawah ini pada header.html untuk memanggil javascript dari disqus.&lt;/p&gt;
