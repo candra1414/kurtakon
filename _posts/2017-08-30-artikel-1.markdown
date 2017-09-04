@@ -6,7 +6,7 @@ date:   2017-08-30 14:06:58
 categories: [Jekyll,Disqus]
 ---
 
-Bagipengguna website static yang tidak memiliki database akan kesulitan membuat komentar. Seperti memasang komentar pada web yang dibuat dengan [**Jekyll** ](https://kurtakon.com/jekyll/2017/08/08/artikel-1.html). Salah satu alternatif kita bisa menggunakan disqus. Akan tetapi __Bagaimana Memasang Disqus Pada Jekyll ?__.
+Bagi pengguna website static yang tidak memiliki database akan kesulitan membuat komentar. Seperti memasang komentar pada web yang dibuat dengan [**Jekyll** ](https://kurtakon.com/jekyll/2017/08/08/artikel-1.html). Salah satu alternatif kita bisa menggunakan disqus. Akan tetapi __Bagaimana Memasang Disqus Pada Jekyll ?__.
 
 Petama, kita harus memiliki akun pada  [**disqus** ](https://disqus.com). 
 Kedua, memasangnya pada aplikasi __Jekyll__
@@ -56,11 +56,9 @@ categories: [Jekyll,Disqus]
 
 Jika berhasil maka akan muncul seperti gambar dibawah ini.
 
-
 ![alt text][gambar]
 
 [gambar]:{{site.urlimg}}img-13.png "view disqus"
-
 
 
 Jika kita ingin mengetahui jumlah komentar untuk halaman yang dibuka. 

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Bagaimana melakukan swicth multipel versi aplikasi pada linux?</title>
+  <meta name="description" content="Pada penggunakan linux sering menemukan banyak versi untuk aplikasi di install biasa lebih tinggi atau lebih lama.Penggunaan versi yang berbeda-beda tergantu...">
+	
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="text/javascript" src="/asset/js/bootstrap.js"></script>
+  <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
+  <link rel="canonical" href="https://kurtakon.com/linux/2017/09/05/artikel-1.html">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header bg-black navbar navbar-fixed-top">
+
+  <div class="wrapper">
+
+    <a class="site-title" style="color:#fff" href="/">KurTakon</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" style="color:#ddd" href="/about/">KurTakon?</a>
+          
+        
+          
+          <a class="page-link" style="color:#ddd" href="/categori/">Kategori</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+    <div class="page-content">
+      <div class="wrapper" style="min-height: 416px; padding-top:50px">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Bagaimana melakukan swicth multipel versi aplikasi pada linux?</h1>
+    <p class="post-meta">Sep 5, 2017  • <a href="/linux/2017/09/05/artikel-1.html#disqus_thread">0 Comments</a></p>
+	
+  </header>
+  <article class="post-content">
+    <p>Pada penggunakan linux sering menemukan banyak versi untuk aplikasi di install biasa lebih tinggi atau lebih lama.
+Penggunaan versi yang berbeda-beda tergantung kebutuhan dan faktor lain seperti hardware yang dimiliki, ataupun seperti saya seorang tukang ketik dengan php yang membutukan php5 padahal saat ini sudah muncul php7.
+Hal tersebut menjadi poliemik, dimana program lama yang dibangun dengan php5 akan sulit berjalan atau sama tidak berjalan jika kita menjalankan php7. Sebagai solusinya harus di install kedua versi php nya yaitu php5 dan php7 pada laptop saya.</p>
+
+<p>Setelah saya install php5 dan php7 akan terjadi perbedaan ketika kita jalankan dengan terminal dibandingkan dengan yang dijalankan dengan phpinfo.php (dijalanakan dengan webrowser).
+contoh A:
+<img src="https://kurtakon.com/asset/img/img-14.png" alt="alt text" title="view php5" /></p>
+
+<p>contoh B :</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="o">-</span><span class="n">v</span>
+<span class="n">PHP</span> <span class="mf">7.1</span><span class="o">.</span><span class="mi">8</span><span class="o">-</span><span class="mi">2</span><span class="o">+</span><span class="n">ubuntu14</span><span class="o">.</span><span class="mf">04.1</span><span class="o">+</span><span class="n">deb</span><span class="o">.</span><span class="n">sury</span><span class="o">.</span><span class="n">org</span><span class="o">+</span><span class="mi">4</span> <span class="p">(</span><span class="n">cli</span><span class="p">)</span> <span class="p">(</span><span class="n">built</span><span class="p">:</span> <span class="n">Aug</span>  <span class="mi">4</span> <span class="mi">2017</span> <span class="mi">14</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">23</span><span class="p">)</span> <span class="p">(</span> <span class="n">NTS</span> <span class="p">)</span>
+<span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">1997</span><span class="o">-</span><span class="mi">2017</span> <span class="n">The</span> <span class="n">PHP</span> <span class="n">Group</span>
+<span class="n">Zend</span> <span class="n">Engine</span> <span class="n">v3</span><span class="o">.</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">1998</span><span class="o">-</span><span class="mi">2017</span> <span class="n">Zend</span> <span class="n">Technologies</span></code></pre></div>
+
+<p>Kenapa bisa terjadi perbedaan serperti itu?
+Pada kasus A aplikasi dilankan pada terminal yang terletak file nya pada /etc/bin/
+Sedangkan pada kasus B apliakasi yang dijalankan lewat apache sebagai web service.</p>
+
+<p>Fungsi pada  <strong>update-alternatives</strong> bisa dilihat dibawah ini dengan cara <strong>sudo update-alternatives –help</strong></p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="o">--</span><span class="n">help</span>
+
+<span class="n">Usage</span><span class="p">:</span> <span class="n">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">option</span><span class="o">&gt;</span> <span class="o">...</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>
+
+<span class="n">Commands</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">install</span> <span class="o">&lt;</span><span class="n">link</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">priority</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">--</span><span class="n">slave</span> <span class="o">&lt;</span><span class="n">link</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">...</span>
+                           <span class="n">add</span> <span class="n">a</span> <span class="n">group</span> <span class="n">of</span> <span class="n">alternatives</span> <span class="n">to</span> <span class="n">the</span> <span class="n">system</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">remove</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span>   <span class="n">remove</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span> <span class="kn">from</span> <span class="nn">the</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">group</span> <span class="n">alternative</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">remove</span><span class="o">-</span><span class="nb">all</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>      <span class="n">remove</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">group</span> <span class="kn">from</span> <span class="nn">the</span> <span class="nn">alternatives</span> <span class="nn">system.</span>
+  <span class="o">--</span><span class="n">auto</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>            <span class="n">switch</span> <span class="n">the</span> <span class="n">master</span> <span class="n">link</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">automatic</span> <span class="n">mode</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">display</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>         <span class="n">display</span> <span class="n">information</span> <span class="n">about</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">group</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">query</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>           <span class="n">machine</span> <span class="n">parseable</span> <span class="n">version</span> <span class="n">of</span> <span class="o">--</span><span class="n">display</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;.</span>
+  <span class="o">--</span><span class="nb">list</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>            <span class="n">display</span> <span class="nb">all</span> <span class="n">targets</span> <span class="n">of</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">group</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">selections</span>         <span class="nb">list</span> <span class="n">master</span> <span class="n">alternative</span> <span class="n">names</span> <span class="ow">and</span> <span class="n">their</span> <span class="n">status</span><span class="o">.</span>
+  <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">selections</span>         <span class="n">read</span> <span class="n">alternative</span> <span class="n">status</span> <span class="kn">from</span> <span class="nn">standard</span> <span class="nn">input.</span>
+  <span class="o">--</span><span class="n">config</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>          <span class="n">show</span> <span class="n">alternatives</span> <span class="k">for</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">group</span> <span class="ow">and</span> <span class="n">ask</span> <span class="n">the</span>
+                           <span class="n">user</span> <span class="n">to</span> <span class="n">select</span> <span class="n">which</span> <span class="n">one</span> <span class="n">to</span> <span class="n">use</span><span class="o">.</span>
+  <span class="o">--</span><span class="nb">set</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span>      <span class="nb">set</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span> <span class="k">as</span> <span class="n">alternative</span> <span class="k">for</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;.</span>
+  <span class="o">--</span><span class="nb">all</span>                    <span class="n">call</span> <span class="o">--</span><span class="n">config</span> <span class="n">on</span> <span class="nb">all</span> <span class="n">alternatives</span><span class="o">.</span>
+
+<span class="o">&lt;</span><span class="n">link</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">symlink</span> <span class="n">pointing</span> <span class="n">to</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">alternatives</span><span class="o">/&lt;</span><span class="n">name</span><span class="o">&gt;.</span>
+  <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pager</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">master</span> <span class="n">name</span> <span class="k">for</span> <span class="n">this</span> <span class="n">link</span> <span class="n">group</span><span class="o">.</span>
+  <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">pager</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">location</span> <span class="n">of</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">alternative</span> <span class="n">target</span> <span class="n">files</span><span class="o">.</span>
+  <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">less</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">priority</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">integer</span><span class="p">;</span> <span class="n">options</span> <span class="k">with</span> <span class="n">higher</span> <span class="n">numbers</span> <span class="n">have</span> <span class="n">higher</span> <span class="n">priority</span> <span class="ow">in</span>
+  <span class="n">automatic</span> <span class="n">mode</span><span class="o">.</span>
+
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">altdir</span> <span class="o">&lt;</span><span class="n">directory</span><span class="o">&gt;</span>     <span class="n">change</span> <span class="n">the</span> <span class="n">alternatives</span> <span class="n">directory</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">admindir</span> <span class="o">&lt;</span><span class="n">directory</span><span class="o">&gt;</span>   <span class="n">change</span> <span class="n">the</span> <span class="n">administrative</span> <span class="n">directory</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">log</span> <span class="o">&lt;</span><span class="nb">file</span><span class="o">&gt;</span>             <span class="n">change</span> <span class="n">the</span> <span class="n">log</span> <span class="nb">file</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">force</span>                  <span class="n">allow</span> <span class="n">replacing</span> <span class="n">files</span> <span class="k">with</span> <span class="n">alternative</span> <span class="n">links</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">auto</span>              <span class="n">skip</span> <span class="n">prompt</span> <span class="k">for</span> <span class="n">alternatives</span> <span class="n">correctly</span> <span class="n">configured</span>
+                           <span class="ow">in</span> <span class="n">automatic</span> <span class="n">mode</span> <span class="p">(</span><span class="n">relevant</span> <span class="k">for</span> <span class="o">--</span><span class="n">config</span> <span class="n">only</span><span class="p">)</span>
+  <span class="o">--</span><span class="n">verbose</span>                <span class="n">verbose</span> <span class="n">operation</span><span class="p">,</span> <span class="n">more</span> <span class="n">output</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">quiet</span>                  <span class="n">quiet</span> <span class="n">operation</span><span class="p">,</span> <span class="n">minimal</span> <span class="n">output</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">help</span>                   <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span><span class="o">.</span>
+  <span class="o">--</span><span class="n">version</span>                <span class="n">show</span> <span class="n">the</span> <span class="n">version</span><span class="o">.</span></code></pre></div>
+
+<p>Untuk merubah versi php nya pada terminal dengan script  <strong>sudo update-alternatives –config php</strong> seperti terlihat dibawah ini.</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="o">--</span><span class="n">config</span> <span class="n">php</span>
+<span class="n">There</span> <span class="n">are</span> <span class="mi">3</span> <span class="n">choices</span> <span class="k">for</span> <span class="n">the</span> <span class="n">alternative</span> <span class="n">php</span> <span class="p">(</span><span class="n">providing</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">php</span><span class="p">)</span><span class="o">.</span>
+
+  <span class="n">Selection</span>    <span class="n">Path</span>             <span class="n">Priority</span>   <span class="n">Status</span>
+<span class="o">------------------------------------------------------------</span>
+  <span class="mi">0</span>            <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">1</span>   <span class="mi">71</span>        <span class="n">auto</span> <span class="n">mode</span>
+  <span class="mi">1</span>            <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">php5</span>     <span class="mi">50</span>        <span class="n">manual</span> <span class="n">mode</span>
+  <span class="mi">2</span>            <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span>   <span class="mi">70</span>        <span class="n">manual</span> <span class="n">mode</span>
+<span class="o">*</span> <span class="mi">3</span>            <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">1</span>   <span class="mi">71</span>        <span class="n">manual</span> <span class="n">mode</span>
+
+<span class="n">Press</span> <span class="n">enter</span> <span class="n">to</span> <span class="n">keep</span> <span class="n">the</span> <span class="n">current</span> <span class="n">choice</span><span class="p">[</span><span class="o">*</span><span class="p">],</span> <span class="ow">or</span> <span class="nb">type</span> <span class="n">selection</span> <span class="n">number</span><span class="p">:</span></code></pre></div>
+
+<p>Baiklah kita bahas, pada saat menjalakan <strong>sudo update-alternatives –config php</strong> kita akan ditampilkan versi php yang sudah terinstall pada linux kita. kebetulan versi yang saya unya ada … wow banyak juga ya heheheh..</p>
+
+<p>Dan dapat terlihat dengan (*) merupakan aplikasi yang sedang berjalan.
+Dalam intruksi kita bisa memasukan angka untuk memilih jenis php yang akan digunakan jika menjalankan dengan terminal.Untuk kali ini saya ingin php5 agar sama dengan php yang jalan pada apache (web browser).</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="o">-</span><span class="n">v</span>
+<span class="n">PHP</span> <span class="mf">5.5</span><span class="o">.</span><span class="mi">9</span><span class="o">-</span><span class="mi">1</span><span class="n">ubuntu4</span><span class="o">.</span><span class="mi">22</span> <span class="p">(</span><span class="n">cli</span><span class="p">)</span> <span class="p">(</span><span class="n">built</span><span class="p">:</span> <span class="n">Aug</span>  <span class="mi">4</span> <span class="mi">2017</span> <span class="mi">19</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">28</span><span class="p">)</span> 
+<span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">1997</span><span class="o">-</span><span class="mi">2014</span> <span class="n">The</span> <span class="n">PHP</span> <span class="n">Group</span>
+<span class="n">Zend</span> <span class="n">Engine</span> <span class="n">v2</span><span class="o">.</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">1998</span><span class="o">-</span><span class="mi">2014</span> <span class="n">Zend</span> <span class="n">Technologies</span>
+    <span class="k">with</span> <span class="n">Zend</span> <span class="n">OPcache</span> <span class="n">v7</span><span class="o">.</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">1999</span><span class="o">-</span><span class="mi">2014</span><span class="p">,</span> <span class="n">by</span> <span class="n">Zend</span> <span class="n">Technologies</span></code></pre></div>
+
+<p>Sekarang versi php yang jalan dengan teminal akan sama dengan php yang jalan pada apache yang kita jalankan.</p>
+
+<p>Bukan hanya untuk php, script ini di gunakan juga untuk aplikasi pada /etc/bin seperti java,ruby,gem dst.</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="o">--</span><span class="n">config</span> <span class="n">java</span>
+<span class="n">There</span> <span class="n">are</span> <span class="mi">2</span> <span class="n">choices</span> <span class="k">for</span> <span class="n">the</span> <span class="n">alternative</span> <span class="n">java</span> <span class="p">(</span><span class="n">providing</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">java</span><span class="p">)</span><span class="o">.</span>
+
+  <span class="n">Selection</span>    <span class="n">Path</span>                                            <span class="n">Priority</span>   <span class="n">Status</span>
+<span class="o">------------------------------------------------------------</span>
+  <span class="mi">0</span>            <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jvm</span><span class="o">/</span><span class="n">java</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">oracle</span><span class="o">/</span><span class="n">jre</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">java</span>          <span class="mi">1081</span>      <span class="n">auto</span> <span class="n">mode</span>
+  <span class="mi">1</span>            <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jvm</span><span class="o">/</span><span class="n">java</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="n">openjdk</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="n">jre</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">java</span>   <span class="mi">1071</span>      <span class="n">manual</span> <span class="n">mode</span>
+<span class="o">*</span> <span class="mi">2</span>            <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jvm</span><span class="o">/</span><span class="n">java</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">oracle</span><span class="o">/</span><span class="n">jre</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">java</span>          <span class="mi">1081</span>      <span class="n">manual</span> <span class="n">mode</span>
+<span class="n">Press</span> <span class="n">enter</span> <span class="n">to</span> <span class="n">keep</span> <span class="n">the</span> <span class="n">current</span> <span class="n">choice</span><span class="p">[</span><span class="o">*</span><span class="p">],</span> <span class="ow">or</span> <span class="nb">type</span> <span class="n">selection</span> <span class="n">number</span><span class="p">:</span></code></pre></div>
+
+
+  	
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url =  "https://kurtakon.com/linux/2017/09/05/artikel-1.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/linux/2017/09/05/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kurtakon-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+
+
+  </article>
+  <div class="row">
+	  <div class=" pull-left">
+		
+		  <a href="/jekyll/disqus/2017/08/30/artikel-1.html" class="btn btn-primary btn-flat" title="Bagaimana Memasang Disqus Pada Jekyll?"> << Previous</a>
+		
+	  </div>
+	<div class="pull-right">
+	
+	  <a href="/linux/apache/php/2017/09/05/artikel-2.html" class="btn btn-primary btn-flat" title="Bagaimana melakukan swicth multipel versi aplikasi php5 ke php7 pada apache linux?">Next >></a>
+	
+	</div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer bg-black">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"><foo>&#169;</foo> 2017 KurTakon</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+         
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Quote : <br> Takonlah sebelum takon itu dilarang.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

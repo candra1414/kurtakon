@@ -1,0 +1,124 @@
+---
+layout: post
+title:  "Bagaimana melakukan swicth multipel versi aplikasi pada linux?"
+comments: true
+date:   2017-09-04 19:06:58
+categories: [linux]
+---
+
+Pada penggunakan linux sering menemukan banyak versi untuk aplikasi di install biasa lebih tinggi atau lebih lama.
+Penggunaan versi yang berbeda-beda tergantung kebutuhan dan faktor lain seperti hardware yang dimiliki, ataupun seperti saya seorang tukang ketik dengan php yang membutukan php5 padahal saat ini sudah muncul php7.
+Hal tersebut menjadi poliemik, dimana program lama yang dibangun dengan php5 akan sulit berjalan atau sama tidak berjalan jika kita menjalankan php7. Sebagai solusinya harus di install kedua versi php nya yaitu php5 dan php7 pada laptop saya.
+
+Setelah saya install php5 dan php7 akan terjadi perbedaan ketika kita jalankan dengan terminal dibandingkan dengan yang dijalankan dengan phpinfo.php (dijalanakan dengan webrowser).
+contoh A:
+![alt text][gambar]
+
+[gambar]:{{site.urlimg}}img-14.png "view php5"
+
+contoh B :
+{% highlight py%}
+
+$ php -v
+PHP 7.1.8-2+ubuntu14.04.1+deb.sury.org+4 (cli) (built: Aug  4 2017 14:30:23) ( NTS )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+{% endhighlight %}
+
+
+Kenapa bisa terjadi perbedaan serperti itu?
+Pada kasus A aplikasi dilankan pada terminal yang terletak file nya pada /etc/bin/
+Sedangkan pada kasus B apliakasi yang dijalankan lewat apache sebagai web service.
+
+Fungsi pada  __update-alternatives__ bisa dilihat dibawah ini dengan cara __sudo update-alternatives --help__
+
+{% highlight py%}
+$ sudo update-alternatives --help
+
+Usage: update-alternatives [<option> ...] <command>
+
+Commands:
+  --install <link> <name> <path> <priority>
+    [--slave <link> <name> <path>] ...
+                           add a group of alternatives to the system.
+  --remove <name> <path>   remove <path> from the <name> group alternative.
+  --remove-all <name>      remove <name> group from the alternatives system.
+  --auto <name>            switch the master link <name> to automatic mode.
+  --display <name>         display information about the <name> group.
+  --query <name>           machine parseable version of --display <name>.
+  --list <name>            display all targets of the <name> group.
+  --get-selections         list master alternative names and their status.
+  --set-selections         read alternative status from standard input.
+  --config <name>          show alternatives for the <name> group and ask the
+                           user to select which one to use.
+  --set <name> <path>      set <path> as alternative for <name>.
+  --all                    call --config on all alternatives.
+
+<link> is the symlink pointing to /etc/alternatives/<name>.
+  (e.g. /usr/bin/pager)
+<name> is the master name for this link group.
+  (e.g. pager)
+<path> is the location of one of the alternative target files.
+  (e.g. /usr/bin/less)
+<priority> is an integer; options with higher numbers have higher priority in
+  automatic mode.
+
+Options:
+  --altdir <directory>     change the alternatives directory.
+  --admindir <directory>   change the administrative directory.
+  --log <file>             change the log file.
+  --force                  allow replacing files with alternative links.
+  --skip-auto              skip prompt for alternatives correctly configured
+                           in automatic mode (relevant for --config only)
+  --verbose                verbose operation, more output.
+  --quiet                  quiet operation, minimal output.
+  --help                   show this help message.
+  --version                show the version.
+
+{% endhighlight %}
+
+Untuk merubah versi php nya pada terminal dengan script  __sudo update-alternatives --config php__ seperti terlihat dibawah ini.
+
+{% highlight py%}
+$ sudo update-alternatives --config php
+There are 3 choices for the alternative php (providing /usr/bin/php).
+
+  Selection    Path             Priority   Status
+------------------------------------------------------------
+  0            /usr/bin/php7.1   71        auto mode
+  1            /usr/bin/php5     50        manual mode
+  2            /usr/bin/php7.0   70        manual mode
+* 3            /usr/bin/php7.1   71        manual mode
+
+Press enter to keep the current choice[*], or type selection number: 
+{% endhighlight %}
+
+Baiklah kita bahas, pada saat menjalakan __sudo update-alternatives --config php__ kita akan ditampilkan versi php yang sudah terinstall pada linux kita. kebetulan versi yang saya unya ada ... wow banyak juga ya heheheh..
+
+
+Dan dapat terlihat dengan (*) merupakan aplikasi yang sedang berjalan.
+Dalam intruksi kita bisa memasukan angka untuk memilih jenis php yang akan digunakan jika menjalankan dengan terminal.Untuk kali ini saya ingin php5 agar sama dengan php yang jalan pada apache (web browser).
+
+{% highlight py%}
+$ php -v
+PHP 5.5.9-1ubuntu4.22 (cli) (built: Aug  4 2017 19:40:28) 
+Copyright (c) 1997-2014 The PHP Group
+Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
+    with Zend OPcache v7.0.3, Copyright (c) 1999-2014, by Zend Technologies
+{% endhighlight %}
+
+Sekarang versi php yang jalan dengan teminal akan sama dengan php yang jalan pada apache yang kita jalankan.
+
+Bukan hanya untuk php, script ini di gunakan juga untuk aplikasi pada /etc/bin seperti java,ruby,gem dst.
+
+{% highlight py%}
+$ sudo update-alternatives --config java
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                            Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-8-oracle/jre/bin/java          1081      auto mode
+  1            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java   1071      manual mode
+* 2            /usr/lib/jvm/java-8-oracle/jre/bin/java          1081      manual mode
+Press enter to keep the current choice[*], or type selection number:
+{% endhighlight %}

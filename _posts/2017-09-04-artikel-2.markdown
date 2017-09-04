@@ -1,0 +1,55 @@
+---
+layout: post
+title:  "Bagaimana melakukan swicth multipel versi aplikasi php5 ke php7 pada apache linux?"
+comments: true
+date:   2017-09-04 20:06:58
+categories: [linux,apache,php]
+---
+
+
+Seperti pada artikel sebelumnnya saya membahas [Bagaimana melakukan swicth multipel versi aplikasi pada linux?]({{site.url}}/linux/2017/09/04/artikel-1.html)
+Untuk kali ini saya akan membahas __Bagaimana melakukan swicth multipel versi aplikasi php5 ke php7 pada apache linux?__ 
+
+Pada artikel sebelumnya yang berjalan pada terminal kita (# secara gampanya begitu) . Kali ini yang berjalan khusus pada apache sebagai webservice yang digunakan.
+
+![alt text][gambar]
+
+[gambar]:{{site.urlimg}}img-14.png "view php5"
+
+Seperti yang terlihat diatas php yang bejalan saat ini pada apche ada php5.
+Untuk merubah dari php5 di rubah menjadi php7 cukup melakukan a2dimod dan a2enmod 
+
+Pertama lakukan disabel untuk php5 terlebih dahulu dengan perintah __a2dimod__
+{% highlight py%}
+$ a2dismod php5
+Module php5 disabled.
+To activate the new configuration, you need to run:
+  service apache2 restart
+
+{% endhighlight %}
+
+kemudian kita jalankan php7 
+{% highlight py%}
+$ a2enmod php7.0
+Considering dependency mpm_prefork for php7.0:
+Considering conflict mpm_event for mpm_prefork:
+Considering conflict mpm_worker for mpm_prefork:
+Module mpm_prefork already enabled
+Considering conflict php5 for php7.0:
+Enabling module php7.0.
+To activate the new configuration, you need to run:
+  service apache2 restart
+
+{% endhighlight %}
+
+Setelah dijalankan kita harus melakukan restart pada apache agar mengatifkan versi phpnya.
+{% highlight py%}
+$ service apache2 restart
+
+{% endhighlight %}
+
+Versi php yang berjalan adalah php7 seperti terlihat dibawah ini:
+
+![alt text][gambar]
+
+[gambar]:{{site.urlimg}}img-15.png "view php7"
