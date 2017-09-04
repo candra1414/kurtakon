@@ -12,9 +12,9 @@ Untuk kali ini saya akan membahas __Bagaimana melakukan swicth multipel versi ap
 
 Pada artikel sebelumnya yang berjalan pada terminal kita (# secara gampanya begitu) . Kali ini yang berjalan khusus pada apache sebagai webservice yang digunakan.
 
-![alt text][gambar]
+![alt text][gambar1]
 
-[gambar]:{{site.urlimg}}img-14.png "view php5"
+[gambar1]:{{site.urlimg}}img-14.png "view php5"
 
 Seperti yang terlihat diatas php yang bejalan saat ini pada apche ada php5.
 Untuk merubah dari php5 di rubah menjadi php7 cukup melakukan a2dimod dan a2enmod 
