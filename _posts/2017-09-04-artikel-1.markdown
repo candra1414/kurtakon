@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bagaimana melakukan swicth multipel versi aplikasi pada linux?"
+title:  "Bagaimana melakukan switch multipel versi aplikasi pada linux?"
 comments: true
 date:   2017-09-04 19:06:58
 categories: [linux]
