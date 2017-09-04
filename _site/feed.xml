@@ -6,12 +6,12 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Sep 2017 18:10:06 +0700</pubDate>
-    <lastBuildDate>Mon, 04 Sep 2017 18:10:06 +0700</lastBuildDate>
+    <pubDate>Mon, 04 Sep 2017 18:58:10 +0700</pubDate>
+    <lastBuildDate>Mon, 04 Sep 2017 18:58:10 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
-        <title>Bagaimana melakukan swicth multipel versi aplikasi php5 ke php7 pada apache linux?</title>
+        <title>Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?</title>
         <description>&lt;p&gt;Seperti pada artikel sebelumnnya saya membahas &lt;a href=&quot;https://kurtakon.com/linux/2017/09/04/artikel-1.html&quot;&gt;Bagaimana melakukan switch multipel versi aplikasi pada linux?&lt;/a&gt;
 Untuk kali ini saya akan membahas &lt;strong&gt;Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?&lt;/strong&gt;&lt;/p&gt;
 
