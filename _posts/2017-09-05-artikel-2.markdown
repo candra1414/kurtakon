@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?"
+comments: true
+date:   2017-09-05 08:06:58
+categories: [ruby,rails]
+---
+
+
+Syarat untuk meinstall rails versi saat ini (5.1.3) diharuskan memiliki ruby versi 2.2.2 atau lebih baru dari versi tersebut.
+
+__Bagaimana jika versi ruby lebih rendah dari syarat yang ditentukan?__
+
+Berdasarkan pengalaman yang penulis lakukan rails tetap bisa terinstall namun ketika dijalankan tidak bisa.
+
+__Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?__
+
+Caranya saya harus menginstall versi ruby yang lebih baru atau sesuai dengan syarat yang ditentukan.
+
+__Bagaimana mengatasi install ruby versi baru?__
+
+Untuk kali ini saya ingin menginstall versi apt-get install ruby2.4-dev
+
+{% highlight py%}
+$ apt-get install ruby2.4-dev
+{% endhighlight %}
+
+__Kenapa install versi dev pada ruby ?__
+
+Karena pada saat saya install tanpa dev, ketika saya install rails muncul error
+
+{% highlight py%}
+Building native extensions.  This could take a while...
+ERROR:  Error installing rails:
+    ERROR: Failed to build gem native extension.
+
+    current directory: /var/lib/gems/2.4.0/gems/nokogiri-1.8.0/ext/nokogiri
+/usr/bin/ruby2.4 -r ./siteconf20170905-7494-ci1a7j.rb extconf.rb
+mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+
+extconf failed, exit code 1
+
+Gem files will remain installed in /var/lib/gems/2.4.0/gems/nokogiri-1.8.0 for inspection.
+Results logged to /var/lib/gems/2.4.0/extensions/x86_64-linux/2.4.0/nokogiri-1.8.0/gem_make.out
+{% endhighlight %}
+
+Sebagai solusi saya install versi __dev__ dan berhasil.
+
+Setelah install ruby yang baru, kita bisa update gem dengan cara :
+    
+    $ gem update --system 
+
+__Bagaimana jika kita sudah meinstall versi ruby yang baru tapi ketika lihat versinya masih dengan versi lama?__
+
+    $ ruby -v
+    ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
+
+Caranya menggunakan [update-alternatives]({{site.url}}/linux/2017/09/04/artikel-1.html)
+
+    $ sudo update-alternatives --config ruby
+
+Kemudian pilih versi yang kita butuhkan.
+
+

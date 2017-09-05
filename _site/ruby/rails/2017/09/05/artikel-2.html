@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?</title>
+  <meta name="description" content="Syarat untuk meinstall rails versi saat ini (5.1.3) diharuskan memiliki ruby versi 2.2.2 atau lebih baru dari versi tersebut.">
+	
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="text/javascript" src="/asset/js/bootstrap.js"></script>
+  <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
+  <link rel="canonical" href="https://kurtakon.com/ruby/rails/2017/09/05/artikel-2.html">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header bg-black navbar navbar-fixed-top">
+
+  <div class="wrapper">
+
+    <a class="site-title" style="color:#fff" href="/">KurTakon</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" style="color:#ddd" href="/about/">KurTakon?</a>
+          
+        
+          
+          <a class="page-link" style="color:#ddd" href="/categori/">Kategori</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+    <div class="page-content">
+      <div class="wrapper" style="min-height: 416px; padding-top:50px">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?</h1>
+    <p class="post-meta">Sep 5, 2017  • <a href="/ruby/rails/2017/09/05/artikel-2.html#disqus_thread">0 Comments</a></p>
+	
+  </header>
+  <article class="post-content">
+    <p>Syarat untuk meinstall rails versi saat ini (5.1.3) diharuskan memiliki ruby versi 2.2.2 atau lebih baru dari versi tersebut.</p>
+
+<p><strong>Bagaimana jika versi ruby lebih rendah dari syarat yang ditentukan?</strong></p>
+
+<p>Berdasarkan pengalaman yang penulis lakukan rails tetap bisa terinstall namun ketika dijalankan tidak bisa.</p>
+
+<p><strong>Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?</strong></p>
+
+<p>Caranya saya harus menginstall versi ruby yang lebih baru atau sesuai dengan syarat yang ditentukan.</p>
+
+<p><strong>Bagaimana mengatasi install ruby versi baru?</strong></p>
+
+<p>Untuk kali ini saya ingin menginstall versi apt-get install ruby2.4-dev</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby2</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">dev</span></code></pre></div>
+
+<p><strong>Kenapa install versi dev pada ruby ?</strong></p>
+
+<p>Karena pada saat saya install tanpa dev, ketika saya install rails muncul error</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">Building</span> <span class="n">native</span> <span class="n">extensions</span><span class="o">.</span>  <span class="n">This</span> <span class="n">could</span> <span class="n">take</span> <span class="n">a</span> <span class="k">while</span><span class="o">...</span>
+<span class="n">ERROR</span><span class="p">:</span>  <span class="n">Error</span> <span class="n">installing</span> <span class="n">rails</span><span class="p">:</span>
+    <span class="n">ERROR</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">build</span> <span class="n">gem</span> <span class="n">native</span> <span class="n">extension</span><span class="o">.</span>
+
+    <span class="n">current</span> <span class="n">directory</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">nokogiri</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">ext</span><span class="o">/</span><span class="n">nokogiri</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ruby2</span><span class="o">.</span><span class="mi">4</span> <span class="o">-</span><span class="n">r</span> <span class="o">./</span><span class="n">siteconf20170905</span><span class="o">-</span><span class="mi">7494</span><span class="o">-</span><span class="n">ci1a7j</span><span class="o">.</span><span class="n">rb</span> <span class="n">extconf</span><span class="o">.</span><span class="n">rb</span>
+<span class="n">mkmf</span><span class="o">.</span><span class="n">rb</span> <span class="n">can</span><span class="s">&#39;t find header files for ruby at /usr/lib/ruby/include/ruby.h</span>
+
+<span class="n">extconf</span> <span class="n">failed</span><span class="p">,</span> <span class="nb">exit</span> <span class="n">code</span> <span class="mi">1</span>
+
+<span class="n">Gem</span> <span class="n">files</span> <span class="n">will</span> <span class="n">remain</span> <span class="n">installed</span> <span class="ow">in</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">nokogiri</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span> <span class="k">for</span> <span class="n">inspection</span><span class="o">.</span>
+<span class="n">Results</span> <span class="n">logged</span> <span class="n">to</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">extensions</span><span class="o">/</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">nokogiri</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">gem_make</span><span class="o">.</span><span class="n">out</span></code></pre></div>
+
+<p>Sebagai solusi saya install versi <strong>dev</strong> dan berhasil.</p>
+
+<p>Setelah install ruby yang baru, kita bisa update gem dengan cara :</p>
+
+<pre><code>$ gem update --system 
+</code></pre>
+
+<p><strong>Bagaimana jika kita sudah meinstall versi ruby yang baru tapi ketika lihat versinya masih dengan versi lama?</strong></p>
+
+<pre><code>$ ruby -v
+ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
+</code></pre>
+
+<p>Caranya menggunakan <a href="https://kurtakon.com/linux/2017/09/04/artikel-1.html">update-alternatives</a></p>
+
+<pre><code>$ sudo update-alternatives --config ruby
+</code></pre>
+
+<p>Kemudian pilih versi yang kita butuhkan.</p>
+
+
+  	
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url =  "https://kurtakon.com/ruby/rails/2017/09/05/artikel-2.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/ruby/rails/2017/09/05/artikel-2"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kurtakon-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+
+
+  </article>
+  <div class="row">
+	  <div class=" pull-left">
+		
+		  <a href="/ruby/rails/2017/09/05/artikel-1.html" class="btn btn-primary btn-flat" title="Bagaimana menginstall ruby on rails pada linux?"> << Previous</a>
+		
+	  </div>
+	<div class="pull-right">
+	
+	</div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer bg-black">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"><foo>&#169;</foo> 2017 KurTakon</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+         
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Quote : <br> Takonlah sebelum takon itu dilarang.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

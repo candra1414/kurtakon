@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Bagaimana menginstall ruby on rails pada linux?</title>
+  <meta name="description" content="Sebelum intall rails,saya ingin menjelaskan">
+	
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="text/javascript" src="/asset/js/bootstrap.js"></script>
+  <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
+  <link rel="canonical" href="https://kurtakon.com/ruby/rails/2017/09/05/artikel-1.html">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header bg-black navbar navbar-fixed-top">
+
+  <div class="wrapper">
+
+    <a class="site-title" style="color:#fff" href="/">KurTakon</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" style="color:#ddd" href="/about/">KurTakon?</a>
+          
+        
+          
+          <a class="page-link" style="color:#ddd" href="/categori/">Kategori</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+    <div class="page-content">
+      <div class="wrapper" style="min-height: 416px; padding-top:50px">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Bagaimana menginstall ruby on rails pada linux?</h1>
+    <p class="post-meta">Sep 5, 2017  • <a href="/ruby/rails/2017/09/05/artikel-1.html#disqus_thread">0 Comments</a></p>
+	
+  </header>
+  <article class="post-content">
+    <p>Sebelum intall rails,saya ingin menjelaskan</p>
+
+<pre><code>__Apa itu Rails?__
+</code></pre>
+
+<p>Rails adalah sebuah web application development framework yang di tulis menggunakan dengan bahasa ruby.</p>
+
+<p>Syarat yang diperlukan :</p>
+
+<ul>
+  <li>install ruby dengan minimal versi 2.2.2</li>
+  <li>install rubygems</li>
+  <li>sqlite sebagai database</li>
+</ul>
+
+<p>setelah terinstall semua, barulah install rails :</p>
+
+<pre><code>$ gem install rails
+</code></pre>
+
+<p>setelah terinstall</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">rails</span>
+<span class="n">Usage</span><span class="p">:</span>
+  <span class="n">rails</span> <span class="n">new</span> <span class="n">APP_PATH</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">ruby</span><span class="o">=</span><span class="n">PATH</span><span class="p">]</span>                                      <span class="c"># Path to the Ruby binary of your choice</span>
+                                                         <span class="c"># Default: /usr/bin/ruby2.4</span>
+  <span class="o">-</span><span class="n">m</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">TEMPLATE</span><span class="p">]</span>                              <span class="c"># Path to some application template (can be a filesystem path or URL)</span>
+  <span class="o">-</span><span class="n">d</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">database</span><span class="o">=</span><span class="n">DATABASE</span><span class="p">]</span>                              <span class="c"># Preconfigure for selected database (options: mysql/postgresql/sqlite3/oracle/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)</span>
+                                                         <span class="c"># Default: sqlite3</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">yarn</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">yarn</span><span class="p">]</span>                    <span class="c"># Don&#39;t use Yarn for managing JavaScript dependencies</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">gemfile</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">gemfile</span><span class="p">]</span>              <span class="c"># Don&#39;t create a Gemfile</span>
+  <span class="o">-</span><span class="n">G</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">git</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">git</span><span class="p">]</span>                      <span class="c"># Skip .gitignore file</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">keeps</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">keeps</span><span class="p">]</span>                  <span class="c"># Skip source control .keep files</span>
+  <span class="o">-</span><span class="n">M</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">action</span><span class="o">-</span><span class="n">mailer</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">action</span><span class="o">-</span><span class="n">mailer</span><span class="p">]</span>  <span class="c"># Skip Action Mailer files</span>
+  <span class="o">-</span><span class="n">O</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">active</span><span class="o">-</span><span class="n">record</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">active</span><span class="o">-</span><span class="n">record</span><span class="p">]</span>  <span class="c"># Skip Active Record files</span>
+  <span class="o">-</span><span class="n">P</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">puma</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">puma</span><span class="p">]</span>                    <span class="c"># Skip Puma related files</span>
+  <span class="o">-</span><span class="n">C</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">action</span><span class="o">-</span><span class="n">cable</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">action</span><span class="o">-</span><span class="n">cable</span><span class="p">]</span>    <span class="c"># Skip Action Cable files</span>
+  <span class="o">-</span><span class="n">S</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">sprockets</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">sprockets</span><span class="p">]</span>          <span class="c"># Skip Sprockets files</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">spring</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">spring</span><span class="p">]</span>                <span class="c"># Don&#39;t install Spring application preloader</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">listen</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">listen</span><span class="p">]</span>                <span class="c"># Don&#39;t generate configuration that depends on the listen gem</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">coffee</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">coffee</span><span class="p">]</span>                <span class="c"># Don&#39;t use CoffeeScript</span>
+  <span class="o">-</span><span class="n">J</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">javascript</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">javascript</span><span class="p">]</span>        <span class="c"># Skip JavaScript files</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">turbolinks</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">turbolinks</span><span class="p">]</span>        <span class="c"># Skip turbolinks gem</span>
+  <span class="o">-</span><span class="n">T</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">test</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">test</span><span class="p">]</span>                    <span class="c"># Skip test files</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">test</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">test</span><span class="p">]</span>      <span class="c"># Skip system test files</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">dev</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">dev</span><span class="p">]</span>                                <span class="c"># Setup the application with Gemfile pointing to your Rails checkout</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">edge</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">edge</span><span class="p">]</span>                              <span class="c"># Setup the application with Gemfile pointing to Rails repository</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">rc</span><span class="o">=</span><span class="n">RC</span><span class="p">]</span>                                          <span class="c"># Path to file containing extra configuration options for rails command</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">rc</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">rc</span><span class="p">]</span>                            <span class="c"># Skip loading of extra configuration options from .railsrc file</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">api</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">api</span><span class="p">]</span>                                <span class="c"># Preconfigure smaller stack for API only apps</span>
+  <span class="o">-</span><span class="n">B</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">bundle</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="o">-</span><span class="n">bundle</span><span class="p">]</span>                <span class="c"># Don&#39;t run bundle install</span>
+      <span class="p">[</span><span class="o">--</span><span class="n">webpack</span><span class="o">=</span><span class="n">WEBPACK</span><span class="p">]</span>                                <span class="c"># Preconfigure for app-like JavaScript with Webpack (options: react/vue/angular)</span>
+
+<span class="n">Runtime</span> <span class="n">options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">force</span><span class="p">]</span>                    <span class="c"># Overwrite files that already exist</span>
+  <span class="o">-</span><span class="n">p</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">pretend</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">pretend</span><span class="p">]</span>  <span class="c"># Run but do not make any changes</span>
+  <span class="o">-</span><span class="n">q</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">quiet</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">quiet</span><span class="p">]</span>      <span class="c"># Suppress status output</span>
+  <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">skip</span><span class="p">]</span>        <span class="c"># Skip files that already exist</span>
+
+<span class="n">Rails</span> <span class="n">options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">help</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">help</span><span class="p">]</span>        <span class="c"># Show this help message and quit</span>
+  <span class="o">-</span><span class="n">v</span><span class="p">,</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">],</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">version</span><span class="p">]</span>  <span class="c"># Show Rails version number and quit</span>
+
+<span class="n">Description</span><span class="p">:</span>
+    <span class="n">The</span> <span class="s">&#39;rails new&#39;</span> <span class="n">command</span> <span class="n">creates</span> <span class="n">a</span> <span class="n">new</span> <span class="n">Rails</span> <span class="n">application</span> <span class="k">with</span> <span class="n">a</span> <span class="n">default</span>
+    <span class="n">directory</span> <span class="n">structure</span> <span class="ow">and</span> <span class="n">configuration</span> <span class="n">at</span> <span class="n">the</span> <span class="n">path</span> <span class="n">you</span> <span class="n">specify</span><span class="o">.</span>
+
+    <span class="n">You</span> <span class="n">can</span> <span class="n">specify</span> <span class="n">extra</span> <span class="n">command</span><span class="o">-</span><span class="n">line</span> <span class="n">arguments</span> <span class="n">to</span> <span class="n">be</span> <span class="n">used</span> <span class="n">every</span> <span class="n">time</span>
+    <span class="s">&#39;rails new&#39;</span> <span class="n">runs</span> <span class="ow">in</span> <span class="n">the</span> <span class="o">.</span><span class="n">railsrc</span> <span class="n">configuration</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">home</span> <span class="n">directory</span><span class="o">.</span>
+
+    <span class="n">Note</span> <span class="n">that</span> <span class="n">the</span> <span class="n">arguments</span> <span class="n">specified</span> <span class="ow">in</span> <span class="n">the</span> <span class="o">.</span><span class="n">railsrc</span> <span class="nb">file</span> <span class="n">don</span><span class="s">&#39;t affect the</span>
+    <span class="n">defaults</span> <span class="n">values</span> <span class="n">shown</span> <span class="n">above</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span><span class="o">.</span>
+
+<span class="n">Example</span><span class="p">:</span>
+    <span class="n">rails</span> <span class="n">new</span> <span class="o">~/</span><span class="n">Code</span><span class="o">/</span><span class="n">Ruby</span><span class="o">/</span><span class="n">weblog</span>
+
+    <span class="n">This</span> <span class="n">generates</span> <span class="n">a</span> <span class="n">skeletal</span> <span class="n">Rails</span> <span class="n">installation</span> <span class="ow">in</span> <span class="o">~/</span><span class="n">Code</span><span class="o">/</span><span class="n">Ruby</span><span class="o">/</span><span class="n">weblog</span><span class="o">.</span></code></pre></div>
+
+<p>Untuk membuat aplikasi baru</p>
+
+<pre><code>$ rails new blog_rails
+</code></pre>
+
+<p>Setelah terbuat aplikasinya, masuk ke direktori tersebut .</p>
+
+<pre><code>$ cd blog_rails
+</code></pre>
+
+<p>Untuk menjalankan dengan cara berikut :</p>
+
+<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span><span class="n">rails</span> <span class="n">server</span>
+<span class="o">=&gt;</span> <span class="n">Booting</span> <span class="n">Puma</span>
+<span class="o">=&gt;</span> <span class="n">Rails</span> <span class="mf">5.1</span><span class="o">.</span><span class="mi">3</span> <span class="n">application</span> <span class="n">starting</span> <span class="ow">in</span> <span class="n">development</span> <span class="n">on</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span>
+<span class="o">=&gt;</span> <span class="n">Run</span> <span class="sb">`rails server -h`</span> <span class="k">for</span> <span class="n">more</span> <span class="n">startup</span> <span class="n">options</span>
+<span class="n">Puma</span> <span class="n">starting</span> <span class="ow">in</span> <span class="n">single</span> <span class="n">mode</span><span class="o">...</span>
+<span class="o">*</span> <span class="n">Version</span> <span class="mf">3.10</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">ruby</span> <span class="mf">2.4</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">p111</span><span class="p">),</span> <span class="n">codename</span><span class="p">:</span> <span class="n">Russell</span><span class="s">&#39;s Teapot</span>
+<span class="o">*</span> <span class="n">Min</span> <span class="n">threads</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nb">max</span> <span class="n">threads</span><span class="p">:</span> <span class="mi">5</span>
+<span class="o">*</span> <span class="n">Environment</span><span class="p">:</span> <span class="n">development</span>
+<span class="o">*</span> <span class="n">Listening</span> <span class="n">on</span> <span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span>
+<span class="n">Use</span> <span class="n">Ctrl</span><span class="o">-</span><span class="n">C</span> <span class="n">to</span> <span class="n">stop</span>
+<span class="n">Started</span> <span class="n">GET</span> <span class="s">&quot;/&quot;</span> <span class="k">for</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="n">at</span> <span class="mi">2017</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mo">05</span> <span class="mi">13</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">10</span> <span class="o">+</span><span class="mo">0700</span>
+<span class="n">Processing</span> <span class="n">by</span> <span class="n">Rails</span><span class="p">::</span><span class="n">WelcomeController</span><span class="c">#index as HTML</span>
+  <span class="n">Rendering</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">railties</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">rails</span><span class="o">/</span><span class="n">templates</span><span class="o">/</span><span class="n">rails</span><span class="o">/</span><span class="n">welcome</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">erb</span>
+  <span class="n">Rendered</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">railties</span><span class="o">-</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">rails</span><span class="o">/</span><span class="n">templates</span><span class="o">/</span><span class="n">rails</span><span class="o">/</span><span class="n">welcome</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">erb</span> <span class="p">(</span><span class="mf">2.0</span><span class="n">ms</span><span class="p">)</span>
+<span class="n">Completed</span> <span class="mi">200</span> <span class="n">OK</span> <span class="ow">in</span> <span class="mi">88</span><span class="n">ms</span> <span class="p">(</span><span class="n">Views</span><span class="p">:</span> <span class="mf">5.2</span><span class="n">ms</span><span class="p">)</span></code></pre></div>
+
+<p>Buka web browser menuju link <a href="http://localhost:3000">http://localhost:3000</a>
+Jika berhasil akan memucul seperti dibawah ini.</p>
+
+<p><img src="https://kurtakon.com/asset/img/img-16.png" alt="alt text" title="view rails" /></p>
+
+
+  	
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url =  "https://kurtakon.com/ruby/rails/2017/09/05/artikel-1.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/ruby/rails/2017/09/05/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kurtakon-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+
+
+  </article>
+  <div class="row">
+	  <div class=" pull-left">
+		
+		  <a href="/linux/apache/php/2017/09/05/artikel-2.html" class="btn btn-primary btn-flat" title="Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?"> << Previous</a>
+		
+	  </div>
+	<div class="pull-right">
+	
+	  <a href="/ruby/rails/2017/09/05/artikel-2.html" class="btn btn-primary btn-flat" title="Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?">Next >></a>
+	
+	</div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer bg-black">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"><foo>&#169;</foo> 2017 KurTakon</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+         
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Quote : <br> Takonlah sebelum takon itu dilarang.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
