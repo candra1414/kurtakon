@@ -6,14 +6,14 @@ date:   2017-09-05 08:06:58
 categories: [ruby,rails]
 ---
 
-Sebelum intall rails,saya ingin menjelaskan
+Sebelum instal rails,saya ingin menjelaskan
 
 __Apa itu Rails?__
 
 Rails adalah framework web aplikasi yang di tulis menggunakan dengan bahasa ruby.
 
 
-Syarat yang diperlukan :
+Syarat yang diperlukan untuk meinstall rails:
 
 - install ruby dengan minimal versi 2.2.2
 - install rubygems
