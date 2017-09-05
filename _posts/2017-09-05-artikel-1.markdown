@@ -10,7 +10,7 @@ Sebelum intall rails,saya ingin menjelaskan
 
 __Apa itu Rails?__
 
-Rails adalah sebuah web application development framework yang di tulis menggunakan dengan bahasa ruby.
+Rails adalah framework web aplikasi yang di tulis menggunakan dengan bahasa ruby.
 
 
 Syarat yang diperlukan :
