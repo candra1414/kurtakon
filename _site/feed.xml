@@ -6,8 +6,8 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Sep 2017 14:55:45 +0700</pubDate>
-    <lastBuildDate>Tue, 05 Sep 2017 14:55:45 +0700</lastBuildDate>
+    <pubDate>Tue, 05 Sep 2017 14:58:11 +0700</pubDate>
+    <lastBuildDate>Tue, 05 Sep 2017 14:58:11 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -81,8 +81,7 @@ ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
         <title>Bagaimana menginstall ruby on rails pada linux?</title>
         <description>&lt;p&gt;Sebelum intall rails,saya ingin menjelaskan&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;__Apa itu Rails?__
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Apa itu Rails?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Rails adalah sebuah web application development framework yang di tulis menggunakan dengan bahasa ruby.&lt;/p&gt;
 

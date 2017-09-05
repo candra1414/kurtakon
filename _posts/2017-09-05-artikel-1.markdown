@@ -8,7 +8,7 @@ categories: [ruby,rails]
 
 Sebelum intall rails,saya ingin menjelaskan
 
-    __Apa itu Rails?__
+__Apa itu Rails?__
 
 Rails adalah sebuah web application development framework yang di tulis menggunakan dengan bahasa ruby.
 
