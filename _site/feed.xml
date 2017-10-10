@@ -6,9 +6,72 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Oct 2017 10:07:51 +0700</pubDate>
-    <lastBuildDate>Mon, 09 Oct 2017 10:07:51 +0700</lastBuildDate>
+    <pubDate>Tue, 10 Oct 2017 20:50:11 +0700</pubDate>
+    <lastBuildDate>Tue, 10 Oct 2017 20:50:11 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana contoh sederhana HTML ? [Bagian 1]</title>
+        <description>&lt;p&gt;&lt;strong&gt;Html&lt;/strong&gt; kepanjangan dari &lt;strong&gt;&lt;em&gt;HyperText Markup Language&lt;/em&gt;&lt;/strong&gt;  merupakan bahasa inti dari semua konten dalam  &lt;strong&gt;&lt;em&gt;Web&lt;/em&gt;&lt;/strong&gt;. Sebagian besar dari web pada browser menggukan HTML sebagai dasarnya. Lebih tepatnya HTML adalah bahasa yang menggambarkan struktur dan isi secara sistematik dari sebuah website.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt; Judul &lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Sebagai Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Isi Paragraf&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hasil jika kita buka dengan web browser (chrome,dkk)
+&lt;img src=&quot;https://kurtakon.com/asset/img/img-10okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Baiklah kali ini saya akan menjelaskan sedikit&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+....
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tag &amp;lt;/html&amp;gt; mengartikan bahwa website bersebut menggunkan html.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    ....
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tag &amp;lt;/head&amp;gt; adalah kepala dari halaman website. Pada tag ini anda bisa menambahkan banyak informasi seperti font,meta, css, javascript,dll.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
+    ....
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tag &amp;lt;/title&amp;gt; digunakan untuk menyatakan judul website. Tag ini disimpan didalam tag &amp;lt;/head&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  ....  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tag &amp;lt;\body&amp;gt; ini digunakan untuk menampilkan isi dari website anda. Anda bisa menampilkan tulisan, gambar,video, musik dan lain-lain.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sumber : &lt;a href=&quot;https://developer.mozilla.org/id/docs/Web/HTML&quot;&gt;https://developer.mozilla.org/id/docs/Web/HTML&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 10 Oct 2017 15:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/html/2017/10/10/artikel-1.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/html/2017/10/10/artikel-1.html</guid>
+        
+        
+        <category>html</category>
+        
+      </item>
     
       <item>
         <title>Chat sederhana degan nodejs?</title>
@@ -714,55 +777,6 @@ Anda dapat membuat library dan mengelola projek anda seperti intall, update pake
         
         
         <category>composer</category>
-        
-      </item>
-    
-      <item>
-        <title>Bagaimana menginstal paket Git dengan Sublime Text ?</title>
-        <description>&lt;p&gt;Bagi penggunakan text editor Sublime Text dan penggunakan Git pasti bertanya &lt;strong&gt;Apakah ada paket untuk git pada Sublime Text?&lt;/strong&gt; Jawabannya &lt;strong&gt;Ada&lt;/strong&gt;.
-Yee.. senang bukan tanpa harus buka terminal bisa melakukan kerjaan menggunakan satu aplikasi saja.&lt;/p&gt;
-
-&lt;p&gt;Akan tertapi akan timbul pertanyaan
-&lt;strong&gt;Bagamana menginstal paket Git dengan Sublime Text?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Cara Install paket git cukup mudah&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;pertama buka &lt;em&gt;Package Control&lt;/em&gt;, caranya bisa klik &lt;em&gt;Preferences&lt;/em&gt;, &lt;em&gt;Package Control&lt;/em&gt; atau menggunakan shortcut keyboard (Command+Shift+p pada OS X, Control+Shift+p pada Linux/Windows).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pilih &lt;em&gt;Package Control:Install Package&lt;/em&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Setelah muncul tulis git dan pilih package yang akan di install.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bagaimana-menjalankan-git-dengan-mudah-pada-sublime-text&quot;&gt;Bagaimana menjalankan git dengan mudah pada Sublime Text?&lt;/h3&gt;
-
-&lt;p&gt;Sebenarnya cukup mudah menjalankan git sublime, hampir sama dengan mengunakan terminal.Untuk menjalankan git telah terpasang bisa klik Tools atau membuka Package Control dan tulis git. Disana akan terlihat tools yang bisa digunakan.&lt;/p&gt;
-
-&lt;h2 id=&quot;apa-keenakannya-menggunakan-git-pada-sublime-text&quot;&gt;Apa keenakannya menggunakan Git pada Sublime Text?&lt;/h2&gt;
-
-&lt;p&gt;Ini menurut pendapat dan pengalaman pribadi ya…
-Kalau menurut saya lebih enak karena seperti dikatakan di atas hanya menggukan satu aplikasi saja tidak perlu membuka terminal. Maklum saya terbisa menggunakan terminal langsung.&lt;/p&gt;
-
-&lt;p&gt;Kedua, lebih tervisual. &lt;strong&gt;Kenapa lebih tervisual?&lt;/strong&gt; Karena saya terbiasa menggunakan terminal jadi jika lupa code nya harus help, tapi menggunakan ini klik tools/git sudah terlihat tools yang bisa di gunakan atau membuka dengan Package Control dan menulis Git sudah keluar code untuk fungsi git sendiri.&lt;/p&gt;
-
-&lt;p&gt;Selain itu, Pada saat menjalankan git akan seperti text biasa pada tampilan sublime text biasa jadi lebih enak dilihat.&lt;/p&gt;
-
-&lt;p&gt;Mungkin itu saya yang dapat disampaikan, hanya menjawab pertanyaan yang ada dipikirkan saya. Nanti kalau ada lagi dan saya coba cari jawabanya baru di tulis lagi.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 22 Aug 2017 21:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/git/sublime-text/2017/08/22/artikel-1.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/git/sublime-text/2017/08/22/artikel-1.html</guid>
-        
-        
-        <category>git</category>
-        
-        <category>sublime-text</category>
         
       </item>
     

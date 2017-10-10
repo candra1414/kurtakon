@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "Bagaimana contoh sederhana HTML ? [Bagian 1]"
+comments: true
+date:   2017-10-10 08:06:58
+categories: [html]
+---
+
+**Html** kepanjangan dari ***HyperText Markup Language***  merupakan bahasa inti dari semua konten dalam  ***Web***. Sebagian besar dari web pada browser menggukan HTML sebagai dasarnya. Lebih tepatnya HTML adalah bahasa yang menggambarkan struktur dan isi secara sistematik dari sebuah website.
+
+
+{% highlight html%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Judul </title>
+</head>
+<body>
+<h1>Sebagai Heading</h1>
+<p>Isi Paragraf</p>
+</body>
+</html>
+{% endhighlight %}
+
+Hasil jika kita buka dengan web browser (chrome,dkk)
+![alt text][gambar1]
+
+[gambar1]:{{site.urlimg}}img-10okt2017-1.png "view html"
+Baiklah kali ini saya akan menjelaskan sedikit
+
+
+{% highlight html%}
+<html>
+....
+</html>
+{% endhighlight %}
+
+- Tag </html> mengartikan bahwa website bersebut menggunkan html.
+
+{% highlight html%}
+<head>
+    ....
+</head>
+{% endhighlight %}
+- Tag </head> adalah kepala dari halaman website. Pada tag ini anda bisa menambahkan banyak informasi seperti font,meta, css, javascript,dll.
+
+{% highlight html%}
+<title>
+    ....
+</title>
+{% endhighlight %}
+- Tag </title> digunakan untuk menyatakan judul website. Tag ini disimpan didalam tag </head>
+{% highlight html%}
+<body>
+  ....  
+</body>
+{% endhighlight %}
+
+- Tag <\body> ini digunakan untuk menampilkan isi dari website anda. Anda bisa menampilkan tulisan, gambar,video, musik dan lain-lain.
+
+
+
+
+
+Sumber : [https://developer.mozilla.org/id/docs/Web/HTML](https://developer.mozilla.org/id/docs/Web/HTML)
