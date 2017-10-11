@@ -3,7 +3,7 @@ layout: post
 title:  "Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?"
 comments: true
 date:   2017-08-03 23:06:58
-categories: Jekyll
+categories: [Jekyll]
 ---
 
 Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan __ctrl+z__ untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika penulis akan mejalankan kembali akan muncul 

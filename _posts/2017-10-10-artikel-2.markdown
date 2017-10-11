@@ -1,0 +1,227 @@
+---
+layout: post
+title:  "Bagaimana contoh sederhana HTML ? [Bagian 2]"
+comments: true
+date:   2017-10-10 09:06:58
+categories: [Html]
+---
+Setelah menulis [**'Bagaimana contoh sederhana HTML ? [Bagian 1]'** ](https://kurtakon.com/html/2017/10/10/artikel-1.html) . Mari kita lanjukan bagian selanjutnya. 
+Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membahas sedikit contoh sederhana yang sering digukan pada html beserta fungsinya.
+
+---
+
+- Heading
+
+    Kalian pasti suka membuat heading untuk judul sebuah artikel pada ms.word atau ms.office. Heading paling besar <h1> dan semakin menambah angka di belakang **h** maka ukuranya akan semakin kecil.
+
+{% highlight html%}
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+{% endhighlight %}
+
+---
+  Berikut hasilnya : 
+
+---
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+---
+
+- Membuat link
+
+    Kita sering melihat pada web ada artikel berupa link, berikut ini cara membuatnya.
+
+{% highlight html%}
+<a href=" alamat_link"> nama link</a>
+{% endhighlight %}
+
+contoh : 
+{% highlight html%}
+
+<a href="https://kurtakon.com/html/2017/10/10/artikel-2.html">Bagaimana contoh sederhana HTML ? [Bagian 2] </a>
+{% endhighlight %}
+
+  Berikut hasilnya : <a href="https://kurtakon.com/html/2017/10/10/artikel-2.html">Bagaimana contoh sederhana HTML ? [Bagian 2] </a>
+
+---
+
+- Membuat paragraf
+
+    Pada saat membuat paragraf dapat menggunakan tag <p>  dan jangan lupa penutupnya. 
+
+Contoh :
+{% highlight html%}
+<p>Ini  paragraph 1.</p>
+<p>Ini  paragraph 2.</p>
+<p>Ini  paragraph 3.</p>
+{% endhighlight %}
+
+ Berikut hasilnya : 
+
+---
+
+<p>Ini  paragraph 1.</p>
+<p>Ini  paragraph 2.</p>
+<p>Ini  paragraph 3.</p>
+
+---
+
+- Membuat tulisan ***center***
+
+    Sering kan kita melulis di posisi tengah-tengah,biasanya digunakan untuk judul.
+
+Contoh :
+{% highlight html%}
+<center> rata tengah</center>
+{% endhighlight %}
+
+ Berikut hasilnya : 
+
+--- 
+
+<center> rata tengah</center>
+
+---
+
+- Membuat *enter*
+    
+    Untuk membuat enter dengan menggunakan < br>
+
+
+{% highlight html%}
+baris 1 <br> baris 2 <br> <br><br> baris 3
+{% endhighlight %}
+
+Berikut hasilnya : 
+
+---
+
+baris 1 <br> baris 2 <br> <br><br> baris 3
+
+---
+
+ - Membuat tabel.
+
+     Dalam halaman website sering kita melihat tabel.Berikut ini contoh sederhana membuat tabel. Dalam tabel terdapat <thead> untuk judul tabel atau header dari tabel tersebut dan <tbody> untuk body atau isi dari tabel tersebut.
+     
+     Mari lanjutkan ...
+
+     Dalam tabel terdapat <tr> digunakan untuk baris (***row***) dan <td> untuk kolom (***colume***). Khusus pada judul atau header tidak menggukan td melaikan ***th***  (**di ingat**).Pada penempatan **td** dan **th** pada code program  ***harus*** di dalam **tr**.
+ 
+{% highlight html%}
+<table>
+<thead>
+    <tr>
+        <th>judul 1</th>
+        <th>judul 2</th>
+        <th>judul 3</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>baris 1 colom 1</td>
+        <td>baris 1 colom 2</td>
+        <td>baris 1 colom 3</td>
+    </tr>
+    <tr>
+        <td>baris 2 colom 1</td>
+        <td>baris 2 colom 2</td>
+        <td>baris 2 colom 3</td>
+    </tr>
+</tbody>
+
+</table>
+{% endhighlight %}
+
+---
+ 
+ Berikut hasilnya : 
+
+---
+<table>
+<thead>
+    <tr>
+        <th>judul 1</th>
+        <th>judul 2</th>
+        <th>judul 3</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>baris 1 colom 1</td>
+        <td>baris 1 colom 2</td>
+        <td>baris 1 colom 3</td>
+    </tr>
+    <tr>
+        <td>baris 2 colom 1</td>
+        <td>baris 2 colom 2</td>
+        <td>baris 2 colom 3</td>
+    </tr>
+</tbody>
+
+</table>
+
+---
+
+- Modifiakasi tampilan
+{% highlight html%}
+
+<b> tebal</b>
+<i> miring</i>
+<u> bergaris bawah</u>
+{% endhighlight %}
+
+Berikut hasilnya : 
+
+---
+<b> tebal</b>
+<i> miring</i>
+<u> bergaris bawah</u>
+
+---
+
+- Membuat bullet dan numbering
+
+{% highlight html%}
+
+<ul>
+    <li> satu</li>
+    <li> dua </li>
+    <li> tiga </li>
+</ul>
+
+<ol>
+<li>satu</li>
+<li>dua</li>
+<li>tiga</li>
+</ol>
+{% endhighlight %}
+
+Berikut hasilnya : 
+
+---
+
+<ul>
+    <li> satu</li>
+    <li> dua </li>
+    <li> tiga </li>
+</ul>
+
+<ol>
+<li>satu</li>
+<li>dua</li>
+<li>tiga</li>
+</ol>
+
+---
+

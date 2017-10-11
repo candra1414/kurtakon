@@ -3,7 +3,7 @@ layout: post
 title:  "Bagaimana melakukan switch multipel versi aplikasi pada linux?"
 comments: true
 date:   2017-09-04 19:06:58
-categories: [linux]
+categories: [Linux]
 ---
 
 Pada penggunakan linux sering menemukan banyak versi untuk aplikasi di install biasa lebih tinggi atau lebih lama.

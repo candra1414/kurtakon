@@ -3,7 +3,7 @@ layout: post
 title:  "Bagaimana Menggunakan Google Analytic pada Jekyll?"
 comments: true
 date:   2017-08-07 13:06:58
-categories: Jekyll
+categories: [Jekyll]
 ---
 
 

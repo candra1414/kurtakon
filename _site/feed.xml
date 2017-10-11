@@ -6,9 +6,251 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Oct 2017 20:50:11 +0700</pubDate>
-    <lastBuildDate>Tue, 10 Oct 2017 20:50:11 +0700</lastBuildDate>
+    <pubDate>Wed, 11 Oct 2017 19:12:19 +0700</pubDate>
+    <lastBuildDate>Wed, 11 Oct 2017 19:12:19 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana contoh sederhana HTML ? [Bagian 2]</title>
+        <description>&lt;p&gt;Setelah menulis &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-1.html&quot;&gt;&lt;strong&gt;‘Bagaimana contoh sederhana HTML ? [Bagian 1]’&lt;/strong&gt; &lt;/a&gt; . Mari kita lanjukan bagian selanjutnya. 
+Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membahas sedikit contoh sederhana yang sering digukan pada html beserta fungsinya.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Heading&lt;/p&gt;
+
+    &lt;p&gt;Kalian pasti suka membuat heading untuk judul sebuah artikel pada ms.word atau ms.office. Heading paling besar &amp;lt;h1&amp;gt; dan semakin menambah angka di belakang &lt;strong&gt;h&lt;/strong&gt; maka ukuranya akan semakin kecil.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Heading 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;Heading 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h3&amp;gt;&lt;/span&gt;Heading 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h3&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h4&amp;gt;&lt;/span&gt;Heading 4&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h4&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h5&amp;gt;&lt;/span&gt;Heading 5&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h5&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h6&amp;gt;&lt;/span&gt;Heading 6&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h6&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Berikut hasilnya :&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Membuat link&lt;/p&gt;
+
+    &lt;p&gt;Kita sering melihat pada web ada artikel berupa link, berikut ini cara membuatnya.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; alamat_link&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; nama link&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;contoh :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://kurtakon.com/html/2017/10/10/artikel-2.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Bagaimana contoh sederhana HTML ? [Bagian 2] &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Berikut hasilnya : &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-2.html&quot;&gt;Bagaimana contoh sederhana HTML ? [Bagian 2] &lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Membuat paragraf&lt;/p&gt;
+
+    &lt;p&gt;Pada saat membuat paragraf dapat menggunakan tag &amp;lt;p&amp;gt;  dan jangan lupa penutupnya.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Contoh :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Ini  paragraph 1.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Ini  paragraph 2.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Ini  paragraph 3.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Berikut hasilnya :&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Ini  paragraph 1.&lt;/p&gt;
+&lt;p&gt;Ini  paragraph 2.&lt;/p&gt;
+&lt;p&gt;Ini  paragraph 3.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Membuat tulisan &lt;strong&gt;&lt;em&gt;center&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Sering kan kita melulis di posisi tengah-tengah,biasanya digunakan untuk judul.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Contoh :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;center&amp;gt;&lt;/span&gt; rata tengah&lt;span class=&quot;nt&quot;&gt;&amp;lt;/center&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Berikut hasilnya :&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;center&gt; rata tengah&lt;/center&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Membuat &lt;em&gt;enter&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;Untuk membuat enter dengan menggunakan &amp;lt; br&amp;gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;baris 1 &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt; baris 2 &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&lt;/span&gt; baris 3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Berikut hasilnya :&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;baris 1 &lt;br /&gt; baris 2 &lt;br /&gt; &lt;br /&gt;&lt;br /&gt; baris 3&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Membuat tabel.&lt;/p&gt;
+
+    &lt;p&gt;Dalam halaman website sering kita melihat tabel.Berikut ini contoh sederhana membuat tabel. Dalam tabel terdapat &amp;lt;thead&amp;gt; untuk judul tabel atau header dari tabel tersebut dan &amp;lt;tbody&amp;gt; untuk body atau isi dari tabel tersebut.&lt;/p&gt;
+
+    &lt;p&gt;Mari lanjutkan …&lt;/p&gt;
+
+    &lt;p&gt;Dalam tabel terdapat &amp;lt;tr&amp;gt; digunakan untuk baris (&lt;strong&gt;&lt;em&gt;row&lt;/em&gt;&lt;/strong&gt;) dan &amp;lt;td&amp;gt; untuk kolom (&lt;strong&gt;&lt;em&gt;colume&lt;/em&gt;&lt;/strong&gt;). Khusus pada judul atau header tidak menggukan td melaikan &lt;strong&gt;&lt;em&gt;th&lt;/em&gt;&lt;/strong&gt;  (&lt;strong&gt;di ingat&lt;/strong&gt;).Pada penempatan &lt;strong&gt;td&lt;/strong&gt; dan &lt;strong&gt;th&lt;/strong&gt; pada code program  &lt;strong&gt;&lt;em&gt;harus&lt;/em&gt;&lt;/strong&gt; di dalam &lt;strong&gt;tr&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;table&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;thead&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;th&amp;gt;&lt;/span&gt;judul 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/th&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;th&amp;gt;&lt;/span&gt;judul 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/th&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;th&amp;gt;&lt;/span&gt;judul 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/th&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/thead&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;tbody&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;td&amp;gt;&lt;/span&gt;baris 1 colom 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;td&amp;gt;&lt;/span&gt;baris 1 colom 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;td&amp;gt;&lt;/span&gt;baris 1 colom 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;td&amp;gt;&lt;/span&gt;baris 2 colom 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;td&amp;gt;&lt;/span&gt;baris 2 colom 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;td&amp;gt;&lt;/span&gt;baris 2 colom 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/tbody&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/table&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Berikut hasilnya :&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;table&gt;
+&lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;judul 1&lt;/th&gt;
+        &lt;th&gt;judul 2&lt;/th&gt;
+        &lt;th&gt;judul 3&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;baris 1 colom 1&lt;/td&gt;
+        &lt;td&gt;baris 1 colom 2&lt;/td&gt;
+        &lt;td&gt;baris 1 colom 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;baris 2 colom 1&lt;/td&gt;
+        &lt;td&gt;baris 2 colom 2&lt;/td&gt;
+        &lt;td&gt;baris 2 colom 3&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;
+
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Modifiakasi tampilan&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;b&amp;gt;&lt;/span&gt; tebal&lt;span class=&quot;nt&quot;&gt;&amp;lt;/b&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;i&amp;gt;&lt;/span&gt; miring&lt;span class=&quot;nt&quot;&gt;&amp;lt;/i&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;u&amp;gt;&lt;/span&gt; bergaris bawah&lt;span class=&quot;nt&quot;&gt;&amp;lt;/u&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Berikut hasilnya :&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;b&gt; tebal&lt;/b&gt;
+&lt;i&gt; miring&lt;/i&gt;
+&lt;u&gt; bergaris bawah&lt;/u&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Membuat bullet dan numbering&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt; satu&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt; dua &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt; tiga &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;ol&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;satu&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;dua&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;tiga&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ol&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Berikut hasilnya :&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+    &lt;li&gt; satu&lt;/li&gt;
+    &lt;li&gt; dua &lt;/li&gt;
+    &lt;li&gt; tiga &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;satu&lt;/li&gt;
+&lt;li&gt;dua&lt;/li&gt;
+&lt;li&gt;tiga&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Tue, 10 Oct 2017 16:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/html/2017/10/10/artikel-2.html</link>
+        <guid isPermaLink="true">https://kurtakon.com/html/2017/10/10/artikel-2.html</guid>
+        
+        
+        <category>html</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana contoh sederhana HTML ? [Bagian 1]</title>
@@ -24,6 +266,12 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Isi Paragraf&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Bagaimana membuatnya ?&lt;/strong&gt;
+&lt;br /&gt;
+Silahkan buka sublime atau notepad copy code diatas kemudian simpan dengan format .html pada contoh saya simpan dengan index.html.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;Hasil jika kita buka dengan web browser (chrome,dkk)
 &lt;img src=&quot;https://kurtakon.com/asset/img/img-10okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
@@ -70,23 +318,6 @@
         
         
         <category>html</category>
-        
-      </item>
-    
-      <item>
-        <title>Chat sederhana degan nodejs?</title>
-        <description>&lt;p&gt;&lt;strong&gt;Dalam Proses Ekperiment&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Mohon di tunggu :)&lt;/p&gt;
-</description>
-        <pubDate>Sun, 08 Oct 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/nodejs/soketio/2017/10/08/artikel-1.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/nodejs/soketio/2017/10/08/artikel-1.html</guid>
-        
-        
-        <category>nodejs</category>
-        
-        <category>soketio</category>
         
       </item>
     

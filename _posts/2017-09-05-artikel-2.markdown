@@ -3,7 +3,7 @@ layout: post
 title:  "Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?"
 comments: true
 date:   2017-09-05 08:06:58
-categories: [ruby,rails]
+categories: [Ruby,Rails]
 ---
 
 

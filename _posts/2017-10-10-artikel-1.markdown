@@ -3,7 +3,7 @@ layout: post
 title:  "Bagaimana contoh sederhana HTML ? [Bagian 1]"
 comments: true
 date:   2017-10-10 08:06:58
-categories: [html]
+categories: [Html]
 ---
 
 **Html** kepanjangan dari ***HyperText Markup Language***  merupakan bahasa inti dari semua konten dalam  ***Web***. Sebagian besar dari web pada browser menggukan HTML sebagai dasarnya. Lebih tepatnya HTML adalah bahasa yang menggambarkan struktur dan isi secara sistematik dari sebuah website.
@@ -21,6 +21,13 @@ categories: [html]
 </body>
 </html>
 {% endhighlight %}
+
+**Bagaimana membuatnya ?**
+<br>
+Silahkan buka sublime atau notepad copy code diatas kemudian simpan dengan format .html pada contoh saya simpan dengan index.html.
+
+---
+
 
 Hasil jika kita buka dengan web browser (chrome,dkk)
 ![alt text][gambar1]

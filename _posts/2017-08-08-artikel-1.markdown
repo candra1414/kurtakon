@@ -3,7 +3,7 @@ layout: post
 title:  "Apa itu Jekyll?"
 comments: true
 date:   2017-08-08 13:06:58
-categories: Jekyll
+categories: [Jekyll]
 ---
 
 ---

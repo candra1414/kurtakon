@@ -3,7 +3,7 @@ layout: post
 title:  "Bagaimana menginstall ruby on rails pada linux?"
 comments: true
 date:   2017-09-05 08:06:58
-categories: [ruby,rails]
+categories: [Ruby,Rails]
 ---
 
 Sebelum instal rails,saya ingin menjelaskan

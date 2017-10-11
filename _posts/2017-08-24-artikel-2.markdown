@@ -3,7 +3,7 @@ layout: post
 title:  "Bagaimana cara Install Yii2 pada Linux dengan Composer?"
 comments: true
 date:   2017-08-24 14:06:58
-categories: [composer,yii]
+categories: [Composer,Yii]
 ---
 
 Yii merupakan akromin dari __Yes It is__. Yii merupakan Framework php dengan konsep MVC.
