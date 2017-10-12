@@ -1,0 +1,207 @@
+[
+  
+
+    {
+    
+      "title"    : "Bagaimana contoh sederhana HTML ? [Bagian 2]",
+      "url"      : "/html/2017/10/10/artikel-2.html",
+      "category" : "html",
+      "tags"     : "",
+      "date"     : "Oct 10, 2017",
+      "content": "Setelah menulis ‘Bagaimana contoh sederhana HTML ? [Bagian 1]’  . Mari kita lanjukan bagian selanjutnya. Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membahas sedikit contoh sederhana yang sering digukan pada html beserta fungsinya."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana contoh sederhana HTML ? [Bagian 1]",
+      "url"      : "/html/2017/10/10/artikel-1.html",
+      "category" : "html",
+      "tags"     : "",
+      "date"     : "Oct 10, 2017",
+      "content": "Html kepanjangan dari HyperText Markup Language  merupakan bahasa inti dari semua konten dalam  Web. Sebagian besar dari web pada browser menggukan HTML sebagai dasarnya. Lebih tepatnya HTML adalah bahasa yang menggambarkan struktur dan isi secara sistematik dari sebuah website."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?",
+      "url"      : "/ruby/rails/2017/09/05/artikel-2.html",
+      "category" : "ruby, rails",
+      "tags"     : "",
+      "date"     : "Sep 5, 2017",
+      "content": "Syarat untuk meinstall rails versi saat ini (5.1.3) diharuskan memiliki ruby versi 2.2.2 atau lebih baru dari versi tersebut."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana menginstall ruby on rails pada linux?",
+      "url"      : "/ruby/rails/2017/09/05/artikel-1.html",
+      "category" : "ruby, rails",
+      "tags"     : "",
+      "date"     : "Sep 5, 2017",
+      "content": "Sebelum instal rails,saya ingin menjelaskan"
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?",
+      "url"      : "/linux/apache/php/2017/09/05/artikel-2.html",
+      "category" : "linux, apache, php",
+      "tags"     : "",
+      "date"     : "Sep 5, 2017",
+      "content": "Seperti pada artikel sebelumnnya saya membahas Bagaimana melakukan switch multipel versi aplikasi pada linux?Untuk kali ini saya akan membahas Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?"
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana melakukan switch multipel versi aplikasi pada linux?",
+      "url"      : "/linux/2017/09/05/artikel-1.html",
+      "category" : "linux",
+      "tags"     : "",
+      "date"     : "Sep 5, 2017",
+      "content": "Pada penggunakan linux sering menemukan banyak versi untuk aplikasi di install biasa lebih tinggi atau lebih lama.Penggunaan versi yang berbeda-beda tergantung kebutuhan dan faktor lain seperti hardware yang dimiliki, ataupun seperti saya seorang tukang ketik dengan php yang membutukan php5 padahal saat ini sudah muncul php7.Hal tersebut menjadi poliemik, dimana program lama yang dibangun dengan php5 akan sulit berjalan atau sama tidak berjalan jika kita menjalankan php7. Sebagai solusinya harus di install kedua versi php nya yaitu php5 dan php7 pada laptop saya."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana Memasang Disqus Pada Jekyll?",
+      "url"      : "/jekyll/disqus/2017/08/30/artikel-1.html",
+      "category" : "jekyll, disqus",
+      "tags"     : "",
+      "date"     : "Aug 30, 2017",
+      "content": "Bagi pengguna website static yang tidak memiliki database akan kesulitan membuat komentar. Seperti memasang komentar pada web yang dibuat dengan Jekyll . Salah satu alternatif kita bisa menggunakan disqus. Akan tetapi Bagaimana Memasang Disqus Pada Jekyll ?."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana Membuat Migrasi Tabel Database Pada Yii2?",
+      "url"      : "/yii/2017/08/28/artikel-1.html",
+      "category" : "yii",
+      "tags"     : "",
+      "date"     : "Aug 28, 2017",
+      "content": "Pada yii terdapat fasilitas migrate database dari file php ke database mysql.Letaknya biasa pada consol/migrations/."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana cara Install Yii2 pada Linux dengan Composer?",
+      "url"      : "/composer/yii/2017/08/24/artikel-2.html",
+      "category" : "composer, yii",
+      "tags"     : "",
+      "date"     : "Aug 24, 2017",
+      "content": "Yii merupakan akromin dari Yes It is. Yii merupakan Framework php dengan konsep MVC.Sebelum Yii2 terlahir dulu terkenal adanya Yii 1.1 . Berdasarkan pengalaman saya terdapat perbedaan mulai cara install, code, dan pemanggilan fungsinya pada Yii 1.1 dengan Yii2."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana cara Install Composer pada Linux?",
+      "url"      : "/composer/2017/08/24/artikel-1.html",
+      "category" : "composer",
+      "tags"     : "",
+      "date"     : "Aug 24, 2017",
+      "content": "Composer adalah tools untuk manajemen projek anda berbasis PHP.Anda dapat membuat library dan mengelola projek anda seperti intall, update paket yang ada. Jadi ibaratnya ada paket tools lain yang akan dimasukan ke dalam aplikasi anda, anda bisa memilih paket yang dibutuhan dan anda dapat mengintallnya."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana menginstal paket Git dengan Sublime Text ?",
+      "url"      : "/git/sublime-text/2017/08/22/artikel-1.html",
+      "category" : "git, sublime-text",
+      "tags"     : "",
+      "date"     : "Aug 22, 2017",
+      "content": "Bagi penggunakan text editor Sublime Text dan penggunakan Git pasti bertanya Apakah ada paket untuk git pada Sublime Text? Jawabannya Ada.Yee.. senang bukan tanpa harus buka terminal bisa melakukan kerjaan menggunakan satu aplikasi saja."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana cara menginstall Jekyll?",
+      "url"      : "/jekyll/2017/08/09/artikel-2.html",
+      "category" : "jekyll",
+      "tags"     : "",
+      "date"     : "Aug 9, 2017",
+      "content": "Seperti pada artikel sebelumnya membahas ‘Apa itu Jekyll?’  . Kali ini akan membahas Bagaimana cara menginstall Jekyll?. Sebelum melakukan install ada beberapa syarat yang dibutukan."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Apa itu Jekyll?",
+      "url"      : "/jekyll/2017/08/08/artikel-1.html",
+      "category" : "jekyll",
+      "tags"     : "",
+      "date"     : "Aug 8, 2017",
+      "content": "Jekyll  is a simple, blog-aware, static site generator for personal, project, or organization sites."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana Menggunakan Google Analytic pada Jekyll?",
+      "url"      : "/jekyll/2017/08/07/artikel-1.html",
+      "category" : "jekyll",
+      "tags"     : "",
+      "date"     : "Aug 7, 2017",
+      "content": "Pada awalnya saya bertanya Bagaimana mengetahui jumlah pengujung pada Website? .Disini saya memcoba fasilitas Google yaitu  Google Analytic. Pada percobaan kali ini saya menggunakan Jekyll."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?",
+      "url"      : "/jekyll/2017/08/04/artikel-1.html",
+      "category" : "jekyll",
+      "tags"     : "",
+      "date"     : "Aug 4, 2017",
+      "content": "Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan ctrl+z untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika penulis akan mejalankan kembali akan muncul"
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Apa itu Markdown ?",
+      "url"      : "/markdown/2017/08/02/artikel-1.html",
+      "category" : "markdown",
+      "tags"     : "",
+      "date"     : "Aug 2, 2017",
+      "content": "Markdown  adalah tools yang digunakan untuk mengkonversi text menjadi html dengan berbagai format pada konten web ."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Selamat datang",
+      "url"      : "/2017/08/01/welcome.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "Aug 1, 2017",
+      "content": "Selamat membaca dan semoga bermanfaat."
+
+    } 
+  
+]
