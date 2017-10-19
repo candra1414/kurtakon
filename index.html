@@ -23,7 +23,7 @@ layout: default
           {{ post.date | date: "%b %-d, %Y" }}
           </span>
           <span>
-            {% if post.comments %} <span class="disqus_thread"> 0 Comment</span>{% endif %}
+            {% if post.comments %} <a href="{{url}}{{ post.url }}#disqus_thread">0 Comments</a>{% endif %}
           </span>
       </li>
 
