@@ -1,0 +1,136 @@
+---
+layout: post
+title:  "Bagaimana contoh sederhana HTML ? [Bagian 3]"
+comments: true
+date:   2017-10-19 09:06:58
+categories: [Html,Css]
+---
+
+Pada artikel sebelumnya tentang [**'Bagaimana contoh sederhana HTML ? [Bagian 1]'** ](https://kurtakon.com/html/2017/10/10/artikel-1.html) dan [**'Bagaimana contoh sederhana HTML ? [Bagian 2]'** ](https://kurtakon.com/html/2017/10/10/artikel-2.html)  masih html biasa serta terlihat kaku bukan, Pada artikel kali ini saya akan menambahakan css agar tamplian web lebih warna.
+
+<h3> Apa itu Css ?</h3>
+Css merupakan kepanjangan dari Cascading Style Sheets. Css memiliki tujuan untuk menghias dan mengatur tampilan agar lebih teratur dan menarik dilihat. CSS adalah sebuah teknologi internet yang direkomendasikan oleh World Wide Web Consortium atau W3C pada tahun 1996.
+
+Seperti pada aplikasi pengolahan kata seperti Microsoft Word yang dapat fitur untuk mengatur beberapa style, misalnya heading, subbab, bodytext, footer, images, dan style lainnya. Selain itu juga dapat digunakan bersama-sama dalam beberapa berkas (file). Pada umumnya CSS dipakai untuk memformat tampilan halaman web yang dibuat dengan bahasa HTML dan XHTML.
+
+CSS dapat merubah ukuran gambar, warna pada teks, warna pada tabel, ukuran border, warna border, warna hyperlink, warna mouse hover, spasi antar paragraf, spasi antar teks, margin kiri, kanan, atas, bawah, dan parameter lainnya. CSS adalah bahasa style sheet yang digunakan untuk mengatur tampilan dokumen.Dengan adanya CSS memungkinkan kita untuk menampilkan halaman yang sama dengan format yang berbeda.
+
+Cara menambakan css ada 3 cara sering digunakan :
+
+1. External Style Sheet (file CSS berbeda dari file HTML)
+2. Internal Style Sheet (Kode CSS dipasang di dalam tag head HTML)
+3. Inline Style Sheet (Kode CSS langsung dipasang di tag HTML, tidak direkomendasikan).
+
+
+- Internal
+
+{% highlight html%}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: green;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>Website sederhana</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+
+</body>
+</html>
+{% endhighlight %}
+
+berikut hasilnya :
+![alt text][gambar1]
+
+[gambar1]:{{site.urlimg}}img-19okt2017-1.png "view html" 
+
+
+- Inline 
+
+{% highlight html%}
+<!DOCTYPE html>
+<html>
+<body style="background-color: blue;">
+
+<h1 style="color:red; text-align: center;">Website sederhana</h1>
+<p style=" font-family: verdana; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+
+</body>
+</html>
+{% endhighlight %}
+
+berikut hasilnya :
+
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}img-19okt2017-2.png "view html" 
+
+
+- External
+{% highlight html%}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gaya.css"/>
+</head>
+<body>
+
+<h1>Website sederhana</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+
+</body>
+</html>
+{% endhighlight %}
+
+Membuat file dengan nama gaya.css
+
+{% highlight html%}
+body {
+    background-color: #A08484;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+{% endhighlight %}
+
+Hasilnya :
+
+![alt text][gambar3]
+
+[gambar3]:{{site.urlimg}}img-19okt2017-3.png "view html" 

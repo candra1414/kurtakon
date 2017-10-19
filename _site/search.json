@@ -3,6 +3,18 @@
 
     {
     
+      "title"    : "Bagaimana contoh sederhana HTML ? [Bagian 3]",
+      "url"      : "/html/css/2017/10/19/artikel-1.html",
+      "category" : "html, css",
+      "tags"     : "",
+      "date"     : "Oct 19, 2017",
+      "content": "Pada artikel sebelumnya tentang ‘Bagaimana contoh sederhana HTML ? [Bagian 1]’  dan ‘Bagaimana contoh sederhana HTML ? [Bagian 2]’   masih html biasa serta terlihat kaku bukan, Pada artikel kali ini saya akan menambahakan css agar tamplian web lebih warna."
+
+    } ,
+  
+
+    {
+    
       "title"    : "Bagaimana contoh sederhana HTML ? [Bagian 2]",
       "url"      : "/html/2017/10/10/artikel-2.html",
       "category" : "html",

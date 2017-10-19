@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Bagaimana contoh sederhana HTML ? [Bagian 3]</title>
+  <meta name="description" content="Pada artikel sebelumnya tentang ‘Bagaimana contoh sederhana HTML ? [Bagian 1]’  dan ‘Bagaimana contoh sederhana HTML ? [Bagian 2]’   masih html biasa serta t...">
+	
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="text/javascript" src="/asset/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/asset/js/jquery.min.js"></script>
+  <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
+  <link rel="canonical" href="https://kurtakon.com/html/css/2017/10/19/artikel-1.html">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header bg-black navbar navbar-fixed-top">
+
+  <div class="wrapper">
+
+    <a class="site-title" style="color:#fff" href="/">KurTakon</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" style="color:#ddd" href="/about/">KurTakon?</a>
+          
+        
+          
+          <a class="page-link" style="color:#ddd" href="/categori/">Kategori</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+    <div class="page-content">
+      <div class="wrapper" style="min-height: 416px; padding-top:50px">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Bagaimana contoh sederhana HTML ? [Bagian 3]</h1>
+    <p class="post-meta">Oct 19, 2017  • <a href="/html/css/2017/10/19/artikel-1.html#disqus_thread">0 Comments</a></p>
+	
+  </header>
+  <article class="post-content">
+    <p>Pada artikel sebelumnya tentang <a href="https://kurtakon.com/html/2017/10/10/artikel-1.html"><strong>‘Bagaimana contoh sederhana HTML ? [Bagian 1]’</strong> </a> dan <a href="https://kurtakon.com/html/2017/10/10/artikel-2.html"><strong>‘Bagaimana contoh sederhana HTML ? [Bagian 2]’</strong> </a>  masih html biasa serta terlihat kaku bukan, Pada artikel kali ini saya akan menambahakan css agar tamplian web lebih warna.</p>
+
+<h3> Apa itu Css ?</h3>
+<p>Css merupakan kepanjangan dari Cascading Style Sheets. Css memiliki tujuan untuk menghias dan mengatur tampilan agar lebih teratur dan menarik dilihat. CSS adalah sebuah teknologi internet yang direkomendasikan oleh World Wide Web Consortium atau W3C pada tahun 1996.</p>
+
+<p>Seperti pada aplikasi pengolahan kata seperti Microsoft Word yang dapat fitur untuk mengatur beberapa style, misalnya heading, subbab, bodytext, footer, images, dan style lainnya. Selain itu juga dapat digunakan bersama-sama dalam beberapa berkas (file). Pada umumnya CSS dipakai untuk memformat tampilan halaman web yang dibuat dengan bahasa HTML dan XHTML.</p>
+
+<p>CSS dapat merubah ukuran gambar, warna pada teks, warna pada tabel, ukuran border, warna border, warna hyperlink, warna mouse hover, spasi antar paragraf, spasi antar teks, margin kiri, kanan, atas, bawah, dan parameter lainnya. CSS adalah bahasa style sheet yang digunakan untuk mengatur tampilan dokumen.Dengan adanya CSS memungkinkan kita untuk menampilkan halaman yang sama dengan format yang berbeda.</p>
+
+<p>Cara menambakan css ada 3 cara sering digunakan :</p>
+
+<ol>
+  <li>External Style Sheet (file CSS berbeda dari file HTML)</li>
+  <li>Internal Style Sheet (Kode CSS dipasang di dalam tag head HTML)</li>
+  <li>Inline Style Sheet (Kode CSS langsung dipasang di tag HTML, tidak direkomendasikan).</li>
+</ol>
+
+<ul>
+  <li>Internal</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;style&gt;</span>
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="nb">green</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="o">:</span> <span class="n">verdana</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>Website sederhana<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum..<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>berikut hasilnya :
+<img src="https://kurtakon.com/asset/img/img-19okt2017-1.png" alt="alt text" title="view html" /></p>
+
+<ul>
+  <li>Inline</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body</span> <span class="na">style=</span><span class="s">&quot;background-color: blue;&quot;</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">style=</span><span class="s">&quot;color:red; text-align: center;&quot;</span><span class="nt">&gt;</span>Website sederhana<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">&quot; font-family: verdana; font-size: 20px;&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum..<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>berikut hasilnya :</p>
+
+<p><img src="https://kurtakon.com/asset/img/img-19okt2017-2.png" alt="alt text" title="view html" /></p>
+
+<ul>
+  <li>External</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;gaya.css&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>Website sederhana<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum..<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>Membuat file dengan nama gaya.css</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">body {
+    background-color: #A08484;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}</code></pre></div>
+
+<p>Hasilnya :</p>
+
+<p><img src="https://kurtakon.com/asset/img/img-19okt2017-3.png" alt="alt text" title="view html" /></p>
+
+
+  	
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url =  "https://kurtakon.com/html/css/2017/10/19/artikel-1.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/html/css/2017/10/19/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kurtakon-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+
+
+  </article>
+  <div class="row">
+	  <div class=" pull-left">
+		
+		  <a href="/html/2017/10/10/artikel-2.html" class="btn btn-primary btn-flat" title="Bagaimana contoh sederhana HTML ? [Bagian 2]"> << Previous</a>
+		
+	  </div>
+	<div class="pull-right">
+	
+	</div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer bg-black">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"><foo>&#169;</foo> 2017 KurTakon</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+         
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Quote : <br> Takonlah sebelum takon itu dilarang.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
