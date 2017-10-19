@@ -22,9 +22,7 @@ layout: default
           <span class="bg-green">
           {{ post.date | date: "%b %-d, %Y" }}
           </span>
-          <span>
-            {% if post.comments %} <a href="{{url}}{{ post.url }}#disqus_thread">0 Comments</a>{% endif %}
-          </span>
+          
       </li>
 
       <li>
@@ -38,7 +36,13 @@ layout: default
 
               <div class="timeline-body">
                  {{ post.excerpt }}
+                 
+                 <div>
+                 <span>
+                  {% if post.comments %} <a href="{{url}}{{ post.url }}#disqus_thread">0 Comments</a>{% endif %}
+                  </span>
                   <a href="{{ post.url }}" class="pull-right btn btn-sm btn-danger btn-flat">More..</a>
+                 </div>
               </div>
 
           </div>
