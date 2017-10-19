@@ -66,14 +66,15 @@
         <div class="home">
 
   <h1 class="page-heading"></h1>
-  <div id="search-container">
-  <input type="text" id="search-input" class ='pull-right form-control' placeholder=" Search...">
-  <br>
-  <br>
+    <div id="search-container">
+      <input type="text" id="search-input" class ='pull-right form-control' placeholder=" Search...">
+      <br>
+      <br>
+      <ul id="results-container" class="timeline">
+      </ul>
 
-  <ul id="results-container" class="timeline">
-  </ul>
-  <ul class="timeline" id='isi-default'>
+    </div>
+    <ul class="timeline" id='isi-default'>
         
 
      
@@ -369,29 +370,30 @@ Sebelum Yii2 terlahir dulu terkenal adanya Yii 1.1 . Berdasarkan pengalaman saya
       
       <!-- END timeline item -->
   </ul>
-</div>
+
+    
 </div>
 <!-- Script pointing to search-script.js -->
 <script src="/asset/js/search.js" type="text/javascript"></script>
-
 <!-- Configuration -->
 <script>
 $('#search-input').on('keyup',function(){
   var input = $(this);
   if( input.val() == "" ) {
-            $('#isi-default').show();
+    $('#isi-default').show();
+    $('#results-container').hide();
   }else{
     $('#isi-default').hide();
-
+    $('#results-container').show();
+  } 
+});
     SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
       json: '/search.json',
       searchResultTemplate : '<li class="time-label"><span class="bg-green"> {date} </span></li><li><div class="timeline-item"><span class="time"><i class="fa fa-clock-o"></i> {category} </span><h3 class="timeline-header"><a href="{url}"> {title} </a></h3><div class="timeline-body"> {content} <a href="{url}" class="pull-right btn btn-sm btn-danger btn-flat">More..</a></div></div></li>'
-    });
-  } 
- 
-});
+    })
+  
 </script>
       </div>
     </div>
