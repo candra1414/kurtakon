@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "Apa itu Web Server?"
+comments: true
+date:   2017-10-19 09:06:58
+categories: [PHP,Server]
+---
+
+Web Server adalah perangkat lunak ataupun perangkat keras yang menyediakan layanan akses kepada pengguna melalui protokol komunikasi HTTP atau HTTPS atas berkas-berkas yang terdapat pada suatu situs web dalam layanan ke pengguna dengan menggunakan aplikasi tertentu seperti website.
+
+<h3>Apa Fungsi Web Server?</h3>
+
+Fungsi utama sebuah server web adalah untuk mentransfer berkas atas permintaan pengguna melalui protokol komunikasi yang telah ditentukan. Disebabkan sebuah halaman web dapat terdiri atas berkas teks, gambar, video, dan lainnya pemanfaatan server web berfungsi pula untuk mentransfer seluruh aspek pemberkasan dalam sebuah halaman web yang terkait; termasuk di dalamnya teks, gambar, video, atau lainnya.
+
+Pada menggunaannya web server tidak hanya digunakan pada pembuatan website tapi juga bisa digunakan perangkat lain seperti printer,router, kemere web yang mengakses jaringan lokal.
+
+Ada bermacam macam Web Server pada saat ini :
+
+1. Apache HTTP Server
+2. Apache Tomcat
+3. Caddy
+4. Lighttpd
+5. Nginx
+6. Jetty
+7. IIS
+8. WEBrick
+9. Gunicorn

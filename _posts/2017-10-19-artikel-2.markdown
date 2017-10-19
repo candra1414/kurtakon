@@ -1,0 +1,86 @@
+---
+layout: post
+title:  "Apa itu PHP?"
+comments: true
+date:   2017-10-19 09:06:58
+categories: [Html,PHP]
+---
+Sering kita mendegar dengan kata __PHP__ , perlu diingat __PHP__ di sini bukan Pemberi harapan palsu namun PHP (Hypertext Preprocessor) yaitu bahasa pemerograman yang sering digunakan bersamaan dengan HTML. Php banyak digunakan untuk membuat situs web dinamis.
+
+PHP singkatan dari _Personal Home Page_ pertama dibuat oleh _Rasmus Lerdorf_ tahun 1995. Pertama di buat PHP dengan _Common Gateway Interface (CGI)_ menggunakan bahasa __C__ . Seiring perkembanggan jaman muncul PHP3, PHP4, PHP5 (yang sampai saat ini masih digunakan), serta yang terakhir PHP7.
+
+Bagaimana Menjalankan PHP ?
+
+Untuk menjalankan PHP kita memerlukan [_Web Server_](https://kurtakon.com/html/2017/10/10/artikel-3.html). Ada bermacam macam web server seperti _Apache_ atau bisa juga _Nginx_ yang bisa kita gunakan. Pada saat ini penulis menggunakan _Nginx_  yang dijalankan pada _localhost_ atau IP _127.0.0.1_
+
+Contoh script :
+
+{% highlight php%}
+<?php
+    echo "Ini Uji coba PHP";
+?>
+{% endhighlight %}
+
+Hasilnya :
+
+![alt text][gambar1]
+
+[gambar1]:{{site.urlimg}}img-19okt2017-4.png "view html" 
+
+Contoh Membuat penjumlahan dengan PHP 
+
+{% highlight php%}
+<?php
+   $n = 1;
+   $m = 4;
+   echo "n =".$n;
+   echo "</br>";
+   echo "m =".$m;
+   echo "</br>";
+   echo "jika n + m ";
+   echo 'hasilnya'.($n+$m);
+?>
+{% endhighlight %}
+
+Hasilnya :
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}img-19okt2017-5.png "view html" 
+
+
+Membuat perulangan dengan __for__ untuk menghasilkan table :
+
+{% highlight php%}
+
+<style type="text/css">
+    table {
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+<table> 
+<tr> <th colspan="2">Contoh Table</th></tr>
+<?php
+    for ($i=0; $i <10 ; $i++) { 
+?>
+    <tr>
+        <td><?php echo $i;?></td>
+        <td> Baris pada tabel  <?php echo $i;?></td>
+
+    </tr>
+<?php
+    }
+?>
+</table>
+
+{% endhighlight %}
+
+Hasilnya :
+
+![alt text][gambar3]
+
+[gambar3]:{{site.urlimg}}img-19okt2017-6.png "view html" 

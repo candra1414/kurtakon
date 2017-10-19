@@ -3,6 +3,30 @@
 
     {
     
+      "title"    : "Apa itu Web Server?",
+      "url"      : "/php/server/2017/10/19/artikel-3.html",
+      "category" : "php, server",
+      "tags"     : "",
+      "date"     : "Oct 19, 2017",
+      "content": "Web Server adalah perangkat lunak ataupun perangkat keras yang menyediakan layanan akses kepada pengguna melalui protokol komunikasi HTTP atau HTTPS atas berkas-berkas yang terdapat pada suatu situs web dalam layanan ke pengguna dengan menggunakan aplikasi tertentu seperti website."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Apa itu PHP?",
+      "url"      : "/html/php/2017/10/19/artikel-2.html",
+      "category" : "html, php",
+      "tags"     : "",
+      "date"     : "Oct 19, 2017",
+      "content": "Sering kita mendegar dengan kata PHP , perlu diingat PHP di sini bukan Pemberi harapan palsu namun PHP (Hypertext Preprocessor) yaitu bahasa pemerograman yang sering digunakan bersamaan dengan HTML. Php banyak digunakan untuk membuat situs web dinamis."
+
+    } ,
+  
+
+    {
+    
       "title"    : "Bagaimana contoh sederhana HTML ? [Bagian 3]",
       "url"      : "/html/css/2017/10/19/artikel-1.html",
       "category" : "html, css",
