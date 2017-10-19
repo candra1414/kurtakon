@@ -22,6 +22,9 @@ layout: default
           <span class="bg-green">
           {{ post.date | date: "%b %-d, %Y" }}
           </span>
+          <span>
+            {% if post.comments %} <span class="disqus_thread"> 0 Comment</span>{% endif %}
+          </span>
       </li>
 
       <li>
