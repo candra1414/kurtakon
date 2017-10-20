@@ -14,7 +14,8 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <script type="text/javascript" src="/asset/js/jquery.min.js"></script>
-  <script src="/js/jquery-1.11.0.js"> </script>
+  <script type="text/javascript" src="/js/jquery-1.11.0.js"> </script>
+  <script type="text/javascript" src="js/costumes.js"> </script>
     <!-- Bootstrap Core JavaScript -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="/js/bootstrap.min.js"></script>
@@ -48,6 +49,8 @@
                 
                 <li><a href="/categori/" style="color:#fff" >Kategori</a></li>
                     
+                
+                
                 
                 
                 
@@ -95,6 +98,40 @@
         
       
         
+      <!-- timeline time label -->
+      <li class="time-label">
+          <span class="bg-green">
+          Oct 20, 2017
+          </span>
+          
+      </li>
+
+      <li>
+          <!-- timeline icon -->
+          <div class="timeline-item">
+              <span class="time"><i class="fa fa-clock-o"></i> 
+          Jekyll,
+           </span>
+
+              <h3 class="timeline-header"><a href="/jekyll/2017/10/20/artikel-1/">Bagaimana membuat pagination pada Jekyll ?</a></h3>
+
+              <div class="timeline-body">
+                 <p>Pagination sering kita jumpai pada web-web terutama pada blog agar tampilan list pada beranda tidak terlalu banyak kebawah. Pada kali ini saya akan mendemokan bagaimana memasang pagination pada Jekyll terutama untuk tampilan awal website agar post blog tidak terlalu kebawah (jika artikelnya sudah banyak).</p>
+
+
+                 
+                 <div>
+                 <span>
+                   <a href="/jekyll/2017/10/20/artikel-1/#disqus_thread">0 Comments</a>
+                  </span>
+                  <a href="/jekyll/2017/10/20/artikel-1/" class="pull-right btn btn-sm btn-danger btn-flat">More..</a>
+                 </div>
+              </div>
+
+          </div>
+      </li>
+
+      
       <!-- timeline time label -->
       <li class="time-label">
           <span class="bg-green">
@@ -419,42 +456,6 @@ Hal tersebut menjadi poliemik, dimana program lama yang dibangun dengan php5 aka
       </li>
 
       
-      <!-- timeline time label -->
-      <li class="time-label">
-          <span class="bg-green">
-          Aug 30, 2017
-          </span>
-          
-      </li>
-
-      <li>
-          <!-- timeline icon -->
-          <div class="timeline-item">
-              <span class="time"><i class="fa fa-clock-o"></i> 
-          Jekyll,
-           
-          Disqus,
-           </span>
-
-              <h3 class="timeline-header"><a href="/jekyll/disqus/2017/08/30/artikel-1/">Bagaimana Memasang Disqus Pada Jekyll?</a></h3>
-
-              <div class="timeline-body">
-                 <p>Bagi pengguna website static yang tidak memiliki database akan kesulitan membuat komentar. Seperti memasang komentar pada web yang dibuat dengan <a href="https://kurtakon.com/jekyll/2017/08/08/artikel-1/"><strong>Jekyll</strong> </a>. Salah satu alternatif kita bisa menggunakan disqus. Akan tetapi <strong>Bagaimana Memasang Disqus Pada Jekyll ?</strong>.</p>
-
-
-                 
-                 <div>
-                 <span>
-                   <a href="/jekyll/disqus/2017/08/30/artikel-1/#disqus_thread">0 Comments</a>
-                  </span>
-                  <a href="/jekyll/disqus/2017/08/30/artikel-1/" class="pull-right btn btn-sm btn-danger btn-flat">More..</a>
-                 </div>
-              </div>
-
-          </div>
-      </li>
-
-      
       <!-- END timeline item -->
       <li>
       <i class="fa fa-clock-o bg-gray"></i>
@@ -463,6 +464,7 @@ Hal tersebut menjadi poliemik, dimana program lama yang dibangun dengan php5 aka
 
 </div>
   <div class="text-center">
+  21
   
   <ul class="pagination"> 
     
@@ -474,6 +476,10 @@ Hal tersebut menjadi poliemik, dimana program lama yang dibangun dengan php5 aka
     
       
         <li><a href="/page2/">2</a> </li>
+      
+    
+      
+        <li><a href="/page3/">3</a> </li>
       
     
 
@@ -513,7 +519,6 @@ $('#search-input').on('keyup',function(){
         </div>
       </div>
     </div>
-
     <footer class="site-footer bg-black">
 
   <div class="wrapper">

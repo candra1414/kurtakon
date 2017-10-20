@@ -1,0 +1,36 @@
+
+.scroll-unhover{
+    width: 40px;
+    position: fixed; bottom: 50px; right: 0;
+    display: none;
+    opacity: 0.5;
+    color:white;
+}
+
+.scroll-hover{
+    width: 40px;
+    position: fixed; bottom: 50px; right: 0;
+    display: none;
+    opacity: 1;
+    color:white;
+}
+
+.btn-gulung{
+    width: 40px;
+    position: fixed; bottom: 50px; right: 0;
+    display: none;
+}
+@-moz-document url-prefix() { 
+    .sidebar-menu li > a > span > span.pull-right {
+        position: absolute !important;
+        right: 10px !important;
+        top: 50% !important;
+        margin-top: -7px !important;
+    }
+    .sidebar-menu li > a > i.pull-right {
+        position: absolute !important;
+        right: 10px !important;
+        top: 50% !important;
+        margin-top: -7px !important;
+    }
+}

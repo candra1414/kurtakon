@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Apa itu Web Server?</title>
-  <meta name="description" content="Web Server adalah perangkat lunak ataupun perangkat keras yang menyediakan layanan akses kepada pengguna melalui protokol komunikasi HTTP atau HTTPS atas ber...">
+  <title>Bagaimana membuat pagination pada Jekyll ?</title>
+  <meta name="description" content="Pagination sering kita jumpai pada web-web terutama pada blog agar tampilan list pada beranda tidak terlalu banyak kebawah. Pada kali ini saya akan mendemoka...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,7 +20,7 @@
   <script src="/js/bootstrap.min.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
-  <link rel="canonical" href="https://kurtakon.com/php/server/2017/10/19/artikel-3/">
+  <link rel="canonical" href="https://kurtakon.com/jekyll/2017/10/20/artikel-1/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
 </head>
 
@@ -82,44 +82,107 @@
                 <div class="post">
 
   <header class="post-header container-fluid">
-    <h1 class="content-max-width">Apa itu Web Server?</h1>
-    <p class="post-meta">Oct 19, 2017  • <a href="/php/server/2017/10/19/artikel-3/#disqus_thread">0 Comments</a></p>
+    <h1 class="content-max-width">Bagaimana membuat pagination pada Jekyll ?</h1>
+    <p class="post-meta">Oct 20, 2017  • <a href="/jekyll/2017/10/20/artikel-1/#disqus_thread">0 Comments</a></p>
 	
   </header>
   <article class="post-content content container-fluid">
-    <p>Web Server adalah perangkat lunak ataupun perangkat keras yang menyediakan layanan akses kepada pengguna melalui protokol komunikasi HTTP atau HTTPS atas berkas-berkas yang terdapat pada suatu situs web dalam layanan ke pengguna dengan menggunakan aplikasi tertentu seperti website.</p>
+    <p>Pagination sering kita jumpai pada web-web terutama pada blog agar tampilan list pada beranda tidak terlalu banyak kebawah. Pada kali ini saya akan mendemokan bagaimana memasang pagination pada Jekyll terutama untuk tampilan awal website agar post blog tidak terlalu kebawah (jika artikelnya sudah banyak).</p>
 
-<h3>Apa Fungsi Web Server?</h3>
+<p>Pada Jekyll versi 3 sudah terdapat  plugin <strong>jekyll-paginate</strong>  sehingga kita cukup memanggilnya pada <strong>_config.yml</strong>.</p>
 
-<p>Fungsi utama sebuah server web adalah untuk mentransfer berkas atas permintaan pengguna melalui protokol komunikasi yang telah ditentukan. Disebabkan sebuah halaman web dapat terdiri atas berkas teks, gambar, video, dan lainnya pemanfaatan server web berfungsi pula untuk mentransfer seluruh aspek pemberkasan dalam sebuah halaman web yang terkait; termasuk di dalamnya teks, gambar, video, atau lainnya.</p>
+<pre><code>plugins: [jekyll-paginate] 
+</code></pre>
 
-<p>Pada menggunaannya web server tidak hanya digunakan pada pembuatan website tapi juga bisa digunakan perangkat lain seperti printer,router, kemere web yang mengakses jaringan lokal.</p>
+<p>Setelah itu tentukan jumlah maksimum list pada setiap halaman yang kan digunakan, misal maksimal 10 list post pada setiap halaman.</p>
 
-<p>Ada bermacam macam Web Server pada saat ini :</p>
+<pre><code>paginate: 10
+</code></pre>
 
-<ol>
-  <li>Apache HTTP Server</li>
-  <li>Apache Tomcat</li>
-  <li>Caddy</li>
-  <li>Lighttpd</li>
-  <li>Nginx</li>
-  <li>Jetty</li>
-  <li>IIS</li>
-  <li>WEBrick</li>
-  <li>Gunicorn</li>
-</ol>
+<p>Kemudian tentukan bagaimana halaman atau format url untuk setiap halaman</p>
+
+<pre><code>paginate_path: "/page:num/"
+</code></pre>
+
+<p>maka tampilannya untuk page kedua</p>
+
+<pre><code>https://kurtakon.com/page2/
+</code></pre>
+<div class="callout callout-danger">
+<h4> Pagination hanya berjalan pada file html</h4>
+
+<p> Pagination hanya tidak bisa berjalan file Markdown atau pada site jekyll, pagination hanya bisa dipanggil pada file html dengan nama file <b> index.html</b> </p>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Keterangan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>page</td>
+      <td>halaman page berada (posisinya)</td>
+    </tr>
+    <tr>
+      <td>per_page</td>
+      <td>menampilkan jumlah maksimum list tiap halaman</td>
+    </tr>
+    <tr>
+      <td>posts</td>
+      <td>list dari post untuk halaman tersebut</td>
+    </tr>
+    <tr>
+      <td>total_posts</td>
+      <td>jumlah seluruh postingan</td>
+    </tr>
+    <tr>
+      <td>total_pages</td>
+      <td>jumlah seluruh halaman hasil pagination</td>
+    </tr>
+    <tr>
+      <td>previous_page</td>
+      <td>halaman sebelumnya</td>
+    </tr>
+    <tr>
+      <td>previous_page_path</td>
+      <td>untuk link nomor halaman dari halaman pagination sebelumnya, atau  jika hasilnya null maka tidak ada halaman sebelumnya</td>
+    </tr>
+    <tr>
+      <td>next_page</td>
+      <td>halaman selanjutnya</td>
+    </tr>
+    <tr>
+      <td>next_page_path</td>
+      <td>untuk link nomor halaman dari halaman pagination sebelumnya, atau  jika hasilnya null maka tidak ada halaman selanjutnya</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Kode untuk menampilkan daftar atau list artikel yang sudah di padding</p>
+
+<p><img src="https://kurtakon.com/asset/img/img-20okt2017-1.png" alt="alt text" title="view html" /></p>
+
+<p>Kode untuk membuat button previous dan next page untuk halaman padding</p>
+
+<p><img src="https://kurtakon.com/asset/img/img-20okt2017-2.png" alt="alt text" title="view html" /></p>
+
+<p>Hasil tampilan :</p>
+
+<p><img src="https://kurtakon.com/asset/img/img-20okt2017-3.png" alt="alt text" title="view html" /></p>
+
 
 
   </article>
 		  <div class="row">
 			  <div class=" pull-left">
 				
-				  <a href="/html/php/2017/10/19/artikel-2/" class="btn btn-primary btn-flat" title="Apa itu PHP?"> <span class="fa fa-angle-double-left"></span></a>
+				  <a href="/php/server/2017/10/19/artikel-3/" class="btn btn-primary btn-flat" title="Apa itu Web Server?"> <span class="fa fa-angle-double-left"></span></a>
 				
 			  </div>
 			<div class="pull-right">
-			
-			  <a href="/jekyll/2017/10/20/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana membuat pagination pada Jekyll ?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>
@@ -128,8 +191,8 @@
 <script>
 
 var disqus_config = function () {
-this.page.url =  "https://kurtakon.com/php/server/2017/10/19/artikel-3/";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "/php/server/2017/10/19/artikel-3"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url =  "https://kurtakon.com/jekyll/2017/10/20/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/jekyll/2017/10/20/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

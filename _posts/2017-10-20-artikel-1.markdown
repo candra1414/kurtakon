@@ -1,0 +1,66 @@
+---
+layout: post
+title:  "Bagaimana membuat pagination pada Jekyll ?"
+comments: true
+date:   2017-10-20 03:06:58
+categories: [Jekyll]
+---
+
+Pagination sering kita jumpai pada web-web terutama pada blog agar tampilan list pada beranda tidak terlalu banyak kebawah. Pada kali ini saya akan mendemokan bagaimana memasang pagination pada Jekyll terutama untuk tampilan awal website agar post blog tidak terlalu kebawah (jika artikelnya sudah banyak).
+
+Pada Jekyll versi 3 sudah terdapat  plugin __jekyll-paginate__  sehingga kita cukup memanggilnya pada ___config.yml__.
+
+    plugins: [jekyll-paginate] 
+
+Setelah itu tentukan jumlah maksimum list pada setiap halaman yang kan digunakan, misal maksimal 10 list post pada setiap halaman.
+
+    paginate: 10
+
+Kemudian tentukan bagaimana halaman atau format url untuk setiap halaman
+
+    paginate_path: "/page:num/"
+
+maka tampilannya untuk page kedua
+
+    https://kurtakon.com/page2/
+<div class="callout callout-danger">
+<h4> Pagination hanya berjalan pada file html</h4>
+
+<p> Pagination hanya tidak bisa berjalan file Markdown atau pada site jekyll, pagination hanya bisa dipanggil pada file html dengan nama file <b> index.html</b> </p>
+</div>
+
+| Attribute | Keterangan |
+|-------|--------|
+| page | halaman page berada (posisinya) |
+| per_page | menampilkan jumlah maksimum list tiap halaman|
+| posts | list dari post untuk halaman tersebut |
+| total_posts | jumlah seluruh postingan|
+| total_pages | jumlah seluruh halaman hasil pagination|
+| previous_page | halaman sebelumnya|
+| previous_page_path | untuk link nomor halaman dari halaman pagination sebelumnya, atau  jika hasilnya null maka tidak ada halaman sebelumnya |
+| next_page | halaman selanjutnya |
+| next_page_path | untuk link nomor halaman dari halaman pagination sebelumnya, atau  jika hasilnya null maka tidak ada halaman selanjutnya|
+{: class="table"}
+
+Kode untuk menampilkan daftar atau list artikel yang sudah di padding
+
+![alt text][gambar1]
+
+[gambar1]:{{site.urlimg}}img-20okt2017-1.png "view html" 
+
+Kode untuk membuat button previous dan next page untuk halaman padding
+
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}img-20okt2017-2.png "view html" 
+
+Hasil tampilan :
+
+![alt text][gambar3]
+
+[gambar3]:{{site.urlimg}}img-20okt2017-3.png "view html" 
+
+
+
+
+

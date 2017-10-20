@@ -3,6 +3,18 @@
 
     {
     
+      "title"    : "Bagaimana membuat pagination pada Jekyll ?",
+      "url"      : "/jekyll/2017/10/20/artikel-1/",
+      "category" : "jekyll",
+      "tags"     : "",
+      "date"     : "Oct 20, 2017",
+      "content": "Pagination sering kita jumpai pada web-web terutama pada blog agar tampilan list pada beranda tidak terlalu banyak kebawah. Pada kali ini saya akan mendemokan bagaimana memasang pagination pada Jekyll terutama untuk tampilan awal website agar post blog tidak terlalu kebawah (jika artikelnya sudah banyak)."
+
+    } ,
+  
+
+    {
+    
       "title"    : "Apa itu Web Server?",
       "url"      : "/php/server/2017/10/19/artikel-3/",
       "category" : "php, server",
