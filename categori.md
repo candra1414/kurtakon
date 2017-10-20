@@ -10,7 +10,7 @@ title: Kategori
     {% assign categories = site.categories | sort %}
     {% for category in categories %}
      <li>
-        <a href="/categori/#{{category[0]}}">
+        <a href="/categori/#{{category[0]| capitalize}}">
                 {{ category[0] | replace:'-', ' ' | capitalize}} ({{ category | last | size }})
         </a>
      </li>
@@ -22,7 +22,7 @@ title: Kategori
   <div class="col-md-8">
     
 {% for tag in categories %}
-<div id="{{ tag[0]}}" class="box box-success box-solid"> 
+<div id="{{ tag[0] | capitalize }}" class="box box-success box-solid"> 
 <div class="box-header">
   <div class="box-title">
     {{ tag[0] | capitalize | replace:'-', ' '}}
