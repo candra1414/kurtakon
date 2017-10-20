@@ -3,7 +3,7 @@ layout: post
 title:  "Apa itu Web Server?"
 comments: true
 date:   2017-10-19 09:06:58
-categories: [PHP,Server]
+categories: [Php,Server]
 ---
 
 Web Server adalah perangkat lunak ataupun perangkat keras yang menyediakan layanan akses kepada pengguna melalui protokol komunikasi HTTP atau HTTPS atas berkas-berkas yang terdapat pada suatu situs web dalam layanan ke pengguna dengan menggunakan aplikasi tertentu seperti website.

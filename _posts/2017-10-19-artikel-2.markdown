@@ -3,7 +3,7 @@ layout: post
 title:  "Apa itu PHP?"
 comments: true
 date:   2017-10-19 09:06:58
-categories: [Html,PHP]
+categories: [Html,Php]
 ---
 Sering kita mendegar dengan kata __PHP__ , perlu diingat __PHP__ di sini bukan Pemberi harapan palsu namun PHP (Hypertext Preprocessor) yaitu bahasa pemerograman yang sering digunakan bersamaan dengan HTML. Php banyak digunakan untuk membuat situs web dinamis.
 
