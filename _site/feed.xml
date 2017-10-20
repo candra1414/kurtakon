@@ -6,8 +6,8 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Oct 2017 18:19:45 +0700</pubDate>
-    <lastBuildDate>Fri, 20 Oct 2017 18:19:45 +0700</lastBuildDate>
+    <pubDate>Fri, 20 Oct 2017 18:40:03 +0700</pubDate>
+    <lastBuildDate>Fri, 20 Oct 2017 18:40:03 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -53,7 +53,7 @@
 
 &lt;p&gt;Bagaimana Menjalankan PHP ?&lt;/p&gt;
 
-&lt;p&gt;Untuk menjalankan PHP kita memerlukan &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-3.html&quot;&gt;&lt;em&gt;Web Server&lt;/em&gt;&lt;/a&gt;. Ada bermacam macam web server seperti &lt;em&gt;Apache&lt;/em&gt; atau bisa juga &lt;em&gt;Nginx&lt;/em&gt; yang bisa kita gunakan. Pada saat ini penulis menggunakan &lt;em&gt;Nginx&lt;/em&gt;  yang dijalankan pada &lt;em&gt;localhost&lt;/em&gt; atau IP &lt;em&gt;127.0.0.1&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Untuk menjalankan PHP kita memerlukan &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-3/&quot;&gt;&lt;em&gt;Web Server&lt;/em&gt;&lt;/a&gt;. Ada bermacam macam web server seperti &lt;em&gt;Apache&lt;/em&gt; atau bisa juga &lt;em&gt;Nginx&lt;/em&gt; yang bisa kita gunakan. Pada saat ini penulis menggunakan &lt;em&gt;Nginx&lt;/em&gt;  yang dijalankan pada &lt;em&gt;localhost&lt;/em&gt; atau IP &lt;em&gt;127.0.0.1&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Contoh script :&lt;/p&gt;
 
@@ -126,7 +126,7 @@
     
       <item>
         <title>Bagaimana contoh sederhana HTML ? [Bagian 3]</title>
-        <description>&lt;p&gt;Pada artikel sebelumnya tentang &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-1.html&quot;&gt;&lt;strong&gt;‘Bagaimana contoh sederhana HTML ? [Bagian 1]’&lt;/strong&gt; &lt;/a&gt; dan &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-2.html&quot;&gt;&lt;strong&gt;‘Bagaimana contoh sederhana HTML ? [Bagian 2]’&lt;/strong&gt; &lt;/a&gt;  masih html biasa serta terlihat kaku bukan, Pada artikel kali ini saya akan menambahakan css agar tamplian web lebih warna.&lt;/p&gt;
+        <description>&lt;p&gt;Pada artikel sebelumnya tentang &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-1/&quot;&gt;&lt;strong&gt;‘Bagaimana contoh sederhana HTML ? [Bagian 1]’&lt;/strong&gt; &lt;/a&gt; dan &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-2/&quot;&gt;&lt;strong&gt;‘Bagaimana contoh sederhana HTML ? [Bagian 2]’&lt;/strong&gt; &lt;/a&gt;  masih html biasa serta terlihat kaku bukan, Pada artikel kali ini saya akan menambahakan css agar tamplian web lebih warna.&lt;/p&gt;
 
 &lt;h3&gt; Apa itu Css ?&lt;/h3&gt;
 &lt;p&gt;Css merupakan kepanjangan dari Cascading Style Sheets. Css memiliki tujuan untuk menghias dan mengatur tampilan agar lebih teratur dan menarik dilihat. CSS adalah sebuah teknologi internet yang direkomendasikan oleh World Wide Web Consortium atau W3C pada tahun 1996.&lt;/p&gt;
@@ -261,7 +261,7 @@ p {
     
       <item>
         <title>Bagaimana contoh sederhana HTML ? [Bagian 2]</title>
-        <description>&lt;p&gt;Setelah menulis &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-1.html&quot;&gt;&lt;strong&gt;‘Bagaimana contoh sederhana HTML ? [Bagian 1]’&lt;/strong&gt; &lt;/a&gt; . Mari kita lanjukan bagian selanjutnya. 
+        <description>&lt;p&gt;Setelah menulis &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-1/&quot;&gt;&lt;strong&gt;‘Bagaimana contoh sederhana HTML ? [Bagian 1]’&lt;/strong&gt; &lt;/a&gt; . Mari kita lanjukan bagian selanjutnya. 
 Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membahas sedikit contoh sederhana yang sering digukan pada html beserta fungsinya.&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -307,9 +307,9 @@ Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membaha
 
 &lt;p&gt;contoh :&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://kurtakon.com/html/2017/10/10/artikel-2.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Bagaimana contoh sederhana HTML ? [Bagian 2] &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://kurtakon.com/html/2017/10/10/artikel-2/&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Bagaimana contoh sederhana HTML ? [Bagian 2] &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Berikut hasilnya : &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-2.html&quot;&gt;Bagaimana contoh sederhana HTML ? [Bagian 2] &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Berikut hasilnya : &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-2/&quot;&gt;Bagaimana contoh sederhana HTML ? [Bagian 2] &lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -933,7 +933,7 @@ Dalam intruksi kita bisa memasukan angka untuk memilih jenis php yang akan digun
     
       <item>
         <title>Bagaimana Memasang Disqus Pada Jekyll?</title>
-        <description>&lt;p&gt;Bagi pengguna website static yang tidak memiliki database akan kesulitan membuat komentar. Seperti memasang komentar pada web yang dibuat dengan &lt;a href=&quot;https://kurtakon.com/jekyll/2017/08/08/artikel-1.html&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt; &lt;/a&gt;. Salah satu alternatif kita bisa menggunakan disqus. Akan tetapi &lt;strong&gt;Bagaimana Memasang Disqus Pada Jekyll ?&lt;/strong&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;Bagi pengguna website static yang tidak memiliki database akan kesulitan membuat komentar. Seperti memasang komentar pada web yang dibuat dengan &lt;a href=&quot;https://kurtakon.com/jekyll/2017/08/08/artikel-1/&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt; &lt;/a&gt;. Salah satu alternatif kita bisa menggunakan disqus. Akan tetapi &lt;strong&gt;Bagaimana Memasang Disqus Pada Jekyll ?&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Petama, kita harus memiliki akun pada  &lt;a href=&quot;https://disqus.com&quot;&gt;&lt;strong&gt;disqus&lt;/strong&gt; &lt;/a&gt;. 
 Kedua, memasangnya pada aplikasi &lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/p&gt;

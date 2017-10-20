@@ -6,7 +6,7 @@ date:   2017-10-19 09:06:58
 categories: [Html,Css]
 ---
 
-Pada artikel sebelumnya tentang [**'Bagaimana contoh sederhana HTML ? [Bagian 1]'** ](https://kurtakon.com/html/2017/10/10/artikel-1.html) dan [**'Bagaimana contoh sederhana HTML ? [Bagian 2]'** ](https://kurtakon.com/html/2017/10/10/artikel-2.html)  masih html biasa serta terlihat kaku bukan, Pada artikel kali ini saya akan menambahakan css agar tamplian web lebih warna.
+Pada artikel sebelumnya tentang [**'Bagaimana contoh sederhana HTML ? [Bagian 1]'** ](https://kurtakon.com/html/2017/10/10/artikel-1/) dan [**'Bagaimana contoh sederhana HTML ? [Bagian 2]'** ](https://kurtakon.com/html/2017/10/10/artikel-2/)  masih html biasa serta terlihat kaku bukan, Pada artikel kali ini saya akan menambahakan css agar tamplian web lebih warna.
 
 <h3> Apa itu Css ?</h3>
 Css merupakan kepanjangan dari Cascading Style Sheets. Css memiliki tujuan untuk menghias dan mengatur tampilan agar lebih teratur dan menarik dilihat. CSS adalah sebuah teknologi internet yang direkomendasikan oleh World Wide Web Consortium atau W3C pada tahun 1996.

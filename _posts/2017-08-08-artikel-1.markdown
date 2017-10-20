@@ -32,7 +32,7 @@ Karena Jekyll tidak membutuhkan _database_ , _comment_, _moderator_  untuk diins
 
 **Kenapa Static menjadi kelebihan Jekyll ?**
 
-Jekyll menggunakan [markdown](http://kurtakon.com/markdown/2017/08/02/artikel-1.html) (atau Textile), Liquid, dalam mebuat website. Sehingga kita hanya membuat file dengan markdown dan seluruh HTML & CSS  akan digenerate menjadi website static.
+Jekyll menggunakan [markdown](http://kurtakon.com/markdown/2017/08/02/artikel-1/) (atau Textile), Liquid, dalam mebuat website. Sehingga kita hanya membuat file dengan markdown dan seluruh HTML & CSS  akan digenerate menjadi website static.
 
 
 **Blog-aware ?**

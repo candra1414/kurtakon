@@ -6,7 +6,7 @@ date:   2017-08-08 23:06:58
 categories: [Jekyll]
 ---
 
-Seperti pada artikel sebelumnya membahas [**'Apa itu Jekyll?'** ](https://kurtakon.com/jekyll/2017/08/08/artikel-1.html) . Kali ini akan membahas **Bagaimana cara menginstall Jekyll?**. Sebelum melakukan install ada beberapa syarat yang dibutukan.
+Seperti pada artikel sebelumnya membahas [**'Apa itu Jekyll?'** ](https://kurtakon.com/jekyll/2017/08/08/artikel-1) . Kali ini akan membahas **Bagaimana cara menginstall Jekyll?**. Sebelum melakukan install ada beberapa syarat yang dibutukan.
 
 
 **Apa syarat sebelum install Jekyll?**

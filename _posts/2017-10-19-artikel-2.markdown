@@ -11,7 +11,7 @@ PHP singkatan dari _Personal Home Page_ pertama dibuat oleh _Rasmus Lerdorf_ tah
 
 Bagaimana Menjalankan PHP ?
 
-Untuk menjalankan PHP kita memerlukan [_Web Server_](https://kurtakon.com/html/2017/10/10/artikel-3.html). Ada bermacam macam web server seperti _Apache_ atau bisa juga _Nginx_ yang bisa kita gunakan. Pada saat ini penulis menggunakan _Nginx_  yang dijalankan pada _localhost_ atau IP _127.0.0.1_
+Untuk menjalankan PHP kita memerlukan [_Web Server_](https://kurtakon.com/html/2017/10/10/artikel-3/). Ada bermacam macam web server seperti _Apache_ atau bisa juga _Nginx_ yang bisa kita gunakan. Pada saat ini penulis menggunakan _Nginx_  yang dijalankan pada _localhost_ atau IP _127.0.0.1_
 
 Contoh script :
 

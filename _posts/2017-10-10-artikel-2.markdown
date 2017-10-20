@@ -5,7 +5,7 @@ comments: true
 date:   2017-10-10 09:06:58
 categories: [Html]
 ---
-Setelah menulis [**'Bagaimana contoh sederhana HTML ? [Bagian 1]'** ](https://kurtakon.com/html/2017/10/10/artikel-1.html) . Mari kita lanjukan bagian selanjutnya. 
+Setelah menulis [**'Bagaimana contoh sederhana HTML ? [Bagian 1]'** ](https://kurtakon.com/html/2017/10/10/artikel-1/) . Mari kita lanjukan bagian selanjutnya. 
 Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membahas sedikit contoh sederhana yang sering digukan pada html beserta fungsinya.
 
 ---
@@ -48,10 +48,10 @@ Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membaha
 contoh : 
 {% highlight html%}
 
-<a href="https://kurtakon.com/html/2017/10/10/artikel-2.html">Bagaimana contoh sederhana HTML ? [Bagian 2] </a>
+<a href="https://kurtakon.com/html/2017/10/10/artikel-2/">Bagaimana contoh sederhana HTML ? [Bagian 2] </a>
 {% endhighlight %}
 
-  Berikut hasilnya : <a href="https://kurtakon.com/html/2017/10/10/artikel-2.html">Bagaimana contoh sederhana HTML ? [Bagian 2] </a>
+  Berikut hasilnya : <a href="https://kurtakon.com/html/2017/10/10/artikel-2/">Bagaimana contoh sederhana HTML ? [Bagian 2] </a>
 
 ---
 

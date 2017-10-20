@@ -14,7 +14,7 @@ Untuk kali ini saya hanya mebahas __Bagaimana cara Install Yii2 pada Linux denga
 
 Tahap awal menginstall Yii2 :
 
-1. Anda harus  [**install composer** ](https://kurtakon.com/composer/2017/08/24/artikel-1.html) terlebih dahulu.
+1. Anda harus  [**install composer** ](https://kurtakon.com/composer/2017/08/24/artikel-1/) terlebih dahulu.
 2. Memiliki akun Github. __Kenapa harus memiliki akun Github?__ Karena pada saat install Yii2 anda akan diminta memasukan token Gihub jika anda mengintall untuk pertama kali.
 3. Memasang plugin Yii pada composer
 {% highlight py%}
