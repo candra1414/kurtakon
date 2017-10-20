@@ -13,7 +13,10 @@ layout: default
       </ul>
 
     </div>
-    <ul class="timeline" id='isi-default'>
+
+
+    <div id='isi-default'>
+    <ul class="timeline timeline-inverse">
         {{ last : null }}
 
      {% for post in site.posts  limit:10 %}
@@ -50,7 +53,11 @@ layout: default
 
       {% endfor %}
       <!-- END timeline item -->
+      <li>
+      <i class="fa fa-clock-o bg-gray"></i>
+      </li>
   </ul>
+</div>
 
     
 </div>

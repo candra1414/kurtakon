@@ -1,21 +1,20 @@
 <header>
-<nav class="navbar navbar-default navbar-static-top navbar-welcome" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top navbar-welcome bg-black" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
+            <a class="navbar-brand"  href="{{ site.baseurl }}/"><span class="font-bold" style="color:#fff">{{ site.title }}</span></a>
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand"  href="{{ site.baseurl }}/"><span class="font-bold">{{ site.title }}</span></a>
         </div>
         <!-- /.navbar-header -->
         <!-- Collect the nav links, forms, and other content for toggling -->
-      
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="collapse-menu">
              {% for page in site.pages %}
                 {% if page.title %}
-                <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                <li><a href="{{ page.url | prepend: site.baseurl }}" style="color:#fff" >{{ page.title }}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

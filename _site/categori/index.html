@@ -13,8 +13,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="/css/main.css">
-  <script type="text/javascript" src="/asset/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/asset/js/jquery.min.js"></script>
+  <script src="/js/jquery-1.11.0.js"> </script>
+    <!-- Bootstrap Core JavaScript -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="/js/bootstrap.min.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
   <link rel="canonical" href="https://kurtakon.com/categori/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
@@ -22,29 +26,27 @@
 
 
   <body>
-
     <header>
-<nav class="navbar navbar-default navbar-static-top navbar-welcome" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top navbar-welcome bg-black" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
+            <a class="navbar-brand"  href="/"><span class="font-bold" style="color:#fff">KurTakon</span></a>
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand"  href="/"><span class="font-bold">KurTakon</span></a>
         </div>
         <!-- /.navbar-header -->
         <!-- Collect the nav links, forms, and other content for toggling -->
-      
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="collapse-menu">
              
                 
-                <li><a href="/about/">KurTakon?</a></li>
+                <li><a href="/about/" style="color:#fff" >KurTakon?</a></li>
                     
                 
                 
-                <li><a href="/categori/">Kategori</a></li>
+                <li><a href="/categori/" style="color:#fff" >Kategori</a></li>
                     
                 
                 
@@ -62,9 +64,18 @@
     <!-- /.container -->
 </nav>
 </header>
-    <div class="page-content">
+      <br>
+      <br>
       <div class="wrapper" style="min-height: 416px;">
-        <div class="post">
+      <div>
+        <div class="col-md-2 pull-right">
+        
+        </div>
+          <div class="col-md-2 pull-left">
+        </div>
+        <div class="col-md-8">
+          <div class="content">
+                <div class="post">
 
   <header class="post-header">
     <h1 class="post-title">Kategori</h1>
@@ -173,8 +184,13 @@
   <div class="col-md-8">
     
 
-<div id="markdown"> 
-  <h3>Markdown</h3>
+<div id="markdown" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Markdown
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -187,10 +203,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="jekyll"> 
-  <h3>Jekyll</h3>
+<div id="jekyll" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Jekyll
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -227,10 +249,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="git"> 
-  <h3>Git</h3>
+<div id="git" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Git
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -243,10 +271,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="sublime-text"> 
-  <h3>Sublime text</h3>
+<div id="sublime-text" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Sublime text
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -259,10 +293,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="composer"> 
-  <h3>Composer</h3>
+<div id="composer" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Composer
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -281,10 +321,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="yii"> 
-  <h3>Yii</h3>
+<div id="yii" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Yii
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -303,10 +349,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="disqus"> 
-  <h3>Disqus</h3>
+<div id="disqus" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Disqus
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -319,10 +371,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="linux"> 
-  <h3>Linux</h3>
+<div id="linux" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Linux
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -341,10 +399,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="apache"> 
-  <h3>Apache</h3>
+<div id="apache" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Apache
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -357,10 +421,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="php"> 
-  <h3>Php</h3>
+<div id="php" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Php
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -385,10 +455,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="ruby"> 
-  <h3>Ruby</h3>
+<div id="ruby" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Ruby
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -407,10 +483,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="rails"> 
-  <h3>Rails</h3>
+<div id="rails" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Rails
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -429,10 +511,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="html"> 
-  <h3>Html</h3>
+<div id="html" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Html
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -463,10 +551,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="css"> 
-  <h3>Css</h3>
+<div id="css" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Css
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -479,10 +573,16 @@
     
     
   </ul>
+  </div>
 </div>
 
-<div id="server"> 
-  <h3>Server</h3>
+<div id="server" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    Server
+  </div>
+</div>
+<div class="box-body">
   <ul>
     
     
@@ -495,6 +595,7 @@
     
     
   </ul>
+  </div>
 </div>
 
   </div>
@@ -504,6 +605,8 @@
 
 </div>
 
+          </div>
+        </div>
       </div>
     </div>
 

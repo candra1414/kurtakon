@@ -22,8 +22,13 @@ title: Kategori
   <div class="col-md-8">
     
 {% for tag in site.categories %}
-<div id="{{ tag[0] }}"> 
-  <h3 >{{ tag[0] | capitalize | replace:'-', ' '}}</h3>
+<div id="{{ tag[0] }}" class="box box-success box-solid"> 
+<div class="box-header">
+  <div class="box-title">
+    {{ tag[0] | capitalize | replace:'-', ' '}}
+  </div>
+</div>
+<div class="box-body">
   <ul>
     {% assign pages_list = tag[1] %}
     {% for post in pages_list %}
@@ -36,6 +41,7 @@ title: Kategori
     {% assign pages_list = nil %}
     {% assign group = nil %}
   </ul>
+  </div>
 </div>
 {% endfor %}
   </div>
