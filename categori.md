@@ -4,6 +4,19 @@ permalink: /categori/
 title: Kategori
 ---
 
+<ul>
+{% capture tags %}
+  {% for tag in site.tags %}
+    <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+       <a href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+    </li>
+  {% endfor %}
+{% endcapture %}
+{{ tags | split:'</li>' | sort | join:'</li>' }}
+</ul>
+
+---
+
 <div class="row">
 <div class="col-md-4 pull-right">
 <ul>

@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Bagaimana Menggunakan Google Analytic pada Jekyll?</title>
-  <meta name="description" content="Pada awalnya saya bertanya Bagaimana mengetahui jumlah pengujung pada Website? .Disini saya memcoba fasilitas Google yaitu  Google Analytic. Pada percobaan k...">
+  <title>Apa itu Web Server?</title>
+  <meta name="description" content="Web Server adalah perangkat lunak ataupun perangkat keras yang menyediakan layanan akses kepada pengguna melalui protokol komunikasi HTTP atau HTTPS atas ber...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +19,7 @@
   <script src="/js/bootstrap.min.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
-  <link rel="canonical" href="https://kurtakon.com/jekyll/2017/08/07/artikel-1.html">
+  <link rel="canonical" href="https://kurtakon.com/php/server/2017/10/19/artikel-3/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
 </head>
 
@@ -56,6 +56,12 @@
                 
                 
                 
+                
+                
+                
+                
+                
+                
             </ul>
             <!-- /.navbar-nav -->
         <!-- /.navbar-collapse -->
@@ -77,62 +83,42 @@
                 <div class="post">
 
   <header class="post-header container-fluid">
-    <h1 class="content-max-width">Bagaimana Menggunakan Google Analytic pada Jekyll?</h1>
-    <p class="post-meta">Aug 7, 2017  • <a href="/jekyll/2017/08/07/artikel-1.html#disqus_thread">0 Comments</a></p>
+    <h1 class="content-max-width">Apa itu Web Server?</h1>
+    <p class="post-meta">Oct 19, 2017  • <a href="/php/server/2017/10/19/artikel-3/#disqus_thread">0 Comments</a></p>
 	
   </header>
   <article class="post-content content container-fluid">
-    <p>Pada awalnya saya bertanya <strong>Bagaimana mengetahui jumlah pengujung pada Website?</strong> .Disini saya memcoba fasilitas <strong>Google</strong> yaitu  <strong>Google Analytic</strong>. Pada percobaan kali ini saya menggunakan <strong>Jekyll</strong>.</p>
+    <p>Web Server adalah perangkat lunak ataupun perangkat keras yang menyediakan layanan akses kepada pengguna melalui protokol komunikasi HTTP atau HTTPS atas berkas-berkas yang terdapat pada suatu situs web dalam layanan ke pengguna dengan menggunakan aplikasi tertentu seperti website.</p>
 
-<hr />
+<h3>Apa Fungsi Web Server?</h3>
 
-<p>Tahap 1</p>
+<p>Fungsi utama sebuah server web adalah untuk mentransfer berkas atas permintaan pengguna melalui protokol komunikasi yang telah ditentukan. Disebabkan sebuah halaman web dapat terdiri atas berkas teks, gambar, video, dan lainnya pemanfaatan server web berfungsi pula untuk mentransfer seluruh aspek pemberkasan dalam sebuah halaman web yang terkait; termasuk di dalamnya teks, gambar, video, atau lainnya.</p>
 
-<p>Pertama kita harus membuka <a href="https://analytics.google.com">https://analytics.google.com</a> .</p>
+<p>Pada menggunaannya web server tidak hanya digunakan pada pembuatan website tapi juga bisa digunakan perangkat lain seperti printer,router, kemere web yang mengakses jaringan lokal.</p>
 
-<p>Tahap 2</p>
+<p>Ada bermacam macam Web Server pada saat ini :</p>
 
-<p>Setelah terbuka akan muncul gambar dibawah ini klik <strong>sigh up</strong>
-<img src="https://kurtakon.com/asset/img//img-3.png" alt="alt text" title="Halaman pertama" /></p>
-
-<p>Tahap 3</p>
-
-<p>Setelah terbuka akan muncul gambar dibawah ini. Isikan data yang diperlukan.
-<img src="https://kurtakon.com/asset/img//img-4.png" alt="alt text" title="Halaman Kedua" /></p>
-
-<p>Setelah itu kita akan mendapatkan id misal <strong>xxxxxxx</strong> .</p>
-
-<p>Tahap 4</p>
-
-<p>Pada file  <strong>_config.yml</strong>  tambahakan</p>
-
-<pre><code>google_analytics : UA-xxxxxxx [id yang didapat dari google]
-</code></pre>
-
-<p>Tahap 5</p>
-
-<p>Masukan js code pada google di simpan dengan nama <strong>analytics.html</strong> pada folder <strong>_inculde</strong> .</p>
-
-<p><img src="https://kurtakon.com/asset/img//img-5.png" alt="alt text" title="file" /></p>
-
-<p>Tahap 6</p>
-
-<p>Pada halaman <strong>_include/head.html</strong>  masukan (<strong>include</strong>) halaman <strong>analytics.html</strong>.</p>
-
-<p><img src="https://kurtakon.com/asset/img//img-6.png" alt="alt text" title="Include html" /></p>
-
+<ol>
+  <li>Apache HTTP Server</li>
+  <li>Apache Tomcat</li>
+  <li>Caddy</li>
+  <li>Lighttpd</li>
+  <li>Nginx</li>
+  <li>Jetty</li>
+  <li>IIS</li>
+  <li>WEBrick</li>
+  <li>Gunicorn</li>
+</ol>
 
 
   </article>
 		  <div class="row">
 			  <div class=" pull-left">
 				
-				  <a href="/jekyll/2017/08/04/artikel-1.html" class="btn btn-primary btn-flat" title="Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?"> <span class="fa fa-angle-double-left"></span></a>
+				  <a href="/html/php/2017/10/19/artikel-2/" class="btn btn-primary btn-flat" title="Apa itu PHP?"> <span class="fa fa-angle-double-left"></span></a>
 				
 			  </div>
 			<div class="pull-right">
-			
-			  <a href="/jekyll/2017/08/08/artikel-1.html" class="btn btn-primary btn-flat" title="Apa itu Jekyll?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>
@@ -141,8 +127,8 @@
 <script>
 
 var disqus_config = function () {
-this.page.url =  "https://kurtakon.com/jekyll/2017/08/07/artikel-1.html";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "/jekyll/2017/08/07/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url =  "https://kurtakon.com/php/server/2017/10/19/artikel-3/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/php/server/2017/10/19/artikel-3"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

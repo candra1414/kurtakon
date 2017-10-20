@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</title>
-  <meta name="description" content="Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan ctrl+z untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika pe...">
+  <title>Bagaimana menginstal paket Git dengan Sublime Text ?</title>
+  <meta name="description" content="Bagi penggunakan text editor Sublime Text dan penggunakan Git pasti bertanya Apakah ada paket untuk git pada Sublime Text? Jawabannya Ada.Yee.. senang bukan ...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +19,7 @@
   <script src="/js/bootstrap.min.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
-  <link rel="canonical" href="https://kurtakon.com/jekyll/2017/08/04/artikel-1.html">
+  <link rel="canonical" href="https://kurtakon.com/git/sublime-text/2017/08/22/artikel-1/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
 </head>
 
@@ -56,6 +56,12 @@
                 
                 
                 
+                
+                
+                
+                
+                
+                
             </ul>
             <!-- /.navbar-nav -->
         <!-- /.navbar-collapse -->
@@ -77,33 +83,45 @@
                 <div class="post">
 
   <header class="post-header container-fluid">
-    <h1 class="content-max-width">Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</h1>
-    <p class="post-meta">Aug 4, 2017  • <a href="/jekyll/2017/08/04/artikel-1.html#disqus_thread">0 Comments</a></p>
+    <h1 class="content-max-width">Bagaimana menginstal paket Git dengan Sublime Text ?</h1>
+    <p class="post-meta">Aug 22, 2017  • <a href="/git/sublime-text/2017/08/22/artikel-1/#disqus_thread">0 Comments</a></p>
 	
   </header>
   <article class="post-content content container-fluid">
-    <p>Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan <strong>ctrl+z</strong> untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika penulis akan mejalankan kembali akan muncul</p>
+    <p>Bagi penggunakan text editor Sublime Text dan penggunakan Git pasti bertanya <strong>Apakah ada paket untuk git pada Sublime Text?</strong> Jawabannya <strong>Ada</strong>.
+Yee.. senang bukan tanpa harus buka terminal bisa melakukan kerjaan menggunakan satu aplikasi saja.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">Error</span><span class="p">:</span>  <span class="no">Address</span> <span class="n">already</span> <span class="k">in</span> <span class="n">use</span> <span class="o">-</span> <span class="n">bind</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></code></pre></div>
+<p>Akan tertapi akan timbul pertanyaan
+<strong>Bagamana menginstal paket Git dengan Sublime Text?</strong></p>
 
-<p>Pada pertama kali akan bertanya-tanya apa maksud <strong>error</strong> diatas, ternyata error tersebut dikarenakan masih ada <strong>port</strong> yang berjalan untuk proses tersebut. Untuk itu harus mematikan terlebih dahulu sebelum menjalankan kembali.</p>
+<p>Cara Install paket git cukup mudah</p>
 
-<p><strong>Bagaimana mengetahui port berjalan ?</strong></p>
+<ul>
+  <li>
+    <p>pertama buka <em>Package Control</em>, caranya bisa klik <em>Preferences</em>, <em>Package Control</em> atau menggunakan shortcut keyboard (Command+Shift+p pada OS X, Control+Shift+p pada Linux/Windows).</p>
+  </li>
+  <li>
+    <p>Pilih <em>Package Control:Install Package</em>.</p>
+  </li>
+  <li>
+    <p>Setelah muncul tulis git dan pilih package yang akan di install.</p>
+  </li>
+</ul>
 
-<p>Untuk mengetahui proses yang berjalan cukup mudah. Kita masukan sintak pada terminal</p>
+<h3 id="bagaimana-menjalankan-git-dengan-mudah-pada-sublime-text">Bagaimana menjalankan git dengan mudah pada Sublime Text?</h3>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">ps</span> <span class="n">aux</span></code></pre></div>
+<p>Sebenarnya cukup mudah menjalankan git sublime, hampir sama dengan mengunakan terminal.Untuk menjalankan git telah terpasang bisa klik Tools atau membuka Package Control dan tulis git. Disana akan terlihat tools yang bisa digunakan.</p>
 
-<p>Namun sintak diatas akan memuncul banyak proses yang berjalan dan akan membingunkan proses mana yang akan di hentikan.
-Untuk memudahkan kita dapat mencarinya dengan menambah <strong>grep</strong> dan nama prosesnya.</p>
+<h2 id="apa-keenakannya-menggunakan-git-pada-sublime-text">Apa keenakannya menggunakan Git pada Sublime Text?</h2>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">ps</span> <span class="n">aux</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">jekyll</span></code></pre></div>
+<p>Ini menurut pendapat dan pengalaman pribadi ya…
+Kalau menurut saya lebih enak karena seperti dikatakan di atas hanya menggukan satu aplikasi saja tidak perlu membuka terminal. Maklum saya terbisa menggunakan terminal langsung.</p>
 
-<p><img src="https://kurtakon.com/asset/img//img-2.png" alt="alt text" title="Porses Berjalan" /></p>
+<p>Kedua, lebih tervisual. <strong>Kenapa lebih tervisual?</strong> Karena saya terbiasa menggunakan terminal jadi jika lupa code nya harus help, tapi menggunakan ini klik tools/git sudah terlihat tools yang bisa di gunakan atau membuka dengan Package Control dan menulis Git sudah keluar code untuk fungsi git sendiri.</p>
 
-<p>Setelah mengetahui proses yang berjalan kita bisa melihat proses masih pada PID <strong>4980</strong> . Untuk mematikannya dengan menggunakan  sintak <strong>kill -9 PID</strong></p>
+<p>Selain itu, Pada saat menjalankan git akan seperti text biasa pada tampilan sublime text biasa jadi lebih enak dilihat.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="mi">4980</span></code></pre></div>
+<p>Mungkin itu saya yang dapat disampaikan, hanya menjawab pertanyaan yang ada dipikirkan saya. Nanti kalau ada lagi dan saya coba cari jawabanya baru di tulis lagi.</p>
 
 
 
@@ -111,12 +129,12 @@ Untuk memudahkan kita dapat mencarinya dengan menambah <strong>grep</strong> dan
 		  <div class="row">
 			  <div class=" pull-left">
 				
-				  <a href="/markdown/2017/08/02/artikel-1.html" class="btn btn-primary btn-flat" title="Apa itu Markdown ?"> <span class="fa fa-angle-double-left"></span></a>
+				  <a href="/jekyll/2017/08/09/artikel-2/" class="btn btn-primary btn-flat" title="Bagaimana cara menginstall Jekyll?"> <span class="fa fa-angle-double-left"></span></a>
 				
 			  </div>
 			<div class="pull-right">
 			
-			  <a href="/jekyll/2017/08/07/artikel-1.html" class="btn btn-primary btn-flat" title="Bagaimana Menggunakan Google Analytic pada Jekyll?"><span class="fa fa-angle-double-right"></span> </a>
+			  <a href="/composer/2017/08/24/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana cara Install Composer pada Linux?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>
@@ -125,8 +143,8 @@ Untuk memudahkan kita dapat mencarinya dengan menambah <strong>grep</strong> dan
 <script>
 
 var disqus_config = function () {
-this.page.url =  "https://kurtakon.com/jekyll/2017/08/04/artikel-1.html";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "/jekyll/2017/08/04/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url =  "https://kurtakon.com/git/sublime-text/2017/08/22/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/git/sublime-text/2017/08/22/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

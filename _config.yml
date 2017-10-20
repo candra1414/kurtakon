@@ -17,3 +17,8 @@ include: ['.htaccess']
 # Google services
 google_analytics: UA-104179765-1
 
+permalink: pretty
+
+plugins: [jekyll-paginate] 
+paginate: 10
+paginate_path: /page:num/

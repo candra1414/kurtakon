@@ -4,7 +4,7 @@
     {
     
       "title"    : "Apa itu Web Server?",
-      "url"      : "/php/server/2017/10/19/artikel-3.html",
+      "url"      : "/php/server/2017/10/19/artikel-3/",
       "category" : "php, server",
       "tags"     : "",
       "date"     : "Oct 19, 2017",
@@ -16,7 +16,7 @@
     {
     
       "title"    : "Apa itu PHP?",
-      "url"      : "/html/php/2017/10/19/artikel-2.html",
+      "url"      : "/html/php/2017/10/19/artikel-2/",
       "category" : "html, php",
       "tags"     : "",
       "date"     : "Oct 19, 2017",
@@ -28,7 +28,7 @@
     {
     
       "title"    : "Bagaimana contoh sederhana HTML ? [Bagian 3]",
-      "url"      : "/html/css/2017/10/19/artikel-1.html",
+      "url"      : "/html/css/2017/10/19/artikel-1/",
       "category" : "html, css",
       "tags"     : "",
       "date"     : "Oct 19, 2017",
@@ -40,7 +40,7 @@
     {
     
       "title"    : "Bagaimana contoh sederhana HTML ? [Bagian 2]",
-      "url"      : "/html/2017/10/10/artikel-2.html",
+      "url"      : "/html/2017/10/10/artikel-2/",
       "category" : "html",
       "tags"     : "",
       "date"     : "Oct 10, 2017",
@@ -52,7 +52,7 @@
     {
     
       "title"    : "Bagaimana contoh sederhana HTML ? [Bagian 1]",
-      "url"      : "/html/2017/10/10/artikel-1.html",
+      "url"      : "/html/2017/10/10/artikel-1/",
       "category" : "html",
       "tags"     : "",
       "date"     : "Oct 10, 2017",
@@ -64,7 +64,7 @@
     {
     
       "title"    : "Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?",
-      "url"      : "/ruby/rails/2017/09/05/artikel-2.html",
+      "url"      : "/ruby/rails/2017/09/05/artikel-2/",
       "category" : "ruby, rails",
       "tags"     : "",
       "date"     : "Sep 5, 2017",
@@ -76,7 +76,7 @@
     {
     
       "title"    : "Bagaimana menginstall ruby on rails pada linux?",
-      "url"      : "/ruby/rails/2017/09/05/artikel-1.html",
+      "url"      : "/ruby/rails/2017/09/05/artikel-1/",
       "category" : "ruby, rails",
       "tags"     : "",
       "date"     : "Sep 5, 2017",
@@ -88,7 +88,7 @@
     {
     
       "title"    : "Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?",
-      "url"      : "/linux/apache/php/2017/09/05/artikel-2.html",
+      "url"      : "/linux/apache/php/2017/09/05/artikel-2/",
       "category" : "linux, apache, php",
       "tags"     : "",
       "date"     : "Sep 5, 2017",
@@ -100,7 +100,7 @@
     {
     
       "title"    : "Bagaimana melakukan switch multipel versi aplikasi pada linux?",
-      "url"      : "/linux/2017/09/05/artikel-1.html",
+      "url"      : "/linux/2017/09/05/artikel-1/",
       "category" : "linux",
       "tags"     : "",
       "date"     : "Sep 5, 2017",
@@ -112,7 +112,7 @@
     {
     
       "title"    : "Bagaimana Memasang Disqus Pada Jekyll?",
-      "url"      : "/jekyll/disqus/2017/08/30/artikel-1.html",
+      "url"      : "/jekyll/disqus/2017/08/30/artikel-1/",
       "category" : "jekyll, disqus",
       "tags"     : "",
       "date"     : "Aug 30, 2017",
@@ -124,7 +124,7 @@
     {
     
       "title"    : "Bagaimana Membuat Migrasi Tabel Database Pada Yii2?",
-      "url"      : "/yii/2017/08/28/artikel-1.html",
+      "url"      : "/yii/2017/08/28/artikel-1/",
       "category" : "yii",
       "tags"     : "",
       "date"     : "Aug 28, 2017",
@@ -136,7 +136,7 @@
     {
     
       "title"    : "Bagaimana cara Install Yii2 pada Linux dengan Composer?",
-      "url"      : "/composer/yii/2017/08/24/artikel-2.html",
+      "url"      : "/composer/yii/2017/08/24/artikel-2/",
       "category" : "composer, yii",
       "tags"     : "",
       "date"     : "Aug 24, 2017",
@@ -148,7 +148,7 @@
     {
     
       "title"    : "Bagaimana cara Install Composer pada Linux?",
-      "url"      : "/composer/2017/08/24/artikel-1.html",
+      "url"      : "/composer/2017/08/24/artikel-1/",
       "category" : "composer",
       "tags"     : "",
       "date"     : "Aug 24, 2017",
@@ -160,7 +160,7 @@
     {
     
       "title"    : "Bagaimana menginstal paket Git dengan Sublime Text ?",
-      "url"      : "/git/sublime-text/2017/08/22/artikel-1.html",
+      "url"      : "/git/sublime-text/2017/08/22/artikel-1/",
       "category" : "git, sublime-text",
       "tags"     : "",
       "date"     : "Aug 22, 2017",
@@ -172,7 +172,7 @@
     {
     
       "title"    : "Bagaimana cara menginstall Jekyll?",
-      "url"      : "/jekyll/2017/08/09/artikel-2.html",
+      "url"      : "/jekyll/2017/08/09/artikel-2/",
       "category" : "jekyll",
       "tags"     : "",
       "date"     : "Aug 9, 2017",
@@ -184,7 +184,7 @@
     {
     
       "title"    : "Apa itu Jekyll?",
-      "url"      : "/jekyll/2017/08/08/artikel-1.html",
+      "url"      : "/jekyll/2017/08/08/artikel-1/",
       "category" : "jekyll",
       "tags"     : "",
       "date"     : "Aug 8, 2017",
@@ -196,7 +196,7 @@
     {
     
       "title"    : "Bagaimana Menggunakan Google Analytic pada Jekyll?",
-      "url"      : "/jekyll/2017/08/07/artikel-1.html",
+      "url"      : "/jekyll/2017/08/07/artikel-1/",
       "category" : "jekyll",
       "tags"     : "",
       "date"     : "Aug 7, 2017",
@@ -208,7 +208,7 @@
     {
     
       "title"    : "Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?",
-      "url"      : "/jekyll/2017/08/04/artikel-1.html",
+      "url"      : "/jekyll/2017/08/04/artikel-1/",
       "category" : "jekyll",
       "tags"     : "",
       "date"     : "Aug 4, 2017",
@@ -220,7 +220,7 @@
     {
     
       "title"    : "Apa itu Markdown ?",
-      "url"      : "/markdown/2017/08/02/artikel-1.html",
+      "url"      : "/markdown/2017/08/02/artikel-1/",
       "category" : "markdown",
       "tags"     : "",
       "date"     : "Aug 2, 2017",
@@ -232,7 +232,7 @@
     {
     
       "title"    : "Selamat datang",
-      "url"      : "/2017/08/01/welcome.html",
+      "url"      : "/2017/08/01/welcome/",
       "category" : "",
       "tags"     : "",
       "date"     : "Aug 1, 2017",

@@ -6,8 +6,8 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Oct 2017 15:17:47 +0700</pubDate>
-    <lastBuildDate>Fri, 20 Oct 2017 15:17:47 +0700</lastBuildDate>
+    <pubDate>Fri, 20 Oct 2017 17:00:50 +0700</pubDate>
+    <lastBuildDate>Fri, 20 Oct 2017 17:00:50 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -35,8 +35,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/php/server/2017/10/19/artikel-3.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/php/server/2017/10/19/artikel-3.html</guid>
+        <link>https://kurtakon.com/php/server/2017/10/19/artikel-3/</link>
+        <guid isPermaLink="true">https://kurtakon.com/php/server/2017/10/19/artikel-3/</guid>
         
         
         <category>php</category>
@@ -114,8 +114,8 @@
 
 </description>
         <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/html/php/2017/10/19/artikel-2.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/html/php/2017/10/19/artikel-2.html</guid>
+        <link>https://kurtakon.com/html/php/2017/10/19/artikel-2/</link>
+        <guid isPermaLink="true">https://kurtakon.com/html/php/2017/10/19/artikel-2/</guid>
         
         
         <category>html</category>
@@ -249,8 +249,8 @@ p {
 
 </description>
         <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/html/css/2017/10/19/artikel-1.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/html/css/2017/10/19/artikel-1.html</guid>
+        <link>https://kurtakon.com/html/css/2017/10/19/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/html/css/2017/10/19/artikel-1/</guid>
         
         
         <category>html</category>
@@ -493,8 +493,8 @@ Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membaha
 
 </description>
         <pubDate>Tue, 10 Oct 2017 16:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/html/2017/10/10/artikel-2.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/html/2017/10/10/artikel-2.html</guid>
+        <link>https://kurtakon.com/html/2017/10/10/artikel-2/</link>
+        <guid isPermaLink="true">https://kurtakon.com/html/2017/10/10/artikel-2/</guid>
         
         
         <category>html</category>
@@ -562,8 +562,8 @@ Silahkan buka sublime atau notepad copy code diatas kemudian simpan dengan forma
 &lt;p&gt;Sumber : &lt;a href=&quot;https://developer.mozilla.org/id/docs/Web/HTML&quot;&gt;https://developer.mozilla.org/id/docs/Web/HTML&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 10 Oct 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/html/2017/10/10/artikel-1.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/html/2017/10/10/artikel-1.html</guid>
+        <link>https://kurtakon.com/html/2017/10/10/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/html/2017/10/10/artikel-1/</guid>
         
         
         <category>html</category>
@@ -627,8 +627,8 @@ ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
 
 </description>
         <pubDate>Tue, 05 Sep 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/ruby/rails/2017/09/05/artikel-2.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/ruby/rails/2017/09/05/artikel-2.html</guid>
+        <link>https://kurtakon.com/ruby/rails/2017/09/05/artikel-2/</link>
+        <guid isPermaLink="true">https://kurtakon.com/ruby/rails/2017/09/05/artikel-2/</guid>
         
         
         <category>ruby</category>
@@ -754,8 +754,8 @@ Jika berhasil akan memucul seperti dibawah ini.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 05 Sep 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/ruby/rails/2017/09/05/artikel-1.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/ruby/rails/2017/09/05/artikel-1.html</guid>
+        <link>https://kurtakon.com/ruby/rails/2017/09/05/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/ruby/rails/2017/09/05/artikel-1/</guid>
         
         
         <category>ruby</category>
@@ -805,8 +805,8 @@ Untuk merubah dari php5 di rubah menjadi php7 cukup melakukan a2dimod dan a2enmo
 
 </description>
         <pubDate>Tue, 05 Sep 2017 03:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/apache/php/2017/09/05/artikel-2.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/apache/php/2017/09/05/artikel-2.html</guid>
+        <link>https://kurtakon.com/linux/apache/php/2017/09/05/artikel-2/</link>
+        <guid isPermaLink="true">https://kurtakon.com/linux/apache/php/2017/09/05/artikel-2/</guid>
         
         
         <category>linux</category>
@@ -923,8 +923,8 @@ Dalam intruksi kita bisa memasukan angka untuk memilih jenis php yang akan digun
 
 </description>
         <pubDate>Tue, 05 Sep 2017 02:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/2017/09/05/artikel-1.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/2017/09/05/artikel-1.html</guid>
+        <link>https://kurtakon.com/linux/2017/09/05/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/linux/2017/09/05/artikel-1/</guid>
         
         
         <category>linux</category>
@@ -997,8 +997,8 @@ categories: [Jekyll,Disqus]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Wed, 30 Aug 2017 21:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/jekyll/disqus/2017/08/30/artikel-1.html</link>
-        <guid isPermaLink="true">https://kurtakon.com/jekyll/disqus/2017/08/30/artikel-1.html</guid>
+        <link>https://kurtakon.com/jekyll/disqus/2017/08/30/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/jekyll/disqus/2017/08/30/artikel-1/</guid>
         
         
         <category>jekyll</category>

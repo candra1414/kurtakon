@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Apa itu Jekyll?</title>
-  <meta name="description" content="Jekyll  is a simple, blog-aware, static site generator for personal, project, or organization sites.">
+  <title>Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</title>
+  <meta name="description" content="Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan ctrl+z untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika pe...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +19,7 @@
   <script src="/js/bootstrap.min.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
-  <link rel="canonical" href="https://kurtakon.com/jekyll/2017/08/08/artikel-1.html">
+  <link rel="canonical" href="https://kurtakon.com/jekyll/2017/08/04/artikel-1/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
 </head>
 
@@ -56,6 +56,12 @@
                 
                 
                 
+                
+                
+                
+                
+                
+                
             </ul>
             <!-- /.navbar-nav -->
         <!-- /.navbar-collapse -->
@@ -77,55 +83,46 @@
                 <div class="post">
 
   <header class="post-header container-fluid">
-    <h1 class="content-max-width">Apa itu Jekyll?</h1>
-    <p class="post-meta">Aug 8, 2017  • <a href="/jekyll/2017/08/08/artikel-1.html#disqus_thread">0 Comments</a></p>
+    <h1 class="content-max-width">Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</h1>
+    <p class="post-meta">Aug 4, 2017  • <a href="/jekyll/2017/08/04/artikel-1/#disqus_thread">0 Comments</a></p>
 	
   </header>
   <article class="post-content content container-fluid">
-    <hr />
-<p><strong>Jekyll</strong>  is a simple, blog-aware, static site generator for personal, project, or organization sites.</p>
+    <p>Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan <strong>ctrl+z</strong> untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika penulis akan mejalankan kembali akan muncul</p>
 
-<hr />
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">Error</span><span class="p">:</span>  <span class="no">Address</span> <span class="n">already</span> <span class="k">in</span> <span class="n">use</span> <span class="o">-</span> <span class="n">bind</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></code></pre></div>
 
-<p>Maksudnya Jekyll dapat merubah <em>plain text</em> menjadi <em>static website</em>.
-Website yang dihasilkan cukup sederhana untuk sekedar dijadikan blog.
-Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan Jekyll  pada host projek, blog, atau website dari server <strong>GitHub</strong> dengan <strong>gratis</strong>.</p>
+<p>Pada pertama kali akan bertanya-tanya apa maksud <strong>error</strong> diatas, ternyata error tersebut dikarenakan masih ada <strong>port</strong> yang berjalan untuk proses tersebut. Untuk itu harus mematikan terlebih dahulu sebelum menjalankan kembali.</p>
 
-<p>Jekyll dapat berjalan dengan sistem operasi berbasis GNU/Linux, Unix, atau macOS. Jekyll merupakan aplikasi berbasis <strong>Ruby</strong>.</p>
+<p><strong>Bagaimana mengetahui port berjalan ?</strong></p>
 
-<p><strong>Apa Kelebihanya?</strong></p>
+<p>Untuk mengetahui proses yang berjalan cukup mudah. Kita masukan sintak pada terminal</p>
 
-<ol>
-  <li>Simpel</li>
-  <li>Static</li>
-  <li>Blog-aware</li>
-</ol>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">ps</span> <span class="n">aux</span></code></pre></div>
 
-<p><strong>Kenapa Jekyll Simpel?</strong></p>
+<p>Namun sintak diatas akan memuncul banyak proses yang berjalan dan akan membingunkan proses mana yang akan di hentikan.
+Untuk memudahkan kita dapat mencarinya dengan menambah <strong>grep</strong> dan nama prosesnya.</p>
 
-<p>Karena Jekyll tidak membutuhkan <em>database</em> , <em>comment</em>, <em>moderator</em>  untuk diinstall seperti apache2 atau nginx. Jekyll hanya berisikan content yang dibuat.</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">ps</span> <span class="n">aux</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">jekyll</span></code></pre></div>
 
-<p><strong>Kenapa Static menjadi kelebihan Jekyll ?</strong></p>
+<p><img src="https://kurtakon.com/asset/img//img-2.png" alt="alt text" title="Porses Berjalan" /></p>
 
-<p>Jekyll menggunakan <a href="http://kurtakon.com/markdown/2017/08/02/artikel-1.html">markdown</a> (atau Textile), Liquid, dalam mebuat website. Sehingga kita hanya membuat file dengan markdown dan seluruh HTML &amp; CSS  akan digenerate menjadi website static.</p>
+<p>Setelah mengetahui proses yang berjalan kita bisa melihat proses masih pada PID <strong>4980</strong> . Untuk mematikannya dengan menggunakan  sintak <strong>kill -9 PID</strong></p>
 
-<p><strong>Blog-aware ?</strong></p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="mi">4980</span></code></pre></div>
 
-<p>Pada Jekyll sudah terdapat fasilitas <em>permalinks</em>, <em>categories</em>, <em>pages</em>, <em>posts</em>, dan pengaturan tampilan sehingga jika ingin menggukanya hanya perlu memangginya saja.</p>
-
-<p><em>Sumber</em> :<a href="https://jekyllrb.com/">https://jekyllrb.com/</a></p>
 
 
   </article>
 		  <div class="row">
 			  <div class=" pull-left">
 				
-				  <a href="/jekyll/2017/08/07/artikel-1.html" class="btn btn-primary btn-flat" title="Bagaimana Menggunakan Google Analytic pada Jekyll?"> <span class="fa fa-angle-double-left"></span></a>
+				  <a href="/markdown/2017/08/02/artikel-1/" class="btn btn-primary btn-flat" title="Apa itu Markdown ?"> <span class="fa fa-angle-double-left"></span></a>
 				
 			  </div>
 			<div class="pull-right">
 			
-			  <a href="/jekyll/2017/08/09/artikel-2.html" class="btn btn-primary btn-flat" title="Bagaimana cara menginstall Jekyll?"><span class="fa fa-angle-double-right"></span> </a>
+			  <a href="/jekyll/2017/08/07/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana Menggunakan Google Analytic pada Jekyll?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>
@@ -134,8 +131,8 @@ Jekyll juga dapat berjalan pada halaman GitHub. Artinya kamu dapat menjalankan J
 <script>
 
 var disqus_config = function () {
-this.page.url =  "https://kurtakon.com/jekyll/2017/08/08/artikel-1.html";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "/jekyll/2017/08/08/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url =  "https://kurtakon.com/jekyll/2017/08/04/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/jekyll/2017/08/04/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
