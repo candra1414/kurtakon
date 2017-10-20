@@ -55,7 +55,7 @@ __Bagaimana jika kita sudah meinstall versi ruby yang baru tapi ketika lihat ver
     $ ruby -v
     ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
 
-Caranya menggunakan [update-alternatives]({{site.url}}/linux/2017/09/04/artikel-1)
+Caranya menggunakan [update-alternatives]({{site.url}}/linux/2017/09/04/artikel-1/)
 
     $ sudo update-alternatives --config ruby
 

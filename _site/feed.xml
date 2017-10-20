@@ -6,8 +6,8 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Oct 2017 18:49:51 +0700</pubDate>
-    <lastBuildDate>Fri, 20 Oct 2017 18:49:51 +0700</lastBuildDate>
+    <pubDate>Fri, 20 Oct 2017 18:56:45 +0700</pubDate>
+    <lastBuildDate>Fri, 20 Oct 2017 18:56:45 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -618,7 +618,7 @@ Silahkan buka sublime atau notepad copy code diatas kemudian simpan dengan forma
 ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Caranya menggunakan &lt;a href=&quot;https://kurtakon.com/linux/2017/09/04/artikel-1&quot;&gt;update-alternatives&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Caranya menggunakan &lt;a href=&quot;https://kurtakon.com/linux/2017/09/04/artikel-1/&quot;&gt;update-alternatives&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo update-alternatives --config ruby
 &lt;/code&gt;&lt;/pre&gt;
