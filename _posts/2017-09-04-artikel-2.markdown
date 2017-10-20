@@ -7,7 +7,7 @@ categories: [Linux,Apache,Php]
 ---
 
 
-Seperti pada artikel sebelumnnya saya membahas [Bagaimana melakukan switch multipel versi aplikasi pada linux?]({{site.url}}/linux/2017/09/04/artikel-1.html)
+Seperti pada artikel sebelumnnya saya membahas [Bagaimana melakukan switch multipel versi aplikasi pada linux?]({{site.url}}/linux/2017/09/04/artikel-1)
 Untuk kali ini saya akan membahas __Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?__ 
 
 Pada artikel sebelumnya yang berjalan pada terminal kita (# secara gampanya begitu) . Kali ini yang berjalan khusus pada apache sebagai webservice yang digunakan.

@@ -5,7 +5,7 @@ comments: true
 date:   2017-10-10 09:06:58
 categories: [Html]
 ---
-Setelah menulis [**'Bagaimana contoh sederhana HTML ? [Bagian 1]'** ](https://kurtakon.com/html/2017/10/10/artikel-1/) . Mari kita lanjukan bagian selanjutnya. 
+Setelah menulis [**'Bagaimana contoh sederhana HTML ? [Bagian 1]'** ](http://kurtakon.com/html/2017/10/10/artikel-1/) . Mari kita lanjukan bagian selanjutnya. 
 Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membahas sedikit contoh sederhana yang sering digukan pada html beserta fungsinya.
 
 ---
