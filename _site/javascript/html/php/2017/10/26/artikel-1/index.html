@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Bagaimana Contoh Menggukan Onkeyup dan Onkeypress pada Javascript ?</title>
+  <meta name="description" content="Pada Kali ini saya ingin memberikan contoh sederhana menggunakan Javascript . Untuk kali ini saya akan menggukan Onkeyup . Pada contoh penggunaan ini saya me...">
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="text/javascript" src="/asset/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-1.11.0.js"> </script>
+  <script type="text/javascript" src="js/costumes.js"> </script>
+    <!-- Bootstrap Core JavaScript -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="/js/bootstrap.min.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+  <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
+  <link rel="canonical" href="https://kurtakon.com/javascript/html/php/2017/10/26/artikel-1/">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
+</head>
+
+
+  <body>
+    <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-welcome bg-black" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand"  href="/"><span class="font-bold" style="color:#fff">KurTakon</span></a>
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- /.navbar-header -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="collapse-menu">
+             
+                
+                <li><a href="/about/" style="color:#fff" >KurTakon?</a></li>
+                    
+                
+                
+                <li><a href="/categori/" style="color:#fff" >Kategori</a></li>
+                    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+            <!-- /.navbar-nav -->
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+</header>
+      <br>
+      <br>
+      <div class="wrapper" style="min-height: 416px;">
+      <div>
+        <div class="col-md-2 pull-right">
+        
+        </div>
+          <div class="col-md-2 pull-left">
+        </div>
+        <div class="col-md-8">
+          <div class="content">
+                <div class="post">
+
+  <header class="post-header container-fluid">
+    <h1 class="content-max-width">Bagaimana Contoh Menggukan Onkeyup dan Onkeypress pada Javascript ?</h1>
+    <p class="post-meta">Oct 26, 2017  • <a href="/javascript/html/php/2017/10/26/artikel-1/#disqus_thread">0 Comments</a></p>
+	
+  </header>
+  <article class="post-content content container-fluid">
+    <p>Pada Kali ini saya ingin memberikan contoh sederhana menggunakan <strong>Javascript</strong> . Untuk kali ini saya akan menggukan <strong>Onkeyup</strong> . Pada contoh penggunaan ini saya menggunakan Yii2, Jadi jika anda ingin menggukan untuk code lain silahkan modifikasi sendiri form nya hehehe.</p>
+
+<p>Form untuk input :</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?</span><span class="o">=</span><span class="nx">Html</span><span class="o">::</span><span class="na">textInput</span><span class="p">(</span><span class="s1">&#39;nilai&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,[</span><span class="s1">&#39;class&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;form-control nilai&#39;</span><span class="p">,</span><span class="s1">&#39;placeholder&#39;</span><span class="o">=&gt;</span><span class="s2">&quot;Nilai Awal&quot;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;nilai_awal&#39;</span><span class="p">])</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x"> &lt;br&gt;</span>
+<span class="x"> &lt;br&gt;</span>
+<span class="x"> </span><span class="cp">&lt;?php</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span><span class="nv">$jumlah</span> <span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
+ <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x"> </span><span class="cp">&lt;?</span><span class="o">=</span><span class="nx">Html</span><span class="o">::</span><span class="na">textInput</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="o">.</span><span class="nv">$i</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,[</span><span class="s1">&#39;class&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;pengurang form-control nilai&#39;</span><span class="p">,</span><span class="s1">&#39;placeholder&#39;</span><span class="o">=&gt;</span><span class="s2">&quot;Input ke-&quot;</span><span class="o">.</span><span class="nv">$i</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;input&#39;</span><span class="o">.</span><span class="nv">$i</span><span class="p">])</span><span class="cp">?&gt;</span><span class="x"></span>
+<span class="x"> </span><span class="cp">&lt;?php</span>
+    <span class="p">}</span>
+ <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x"> &lt;br&gt;</span>
+<span class="x"> &lt;br&gt;</span>
+
+<span class="x"> </span><span class="cp">&lt;?</span><span class="o">=</span><span class="nx">Html</span><span class="o">::</span><span class="na">textInput</span><span class="p">(</span><span class="s1">&#39;Jumlah&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,[</span><span class="s1">&#39;class&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;form-control&#39;</span><span class="p">,</span><span class="s1">&#39;placeholder&#39;</span><span class="o">=&gt;</span><span class="s2">&quot;Jumlah&quot;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;jumlah&#39;</span><span class="p">,</span><span class="s1">&#39;readOnly&#39;</span><span class="o">=&gt;</span><span class="k">true</span><span class="p">])</span><span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
+
+<p>Javascript :</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$js=&lt;&lt;&lt;JS</span>
+<span class="x">    var numItems = $(&#39;.pengurang&#39;).length;</span>
+
+<span class="x">    $(&#39;.nilai&#39;).on(&#39;keypress&#39;,</span>
+<span class="x">        function (evt) {</span>
+<span class="x">          evt = (evt) ? evt : window.event;</span>
+<span class="x">          var charCode = (evt.which) ? evt.which : evt.keyCode;</span>
+<span class="x">          if (charCode &gt; 31 &amp;&amp; (charCode &lt; 48 || charCode &gt; 57)) {</span>
+<span class="x">              return false;</span>
+<span class="x">          }</span>
+<span class="x">          return true;</span>
+<span class="x">    });</span>
+<span class="x">    var jumlah =0;</span>
+
+<span class="x">    $(&#39;#nilai_awal&#39;).on(&#39;keyup&#39;,function(){</span>
+<span class="x">        jumlah =$(this).val();</span>
+<span class="x">        for (i=1; i &lt;=numItems ; i++) { </span>
+<span class="x">            jumlah = jumlah - $(&#39;#input&#39;+i).val();</span>
+<span class="x">        }</span>
+<span class="x">        $(&#39;#jumlah&#39;).val(jumlah);</span>
+<span class="x">    });</span>
+
+<span class="x">    $(&#39;.pengurang&#39;).on(&#39;keyup&#39;,function(){</span>
+<span class="x">        jumlah = $(&#39;#nilai_awal&#39;).val();</span>
+<span class="x">        for (i=1; i &lt;=numItems ; i++) { </span>
+<span class="x">            jumlah = jumlah - $(&#39;#input&#39;+i).val();</span>
+<span class="x">        }</span>
+<span class="x">        $(&#39;#jumlah&#39;).val(jumlah);</span>
+<span class="x">    });</span>
+<span class="x">    </span>
+<span class="x">JS;</span>
+
+<span class="x">$this-&gt;registerJs($js, $this::POS_READY);</span></code></pre></div>
+
+<p>Hasil Code :</p>
+
+<ul>
+  <li>Tampilan awal</li>
+</ul>
+
+<p><img src="https://kurtakon.com/asset/img/img-26okt2017-1.png" alt="alt text" title="view" /></p>
+
+<ul>
+  <li>Tampilan pada saat input nilai awal</li>
+</ul>
+
+<p><img src="https://kurtakon.com/asset/img/img-26okt2017-2.png" alt="alt text" title="view" /></p>
+
+<ul>
+  <li>Tampilan pada saat input nilai pengurangan</li>
+</ul>
+
+<p><img src="https://kurtakon.com/asset/img/img-26okt2017-3.png" alt="alt text" title="view" /></p>
+
+<p><img src="https://kurtakon.com/asset/img/img-26okt2017-4.png" alt="alt text" title="view" /></p>
+
+<p>Penjelasan :</p>
+
+<ul>
+  <li>Fungsi di atas digunakan agar nilai yang di inputkan hanya angka saja untuk class nilai pada saat di ketik.</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.nilai&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keypress&#39;</span><span class="p">,</span>
+        <span class="kd">function</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">evt</span> <span class="o">=</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="o">?</span> <span class="nx">evt</span> <span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+          <span class="kd">var</span> <span class="nx">charCode</span> <span class="o">=</span> <span class="p">(</span><span class="nx">evt</span><span class="p">.</span><span class="nx">which</span><span class="p">)</span> <span class="o">?</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">which</span> <span class="o">:</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">charCode</span> <span class="o">&gt;</span> <span class="mi">31</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">charCode</span> <span class="o">&lt;</span> <span class="mi">48</span> <span class="o">||</span> <span class="nx">charCode</span> <span class="o">&gt;</span> <span class="mi">57</span><span class="p">))</span> <span class="p">{</span>
+              <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">});</span></code></pre></div>
+
+<ul>
+  <li>Kita dapat menghitung jumlah variabel yang menggunakan class pada halaman tersebut dengan <strong>length</strong></li>
+</ul>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">numItems</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.pengurang&#39;</span><span class="p">).</span><span class="nx">length</span><span class="p">;</span></code></pre></div>
+
+<ul>
+  <li>Pada saat on keyup untuk form input pada id nilai_awal kita melakukan perulangan untuk mengurangi nilai awal dan memunculkannya pada jumlah.</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#nilai_awal&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keyup&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">jumlah</span> <span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span><span class="nx">numItems</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
+            <span class="nx">jumlah</span> <span class="o">=</span> <span class="nx">jumlah</span> <span class="o">-</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#input&#39;</span><span class="o">+</span><span class="nx">i</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#jumlah&#39;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">jumlah</span><span class="p">);</span>
+    <span class="p">});</span></code></pre></div>
+
+<ul>
+  <li>Pada saat on keyup untuk form input pada class pengurang kita melakukan perulangan untuk mengurangi nilai awal dan memunculkannya pada jumlah.</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.pengurang&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;keyup&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">jumlah</span> <span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span><span class="nx">numItems</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
+            <span class="nx">jumlah</span> <span class="o">=</span> <span class="nx">jumlah</span> <span class="o">-</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#input&#39;</span><span class="o">+</span><span class="nx">i</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#jumlah&#39;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">jumlah</span><span class="p">);</span>
+    <span class="p">});</span></code></pre></div>
+
+<p>Semoga membantu.</p>
+
+
+  </article>
+		  <div class="row">
+			  <div class=" pull-left">
+				
+				  <a href="/jekyll/2017/10/20/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana membuat pagination pada Jekyll ?"> <span class="fa fa-angle-double-left"></span></a>
+				
+			  </div>
+			<div class="pull-right">
+			
+			</div>
+		  </div>
+  	
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url =  "https://kurtakon.com/javascript/html/php/2017/10/26/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/javascript/html/php/2017/10/26/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kurtakon-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+
+
+
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer bg-black">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"><foo>&#169;</foo> 2017 KurTakon</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+         
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Quote : <br> Takonlah sebelum takon itu dilarang.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -3,6 +3,18 @@
 
     {
     
+      "title"    : "Bagaimana Contoh Menggukan Onkeyup dan Onkeypress pada Javascript ?",
+      "url"      : "/javascript/html/php/2017/10/26/artikel-1/",
+      "category" : "javascript, html, php",
+      "tags"     : "",
+      "date"     : "Oct 26, 2017",
+      "content": "Pada Kali ini saya ingin memberikan contoh sederhana menggunakan Javascript . Untuk kali ini saya akan menggukan Onkeyup . Pada contoh penggunaan ini saya menggunakan Yii2, Jadi jika anda ingin menggukan untuk code lain silahkan modifikasi sendiri form nya hehehe."
+
+    } ,
+  
+
+    {
+    
       "title"    : "Bagaimana membuat pagination pada Jekyll ?",
       "url"      : "/jekyll/2017/10/20/artikel-1/",
       "category" : "jekyll",

@@ -1,0 +1,149 @@
+---
+layout: post
+title:  "Bagaimana Contoh Menggukan Onkeyup dan Onkeypress pada Javascript ?"
+comments: true
+date:   2017-10-26 03:06:58
+categories: [Javascript,Html,Php]
+---
+
+Pada Kali ini saya ingin memberikan contoh sederhana menggunakan __Javascript__ . Untuk kali ini saya akan menggukan __Onkeyup__ . Pada contoh penggunaan ini saya menggunakan Yii2, Jadi jika anda ingin menggukan untuk code lain silahkan modifikasi sendiri form nya hehehe.
+
+Form untuk input :
+
+{% highlight php%}
+
+ <?=Html::textInput('nilai','',['class'=>'form-control nilai','placeholder'=>"Nilai Awal", 'id'=>'nilai_awal'])?>
+ <br>
+ <br>
+ <?php
+    for ($i=1; $i <=$jumlah ; $i++) { 
+ ?>
+ <?=Html::textInput('input'.$i,'',['class'=>'pengurang form-control nilai','placeholder'=>"Input ke-".$i, 'id'=>'input'.$i])?>
+ <?php
+    }
+ ?>
+ <br>
+ <br>
+
+ <?=Html::textInput('Jumlah','',['class'=>'form-control','placeholder'=>"Jumlah", 'id'=>'jumlah','readOnly'=>true])?>
+
+{% endhighlight %}
+
+Javascript :
+
+{% highlight php%}
+
+$js=<<<JS
+    var numItems = $('.pengurang').length;
+
+    $('.nilai').on('keypress',
+        function (evt) {
+          evt = (evt) ? evt : window.event;
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+              return false;
+          }
+          return true;
+    });
+    var jumlah =0;
+
+    $('#nilai_awal').on('keyup',function(){
+        jumlah =$(this).val();
+        for (i=1; i <=numItems ; i++) { 
+            jumlah = jumlah - $('#input'+i).val();
+        }
+        $('#jumlah').val(jumlah);
+    });
+
+    $('.pengurang').on('keyup',function(){
+        jumlah = $('#nilai_awal').val();
+        for (i=1; i <=numItems ; i++) { 
+            jumlah = jumlah - $('#input'+i).val();
+        }
+        $('#jumlah').val(jumlah);
+    });
+    
+JS;
+
+$this->registerJs($js, $this::POS_READY);
+{% endhighlight %}
+
+Hasil Code :
+
+
+ - Tampilan awal
+ 
+
+![alt text][gambar]
+
+[gambar]:{{site.urlimg}}img-26okt2017-1.png "view"
+
+- Tampilan pada saat input nilai awal
+
+
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}img-26okt2017-2.png "view"
+
+
+- Tampilan pada saat input nilai pengurangan
+    
+![alt text][gambar3]
+
+[gambar3]:{{site.urlimg}}img-26okt2017-3.png "view" 
+
+![alt text][gambar4]
+
+[gambar4]:{{site.urlimg}}img-26okt2017-4.png "view" 
+
+Penjelasan :
+
+- Fungsi di atas digunakan agar nilai yang di inputkan hanya angka saja untuk class nilai pada saat di ketik.
+
+{% highlight js%}
+$('.nilai').on('keypress',
+        function (evt) {
+          evt = (evt) ? evt : window.event;
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+              return false;
+          }
+          return true;
+});
+{% endhighlight %}
+
+- Kita dapat menghitung jumlah variabel yang menggunakan class pada halaman tersebut dengan __length__
+
+{% highlight js%}
+
+var numItems = $('.pengurang').length;
+
+{% endhighlight %}
+
+
+- Pada saat on keyup untuk form input pada id nilai_awal kita melakukan perulangan untuk mengurangi nilai awal dan memunculkannya pada jumlah.
+
+{% highlight js%}
+ $('#nilai_awal').on('keyup',function(){
+        jumlah =$(this).val();
+        for (i=1; i <=numItems ; i++) { 
+            jumlah = jumlah - $('#input'+i).val();
+        }
+        $('#jumlah').val(jumlah);
+    });
+{% endhighlight %}
+
+- Pada saat on keyup untuk form input pada class pengurang kita melakukan perulangan untuk mengurangi nilai awal dan memunculkannya pada jumlah.
+
+{% highlight js%}
+ $('.pengurang').on('keyup',function(){
+        jumlah =$(this).val();
+        for (i=1; i <=numItems ; i++) { 
+            jumlah = jumlah - $('#input'+i).val();
+        }
+        $('#jumlah').val(jumlah);
+    });
+{% endhighlight %}
+
+
+Semoga membantu.
