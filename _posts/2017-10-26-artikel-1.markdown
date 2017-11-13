@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Bagaimana Contoh Menggukan Onkeyup dan Onkeypress pada Javascript ?"
+title:  "Bagaimana Contoh Menggunakan Onkeyup dan Onkeypress pada Javascript ?"
 comments: true
 date:   2017-10-26 03:06:58
 categories: [Javascript,Html,Php]
 ---
 
-Pada Kali ini saya ingin memberikan contoh sederhana menggunakan __Javascript__ . Untuk kali ini saya akan menggukan __Onkeyup__ . Pada contoh penggunaan ini saya menggunakan Yii2, Jadi jika anda ingin menggukan untuk code lain silahkan modifikasi sendiri form nya hehehe.
+Pada Kali ini saya ingin memberikan contoh sederhana menggunakan __Javascript__ . Untuk kali ini saya akan menggukan __Onkeyup__ dan __Onkeypress__ . Pada contoh penggunaan ini saya menggunakan Yii2, Jadi jika anda ingin menggukan untuk code lain silahkan modifikasi sendiri form nya hehehe.
 
 Form untuk input :
 

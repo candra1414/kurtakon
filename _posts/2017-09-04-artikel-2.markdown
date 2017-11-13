@@ -2,7 +2,7 @@
 layout: post
 title:  "Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?"
 comments: true
-date:   2017-09-04 20:06:58
+date:   2017-09-04 08:06:58
 categories: [Linux,Apache,Php]
 ---
 

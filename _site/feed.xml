@@ -6,13 +6,94 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 26 Oct 2017 12:27:55 +0700</pubDate>
-    <lastBuildDate>Thu, 26 Oct 2017 12:27:55 +0700</lastBuildDate>
+    <pubDate>Mon, 13 Nov 2017 15:01:50 +0700</pubDate>
+    <lastBuildDate>Mon, 13 Nov 2017 15:01:50 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
-        <title>Bagaimana Contoh Menggukan Onkeyup dan Onkeypress pada Javascript ?</title>
-        <description>&lt;p&gt;Pada Kali ini saya ingin memberikan contoh sederhana menggunakan &lt;strong&gt;Javascript&lt;/strong&gt; . Untuk kali ini saya akan menggukan &lt;strong&gt;Onkeyup&lt;/strong&gt; . Pada contoh penggunaan ini saya menggunakan Yii2, Jadi jika anda ingin menggukan untuk code lain silahkan modifikasi sendiri form nya hehehe.&lt;/p&gt;
+        <title>Bagaimana merubah versi php pada nginx linux FastCGI?</title>
+        <description>&lt;p&gt;Pada artikel sebelumnnya saya membahas &lt;a href=&quot;https://kurtakon.com/linux/apache/php/2017/09/04/artikel-2/&quot;&gt;Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux??&lt;/a&gt; Untuk kali ini saya akan membahas bagaimana jika merubah versi php untuk web server nginx pada linux?&lt;/p&gt;
+
+&lt;p&gt;Sebelumnya untuk install versi php yang diinginkan,misal php5 dan php7&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; untuk php5&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ apt-get install php5-fpm 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-&amp;gt; untuk php7.0&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ apt-get install php7-fpm 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bagaimana merubah settinganya?&lt;/p&gt;
+
+&lt;p&gt;Buka file /etc/nginx/sites-available/default:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server {
+    listen   80;
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+    root /var/www/html;
+    index index.php index.html;
+    location / {
+        try_files $uri $uri/ /index.php?$args ;
+    }
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_read_timeout 300;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada &lt;strong&gt;location&lt;/strong&gt; terdapat &lt;strong&gt;fastcgi_pass unix:&lt;/strong&gt;  yang mengacu pada versi &lt;em&gt;php&lt;/em&gt; yang berjalan. Terlihat &lt;strong&gt;/var/run/php5-fpm.sock&lt;/strong&gt; versi php5 yang saat ini berjalan. Untuk merubahnya, kita harus mencari versi pada folder &lt;strong&gt;/var/run/&lt;/strong&gt;   &lt;strong&gt;php7-fpm.sock&lt;/strong&gt; berada di folder mana pada di install (pada kasus saya file tersebut terdapat didalam folder php).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server {
+    listen   80;
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+    root /var/www/html;
+    index index.php index.html;
+    location / {
+        try_files $uri $uri/ /index.php?$args ;
+    }
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_read_timeout 300;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah serlesai restart nginx&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ sudo service nginx restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 13 Nov 2017 15:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/linux/nginx/php/2017/11/13/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/linux/nginx/php/2017/11/13/artikel-1/</guid>
+        
+        
+        <category>linux</category>
+        
+        <category>nginx</category>
+        
+        <category>php</category>
+        
+      </item>
+    
+      <item>
+        <title>Bagaimana Contoh Menggunakan Onkeyup dan Onkeypress pada Javascript ?</title>
+        <description>&lt;p&gt;Pada Kali ini saya ingin memberikan contoh sederhana menggunakan &lt;strong&gt;Javascript&lt;/strong&gt; . Untuk kali ini saya akan menggukan &lt;strong&gt;Onkeyup&lt;/strong&gt; dan &lt;strong&gt;Onkeypress&lt;/strong&gt; . Pada contoh penggunaan ini saya menggunakan Yii2, Jadi jika anda ingin menggukan untuk code lain silahkan modifikasi sendiri form nya hehehe.&lt;/p&gt;
 
 &lt;p&gt;Form untuk input :&lt;/p&gt;
 
@@ -999,59 +1080,6 @@ Jika berhasil akan memucul seperti dibawah ini.&lt;/p&gt;
         <category>ruby</category>
         
         <category>rails</category>
-        
-      </item>
-    
-      <item>
-        <title>Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?</title>
-        <description>&lt;p&gt;Seperti pada artikel sebelumnnya saya membahas &lt;a href=&quot;https://kurtakon.com/linux/2017/09/04/artikel-1&quot;&gt;Bagaimana melakukan switch multipel versi aplikasi pada linux?&lt;/a&gt;
-Untuk kali ini saya akan membahas &lt;strong&gt;Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada artikel sebelumnya yang berjalan pada terminal kita (# secara gampanya begitu) . Kali ini yang berjalan khusus pada apache sebagai webservice yang digunakan.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-14.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Seperti yang terlihat diatas php yang bejalan saat ini pada apche ada php5.
-Untuk merubah dari php5 di rubah menjadi php7 cukup melakukan a2dimod dan a2enmod&lt;/p&gt;
-
-&lt;p&gt;Pertama lakukan disabel untuk php5 terlebih dahulu dengan perintah &lt;strong&gt;a2dimod&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a2dismod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php5&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php5&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;To&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;you&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;need&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apache2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restart&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;kemudian kita jalankan php7&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a2enmod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Considering&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dependency&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mpm_prefork&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Considering&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conflict&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mpm_event&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mpm_prefork&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Considering&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conflict&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mpm_worker&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mpm_prefork&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mpm_prefork&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;already&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enabled&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Considering&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conflict&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Enabling&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;To&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;you&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;need&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apache2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restart&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Setelah dijalankan kita harus melakukan restart pada apache agar mengatifkan versi phpnya.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apache2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restart&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Versi php yang berjalan adalah php7 seperti terlihat dibawah ini:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-15.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 05 Sep 2017 03:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/apache/php/2017/09/05/artikel-2/</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/apache/php/2017/09/05/artikel-2/</guid>
-        
-        
-        <category>linux</category>
-        
-        <category>apache</category>
-        
-        <category>php</category>
         
       </item>
     

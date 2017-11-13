@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Bagaimana membuat pagination pada Jekyll ?</title>
-  <meta name="description" content="Pagination sering kita jumpai pada web-web terutama pada blog agar tampilan list pada beranda tidak terlalu banyak kebawah. Pada kali ini saya akan mendemoka...">
+  <title>Bagaimana merubah versi php pada nginx linux FastCGI?</title>
+  <meta name="description" content="Pada artikel sebelumnnya saya membahas Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux?? Untuk kali ini saya akan membahas ...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,7 +20,7 @@
   <script src="/js/bootstrap.min.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
-  <link rel="canonical" href="https://kurtakon.com/jekyll/2017/10/20/artikel-1/">
+  <link rel="canonical" href="https://kurtakon.com/linux/nginx/php/2017/11/13/artikel-1/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
 </head>
 
@@ -82,96 +82,75 @@
                 <div class="post">
 
   <header class="post-header container-fluid">
-    <h1 class="content-max-width">Bagaimana membuat pagination pada Jekyll ?</h1>
-    <p class="post-meta">Oct 20, 2017  • <a href="/jekyll/2017/10/20/artikel-1/#disqus_thread">0 Comments</a></p>
+    <h1 class="content-max-width">Bagaimana merubah versi php pada nginx linux FastCGI?</h1>
+    <p class="post-meta">Nov 13, 2017  • <a href="/linux/nginx/php/2017/11/13/artikel-1/#disqus_thread">0 Comments</a></p>
 	
   </header>
   <article class="post-content content container-fluid">
-    <p>Pagination sering kita jumpai pada web-web terutama pada blog agar tampilan list pada beranda tidak terlalu banyak kebawah. Pada kali ini saya akan mendemokan bagaimana memasang pagination pada Jekyll terutama untuk tampilan awal website agar post blog tidak terlalu kebawah (jika artikelnya sudah banyak).</p>
+    <p>Pada artikel sebelumnnya saya membahas <a href="https://kurtakon.com/linux/apache/php/2017/09/04/artikel-2/">Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux??</a> Untuk kali ini saya akan membahas bagaimana jika merubah versi php untuk web server nginx pada linux?</p>
 
-<p>Pada Jekyll versi 3 sudah terdapat  plugin <strong>jekyll-paginate</strong>  sehingga kita cukup memanggilnya pada <strong>_config.yml</strong>.</p>
+<p>Sebelumnya untuk install versi php yang diinginkan,misal php5 dan php7</p>
 
-<pre><code>plugins: [jekyll-paginate] 
+<p>-&gt; untuk php5</p>
+
+<pre><code>    $ apt-get install php5-fpm 
 </code></pre>
 
-<p>Setelah itu tentukan jumlah maksimum list pada setiap halaman yang kan digunakan, misal maksimal 10 list post pada setiap halaman.</p>
+<p>-&gt; untuk php7.0</p>
 
-<pre><code>paginate: 10
+<pre><code>    $ apt-get install php7-fpm 
 </code></pre>
 
-<p>Kemudian tentukan bagaimana halaman atau format url untuk setiap halaman</p>
+<p>Bagaimana merubah settinganya?</p>
 
-<pre><code>paginate_path: "/page:num/"
+<p>Buka file /etc/nginx/sites-available/default:</p>
+
+<pre><code>server {
+    listen   80;
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+    root /var/www/html;
+    index index.php index.html;
+    location / {
+        try_files $uri $uri/ /index.php?$args ;
+    }
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_read_timeout 300;
+    }
+}
 </code></pre>
 
-<p>maka tampilannya untuk page kedua</p>
+<p><img src="https://kurtakon.com/asset/img/img-13nov2017-2.png" alt="alt text" title="view php5" /></p>
 
-<pre><code>https://kurtakon.com/page2/
+<p>Pada <strong>location</strong> terdapat <strong>fastcgi_pass unix:</strong>  yang mengacu pada versi <em>php</em> yang berjalan. Terlihat <strong>/var/run/php5-fpm.sock</strong> versi php5 yang saat ini berjalan. Untuk merubahnya, kita harus mencari versi pada folder <strong>/var/run/</strong>   <strong>php7-fpm.sock</strong> berada di folder mana pada di install (pada kasus saya file tersebut terdapat didalam folder php).</p>
+
+<pre><code>server {
+    listen   80;
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+    root /var/www/html;
+    index index.php index.html;
+    location / {
+        try_files $uri $uri/ /index.php?$args ;
+    }
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_read_timeout 300;
+    }
+}
 </code></pre>
-<div class="callout callout-danger">
-<h4> Pagination hanya berjalan pada file html</h4>
 
-<p> Pagination hanya tidak bisa berjalan file Markdown atau pada site jekyll, pagination hanya bisa dipanggil pada file html dengan nama file <b> index.html</b> </p>
-</div>
+<p>Setelah serlesai restart nginx</p>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Attribute</th>
-      <th>Keterangan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>page</td>
-      <td>halaman page berada (posisinya)</td>
-    </tr>
-    <tr>
-      <td>per_page</td>
-      <td>menampilkan jumlah maksimum list tiap halaman</td>
-    </tr>
-    <tr>
-      <td>posts</td>
-      <td>list dari post untuk halaman tersebut</td>
-    </tr>
-    <tr>
-      <td>total_posts</td>
-      <td>jumlah seluruh postingan</td>
-    </tr>
-    <tr>
-      <td>total_pages</td>
-      <td>jumlah seluruh halaman hasil pagination</td>
-    </tr>
-    <tr>
-      <td>previous_page</td>
-      <td>halaman sebelumnya</td>
-    </tr>
-    <tr>
-      <td>previous_page_path</td>
-      <td>untuk link nomor halaman dari halaman pagination sebelumnya, atau  jika hasilnya null maka tidak ada halaman sebelumnya</td>
-    </tr>
-    <tr>
-      <td>next_page</td>
-      <td>halaman selanjutnya</td>
-    </tr>
-    <tr>
-      <td>next_page_path</td>
-      <td>untuk link nomor halaman dari halaman pagination sebelumnya, atau  jika hasilnya null maka tidak ada halaman selanjutnya</td>
-    </tr>
-  </tbody>
-</table>
+<pre><code>    $ sudo service nginx restart
+</code></pre>
 
-<p>Kode untuk menampilkan daftar atau list artikel yang sudah di padding</p>
-
-<p><img src="https://kurtakon.com/asset/img/img-20okt2017-1.png" alt="alt text" title="view html" /></p>
-
-<p>Kode untuk membuat button previous dan next page untuk halaman padding</p>
-
-<p><img src="https://kurtakon.com/asset/img/img-20okt2017-2.png" alt="alt text" title="view html" /></p>
-
-<p>Hasil tampilan :</p>
-
-<p><img src="https://kurtakon.com/asset/img/img-20okt2017-3.png" alt="alt text" title="view html" /></p>
+<p><img src="https://kurtakon.com/asset/img/img-13nov2017-1.png" alt="alt text" title="view php7" /></p>
 
 
 
@@ -179,12 +158,10 @@
 		  <div class="row">
 			  <div class=" pull-left">
 				
-				  <a href="/php/server/2017/10/19/artikel-3/" class="btn btn-primary btn-flat" title="Apa itu Web Server?"> <span class="fa fa-angle-double-left"></span></a>
+				  <a href="/javascript/html/php/2017/10/26/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana Contoh Menggunakan Onkeyup dan Onkeypress pada Javascript ?"> <span class="fa fa-angle-double-left"></span></a>
 				
 			  </div>
 			<div class="pull-right">
-			
-			  <a href="/javascript/html/php/2017/10/26/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana Contoh Menggunakan Onkeyup dan Onkeypress pada Javascript ?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>
@@ -193,8 +170,8 @@
 <script>
 
 var disqus_config = function () {
-this.page.url =  "https://kurtakon.com/jekyll/2017/10/20/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "/jekyll/2017/10/20/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url =  "https://kurtakon.com/linux/nginx/php/2017/11/13/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/linux/nginx/php/2017/11/13/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

@@ -1,0 +1,74 @@
+---
+layout: post
+title:  "Bagaimana merubah versi php pada nginx linux FastCGI?"
+comments: true
+date:   2017-11-13 08:06:58
+categories: [Linux,Nginx,Php]
+---
+
+Pada artikel sebelumnnya saya membahas [Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux??]({{site.url}}/linux/apache/php/2017/09/04/artikel-2/) Untuk kali ini saya akan membahas bagaimana jika merubah versi php untuk web server nginx pada linux?
+
+Sebelumnya untuk install versi php yang diinginkan,misal php5 dan php7
+
+-> untuk php5
+
+        $ apt-get install php5-fpm 
+
+-> untuk php7.0
+
+        $ apt-get install php7-fpm 
+
+
+Bagaimana merubah settinganya?
+
+Buka file /etc/nginx/sites-available/default:
+
+    server {
+        listen   80;
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+        root /var/www/html;
+        index index.php index.html;
+        location / {
+            try_files $uri $uri/ /index.php?$args ;
+        }
+        location ~ \.php$ {
+            fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_index index.php;
+            include fastcgi_params;
+            fastcgi_read_timeout 300;
+        }
+    }
+
+
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}img-13nov2017-2.png "view php5"
+
+
+Pada __location__ terdapat __fastcgi_pass unix:__  yang mengacu pada versi _php_ yang berjalan. Terlihat __/var/run/php5-fpm.sock__ versi php5 yang saat ini berjalan. Untuk merubahnya, kita harus mencari versi pada folder __/var/run/__   __php7-fpm.sock__ berada di folder mana pada di install (pada kasus saya file tersebut terdapat didalam folder php).
+
+    server {
+        listen   80;
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+        root /var/www/html;
+        index index.php index.html;
+        location / {
+            try_files $uri $uri/ /index.php?$args ;
+        }
+        location ~ \.php$ {
+            fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+            fastcgi_index index.php;
+            include fastcgi_params;
+            fastcgi_read_timeout 300;
+        }
+    }
+
+Setelah serlesai restart nginx
+
+        $ sudo service nginx restart
+
+![alt text][gambar]
+
+[gambar]:{{site.urlimg}}img-13nov2017-1.png "view php7"
