@@ -11,9 +11,13 @@ layout: default
 
   <header class="post-header container-fluid">
     <h1 class="content-max-width">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} {% if page.comments %} • <a href="{{url}}{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}</p>
-	
+    <span>{{ page.date | date: "%b %-d, %Y" }} </span> {% if page.author %}• {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} {% if page.comments %} • <a href="{{url}}{{ page.url }}#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>{% endif %}
+    <span class="time label label-danger pull-right"> {% for category in page.categories %}
+          {{category | capitalize | replace:'-', ' '}},
+           {% endfor %}</span>
+  <hr>
   </header>
+
   <article class="post-content content container-fluid">
     {{ content }}
 

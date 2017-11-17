@@ -29,9 +29,9 @@ layout: default
             <p>
                {{ post.excerpt }}
             </p>
-            <div>
+            <div style="border-top: 1px solid #f4f4f4;padding: 10px;">
               <span>
-                  {% if post.comments %} <a href="{{url}}{{ post.url }}#disqus_thread">0 Comments</a>{% endif %}
+                  {% if post.comments %} <a href="{{url}}{{ post.url }}#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>{% endif %}
                   </span>
                   <a href="{{ post.url }}" class="pull-right btn btn-sm btn-danger btn-flat">More..</a>
             </div>
