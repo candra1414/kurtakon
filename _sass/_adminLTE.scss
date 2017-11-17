@@ -73,13 +73,59 @@ body {
 .layout-top-nav .main-footer {
   margin-left: 0;
 }
+
+ul.view-kategori {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.view-kategori li {float: none;}
+
+ul.view-kategori li a {
+    text-align: left;
+    text-decoration: none;
+    padding: 10px 10px;
+
+}
+
+li > a:hover{
+        outline:none;
+        text-decoration:none;
+        color:#4C4040
+}
+ul.kategori {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.kategori li {float: none;}
+
+ul.kategori li a {
+    display: block;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.kategori li a:hover:not(.active) {background-color: #111; color:#fff}
+
+ul.kategori li a.active {background-color: #4CAF50;}
+
+ul.kategori li.right {float: right;}
+
 @media (max-width: 767px) {
   .content-wrapper,
   .right-side,
   .main-footer {
     margin-left: 0;
   }
-}
+
+  ul.kategori li.right, 
+  ul.kategori li {float: left;}}
 @media (min-width: 768px) {
   .sidebar-collapse .content-wrapper,
   .sidebar-collapse .right-side,

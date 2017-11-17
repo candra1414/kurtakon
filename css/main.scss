@@ -36,13 +36,16 @@ $on-laptop:        800px;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
+
+
 @mixin media-query($device) {
+      
     @media screen and (max-width: $device) {
         @content;
     }
 }
 
-
+a:hover,a:active,a:focus{outline:none;text-decoration:none;color:#72afd2}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

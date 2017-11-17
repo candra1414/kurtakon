@@ -20,5 +20,5 @@ google_analytics: UA-104179765-1
 permalink: pretty
 
 plugins: [jekyll-paginate] 
-paginate: 10
+paginate: 3
 paginate_path: /page:num/

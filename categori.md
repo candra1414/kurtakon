@@ -6,7 +6,7 @@ title: Kategori
 
 <div class="row">
   <div class="col-md-4 pull-right">
-    <ul>
+    <ul class="kategori">
         {% assign categories = site.categories | sort %}
         {% for category in categories %}
          <li>
@@ -19,14 +19,14 @@ title: Kategori
   </div>
   <div class="col-md-8 pull-left">
     {% for tag in categories %}
-    <div id="{{ tag[0] | capitalize }}" class="box box-success box-solid"> 
+    <div id="{{ tag[0] | capitalize }}" class="box box-solid"> 
       <div class="box-header">
         <div class="box-title">
           {{ tag[0] | capitalize | replace:'-', ' '}}
         </div>
       </div>
       <div class="box-body">
-          <ul>
+          <ul class="view-kategori">
             {% assign pages_list = tag[1] %}
             {% for post in pages_list %}
               {% if post.title != null %}
