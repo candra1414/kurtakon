@@ -6,8 +6,8 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Nov 2017 16:29:41 +0700</pubDate>
-    <lastBuildDate>Fri, 17 Nov 2017 16:29:41 +0700</lastBuildDate>
+    <pubDate>Wed, 22 Nov 2017 17:43:07 +0700</pubDate>
+    <lastBuildDate>Wed, 22 Nov 2017 17:43:07 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -48,7 +48,7 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Pada &lt;strong&gt;location&lt;/strong&gt; terdapat &lt;strong&gt;fastcgi_pass unix:&lt;/strong&gt;  yang mengacu pada versi &lt;em&gt;php&lt;/em&gt; yang berjalan. Terlihat &lt;strong&gt;/var/run/php5-fpm.sock&lt;/strong&gt; versi php5 yang saat ini berjalan. Untuk merubahnya, kita harus mencari versi pada folder &lt;strong&gt;/var/run/&lt;/strong&gt;   &lt;strong&gt;php7-fpm.sock&lt;/strong&gt; berada di folder mana pada di install (pada kasus saya file tersebut terdapat didalam folder php).&lt;/p&gt;
 
@@ -75,7 +75,7 @@
 &lt;pre&gt;&lt;code&gt;    $ sudo service nginx restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 13 Nov 2017 15:06:58 +0700</pubDate>
@@ -154,21 +154,21 @@
   &lt;li&gt;Tampilan awal&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tampilan pada saat input nilai awal&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tampilan pada saat input nilai pengurangan&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Penjelasan :&lt;/p&gt;
 
@@ -309,15 +309,15 @@
 
 &lt;p&gt;Kode untuk menampilkan daftar atau list artikel yang sudah di padding&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-20okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-20okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kode untuk membuat button previous dan next page untuk halaman padding&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-20okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-20okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hasil tampilan :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-20okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-20okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 20 Oct 2017 10:06:58 +0700</pubDate>
@@ -382,7 +382,7 @@
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Contoh Membuat penjumlahan dengan PHP&lt;/p&gt;
 
@@ -398,7 +398,7 @@
 &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Hasilnya :
-&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-5.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-5.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Membuat perulangan dengan &lt;strong&gt;for&lt;/strong&gt; untuk menghasilkan table :&lt;/p&gt;
 
@@ -429,7 +429,7 @@
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-6.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-6.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
@@ -499,7 +499,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum..&lt;spa
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;berikut hasilnya :
-&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Inline&lt;/li&gt;
@@ -522,7 +522,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum..&lt;spa
 
 &lt;p&gt;berikut hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;External&lt;/li&gt;
@@ -564,7 +564,7 @@ p {
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
@@ -842,7 +842,7 @@ Silahkan buka sublime atau notepad copy code diatas kemudian simpan dengan forma
 &lt;hr /&gt;
 
 &lt;p&gt;Hasil jika kita buka dengan web browser (chrome,dkk)
-&lt;img src=&quot;https://kurtakon.com/asset/img/img-10okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-10okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Baiklah kali ini saya akan menjelaskan sedikit&lt;/p&gt;
 
@@ -1069,7 +1069,7 @@ ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
 &lt;p&gt;Buka web browser menuju link &lt;a href=&quot;http://localhost:3000&quot;&gt;http://localhost:3000&lt;/a&gt;
 Jika berhasil akan memucul seperti dibawah ini.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-16.png&quot; alt=&quot;alt text&quot; title=&quot;view rails&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-16.png&quot; alt=&quot;alt text&quot; title=&quot;view rails&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 05 Sep 2017 15:06:58 +0700</pubDate>
