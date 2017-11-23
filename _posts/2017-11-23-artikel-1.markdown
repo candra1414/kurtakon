@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Bagaimana install file deb pada linux ?"
+comments: true
+date:   2017-11-23 08:06:58
+categories: [Linux]
+---
+
+Ketika kita membutukahan aplikasi baru pada linux, kita terkadang mencari pada internet panggil saja mbah google. Aplikasi yang kita dapat berformat __deb__. dan yang menjadi pertanyaan bagaimana cara installnya. Pasti binggung kan kalau gak binggung tidak akan cari tau donk... hehehe maaf bercanda.
+
+Padahal caranya cukup mudah, buka terminal masukan script dibawah ini :
+
+
+	sudo dpkg -i nama_aplikasinya.deb 
+
+Sekian semoga membantu.
