@@ -6,8 +6,8 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Nov 2017 23:02:01 +0700</pubDate>
-    <lastBuildDate>Thu, 23 Nov 2017 23:02:01 +0700</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2017 23:06:57 +0700</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2017 23:06:57 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -20,28 +20,28 @@
 
 &lt;p&gt;Bagaimana cara install ?&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;harus install Python&lt;/li&gt;
   &lt;li&gt;install framework Django&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Cara install sama sepertai aplikasi lain di linux menggunakan &lt;strong&gt;apt-get&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ apt-get install python-django
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;Buat aplikasi&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Cara membuat aplikasi buka terminal misal nama aplikasi nya &lt;em&gt;mysite&lt;/em&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ django-admin startproject mysite
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
   &lt;li&gt;Jalankan Aplikasinya&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Cara menjalnkan masih menggunakan terminal, masuk ke direktori aplikasinya (menggunakan &lt;strong&gt;cd&lt;/strong&gt; ) kemudian jalankan sintak dibawah ini :&lt;/p&gt;
 
