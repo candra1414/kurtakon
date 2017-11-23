@@ -6,9 +6,76 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Nov 2017 22:15:33 +0700</pubDate>
-    <lastBuildDate>Thu, 23 Nov 2017 22:15:33 +0700</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2017 23:02:01 +0700</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2017 23:02:01 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana install Django pada Linux ?</title>
+        <description>&lt;p&gt;Selamat malam dan dimana mata butuh kopi. Apa yang pertama kali anda pikirkan ketika dengar kata Python? Pasti orang awan akan bilang ular Python .Akan tetapi kali ini saya tidak akan membahas ular (asli ular) namun bahasa pemerogaman Python. Python &lt;em&gt;is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991&lt;/em&gt; (menurut Wikipedia).&lt;/p&gt;
+
+&lt;p&gt;Pada judul artikel &lt;strong&gt;Bagaimana install Django pada Linux ?&lt;/strong&gt;  kenapa bahas Python apa hubungannya?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt; adalah salah satu dari web framework open source berbasis Python yang didesain untuk membuat aplikasi web yang dinamis yang telah memiliki banyak fitur dan aman.&lt;/p&gt;
+
+&lt;p&gt;Bagaimana cara install ?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;harus install Python&lt;/li&gt;
+  &lt;li&gt;install framework Django&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cara install sama sepertai aplikasi lain di linux menggunakan &lt;strong&gt;apt-get&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ apt-get install python-django
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Buat aplikasi&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cara membuat aplikasi buka terminal misal nama aplikasi nya &lt;em&gt;mysite&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ django-admin startproject mysite
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Jalankan Aplikasinya&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cara menjalnkan masih menggunakan terminal, masuk ke direktori aplikasinya (menggunakan &lt;strong&gt;cd&lt;/strong&gt; ) kemudian jalankan sintak dibawah ini :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ python manage.py runserver
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Kemudian akan muncul :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Validating models...
+0 errors found
+November 23, 2017 - 15:29:25
+Django version 1.6.11, using settings &#39;mysite.settings&#39;
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[23/Nov/2017 15:29:30] &quot;GET / HTTP/1.1&quot; 200 1757
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;dari data diatas diketahui aplikasi berjalan pada port 8000. Untuk mengetahui buka web browser dan masukan link &lt;a href=&quot;http://127.0.0.1:8000/&quot;&gt;http://127.0.0.1:8000/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasilnya…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-23nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/linux/python/2017/11/23/artikel-3/</link>
+        <guid isPermaLink="true">https://kurtakon.com/linux/python/2017/11/23/artikel-3/</guid>
+        
+        
+        <category>linux</category>
+        
+        <category>python</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana uninstall aplikasi pada linux dengan terminal ?</title>
@@ -911,75 +978,6 @@ Pada artikel sebelumnya membahas sedikit tentang html pada kali ini akan membaha
         <pubDate>Tue, 10 Oct 2017 16:06:58 +0700</pubDate>
         <link>https://kurtakon.com/html/2017/10/10/artikel-2/</link>
         <guid isPermaLink="true">https://kurtakon.com/html/2017/10/10/artikel-2/</guid>
-        
-        
-        <category>html</category>
-        
-      </item>
-    
-      <item>
-        <title>Bagaimana contoh sederhana HTML ? [Bagian 1]</title>
-        <description>&lt;p&gt;&lt;strong&gt;Html&lt;/strong&gt; kepanjangan dari &lt;strong&gt;&lt;em&gt;HyperText Markup Language&lt;/em&gt;&lt;/strong&gt;  merupakan bahasa inti dari semua konten dalam  &lt;strong&gt;&lt;em&gt;Web&lt;/em&gt;&lt;/strong&gt;. Sebagian besar dari web pada browser menggukan HTML sebagai dasarnya. Lebih tepatnya HTML adalah bahasa yang menggambarkan struktur dan isi secara sistematik dari sebuah website.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt; Judul &lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Sebagai Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Isi Paragraf&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Bagaimana membuatnya ?&lt;/strong&gt;
-&lt;br /&gt;
-Silahkan buka sublime atau notepad copy code diatas kemudian simpan dengan format .html pada contoh saya simpan dengan index.html.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Hasil jika kita buka dengan web browser (chrome,dkk)
-&lt;img src=&quot;https://kurtakon.com/asset/img/img-10okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Baiklah kali ini saya akan menjelaskan sedikit&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-....
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Tag &amp;lt;/html&amp;gt; mengartikan bahwa website bersebut menggunkan html.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    ....
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Tag &amp;lt;/head&amp;gt; adalah kepala dari halaman website. Pada tag ini anda bisa menambahkan banyak informasi seperti font,meta, css, javascript,dll.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
-    ....
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Tag &amp;lt;/title&amp;gt; digunakan untuk menyatakan judul website. Tag ini disimpan didalam tag &amp;lt;/head&amp;gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-  ....  
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Tag &amp;lt;\body&amp;gt; ini digunakan untuk menampilkan isi dari website anda. Anda bisa menampilkan tulisan, gambar,video, musik dan lain-lain.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sumber : &lt;a href=&quot;https://developer.mozilla.org/id/docs/Web/HTML&quot;&gt;https://developer.mozilla.org/id/docs/Web/HTML&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Oct 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/html/2017/10/10/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/html/2017/10/10/artikel-1/</guid>
         
         
         <category>html</category>

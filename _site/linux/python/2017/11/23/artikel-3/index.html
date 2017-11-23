@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Bagaimana uninstall aplikasi pada linux dengan terminal ?</title>
-  <meta name="description" content="Sering kita main install aplikasi laptop kita. Padahal tidak penting sama sekali di sentuh juga tidak. Aplikasi tersebut tanpa sadari mengurangi kapasitas ha...">
+  <title>Bagaimana install Django pada Linux ?</title>
+  <meta name="description" content="Selamat malam dan dimana mata butuh kopi. Apa yang pertama kali anda pikirkan ketika dengar kata Python? Pasti orang awan akan bilang ular Python .Akan tetap...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,7 +20,7 @@
   <script src="/js/bootstrap.min.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
-  <link rel="canonical" href="https://kurtakon.com/linux/2017/11/23/artikel-2/">
+  <link rel="canonical" href="https://kurtakon.com/linux/python/2017/11/23/artikel-3/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
 
 </head>
@@ -105,92 +105,80 @@
 <div class="post col-md-8">
 
   <header class="post-header container-fluid">
-    <h1 class="content-max-width">Bagaimana uninstall aplikasi pada linux dengan terminal ?</h1>
-    <span>Nov 23, 2017 </span>   • <a href="/linux/2017/11/23/artikel-2/#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>
+    <h1 class="content-max-width">Bagaimana install Django pada Linux ?</h1>
+    <span>Nov 23, 2017 </span>   • <a href="/linux/python/2017/11/23/artikel-3/#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>
     <span class="time label label-danger pull-right"> 
           Linux,
+           
+          Python,
            </span>
   <hr>
   </header>
 
   <article class="post-content content container-fluid">
-    <p>Sering kita main install aplikasi laptop kita. Padahal tidak penting sama sekali di sentuh juga tidak. Aplikasi tersebut tanpa sadari mengurangi kapasitas hardisk kita. Yang jadi masalah bagaimana cara unistall aplikasi tersebut pada linux ? <em>*karena saya pengguna linux</em> hehe… heheh…</p>
+    <p>Selamat malam dan dimana mata butuh kopi. Apa yang pertama kali anda pikirkan ketika dengar kata Python? Pasti orang awan akan bilang ular Python .Akan tetapi kali ini saya tidak akan membahas ular (asli ular) namun bahasa pemerogaman Python. Python <em>is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991</em> (menurut Wikipedia).</p>
 
-<p>Pada artikel kali ini saya akan menulis cara uninstall aplikasi pada linux mengunakan terminal.</p>
+<p>Pada judul artikel <strong>Bagaimana install Django pada Linux ?</strong>  kenapa bahas Python apa hubungannya?</p>
 
-<ol>
-  <li>cari pada list nama aplikasinya :</li>
-</ol>
+<p><strong>Django</strong> adalah salah satu dari web framework open source berbasis Python yang didesain untuk membuat aplikasi web yang dinamis yang telah memiliki banyak fitur dan aman.</p>
 
-<p>Untuk melihat aplikasi yang telah kita install bisa menggunakan <strong>dpkg</strong></p>
-
-<pre><code>$ dpkg --list
-</code></pre>
-
-<p>setelah muncul :</p>
-
-<pre><code>ii  gir1.2-vte-2.90                      1:0.34.9-1ubuntu2       amd64                   GObject introspection data for the VTE library
-ii  gir1.2-webkit-3.0                    2.4.10-0ubuntu0.14.04.1 amd64                   Web content engine library for GTK+ - GObject introspection data
-ii  gir1.2-wnck-3.0:amd64                3.14.0-1~14.04~ricotz1  amd64                   GObject introspection data for the WNCK library
-ii  git                                  1:1.9.1-1ubuntu0.7      amd64                   fast, scalable, distributed revision control system
-ii  git-man                              1:1.9.1-1ubuntu0.7      all                     fast, scalable, distributed revision control system (manual pages)
-ii  gitg                                 0.2.7-2                 amd64                   git repository viewer
-ii  gitk                                 1:1.9.1-1ubuntu0.7      all                     fast, scalable, distributed revision control system (revision tree visualizer
-ii  gitkraken                            3.2.2                   amd64                   Unleash your repo
-</code></pre>
-
-<p>setelah muncul, pilih apalikasi yang akan di <em>uninstall</em></p>
+<p>Bagaimana cara install ?</p>
 
 <ol>
-  <li>Unistall aplikasinya :</li>
+  <li>harus install Python</li>
+  <li>install framework Django</li>
 </ol>
 
-<p>Misal saya mau <em>uninstall</em>  apliaksi <strong>gitkraken</strong></p>
+<p>Cara install sama sepertai aplikasi lain di linux menggunakan <strong>apt-get</strong></p>
 
-<pre><code>$ apt-get --purge remove gitkraken
+<pre><code>$ apt-get install python-django
 </code></pre>
 
-<p>setelah itu akan mendapatkan perintah konfirmasi , intinya yakin mau di unistall</p>
+<ol>
+  <li>Buat aplikasi</li>
+</ol>
 
-<pre><code>Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following package was automatically installed and is no longer required:
-  libzip4
-Use 'apt-get autoremove' to remove it.
-The following packages will be REMOVED:
-  gitkraken*
-0 upgraded, 0 newly installed, 1 to remove and 116 not upgraded.
-After this operation, 248 MB disk space will be freed.
-Do you want to continue? [Y/n] 
+<p>Cara membuat aplikasi buka terminal misal nama aplikasi nya <em>mysite</em></p>
+
+<pre><code>$ django-admin startproject mysite
 </code></pre>
 
-<p>Jika iya tulis <strong>y</strong> jika tidak jadi tinggal tulis <strong>n</strong></p>
+<ol>
+  <li>Jalankan Aplikasinya</li>
+</ol>
 
-<p>Ini jika tulis <strong>y</strong></p>
+<p>Cara menjalnkan masih menggunakan terminal, masuk ke direktori aplikasinya (menggunakan <strong>cd</strong> ) kemudian jalankan sintak dibawah ini :</p>
 
-<pre><code>(Reading database ... 1350641 files and directories currently installed.)
-Removing gitkraken (3.2.2) ...
-Processing triggers for gnome-menus (3.10.1-0ubuntu2) ...
-Processing triggers for desktop-file-utils (0.22-1ubuntu1) ...
-Processing triggers for bamfdaemon (0.5.1+14.04.20140409-0ubuntu1+elementary2~ubuntu14.04.1) ...
-Rebuilding /usr/share/applications/bamf-2.index...
-Processing triggers for mime-support (3.54ubuntu1.1) ...
+<pre><code>$ python manage.py runserver
 </code></pre>
 
-<p>Oke aplikasi berhasil dihapus.. bye..bye…</p>
+<p>Kemudian akan muncul :</p>
+
+<pre><code>Validating models...
+0 errors found
+November 23, 2017 - 15:29:25
+Django version 1.6.11, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[23/Nov/2017 15:29:30] "GET / HTTP/1.1" 200 1757
+</code></pre>
+
+<p>dari data diatas diketahui aplikasi berjalan pada port 8000. Untuk mengetahui buka web browser dan masukan link <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+
+<p>Hasilnya…</p>
+
+<p><img src="https://kurtakon.com/asset/img/img-23nov2017-1.png" alt="alt text" title="hello word" /></p>
+
 
 
   </article>
 		  <div class="row">
 			  <div class=" pull-left">
 				
-				  <a href="/linux/2017/11/23/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana install file deb pada linux ?"> <span class="fa fa-angle-double-left"></span></a>
+				  <a href="/linux/2017/11/23/artikel-2/" class="btn btn-primary btn-flat" title="Bagaimana uninstall aplikasi pada linux dengan terminal ?"> <span class="fa fa-angle-double-left"></span></a>
 				
 			  </div>
 			<div class="pull-right">
-			
-			  <a href="/linux/python/2017/11/23/artikel-3/" class="btn btn-primary btn-flat" title="Bagaimana install Django pada Linux ?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>
@@ -199,8 +187,8 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 <script>
 
 var disqus_config = function () {
-this.page.url =  "https://kurtakon.com/linux/2017/11/23/artikel-2/";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "/linux/2017/11/23/artikel-2"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url =  "https://kurtakon.com/linux/python/2017/11/23/artikel-3/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/linux/python/2017/11/23/artikel-3"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

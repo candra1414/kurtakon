@@ -3,6 +3,18 @@
 
     {
     
+      "title"    : "Bagaimana install Django pada Linux ?",
+      "url"      : "/linux/python/2017/11/23/artikel-3/",
+      "category" : "linux, python",
+      "tags"     : "",
+      "date"     : "Nov 23, 2017",
+      "content": "Selamat malam dan dimana mata butuh kopi. Apa yang pertama kali anda pikirkan ketika dengar kata Python? Pasti orang awan akan bilang ular Python .Akan tetapi kali ini saya tidak akan membahas ular (asli ular) namun bahasa pemerogaman Python. Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991 (menurut Wikipedia)."
+
+    } ,
+  
+
+    {
+    
       "title"    : "Bagaimana uninstall aplikasi pada linux dengan terminal ?",
       "url"      : "/linux/2017/11/23/artikel-2/",
       "category" : "linux",
