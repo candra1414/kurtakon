@@ -14,21 +14,21 @@ __Django__ adalah salah satu dari web framework open source berbasis Python yang
 
 Bagaimana cara install ?
 
-1. harus install Python
-2. install framework Django
+- harus install Python
+- install framework Django
 
 Cara install sama sepertai aplikasi lain di linux menggunakan __apt-get__
 
     $ apt-get install python-django
 
 
-3.  Buat aplikasi
+-  Buat aplikasi
 
 Cara membuat aplikasi buka terminal misal nama aplikasi nya _mysite_
 
     $ django-admin startproject mysite
 
-4. Jalankan Aplikasinya
+- Jalankan Aplikasinya
 
 Cara menjalnkan masih menggunakan terminal, masuk ke direktori aplikasinya (menggunakan __cd__ ) kemudian jalankan sintak dibawah ini :
 
