@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "Bagaimana uninstall aplikasi pada linux dengan terminal ?"
+comments: true
+date:   2017-11-23 08:06:58
+categories: [Linux]
+---
+
+Sering kita main install aplikasi laptop kita. Padahal tidak penting sama sekali di sentuh juga tidak. Aplikasi tersebut tanpa sadari mengurangi kapasitas hardisk kita. Yang jadi masalah bagaimana cara unistall aplikasi tersebut pada linux ? _*karena saya pengguna linux_ hehe... heheh...
+
+
+Pada artikel kali ini saya akan menulis cara uninstall aplikasi pada linux mengunakan terminal. 
+
+1. cari pada list nama aplikasinya :
+
+Untuk melihat aplikasi yang telah kita install bisa menggunakan __dpkg__
+
+    $ dpkg --list
+
+setelah muncul :
+
+    ii  gir1.2-vte-2.90                      1:0.34.9-1ubuntu2       amd64                   GObject introspection data for the VTE library
+    ii  gir1.2-webkit-3.0                    2.4.10-0ubuntu0.14.04.1 amd64                   Web content engine library for GTK+ - GObject introspection data
+    ii  gir1.2-wnck-3.0:amd64                3.14.0-1~14.04~ricotz1  amd64                   GObject introspection data for the WNCK library
+    ii  git                                  1:1.9.1-1ubuntu0.7      amd64                   fast, scalable, distributed revision control system
+    ii  git-man                              1:1.9.1-1ubuntu0.7      all                     fast, scalable, distributed revision control system (manual pages)
+    ii  gitg                                 0.2.7-2                 amd64                   git repository viewer
+    ii  gitk                                 1:1.9.1-1ubuntu0.7      all                     fast, scalable, distributed revision control system (revision tree visualizer
+    ii  gitkraken                            3.2.2                   amd64                   Unleash your repo
+
+
+setelah muncul, pilih apalikasi yang akan di _uninstall_ 
+
+
+2. Unistall aplikasinya :
+
+Misal saya mau _uninstall_  apliaksi __gitkraken__
+
+    $ apt-get --purge remove gitkraken
+
+setelah itu akan mendapatkan perintah konfirmasi , intinya yakin mau di unistall 
+
+    Reading package lists... Done
+    Building dependency tree       
+    Reading state information... Done
+    The following package was automatically installed and is no longer required:
+      libzip4
+    Use 'apt-get autoremove' to remove it.
+    The following packages will be REMOVED:
+      gitkraken*
+    0 upgraded, 0 newly installed, 1 to remove and 116 not upgraded.
+    After this operation, 248 MB disk space will be freed.
+    Do you want to continue? [Y/n] 
+
+
+Jika iya tulis __y__ jika tidak jadi tinggal tulis __n__
+
+Ini jika tulis __y__
+
+    (Reading database ... 1350641 files and directories currently installed.)
+    Removing gitkraken (3.2.2) ...
+    Processing triggers for gnome-menus (3.10.1-0ubuntu2) ...
+    Processing triggers for desktop-file-utils (0.22-1ubuntu1) ...
+    Processing triggers for bamfdaemon (0.5.1+14.04.20140409-0ubuntu1+elementary2~ubuntu14.04.1) ...
+    Rebuilding /usr/share/applications/bamf-2.index...
+    Processing triggers for mime-support (3.54ubuntu1.1) ...
+
+
+Oke aplikasi berhasil dihapus.. bye..bye... 

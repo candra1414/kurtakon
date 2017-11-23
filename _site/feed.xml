@@ -6,9 +6,86 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Nov 2017 11:55:13 +0700</pubDate>
-    <lastBuildDate>Thu, 23 Nov 2017 11:55:13 +0700</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2017 13:26:30 +0700</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2017 13:26:30 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana uninstall aplikasi pada linux dengan terminal ?</title>
+        <description>&lt;p&gt;Sering kita main install aplikasi laptop kita. Padahal tidak penting sama sekali di sentuh juga tidak. Aplikasi tersebut tanpa sadari mengurangi kapasitas hardisk kita. Yang jadi masalah bagaimana cara unistall aplikasi tersebut pada linux ? &lt;em&gt;*karena saya pengguna linux&lt;/em&gt; hehe… heheh…&lt;/p&gt;
+
+&lt;p&gt;Pada artikel kali ini saya akan menulis cara uninstall aplikasi pada linux mengunakan terminal.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;cari pada list nama aplikasinya :&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Untuk melihat aplikasi yang telah kita install bisa menggunakan &lt;strong&gt;dpkg&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ dpkg --list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;setelah muncul :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ii  gir1.2-vte-2.90                      1:0.34.9-1ubuntu2       amd64                   GObject introspection data for the VTE library
+ii  gir1.2-webkit-3.0                    2.4.10-0ubuntu0.14.04.1 amd64                   Web content engine library for GTK+ - GObject introspection data
+ii  gir1.2-wnck-3.0:amd64                3.14.0-1~14.04~ricotz1  amd64                   GObject introspection data for the WNCK library
+ii  git                                  1:1.9.1-1ubuntu0.7      amd64                   fast, scalable, distributed revision control system
+ii  git-man                              1:1.9.1-1ubuntu0.7      all                     fast, scalable, distributed revision control system (manual pages)
+ii  gitg                                 0.2.7-2                 amd64                   git repository viewer
+ii  gitk                                 1:1.9.1-1ubuntu0.7      all                     fast, scalable, distributed revision control system (revision tree visualizer
+ii  gitkraken                            3.2.2                   amd64                   Unleash your repo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;setelah muncul, pilih apalikasi yang akan di &lt;em&gt;uninstall&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Unistall aplikasinya :&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Misal saya mau &lt;em&gt;uninstall&lt;/em&gt;  apliaksi &lt;strong&gt;gitkraken&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ apt-get --purge remove gitkraken
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;setelah itu akan mendapatkan perintah konfirmasi , intinya yakin mau di unistall&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libzip4
+Use &#39;apt-get autoremove&#39; to remove it.
+The following packages will be REMOVED:
+  gitkraken*
+0 upgraded, 0 newly installed, 1 to remove and 116 not upgraded.
+After this operation, 248 MB disk space will be freed.
+Do you want to continue? [Y/n] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Jika iya tulis &lt;strong&gt;y&lt;/strong&gt; jika tidak jadi tinggal tulis &lt;strong&gt;n&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ini jika tulis &lt;strong&gt;y&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(Reading database ... 1350641 files and directories currently installed.)
+Removing gitkraken (3.2.2) ...
+Processing triggers for gnome-menus (3.10.1-0ubuntu2) ...
+Processing triggers for desktop-file-utils (0.22-1ubuntu1) ...
+Processing triggers for bamfdaemon (0.5.1+14.04.20140409-0ubuntu1+elementary2~ubuntu14.04.1) ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers for mime-support (3.54ubuntu1.1) ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oke aplikasi berhasil dihapus.. bye..bye…&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/linux/2017/11/23/artikel-2/</link>
+        <guid isPermaLink="true">https://kurtakon.com/linux/2017/11/23/artikel-2/</guid>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana install file deb pada linux ?</title>
@@ -906,73 +983,6 @@ Silahkan buka sublime atau notepad copy code diatas kemudian simpan dengan forma
         
         
         <category>html</category>
-        
-      </item>
-    
-      <item>
-        <title>Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?</title>
-        <description>&lt;p&gt;Syarat untuk meinstall rails versi saat ini (5.1.3) diharuskan memiliki ruby versi 2.2.2 atau lebih baru dari versi tersebut.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bagaimana jika versi ruby lebih rendah dari syarat yang ditentukan?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Berdasarkan pengalaman yang penulis lakukan rails tetap bisa terinstall namun ketika dijalankan tidak bisa.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bagaimana mengatasi install ruby on rails error karena versi ruby pada linux?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Caranya saya harus menginstall versi ruby yang lebih baru atau sesuai dengan syarat yang ditentukan.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bagaimana mengatasi install ruby versi baru?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Untuk kali ini saya ingin menginstall versi apt-get install ruby2.4-dev&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ruby2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Kenapa install versi dev pada ruby ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Karena pada saat saya install tanpa dev, ketika saya install rails muncul error&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;n&quot;&gt;Building&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;native&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extensions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;This&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;could&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;installing&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ERROR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Failed&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;native&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extension&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gems&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gems&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nokogiri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nokogiri&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ruby2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;siteconf20170905&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7494&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ci1a7j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extconf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rb&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mkmf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;can&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;t find header files for ruby at /usr/lib/ruby/include/ruby.h&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;extconf&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;failed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;Gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remain&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;installed&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gems&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gems&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nokogiri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inspection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Results&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;logged&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gems&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extensions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x86_64&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linux&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nokogiri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gem_make&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Sebagai solusi saya install versi &lt;strong&gt;dev&lt;/strong&gt; dan berhasil.&lt;/p&gt;
-
-&lt;p&gt;Setelah install ruby yang baru, kita bisa update gem dengan cara :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gem update --system 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Bagaimana jika kita sudah meinstall versi ruby yang baru tapi ketika lihat versinya masih dengan versi lama?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ruby -v
-ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Caranya menggunakan &lt;a href=&quot;https://kurtakon.com/linux/2017/09/04/artikel-1/&quot;&gt;update-alternatives&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo update-alternatives --config ruby
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Kemudian pilih versi yang kita butuhkan.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 05 Sep 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/ruby/rails/2017/09/05/artikel-2/</link>
-        <guid isPermaLink="true">https://kurtakon.com/ruby/rails/2017/09/05/artikel-2/</guid>
-        
-        
-        <category>ruby</category>
-        
-        <category>rails</category>
         
       </item>
     
