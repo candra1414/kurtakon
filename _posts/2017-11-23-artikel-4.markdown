@@ -1,0 +1,80 @@
+---
+layout: post
+title:  "Bagaimana koneksi database Mysql pada Django ?"
+comments: true
+date:   2017-11-23 08:06:58
+categories: [Linux,Python,Django,Mysql]
+---
+
+Pada artikel sebelumnya membahas [Bagaimana cara install Django pada linux?](https://kurtakon.com/linux/python/2017/11/23/artikel-3/) untuk kali ini mengatur koneksi databasenya. Karena gak keren kalau gak ada input data donk. Nanti jadi website statik bukan dinamis. Yups untuk kali ini koneksi databasenya menggunakan yang bisa __Mysql__ ( ini biasa buat saya belum tentu anda ya hehehe).
+
+Cara koneksi databasenya :
+
+- install konektor antara mysql dan python dulu 
+
+Cara installnya biasa __apt-get__ (_ini dengen syarat Mysql sudah terinstall loh)
+    
+    # apt-get install python3-mysql.connector
+
+kalau belum install _mysql-server_atau biar sekalian atau lupa dan biar gak ragu
+
+    # apt-get install mysql-server python3-mysql.connector
+
+- membuat database di Mysql misal namanya __mysite__ (bisa sama dengan nama aplikasinya)
+- merubah file pada __mysite/mysite/settings.py__
+
+Perubahan terjadi 
+
+    DATABASES = {
+       'default': {
+          'ENGINE': 'django.db.backends.sqlite3',
+          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+       }
+    }
+
+Menjadi :
+
+    DATABASES = {
+        'default': {
+            #'ENGINE': 'django.db.backends.mysql',
+            'ENGINE': 'mysql.connector.django',
+            'NAME': 'nama_database',
+            'USER': 'user_pada_database',
+            'PASSWORD': 'password_pada_database',
+            'HOST': 'localhost',
+        }
+    }
+
+
+Setelah terkoneksi kalian bisa melakukan migrasi databasenya :
+
+    $ python manage.py migrate
+
+Kalau tidak bisa dan  muncul error
+    
+    Unknown command: 'migrate'
+    Type 'manage.py help' for usage.
+
+Maka coba dengan sitak dibawah ini
+
+    $ python manage.py syncdb
+
+maka akan muncul :
+
+    Creating tables ...
+    Creating table django_admin_log
+    Creating table auth_permission
+    Creating table auth_group_permissions
+    Creating table auth_group
+    Creating table auth_user_groups
+    Creating table auth_user_user_permissions
+    Creating table auth_user
+    Creating table django_content_type
+    Creating table django_session
+
+    You just installed Django's auth system, which means you don't have any superusers defined.
+    Would you like to create one now? (yes/no):
+
+Jika sudah yakin tinggal tulis __yes__ , kemudian ikuti perintanya untuk meamsukan email, user dan password.
+
+Selesai... Database berhasil terkoneksi serta termigrasi ke Mysql.
