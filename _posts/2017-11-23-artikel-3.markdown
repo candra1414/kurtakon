@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bagaimana install Django pada Linux ?"
+title:  "Bagaimana cata install Django pada Linux ?"
 comments: true
 date:   2017-11-23 08:06:58
 categories: [Linux,Python]
@@ -8,7 +8,7 @@ categories: [Linux,Python]
 
 Selamat malam dan dimana mata butuh kopi. Apa yang pertama kali anda pikirkan ketika dengar kata Python? Pasti orang awan akan bilang ular Python .Akan tetapi kali ini saya tidak akan membahas ular (asli ular) namun bahasa pemerogaman Python. Python _is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991_ (menurut Wikipedia).
 
-Pada judul artikel __Bagaimana install Django pada Linux ?__  kenapa bahas Python apa hubungannya?
+Pada judul artikel __Bagaimana cara install Django pada Linux ?__  kenapa bahas Python apa hubungannya?
 
 __Django__ adalah salah satu dari web framework open source berbasis Python yang didesain untuk membuat aplikasi web yang dinamis yang telah memiliki banyak fitur dan aman.
 
