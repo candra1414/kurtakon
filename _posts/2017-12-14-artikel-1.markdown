@@ -23,7 +23,7 @@ Langkah Pertama, Membuat tabel nya terlabih dahulu pada database (untuk nama tab
 
 Langkah kedua bikin crud (karena menggukan Yii kalian bisa skipt)
 
-Langkah ketiga , download javascipt dan css bisa di download pada [https://fullcalendar.io/download/ ](https://fullcalendar.io/download/) antra lain :
+Langkah ketiga , download javascipt dan css bisa di download pada [https://fullcalendar.io/download/ ](https://fullcalendar.io/download/) antara lain :
 
 - Untuk Css
     1. fullcalendar.css,
