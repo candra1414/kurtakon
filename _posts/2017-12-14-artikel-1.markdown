@@ -23,7 +23,20 @@ Langkah Pertama, Membuat tabel nya terlabih dahulu pada database (untuk nama tab
 
 Langkah kedua bikin crud (karena menggukan Yii kalian bisa skipt)
 
-Langkah ketiga view untuk mempilkan agenda 
+Langkah ketiga , download javascipt dan css bisa di download pada [https://fullcalendar.io/download/ ](https://fullcalendar.io/download/) antra lain :
+
+- Untuk Css
+    1. fullcalendar.css,
+        
+- Untuk Js
+    1. jquery-ui.js,
+    2. moment.min.js,
+    3. fullcalendar.js',
+
+
+
+
+Langkah kemmpat view untuk mempilkan agenda 
 
 Pada Controller :
 Pada menampilakan data menggukan code json

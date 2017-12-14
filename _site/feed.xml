@@ -6,8 +6,8 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Dec 2017 23:29:24 +0700</pubDate>
-    <lastBuildDate>Thu, 14 Dec 2017 23:29:24 +0700</lastBuildDate>
+    <pubDate>Thu, 14 Dec 2017 23:38:25 +0700</pubDate>
+    <lastBuildDate>Thu, 14 Dec 2017 23:38:25 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
     
       <item>
@@ -29,7 +29,24 @@
 
 &lt;p&gt;Langkah kedua bikin crud (karena menggukan Yii kalian bisa skipt)&lt;/p&gt;
 
-&lt;p&gt;Langkah ketiga view untuk mempilkan agenda&lt;/p&gt;
+&lt;p&gt;Langkah ketiga , download javascipt dan css bisa di download pada &lt;a href=&quot;https://fullcalendar.io/download/&quot;&gt;https://fullcalendar.io/download/ &lt;/a&gt; antra lain :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Untuk Css
+    &lt;ol&gt;
+      &lt;li&gt;fullcalendar.css,&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Untuk Js
+    &lt;ol&gt;
+      &lt;li&gt;jquery-ui.js,&lt;/li&gt;
+      &lt;li&gt;moment.min.js,&lt;/li&gt;
+      &lt;li&gt;fullcalendar.js’,&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Langkah kemmpat view untuk mempilkan agenda&lt;/p&gt;
 
 &lt;p&gt;Pada Controller :
 Pada menampilakan data menggukan code json&lt;/p&gt;
@@ -119,7 +136,7 @@ selectable: true,
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-14dec2017-1.gif&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-14dec2017-1.gif&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Controller pada create (berdasarkan link yang dibuat)&lt;/p&gt;
 
@@ -338,7 +355,7 @@ Quit the server with CONTROL-C.
 
 &lt;p&gt;Hasilnya…&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-23nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-23nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
@@ -487,7 +504,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Pada &lt;strong&gt;location&lt;/strong&gt; terdapat &lt;strong&gt;fastcgi_pass unix:&lt;/strong&gt;  yang mengacu pada versi &lt;em&gt;php&lt;/em&gt; yang berjalan. Terlihat &lt;strong&gt;/var/run/php5-fpm.sock&lt;/strong&gt; versi php5 yang saat ini berjalan. Untuk merubahnya, kita harus mencari versi pada folder &lt;strong&gt;/var/run/&lt;/strong&gt;   &lt;strong&gt;php7-fpm.sock&lt;/strong&gt; berada di folder mana pada di install (pada kasus saya file tersebut terdapat didalam folder php).&lt;/p&gt;
 
@@ -514,7 +531,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 &lt;pre&gt;&lt;code&gt;    $ sudo service nginx restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 13 Nov 2017 15:06:58 +0700</pubDate>
@@ -593,21 +610,21 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
   &lt;li&gt;Tampilan awal&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tampilan pada saat input nilai awal&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tampilan pada saat input nilai pengurangan&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Penjelasan :&lt;/p&gt;
 
@@ -748,15 +765,15 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 
 &lt;p&gt;Kode untuk menampilkan daftar atau list artikel yang sudah di padding&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-20okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-20okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kode untuk membuat button previous dan next page untuk halaman padding&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-20okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-20okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hasil tampilan :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-20okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-20okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 20 Oct 2017 10:06:58 +0700</pubDate>
@@ -821,7 +838,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Contoh Membuat penjumlahan dengan PHP&lt;/p&gt;
 
@@ -837,7 +854,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Hasilnya :
-&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-5.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-5.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Membuat perulangan dengan &lt;strong&gt;for&lt;/strong&gt; untuk menghasilkan table :&lt;/p&gt;
 
@@ -868,7 +885,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-6.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-6.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
