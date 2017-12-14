@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Bagaimana Input data langsung pada Fullcalender ? [Yii2]</title>
+  <meta name="description" content="Setelah sekian lama puasa post artikel. Pada kali ini saya akan mencoba berekperiment dengan Fullcalender event.Nah lo.. Apa itu?? Tenang bukan aneh aneh kok...">
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <script type="text/javascript" src="/asset/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-1.11.0.js"> </script>
+  <script type="text/javascript" src="js/costumes.js"> </script>
+    <!-- Bootstrap Core JavaScript -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="/js/bootstrap.min.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+  <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
+  <link rel="canonical" href="https://kurtakon.com/yii/fullcalender/database/javascript/2017/12/14/artikel-1/">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
+
+</head>
+
+
+  <body>
+    <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-welcome bg-black" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand"  href="/"><span class="font-bold" style="color:#fff">KurTakon</span></a>
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- /.navbar-header -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="collapse-menu">
+             
+                
+                <li><a href="/about/" style="color:#fff" >KurTakon?</a></li>
+                    
+                
+                
+                <li><a href="/categori/" style="color:#fff" >Kategori</a></li>
+                    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+            <!-- /.navbar-nav -->
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+</header>
+      <br>
+      <br>
+      <div class="wrapper" style="min-height: 416px;">
+      <div>
+          <div class="content">
+                <div class="col-md-2 pull-right">
+        
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-gw-g+2z-2m-45"
+     data-ad-client="ca-pub-8015856612401610"
+     data-ad-slot="3065660661"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="col-md-2 pull-left">
+</div>
+
+<div class="post col-md-8">
+
+  <header class="post-header container-fluid">
+    <h1 class="content-max-width">Bagaimana Input data langsung pada Fullcalender ? [Yii2]</h1>
+    <span>Dec 14, 2017 </span>   • <a href="/yii/fullcalender/database/javascript/2017/12/14/artikel-1/#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>
+    <span class="time label label-danger pull-right"> 
+          Yii,
+           
+          Fullcalender,
+           
+          Database,
+           
+          Javascript,
+           </span>
+  <hr>
+  </header>
+
+  <article class="post-content content container-fluid">
+    <p>Setelah sekian lama puasa post artikel. Pada kali ini saya akan mencoba berekperiment dengan Fullcalender event.Nah lo.. Apa itu?? Tenang bukan aneh aneh kok . Fullcalender adalah <em>A JavaScript event calendar. Customizable and open source</em> menurut situs nya <a href="https://fullcalendar.io/">disini</a> .</p>
+
+<p>Dari halaman diatas kita menemukan contoh dasar penggunakannya. Yang jadi pertanyaan bagaimana input data langsung pada Fullcalender. Untuk kali ini percobaanya menggunakan Yii2.</p>
+
+<p>Langkah Pertama, Membuat tabel nya terlabih dahulu pada database (untuk nama tabel saya <strong>Agenda</strong> )</p>
+
+<pre><code>CREATE TABLE `agenda` (
+  `id_agenda` int(11) NOT NULL AUTO_INCREMENT,
+  `mulai` datetime NOT NULL,
+  `selesai` datetime NOT NULL,
+  `nama_agenda` text NOT NULL,
+  PRIMARY KEY (`id_agenda`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+</code></pre>
+
+<p>Langkah kedua bikin crud (karena menggukan Yii kalian bisa skipt)</p>
+
+<p>Langkah ketiga view untuk mempilkan agenda</p>
+
+<p>Pada Controller :
+Pada menampilakan data menggukan code json</p>
+
+<pre><code>  $Agenda = Agenda::find()-&gt;all();
+    $arr_agenda =[];
+    foreach ($Agenda as $key =&gt; $value) {
+          $arr_agenda [] = [
+            'title'=&gt;$value-&gt;nama_agenda,
+            'start' =&gt;$value-&gt;mulai,
+            'end'=&gt;$value-&gt;selesai,
+            'allDay'=&gt;'false',
+            'backgroundColor'=&gt; "#FA6969", 
+            'borderColor'=&gt; "#FA6969",
+        ];
+    }
+    $json = json_encode($arr_agenda);
+    return $this-&gt;render('index', [
+        'json' =&gt; $json,
+    ]);
+</code></pre>
+
+<p>Pada view (php) tempat link url untuk create baru agenda</p>
+
+<pre><code>$url = Url::to(['agenda/create']);
+</code></pre>
+
+<p>Pada View (Javascipt):</p>
+
+<pre><code>    var date = new Date();
+    var d = date.getDate(),
+        m = date.getMonth(),
+        y = date.getFullYear();
+$('#calendar').fullCalendar({
+   header: {
+    left: 'prev,next today',
+    center: 'title',
+    right: 'month'
+  },
+  buttonText: {
+    month: 'Agenda',
+  },
+events: $json,
+eventClick: function(event) {
+    return false;
+},
+selectable: true,
+  selectHelper: true,
+  select: function(start, end) {
+      $('#modal').modal('show')
+            .find('#modalContent')
+            .load('$url&amp;start='+start+'&amp;'+'end='+end); // $url adalah link form create
+        $('.modal-header').html('Tambah Agenda');
+  },
+});
+</code></pre>
+
+<p>Penjelasan Javascript :</p>
+
+<ul>
+  <li>events</li>
+</ul>
+
+<p>Digunakan untuk menampilkan agenda yang telah dibuat, pada kasus di atas menggukan <em>$json</em> yang diambil dari controller.</p>
+
+<pre><code>events: $json,
+</code></pre>
+
+<ul>
+  <li>select</li>
+</ul>
+
+<p>Merupakan fasilitas untuk melakukan <em>select</em> atau bisa bilang ketika memilih (dengan di blok). Pada saat tersebut kita bisa menabahkan javascript untuk kali ini saya gunkan sebagai fasilitas melakukan input agenda dengan menggukan modal.</p>
+
+<pre><code>  select: function(start, end) {
+      $('#modal').modal('show')
+            .find('#modalContent')
+            .load('$url&amp;start='+start+'&amp;'+'end='+end); // $url adalah link form create
+        $('.modal-header').html('Tambah Agenda');
+  },
+</code></pre>
+
+<p>Pada view (html) tempat menampilkan hasil load javascript</p>
+
+<pre><code>&lt;div id="calendar"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>Hasilnya :</p>
+
+<p><img src="http://127.0.0.1:4000/asset/img/img-14dec2017-1.gif" alt="alt text" title="hello word" /></p>
+
+<p>Controller pada create (berdasarkan link yang dibuat)</p>
+
+<pre><code> $model = new Agenda();
+    $model-&gt;mulai =  date('Y-m-d H:i:s',strtotime('-7 hour',$start/1000));
+    $model-&gt;selesai = date('Y-m-d H:i:s',strtotime('-7 hour',$end/1000));
+    if ($model-&gt;load(Yii::$app-&gt;request-&gt;post()) &amp;&amp; $model-&gt;save()) {
+        return $this-&gt;redirect(['index']);
+    } else {
+        return $this-&gt;renderAjax('create', [
+            'model' =&gt; $model,
+        ]);
+    }
+</code></pre>
+
+<p>View untuk menampilakan form untuk melakukan input agenda</p>
+
+<pre><code>&lt;div class="agenda-form"&gt;
+    &lt;?php $form = ActiveForm::begin(); ?&gt;
+    &lt;?= $form-&gt;field($model, 'mulai')-&gt;widget(DateTimePicker::classname(), [
+            'options' =&gt; [ 'placeholder' =&gt; 'Tanggal Mulai Agenda'],
+            'pluginOptions' =&gt; [
+                'autoclose' =&gt; true,
+                'format' =&gt; 'yyyy-mm-dd  hh:ii:ss',
+            ]
+        ])-&gt;label('Tanggal Mulai Agenda') ?&gt;
+    &lt;?= $form-&gt;field($model, 'selesai')-&gt;widget(DateTimePicker::classname(), [
+            'options' =&gt; [ 'placeholder' =&gt; 'Tanggal Selesai Agenda'],
+            'pluginOptions' =&gt; [
+                'autoclose' =&gt; true,
+                'format' =&gt; 'yyyy-mm-dd  hh:ii:ss',
+            ]
+        ])-&gt;label('Tanggal Selesai Agenda') ?&gt;
+    &lt;?= $form-&gt;field($model, 'nama_agenda')-&gt;textarea(['rows' =&gt; 6]) ?&gt;
+    &lt;div class="form-group"&gt;
+        &lt;?= Html::submitButton($model-&gt;isNewRecord ? 'Simpan' : 'Update', ['class' =&gt; $model-&gt;isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?&gt;
+        &lt;div class="pull-right"&gt;
+        &lt;?=
+            Html::a('Kembali',Url::to(['/agenda/index']), [
+                'id'=&gt;'disposisi',
+                'class'=&gt;'btn btn-danger',
+                'title' =&gt;'Kembali',
+            ]);?&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;?php ActiveForm::end(); ?&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+  </article>
+  <div class="align-center">  
+       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- footer -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-8015856612401610"
+           data-ad-slot="8025988080"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script> 
+  </div>
+		  <div class="row">
+			  <div class=" pull-left">
+				
+				  <a href="/linux/python/django/mysql/2017/11/23/artikel-4/" class="btn btn-primary btn-flat" title="Bagaimana koneksi database Mysql pada Django ?"> <span class="fa fa-angle-double-left"></span></a>
+				
+			  </div>
+			<div class="pull-right">
+			
+			</div>
+		  </div>
+  	
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url =  "https://kurtakon.com/yii/fullcalender/database/javascript/2017/12/14/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/yii/fullcalender/database/javascript/2017/12/14/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kurtakon-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+
+
+
+</div>
+
+
+          </div>
+      </div>
+
+    </div>
+    <footer class="site-footer bg-black">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"><foo>&#169;</foo> 2017 KurTakon</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+         
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Quote : <br> Takonlah sebelum takon itu dilarang.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

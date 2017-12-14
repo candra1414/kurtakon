@@ -75,6 +75,6 @@ maka akan muncul :
     You just installed Django's auth system, which means you don't have any superusers defined.
     Would you like to create one now? (yes/no):
 
-Jika sudah yakin tinggal tulis __yes__ , kemudian ikuti perintanya untuk meamsukan email, user dan password.
+Jika sudah yakin tinggal tulis __yes__ , kemudian ikuti perintahnya untuk memasukan email, user dan password.
 
 Selesai... Database berhasil terkoneksi serta termigrasi ke Mysql.

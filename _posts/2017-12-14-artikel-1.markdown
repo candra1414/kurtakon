@@ -1,0 +1,160 @@
+---
+layout: post
+title:  "Bagaimana Input data langsung pada Fullcalender ? [Yii2]"
+comments: true
+date:   2017-12-14 02:06:58
+categories: [Yii,Fullcalender,Database,Javascript]
+---
+
+Setelah sekian lama puasa post artikel. Pada kali ini saya akan mencoba berekperiment dengan Fullcalender event.Nah lo.. Apa itu?? Tenang bukan aneh aneh kok . Fullcalender adalah _A JavaScript event calendar. Customizable and open source_ menurut situs nya [disini](https://fullcalendar.io/) .
+
+Dari halaman diatas kita menemukan contoh dasar penggunakannya. Yang jadi pertanyaan bagaimana input data langsung pada Fullcalender. Untuk kali ini percobaanya menggunakan Yii2.
+
+Langkah Pertama, Membuat tabel nya terlabih dahulu pada database (untuk nama tabel saya __Agenda__ )
+
+
+    CREATE TABLE `agenda` (
+      `id_agenda` int(11) NOT NULL AUTO_INCREMENT,
+      `mulai` datetime NOT NULL,
+      `selesai` datetime NOT NULL,
+      `nama_agenda` text NOT NULL,
+      PRIMARY KEY (`id_agenda`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+Langkah kedua bikin crud (karena menggukan Yii kalian bisa skipt)
+
+Langkah ketiga view untuk mempilkan agenda 
+
+Pada Controller :
+Pada menampilakan data menggukan code json
+
+      $Agenda = Agenda::find()->all();
+        $arr_agenda =[];
+        foreach ($Agenda as $key => $value) {
+              $arr_agenda [] = [
+                'title'=>$value->nama_agenda,
+                'start' =>$value->mulai,
+                'end'=>$value->selesai,
+                'allDay'=>'false',
+                'backgroundColor'=> "#FA6969", 
+                'borderColor'=> "#FA6969",
+            ];
+        }
+        $json = json_encode($arr_agenda);
+        return $this->render('index', [
+            'json' => $json,
+        ]);
+
+Pada view (php) tempat link url untuk create baru agenda
+    
+    $url = Url::to(['agenda/create']);
+
+Pada View (Javascipt):
+
+        var date = new Date();
+        var d = date.getDate(),
+            m = date.getMonth(),
+            y = date.getFullYear();
+    $('#calendar').fullCalendar({
+       header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month'
+      },
+      buttonText: {
+        month: 'Agenda',
+      },
+    events: $json,
+    eventClick: function(event) {
+        return false;
+    },
+    selectable: true,
+      selectHelper: true,
+      select: function(start, end) {
+          $('#modal').modal('show')
+                .find('#modalContent')
+                .load('$url&start='+start+'&'+'end='+end); // $url adalah link form create
+            $('.modal-header').html('Tambah Agenda');
+      },
+    });
+    
+
+Penjelasan Javascript :
+
+- events  
+
+Digunakan untuk menampilkan agenda yang telah dibuat, pada kasus di atas menggukan _$json_ yang diambil dari controller.
+
+    events: $json,
+
+
+- select 
+
+Merupakan fasilitas untuk melakukan _select_ atau bisa bilang ketika memilih (dengan di blok). Pada saat tersebut kita bisa menabahkan javascript untuk kali ini saya gunkan sebagai fasilitas melakukan input agenda dengan menggukan modal.
+
+      select: function(start, end) {
+          $('#modal').modal('show')
+                .find('#modalContent')
+                .load('$url&start='+start+'&'+'end='+end); // $url adalah link form create
+            $('.modal-header').html('Tambah Agenda');
+      },
+
+Pada view (html) tempat menampilkan hasil load javascript
+
+    <div id="calendar"></div>
+
+
+
+Hasilnya :
+
+![alt text][gambar1]
+
+[gambar1]:{{site.urlimg}}img-14dec2017-1.gif "hello word"
+
+
+Controller pada create (berdasarkan link yang dibuat)
+
+     $model = new Agenda();
+        $model->mulai =  date('Y-m-d H:i:s',strtotime('-7 hour',$start/1000));
+        $model->selesai = date('Y-m-d H:i:s',strtotime('-7 hour',$end/1000));
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['index']);
+        } else {
+            return $this->renderAjax('create', [
+                'model' => $model,
+            ]);
+        }
+
+
+View untuk menampilakan form untuk melakukan input agenda 
+
+    <div class="agenda-form">
+        <?php $form = ActiveForm::begin(); ?>
+        <?= $form->field($model, 'mulai')->widget(DateTimePicker::classname(), [
+                'options' => [ 'placeholder' => 'Tanggal Mulai Agenda'],
+                'pluginOptions' => [
+                    'autoclose' => true,
+                    'format' => 'yyyy-mm-dd  hh:ii:ss',
+                ]
+            ])->label('Tanggal Mulai Agenda') ?>
+        <?= $form->field($model, 'selesai')->widget(DateTimePicker::classname(), [
+                'options' => [ 'placeholder' => 'Tanggal Selesai Agenda'],
+                'pluginOptions' => [
+                    'autoclose' => true,
+                    'format' => 'yyyy-mm-dd  hh:ii:ss',
+                ]
+            ])->label('Tanggal Selesai Agenda') ?>
+        <?= $form->field($model, 'nama_agenda')->textarea(['rows' => 6]) ?>
+        <div class="form-group">
+            <?= Html::submitButton($model->isNewRecord ? 'Simpan' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+            <div class="pull-right">
+            <?=
+                Html::a('Kembali',Url::to(['/agenda/index']), [
+                    'id'=>'disposisi',
+                    'class'=>'btn btn-danger',
+                    'title' =>'Kembali',
+                ]);?>
+            </div>
+        </div>
+        <?php ActiveForm::end(); ?>
+    </div>

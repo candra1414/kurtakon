@@ -6,9 +6,183 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 Nov 2017 09:08:12 +0700</pubDate>
-    <lastBuildDate>Fri, 24 Nov 2017 09:08:12 +0700</lastBuildDate>
+    <pubDate>Thu, 14 Dec 2017 23:29:24 +0700</pubDate>
+    <lastBuildDate>Thu, 14 Dec 2017 23:29:24 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana Input data langsung pada Fullcalender ? [Yii2]</title>
+        <description>&lt;p&gt;Setelah sekian lama puasa post artikel. Pada kali ini saya akan mencoba berekperiment dengan Fullcalender event.Nah lo.. Apa itu?? Tenang bukan aneh aneh kok . Fullcalender adalah &lt;em&gt;A JavaScript event calendar. Customizable and open source&lt;/em&gt; menurut situs nya &lt;a href=&quot;https://fullcalendar.io/&quot;&gt;disini&lt;/a&gt; .&lt;/p&gt;
+
+&lt;p&gt;Dari halaman diatas kita menemukan contoh dasar penggunakannya. Yang jadi pertanyaan bagaimana input data langsung pada Fullcalender. Untuk kali ini percobaanya menggunakan Yii2.&lt;/p&gt;
+
+&lt;p&gt;Langkah Pertama, Membuat tabel nya terlabih dahulu pada database (untuk nama tabel saya &lt;strong&gt;Agenda&lt;/strong&gt; )&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CREATE TABLE `agenda` (
+  `id_agenda` int(11) NOT NULL AUTO_INCREMENT,
+  `mulai` datetime NOT NULL,
+  `selesai` datetime NOT NULL,
+  `nama_agenda` text NOT NULL,
+  PRIMARY KEY (`id_agenda`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Langkah kedua bikin crud (karena menggukan Yii kalian bisa skipt)&lt;/p&gt;
+
+&lt;p&gt;Langkah ketiga view untuk mempilkan agenda&lt;/p&gt;
+
+&lt;p&gt;Pada Controller :
+Pada menampilakan data menggukan code json&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  $Agenda = Agenda::find()-&amp;gt;all();
+    $arr_agenda =[];
+    foreach ($Agenda as $key =&amp;gt; $value) {
+          $arr_agenda [] = [
+            &#39;title&#39;=&amp;gt;$value-&amp;gt;nama_agenda,
+            &#39;start&#39; =&amp;gt;$value-&amp;gt;mulai,
+            &#39;end&#39;=&amp;gt;$value-&amp;gt;selesai,
+            &#39;allDay&#39;=&amp;gt;&#39;false&#39;,
+            &#39;backgroundColor&#39;=&amp;gt; &quot;#FA6969&quot;, 
+            &#39;borderColor&#39;=&amp;gt; &quot;#FA6969&quot;,
+        ];
+    }
+    $json = json_encode($arr_agenda);
+    return $this-&amp;gt;render(&#39;index&#39;, [
+        &#39;json&#39; =&amp;gt; $json,
+    ]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada view (php) tempat link url untuk create baru agenda&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$url = Url::to([&#39;agenda/create&#39;]);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada View (Javascipt):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var date = new Date();
+    var d = date.getDate(),
+        m = date.getMonth(),
+        y = date.getFullYear();
+$(&#39;#calendar&#39;).fullCalendar({
+   header: {
+    left: &#39;prev,next today&#39;,
+    center: &#39;title&#39;,
+    right: &#39;month&#39;
+  },
+  buttonText: {
+    month: &#39;Agenda&#39;,
+  },
+events: $json,
+eventClick: function(event) {
+    return false;
+},
+selectable: true,
+  selectHelper: true,
+  select: function(start, end) {
+      $(&#39;#modal&#39;).modal(&#39;show&#39;)
+            .find(&#39;#modalContent&#39;)
+            .load(&#39;$url&amp;amp;start=&#39;+start+&#39;&amp;amp;&#39;+&#39;end=&#39;+end); // $url adalah link form create
+        $(&#39;.modal-header&#39;).html(&#39;Tambah Agenda&#39;);
+  },
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Penjelasan Javascript :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;events&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Digunakan untuk menampilkan agenda yang telah dibuat, pada kasus di atas menggukan &lt;em&gt;$json&lt;/em&gt; yang diambil dari controller.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;events: $json,
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;select&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Merupakan fasilitas untuk melakukan &lt;em&gt;select&lt;/em&gt; atau bisa bilang ketika memilih (dengan di blok). Pada saat tersebut kita bisa menabahkan javascript untuk kali ini saya gunkan sebagai fasilitas melakukan input agenda dengan menggukan modal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  select: function(start, end) {
+      $(&#39;#modal&#39;).modal(&#39;show&#39;)
+            .find(&#39;#modalContent&#39;)
+            .load(&#39;$url&amp;amp;start=&#39;+start+&#39;&amp;amp;&#39;+&#39;end=&#39;+end); // $url adalah link form create
+        $(&#39;.modal-header&#39;).html(&#39;Tambah Agenda&#39;);
+  },
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pada view (html) tempat menampilkan hasil load javascript&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;calendar&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hasilnya :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-14dec2017-1.gif&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Controller pada create (berdasarkan link yang dibuat)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; $model = new Agenda();
+    $model-&amp;gt;mulai =  date(&#39;Y-m-d H:i:s&#39;,strtotime(&#39;-7 hour&#39;,$start/1000));
+    $model-&amp;gt;selesai = date(&#39;Y-m-d H:i:s&#39;,strtotime(&#39;-7 hour&#39;,$end/1000));
+    if ($model-&amp;gt;load(Yii::$app-&amp;gt;request-&amp;gt;post()) &amp;amp;&amp;amp; $model-&amp;gt;save()) {
+        return $this-&amp;gt;redirect([&#39;index&#39;]);
+    } else {
+        return $this-&amp;gt;renderAjax(&#39;create&#39;, [
+            &#39;model&#39; =&amp;gt; $model,
+        ]);
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;View untuk menampilakan form untuk melakukan input agenda&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;agenda-form&quot;&amp;gt;
+    &amp;lt;?php $form = ActiveForm::begin(); ?&amp;gt;
+    &amp;lt;?= $form-&amp;gt;field($model, &#39;mulai&#39;)-&amp;gt;widget(DateTimePicker::classname(), [
+            &#39;options&#39; =&amp;gt; [ &#39;placeholder&#39; =&amp;gt; &#39;Tanggal Mulai Agenda&#39;],
+            &#39;pluginOptions&#39; =&amp;gt; [
+                &#39;autoclose&#39; =&amp;gt; true,
+                &#39;format&#39; =&amp;gt; &#39;yyyy-mm-dd  hh:ii:ss&#39;,
+            ]
+        ])-&amp;gt;label(&#39;Tanggal Mulai Agenda&#39;) ?&amp;gt;
+    &amp;lt;?= $form-&amp;gt;field($model, &#39;selesai&#39;)-&amp;gt;widget(DateTimePicker::classname(), [
+            &#39;options&#39; =&amp;gt; [ &#39;placeholder&#39; =&amp;gt; &#39;Tanggal Selesai Agenda&#39;],
+            &#39;pluginOptions&#39; =&amp;gt; [
+                &#39;autoclose&#39; =&amp;gt; true,
+                &#39;format&#39; =&amp;gt; &#39;yyyy-mm-dd  hh:ii:ss&#39;,
+            ]
+        ])-&amp;gt;label(&#39;Tanggal Selesai Agenda&#39;) ?&amp;gt;
+    &amp;lt;?= $form-&amp;gt;field($model, &#39;nama_agenda&#39;)-&amp;gt;textarea([&#39;rows&#39; =&amp;gt; 6]) ?&amp;gt;
+    &amp;lt;div class=&quot;form-group&quot;&amp;gt;
+        &amp;lt;?= Html::submitButton($model-&amp;gt;isNewRecord ? &#39;Simpan&#39; : &#39;Update&#39;, [&#39;class&#39; =&amp;gt; $model-&amp;gt;isNewRecord ? &#39;btn btn-success&#39; : &#39;btn btn-primary&#39;]) ?&amp;gt;
+        &amp;lt;div class=&quot;pull-right&quot;&amp;gt;
+        &amp;lt;?=
+            Html::a(&#39;Kembali&#39;,Url::to([&#39;/agenda/index&#39;]), [
+                &#39;id&#39;=&amp;gt;&#39;disposisi&#39;,
+                &#39;class&#39;=&amp;gt;&#39;btn btn-danger&#39;,
+                &#39;title&#39; =&amp;gt;&#39;Kembali&#39;,
+            ]);?&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;?php ActiveForm::end(); ?&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Thu, 14 Dec 2017 09:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/yii/fullcalender/database/javascript/2017/12/14/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/yii/fullcalender/database/javascript/2017/12/14/artikel-1/</guid>
+        
+        
+        <category>yii</category>
+        
+        <category>fullcalender</category>
+        
+        <category>database</category>
+        
+        <category>javascript</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana koneksi database Mysql pada Django ?</title>
@@ -92,7 +266,7 @@ You just installed Django&#39;s auth system, which means you don&#39;t have any 
 Would you like to create one now? (yes/no):
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Jika sudah yakin tinggal tulis &lt;strong&gt;yes&lt;/strong&gt; , kemudian ikuti perintanya untuk meamsukan email, user dan password.&lt;/p&gt;
+&lt;p&gt;Jika sudah yakin tinggal tulis &lt;strong&gt;yes&lt;/strong&gt; , kemudian ikuti perintahnya untuk memasukan email, user dan password.&lt;/p&gt;
 
 &lt;p&gt;Selesai… Database berhasil terkoneksi serta termigrasi ke Mysql.&lt;/p&gt;
 </description>
@@ -164,7 +338,7 @@ Quit the server with CONTROL-C.
 
 &lt;p&gt;Hasilnya…&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-23nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-23nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
@@ -313,7 +487,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Pada &lt;strong&gt;location&lt;/strong&gt; terdapat &lt;strong&gt;fastcgi_pass unix:&lt;/strong&gt;  yang mengacu pada versi &lt;em&gt;php&lt;/em&gt; yang berjalan. Terlihat &lt;strong&gt;/var/run/php5-fpm.sock&lt;/strong&gt; versi php5 yang saat ini berjalan. Untuk merubahnya, kita harus mencari versi pada folder &lt;strong&gt;/var/run/&lt;/strong&gt;   &lt;strong&gt;php7-fpm.sock&lt;/strong&gt; berada di folder mana pada di install (pada kasus saya file tersebut terdapat didalam folder php).&lt;/p&gt;
 
@@ -340,7 +514,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 &lt;pre&gt;&lt;code&gt;    $ sudo service nginx restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 13 Nov 2017 15:06:58 +0700</pubDate>
@@ -419,21 +593,21 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
   &lt;li&gt;Tampilan awal&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tampilan pada saat input nilai awal&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tampilan pada saat input nilai pengurangan&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-26okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Penjelasan :&lt;/p&gt;
 
@@ -574,15 +748,15 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 
 &lt;p&gt;Kode untuk menampilkan daftar atau list artikel yang sudah di padding&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-20okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-20okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kode untuk membuat button previous dan next page untuk halaman padding&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-20okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-20okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hasil tampilan :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-20okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-20okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 20 Oct 2017 10:06:58 +0700</pubDate>
@@ -647,7 +821,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Contoh Membuat penjumlahan dengan PHP&lt;/p&gt;
 
@@ -663,7 +837,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Hasilnya :
-&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-5.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-5.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Membuat perulangan dengan &lt;strong&gt;for&lt;/strong&gt; untuk menghasilkan table :&lt;/p&gt;
 
@@ -694,7 +868,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-6.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-19okt2017-6.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
@@ -705,141 +879,6 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
         <category>html</category>
         
         <category>php</category>
-        
-      </item>
-    
-      <item>
-        <title>Bagaimana contoh sederhana HTML ? [Bagian 3]</title>
-        <description>&lt;p&gt;Pada artikel sebelumnya tentang &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-1/&quot;&gt;&lt;strong&gt;‘Bagaimana contoh sederhana HTML ? [Bagian 1]’&lt;/strong&gt; &lt;/a&gt; dan &lt;a href=&quot;https://kurtakon.com/html/2017/10/10/artikel-2/&quot;&gt;&lt;strong&gt;‘Bagaimana contoh sederhana HTML ? [Bagian 2]’&lt;/strong&gt; &lt;/a&gt;  masih html biasa serta terlihat kaku bukan, Pada artikel kali ini saya akan menambahakan css agar tamplian web lebih warna.&lt;/p&gt;
-
-&lt;h3&gt; Apa itu Css ?&lt;/h3&gt;
-&lt;p&gt;Css merupakan kepanjangan dari Cascading Style Sheets. Css memiliki tujuan untuk menghias dan mengatur tampilan agar lebih teratur dan menarik dilihat. CSS adalah sebuah teknologi internet yang direkomendasikan oleh World Wide Web Consortium atau W3C pada tahun 1996.&lt;/p&gt;
-
-&lt;p&gt;Seperti pada aplikasi pengolahan kata seperti Microsoft Word yang dapat fitur untuk mengatur beberapa style, misalnya heading, subbab, bodytext, footer, images, dan style lainnya. Selain itu juga dapat digunakan bersama-sama dalam beberapa berkas (file). Pada umumnya CSS dipakai untuk memformat tampilan halaman web yang dibuat dengan bahasa HTML dan XHTML.&lt;/p&gt;
-
-&lt;p&gt;CSS dapat merubah ukuran gambar, warna pada teks, warna pada tabel, ukuran border, warna border, warna hyperlink, warna mouse hover, spasi antar paragraf, spasi antar teks, margin kiri, kanan, atas, bawah, dan parameter lainnya. CSS adalah bahasa style sheet yang digunakan untuk mengatur tampilan dokumen.Dengan adanya CSS memungkinkan kita untuk menampilkan halaman yang sama dengan format yang berbeda.&lt;/p&gt;
-
-&lt;p&gt;Cara menambakan css ada 3 cara sering digunakan :&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;External Style Sheet (file CSS berbeda dari file HTML)&lt;/li&gt;
-  &lt;li&gt;Internal Style Sheet (Kode CSS dipasang di dalam tag head HTML)&lt;/li&gt;
-  &lt;li&gt;Inline Style Sheet (Kode CSS langsung dipasang di tag HTML, tidak direkomendasikan).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Internal&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verdana&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Website sederhana&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum..&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;berikut hasilnya :
-&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Inline&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;background-color: blue;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;color:red; text-align: center;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Website sederhana&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; font-family: verdana; font-size: 20px;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum..&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;berikut hasilnya :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;External&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;gaya.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Website sederhana&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum..&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Membuat file dengan nama gaya.css&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;body {
-    background-color: #A08484;
-}
-
-h1 {
-    color: white;
-    text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hasilnya :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/html/css/2017/10/19/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/html/css/2017/10/19/artikel-1/</guid>
-        
-        
-        <category>html</category>
-        
-        <category>css</category>
         
       </item>
     

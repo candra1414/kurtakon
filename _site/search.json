@@ -3,6 +3,18 @@
 
     {
     
+      "title"    : "Bagaimana Input data langsung pada Fullcalender ? [Yii2]",
+      "url"      : "/yii/fullcalender/database/javascript/2017/12/14/artikel-1/",
+      "category" : "yii, fullcalender, database, javascript",
+      "tags"     : "",
+      "date"     : "Dec 14, 2017",
+      "content": "Setelah sekian lama puasa post artikel. Pada kali ini saya akan mencoba berekperiment dengan Fullcalender event.Nah lo.. Apa itu?? Tenang bukan aneh aneh kok . Fullcalender adalah A JavaScript event calendar. Customizable and open source menurut situs nya disini ."
+
+    } ,
+  
+
+    {
+    
       "title"    : "Bagaimana koneksi database Mysql pada Django ?",
       "url"      : "/linux/python/django/mysql/2017/11/23/artikel-4/",
       "category" : "linux, python, django, mysql",
