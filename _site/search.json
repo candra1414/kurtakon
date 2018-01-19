@@ -3,6 +3,18 @@
 
     {
     
+      "title"    : "Code seperti Rubik atau Rubik seperti Code ?",
+      "url"      : "/other/2018/01/01/artikel-1/",
+      "category" : "other",
+      "tags"     : "",
+      "date"     : "Jan 1, 2018",
+      "content": "Sepertinya ini artikel pertama di tahun 2018, Pada artikel kali ini saya tidak akan  membahas full code. Kali ini saya akan sedikit curhat dari pemikiran dan pengalaman.Kali ini saya akan sedikit menceritakan dua kegiatan saya yaitu code dan rubik. Kenapa rubik dan kenapa code , apa hubunganya?"
+
+    } ,
+  
+
+    {
+    
       "title"    : "Bagaimana Input data langsung pada Fullcalender ? [Yii2]",
       "url"      : "/yii/fullcalender/database/javascript/2017/12/14/artikel-1/",
       "category" : "yii, fullcalender, database, javascript",

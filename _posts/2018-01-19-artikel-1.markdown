@@ -1,0 +1,61 @@
+---
+layout: post
+comments: true
+title:  "Code seperti Rubik atau Rubik seperti Code ?"
+date:   2018-01-01 14:06:58
+categories: [Other]
+---
+Sepertinya ini artikel pertama di tahun 2018, Pada artikel kali ini saya tidak akan  membahas full code. Kali ini saya akan sedikit curhat dari pemikiran dan pengalaman.Kali ini saya akan sedikit menceritakan dua kegiatan saya yaitu code dan rubik. Kenapa rubik dan kenapa code , apa hubunganya?
+
+Rubik adalah permainan teka teki mekanik yang ditemukan pada tahun 1974 oleh pemahat dan profersor arsitektur Hungaria yaitu Erno Rubik.
+
+__Apa yang anda pikirkan tentang Rubik untuk pertamakali?__
+
+dan kali ini saya kembali bertanya
+
+__Apa yang anda pikirkan tentang Code (bahasa pemrograman) untuk pertamakali?__
+
+
+Dari dua pertanyaan diatas saya akan menjawab __Susah__ tapi __Penasaran__.
+
+Kenapa __Susah__?
+Karena 
+
+- Saya tidak tahu __caranya__.
+- Saya tidak tahu __memulai dari mana__.
+- Saya tidah tahu __apa maksudnya__
+- Saya tidah tahu __bertanya kepada siapa__
+- Saya tidah tahu __mencari dimana__
+
+Tetapi saya __Penasaran__
+
+Pada saat belajar anda akan frustasi, tidak tau bagaimana dan harus melakukan apa? Namun, rasa penasaran akan membuat anda bangkit dan tidak menyerah untuk menyelesaikan teka teki tersebut.
+
+Pada saat saya pertama kali bermain rubik saya membutuhkan berhari-hari untuk mengetahui caranya. Bertanya kesana kemari (efek tidak bisa membaca rumus sampai sekarang juga hehehe). Mengamati dan mengikuti gerakan. Kemudian membayangkan serta menerapkanya pada rubik. Begitu juga dengan belajar code. Mengikuti tutorial mempelajari bug atau bertanya pada teman.
+
+__Dan Apa yang terjadi jika kau menyelesaikannya ?__
+
+
+__PUAS__
+
+YA, ada kepuasan tersendiri jika telah menyelesaikanya.
+
+Apa yang terjadi jika kau sudah bisa rubik misal 3x3 ?
+
+Saya akan merasa bosan, lalu apa yang akan dilakukan?
+
+well, kalau saya
+
+ 1. Bereksperiment dengan rubik tersebut dengan bentuk aneh atau costume (bukan hanya membenarkan dari bentuk berantakan)
+ 2.  Mencari rubik baru dengan tingkat kesulitan berbeda.
+ 
+ Kau tau, ada berbagai jenis bentuk rubik saat ini dengan kesulitan yang berbeda. Dan apa yang terjadi jika pertama kali sama frustasi dan bingung. Dan apa yang saya lakukan pelajari dan taklukan.
+
+ Begitu juga code, banyak sekali bahasa pemorograman saat ini apa yang saya lakukan buat penasaran dan pelajari.
+
+ Kau tau cara meyelasaikan rubik bagaimana? Putar putar
+
+ Kalau kau cari banyak rumus untuk menyelesaikanya.
+ (* jangan tanya saya ya seperti dikatakan sebelumnnya saya tidak bisa baca rumus rubik).
+
+ Kau tau pada dasarnya code sama saja terdapat if, else , for (looping),fungsi menampilkan dan hanya saja menggunakan cara berbeda-beda.

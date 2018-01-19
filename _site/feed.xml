@@ -6,9 +6,77 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Dec 2017 23:49:36 +0700</pubDate>
-    <lastBuildDate>Thu, 14 Dec 2017 23:49:36 +0700</lastBuildDate>
+    <pubDate>Fri, 19 Jan 2018 23:47:47 +0700</pubDate>
+    <lastBuildDate>Fri, 19 Jan 2018 23:47:47 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Code seperti Rubik atau Rubik seperti Code ?</title>
+        <description>&lt;p&gt;Sepertinya ini artikel pertama di tahun 2018, Pada artikel kali ini saya tidak akan  membahas full code. Kali ini saya akan sedikit curhat dari pemikiran dan pengalaman.Kali ini saya akan sedikit menceritakan dua kegiatan saya yaitu code dan rubik. Kenapa rubik dan kenapa code , apa hubunganya?&lt;/p&gt;
+
+&lt;p&gt;Rubik adalah permainan teka teki mekanik yang ditemukan pada tahun 1974 oleh pemahat dan profersor arsitektur Hungaria yaitu Erno Rubik.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Apa yang anda pikirkan tentang Rubik untuk pertamakali?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;dan kali ini saya kembali bertanya&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Apa yang anda pikirkan tentang Code (bahasa pemrograman) untuk pertamakali?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Dari dua pertanyaan diatas saya akan menjawab &lt;strong&gt;Susah&lt;/strong&gt; tapi &lt;strong&gt;Penasaran&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kenapa &lt;strong&gt;Susah&lt;/strong&gt;?
+Karena&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Saya tidak tahu &lt;strong&gt;caranya&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Saya tidak tahu &lt;strong&gt;memulai dari mana&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Saya tidah tahu &lt;strong&gt;apa maksudnya&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Saya tidah tahu &lt;strong&gt;bertanya kepada siapa&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Saya tidah tahu &lt;strong&gt;mencari dimana&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tetapi saya &lt;strong&gt;Penasaran&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Pada saat belajar anda akan frustasi, tidak tau bagaimana dan harus melakukan apa? Namun, rasa penasaran akan membuat anda bangkit dan tidak menyerah untuk menyelesaikan teka teki tersebut.&lt;/p&gt;
+
+&lt;p&gt;Pada saat saya pertama kali bermain rubik saya membutuhkan berhari-hari untuk mengetahui caranya. Bertanya kesana kemari (efek tidak bisa membaca rumus sampai sekarang juga hehehe). Mengamati dan mengikuti gerakan. Kemudian membayangkan serta menerapkanya pada rubik. Begitu juga dengan belajar code. Mengikuti tutorial mempelajari bug atau bertanya pada teman.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dan Apa yang terjadi jika kau menyelesaikannya ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PUAS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;YA, ada kepuasan tersendiri jika telah menyelesaikanya.&lt;/p&gt;
+
+&lt;p&gt;Apa yang terjadi jika kau sudah bisa rubik misal 3x3 ?&lt;/p&gt;
+
+&lt;p&gt;Saya akan merasa bosan, lalu apa yang akan dilakukan?&lt;/p&gt;
+
+&lt;p&gt;well, kalau saya&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Bereksperiment dengan rubik tersebut dengan bentuk aneh atau costume (bukan hanya membenarkan dari bentuk berantakan)&lt;/li&gt;
+  &lt;li&gt;Mencari rubik baru dengan tingkat kesulitan berbeda.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kau tau, ada berbagai jenis bentuk rubik saat ini dengan kesulitan yang berbeda. Dan apa yang terjadi jika pertama kali sama frustasi dan bingung. Dan apa yang saya lakukan pelajari dan taklukan.&lt;/p&gt;
+
+&lt;p&gt;Begitu juga code, banyak sekali bahasa pemorograman saat ini apa yang saya lakukan buat penasaran dan pelajari.&lt;/p&gt;
+
+&lt;p&gt;Kau tau cara meyelasaikan rubik bagaimana? Putar putar&lt;/p&gt;
+
+&lt;p&gt;Kalau kau cari banyak rumus untuk menyelesaikanya.
+ (* jangan tanya saya ya seperti dikatakan sebelumnnya saya tidak bisa baca rumus rubik).&lt;/p&gt;
+
+&lt;p&gt;Kau tau pada dasarnya code sama saja terdapat if, else , for (looping),fungsi menampilkan dan hanya saja menggunakan cara berbeda-beda.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 01 Jan 2018 21:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/other/2018/01/01/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/other/2018/01/01/artikel-1/</guid>
+        
+        
+        <category>other</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana Input data langsung pada Fullcalender ? [Yii2]</title>
@@ -817,85 +885,6 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
         <category>php</category>
         
         <category>server</category>
-        
-      </item>
-    
-      <item>
-        <title>Apa itu PHP?</title>
-        <description>&lt;p&gt;Sering kita mendegar dengan kata &lt;strong&gt;PHP&lt;/strong&gt; , perlu diingat &lt;strong&gt;PHP&lt;/strong&gt; di sini bukan Pemberi harapan palsu namun PHP (Hypertext Preprocessor) yaitu bahasa pemerograman yang sering digunakan bersamaan dengan HTML. Php banyak digunakan untuk membuat situs web dinamis.&lt;/p&gt;
-
-&lt;p&gt;PHP singkatan dari &lt;em&gt;Personal Home Page&lt;/em&gt; pertama dibuat oleh &lt;em&gt;Rasmus Lerdorf&lt;/em&gt; tahun 1995. Pertama di buat PHP dengan &lt;em&gt;Common Gateway Interface (CGI)&lt;/em&gt; menggunakan bahasa &lt;strong&gt;C&lt;/strong&gt; . Seiring perkembanggan jaman muncul PHP3, PHP4, PHP5 (yang sampai saat ini masih digunakan), serta yang terakhir PHP7.&lt;/p&gt;
-
-&lt;p&gt;Bagaimana Menjalankan PHP ?&lt;/p&gt;
-
-&lt;p&gt;Untuk menjalankan PHP kita memerlukan &lt;a href=&quot;https://kurtakon.com/php/server/2017/10/19/artikel-3/&quot;&gt;&lt;em&gt;Web Server&lt;/em&gt;&lt;/a&gt;. Ada bermacam macam web server seperti &lt;em&gt;Apache&lt;/em&gt; atau bisa juga &lt;em&gt;Nginx&lt;/em&gt; yang bisa kita gunakan. Pada saat ini penulis menggunakan &lt;em&gt;Nginx&lt;/em&gt;  yang dijalankan pada &lt;em&gt;localhost&lt;/em&gt; atau IP &lt;em&gt;127.0.0.1&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Contoh script :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Ini Uji coba PHP&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hasilnya :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Contoh Membuat penjumlahan dengan PHP&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-   &lt;span class=&quot;nv&quot;&gt;$n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;nv&quot;&gt;$m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;n =&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;/br&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;m =&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;/br&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;jika n + m &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;hasilnya&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hasilnya :
-&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-5.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Membuat perulangan dengan &lt;strong&gt;for&lt;/strong&gt; untuk menghasilkan table :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    table {&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        border-collapse: collapse;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
-
-&lt;span class=&quot;x&quot;&gt;    table, th, td {&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        border: 1px solid black;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        padding: 10px;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    }&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;&amp;lt;table&amp;gt; &lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;&amp;lt;tr&amp;gt; &amp;lt;th colspan=&amp;quot;2&amp;quot;&amp;gt;Contoh Table&amp;lt;/th&amp;gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    &amp;lt;tr&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        &amp;lt;td&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        &amp;lt;td&amp;gt; Baris pada tabel  &lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;x&quot;&gt;    &amp;lt;/tr&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;&amp;lt;/table&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hasilnya :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-19okt2017-6.png&quot; alt=&quot;alt text&quot; title=&quot;view html&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/html/php/2017/10/19/artikel-2/</link>
-        <guid isPermaLink="true">https://kurtakon.com/html/php/2017/10/19/artikel-2/</guid>
-        
-        
-        <category>html</category>
-        
-        <category>php</category>
         
       </item>
     
