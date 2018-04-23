@@ -6,9 +6,56 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Feb 2018 19:11:00 +0700</pubDate>
-    <lastBuildDate>Fri, 23 Feb 2018 19:11:00 +0700</lastBuildDate>
+    <pubDate>Mon, 23 Apr 2018 11:08:57 +0700</pubDate>
+    <lastBuildDate>Mon, 23 Apr 2018 11:08:57 +0700</lastBuildDate>
     <generator>Jekyll v2.5.0</generator>
+    
+      <item>
+        <title>Bagaimana cara memasang koneksi database mysql pada Ruby on Rails?</title>
+        <description>&lt;p&gt;Catatan kali ini saya akan membahas bagainama cara melakukan koneksi untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pada dasarnya telah terkoneksi menggunakan &lt;em&gt;sqlite&lt;/em&gt;. Lalu bagaimana jika ingin menggantinya dengan mysql?&lt;/p&gt;
+
+&lt;p&gt;Pertama, intall mysql pada ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo gem install mysql2 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setelah dipastikan telah terinstall dengan benar lalu buka file
+&lt;strong&gt;app_rails/Gemfile&lt;/strong&gt; untuk memasangkan repo yang akan di gunakan aplikasi&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gem &#39;mysql2&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tahap selanjutnya kita perlu melakukan perubahan agar  mengacu pada database yang kita gunakan dengan merubah pada file 
+&lt;strong&gt;config/database.yml&lt;/strong&gt; untuk melakuan perubahan setting database.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;development:
+  adapter: mysql2
+  encoding: utf8
+  database: nama_database
+  username: username
+  password: password
+  host: 127.0.0.1 // atau localhost
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: nama_database
+  username: username
+  password: password
+  host: 127.0.0.1 // atau localhost
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sekian catatan kali ini , terima kasih.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 23 Apr 2018 15:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/ruby/rails/2018/04/23/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/ruby/rails/2018/04/23/artikel-1/</guid>
+        
+        
+        <category>ruby</category>
+        
+        <category>rails</category>
+        
+      </item>
     
       <item>
         <title>Code seperti Rubik atau Rubik seperti Code ?</title>
@@ -850,41 +897,6 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
         
         
         <category>jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>Apa itu Web Server?</title>
-        <description>&lt;p&gt;Web Server adalah perangkat lunak ataupun perangkat keras yang menyediakan layanan akses kepada pengguna melalui protokol komunikasi HTTP atau HTTPS atas berkas-berkas yang terdapat pada suatu situs web dalam layanan ke pengguna dengan menggunakan aplikasi tertentu seperti website.&lt;/p&gt;
-
-&lt;h3&gt;Apa Fungsi Web Server?&lt;/h3&gt;
-
-&lt;p&gt;Fungsi utama sebuah server web adalah untuk mentransfer berkas atas permintaan pengguna melalui protokol komunikasi yang telah ditentukan. Disebabkan sebuah halaman web dapat terdiri atas berkas teks, gambar, video, dan lainnya pemanfaatan server web berfungsi pula untuk mentransfer seluruh aspek pemberkasan dalam sebuah halaman web yang terkait; termasuk di dalamnya teks, gambar, video, atau lainnya.&lt;/p&gt;
-
-&lt;p&gt;Pada menggunaannya web server tidak hanya digunakan pada pembuatan website tapi juga bisa digunakan perangkat lain seperti printer,router, kemere web yang mengakses jaringan lokal.&lt;/p&gt;
-
-&lt;p&gt;Ada bermacam macam Web Server pada saat ini :&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Apache HTTP Server&lt;/li&gt;
-  &lt;li&gt;Apache Tomcat&lt;/li&gt;
-  &lt;li&gt;Caddy&lt;/li&gt;
-  &lt;li&gt;Lighttpd&lt;/li&gt;
-  &lt;li&gt;Nginx&lt;/li&gt;
-  &lt;li&gt;Jetty&lt;/li&gt;
-  &lt;li&gt;IIS&lt;/li&gt;
-  &lt;li&gt;WEBrick&lt;/li&gt;
-  &lt;li&gt;Gunicorn&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Thu, 19 Oct 2017 16:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/php/server/2017/10/19/artikel-3/</link>
-        <guid isPermaLink="true">https://kurtakon.com/php/server/2017/10/19/artikel-3/</guid>
-        
-        
-        <category>php</category>
-        
-        <category>server</category>
         
       </item>
     

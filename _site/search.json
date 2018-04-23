@@ -3,6 +3,18 @@
 
     {
     
+      "title"    : "Bagaimana cara memasang koneksi database mysql pada Ruby on Rails?",
+      "url"      : "/ruby/rails/2018/04/23/artikel-1/",
+      "category" : "ruby, rails",
+      "tags"     : "",
+      "date"     : "Apr 23, 2018",
+      "content": "Catatan kali ini saya akan membahas bagainama cara melakukan koneksi untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pada dasarnya telah terkoneksi menggunakan sqlite. Lalu bagaimana jika ingin menggantinya dengan mysql?"
+
+    } ,
+  
+
+    {
+    
       "title"    : "Code seperti Rubik atau Rubik seperti Code ?",
       "url"      : "/other/2018/01/01/artikel-1/",
       "category" : "other",

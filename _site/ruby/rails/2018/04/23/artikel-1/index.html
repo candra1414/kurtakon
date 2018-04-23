@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Code seperti Rubik atau Rubik seperti Code ?</title>
-  <meta name="description" content="Sepertinya ini artikel pertama di tahun 2018, Pada artikel kali ini saya tidak akan  membahas full code. Kali ini saya akan sedikit curhat dari pemikiran dan...">
+  <title>Bagaimana cara memasang koneksi database mysql pada Ruby on Rails?</title>
+  <meta name="description" content="Catatan kali ini saya akan membahas bagainama cara melakukan koneksi untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pada dasarn...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,7 +20,7 @@
   <script src="/js/bootstrap.min.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
-  <link rel="canonical" href="https://kurtakon.com/other/2018/01/01/artikel-1/">
+  <link rel="canonical" href="https://kurtakon.com/ruby/rails/2018/04/23/artikel-1/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
 
 </head>
@@ -107,71 +107,50 @@
 <div class="post col-md-8">
 
   <header class="post-header container-fluid">
-    <h1 class="content-max-width">Code seperti Rubik atau Rubik seperti Code ?</h1>
-    <span>Jan 1, 2018 </span>   • <a href="/other/2018/01/01/artikel-1/#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>
+    <h1 class="content-max-width">Bagaimana cara memasang koneksi database mysql pada Ruby on Rails?</h1>
+    <span>Apr 23, 2018 </span>   • <a href="/ruby/rails/2018/04/23/artikel-1/#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>
     <span class="time label label-danger pull-right"> 
-          Other,
+          Ruby,
+           
+          Rails,
            </span>
   <hr>
   </header>
 
   <article class="post-content content container-fluid">
-    <p>Sepertinya ini artikel pertama di tahun 2018, Pada artikel kali ini saya tidak akan  membahas full code. Kali ini saya akan sedikit curhat dari pemikiran dan pengalaman.Kali ini saya akan sedikit menceritakan dua kegiatan saya yaitu code dan rubik. Kenapa rubik dan kenapa code , apa hubunganya?</p>
+    <p>Catatan kali ini saya akan membahas bagainama cara melakukan koneksi untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pada dasarnya telah terkoneksi menggunakan <em>sqlite</em>. Lalu bagaimana jika ingin menggantinya dengan mysql?</p>
 
-<p>Rubik adalah permainan teka teki mekanik yang ditemukan pada tahun 1974 oleh pemahat dan profersor arsitektur Hungaria yaitu Erno Rubik.</p>
+<p>Pertama, intall mysql pada ruby</p>
 
-<p><strong>Apa yang anda pikirkan tentang Rubik untuk pertamakali?</strong></p>
+<pre><code>$ sudo gem install mysql2 
+</code></pre>
 
-<p>dan kali ini saya kembali bertanya</p>
+<p>Setelah dipastikan telah terinstall dengan benar lalu buka file
+<strong>app_rails/Gemfile</strong> untuk memasangkan repo yang akan di gunakan aplikasi</p>
 
-<p><strong>Apa yang anda pikirkan tentang Code (bahasa pemrograman) untuk pertamakali?</strong></p>
+<pre><code>gem 'mysql2'
+</code></pre>
 
-<p>Dari dua pertanyaan diatas saya akan menjawab <strong>Susah</strong> tapi <strong>Penasaran</strong>.</p>
+<p>Tahap selanjutnya kita perlu melakukan perubahan agar  mengacu pada database yang kita gunakan dengan merubah pada file 
+<strong>config/database.yml</strong> untuk melakuan perubahan setting database.</p>
 
-<p>Kenapa <strong>Susah</strong>?
-Karena</p>
+<pre><code>development:
+  adapter: mysql2
+  encoding: utf8
+  database: nama_database
+  username: username
+  password: password
+  host: 127.0.0.1 // atau localhost
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: nama_database
+  username: username
+  password: password
+  host: 127.0.0.1 // atau localhost
+</code></pre>
 
-<ul>
-  <li>Saya tidak tahu <strong>caranya</strong>.</li>
-  <li>Saya tidak tahu <strong>memulai dari mana</strong>.</li>
-  <li>Saya tidah tahu <strong>apa maksudnya</strong></li>
-  <li>Saya tidah tahu <strong>bertanya kepada siapa</strong></li>
-  <li>Saya tidah tahu <strong>mencari dimana</strong></li>
-</ul>
-
-<p>Tetapi saya <strong>Penasaran</strong></p>
-
-<p>Pada saat belajar anda akan frustasi, tidak tau bagaimana dan harus melakukan apa? Namun, rasa penasaran akan membuat anda bangkit dan tidak menyerah untuk menyelesaikan teka teki tersebut.</p>
-
-<p>Pada saat saya pertama kali bermain rubik saya membutuhkan berhari-hari untuk mengetahui caranya. Bertanya kesana kemari (efek tidak bisa membaca rumus sampai sekarang juga hehehe). Mengamati dan mengikuti gerakan. Kemudian membayangkan serta menerapkanya pada rubik. Begitu juga dengan belajar code. Mengikuti tutorial mempelajari bug atau bertanya pada teman.</p>
-
-<p><strong>Dan Apa yang terjadi jika kau menyelesaikannya ?</strong></p>
-
-<p><strong>PUAS</strong></p>
-
-<p>YA, ada kepuasan tersendiri jika telah menyelesaikanya.</p>
-
-<p>Apa yang terjadi jika kau sudah bisa rubik misal 3x3 ?</p>
-
-<p>Saya akan merasa bosan, lalu apa yang akan dilakukan?</p>
-
-<p>well, kalau saya</p>
-
-<ol>
-  <li>Bereksperiment dengan rubik tersebut dengan bentuk aneh atau costume (bukan hanya membenarkan dari bentuk berantakan)</li>
-  <li>Mencari rubik baru dengan tingkat kesulitan berbeda.</li>
-</ol>
-
-<p>Kau tau, ada berbagai jenis bentuk rubik saat ini dengan kesulitan yang berbeda. Dan apa yang terjadi jika pertama kali sama frustasi dan bingung. Dan apa yang saya lakukan pelajari dan taklukan.</p>
-
-<p>Begitu juga code, banyak sekali bahasa pemorograman saat ini apa yang saya lakukan buat penasaran dan pelajari.</p>
-
-<p>Kau tau cara meyelasaikan rubik bagaimana? Putar putar</p>
-
-<p>Kalau kau cari banyak rumus untuk menyelesaikanya.
- (* jangan tanya saya ya seperti dikatakan sebelumnnya saya tidak bisa baca rumus rubik).</p>
-
-<p>Kau tau pada dasarnya code sama saja terdapat if, else , for (looping),fungsi menampilkan dan hanya saja menggunakan cara berbeda-beda.</p>
+<p>Sekian catatan kali ini , terima kasih.</p>
 
 
   </article>
@@ -189,12 +168,10 @@ Karena</p>
 		  <div class="row">
 			  <div class=" pull-left">
 				
-				  <a href="/yii/fullcalender/database/javascript/2017/12/14/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana Input data langsung pada Fullcalender ? [Yii2]"> <span class="fa fa-angle-double-left"></span></a>
+				  <a href="/other/2018/01/01/artikel-1/" class="btn btn-primary btn-flat" title="Code seperti Rubik atau Rubik seperti Code ?"> <span class="fa fa-angle-double-left"></span></a>
 				
 			  </div>
 			<div class="pull-right">
-			
-			  <a href="/ruby/rails/2018/04/23/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana cara memasang koneksi database mysql pada Ruby on Rails?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>
@@ -203,8 +180,8 @@ Karena</p>
 <script>
 
 var disqus_config = function () {
-this.page.url =  "https://kurtakon.com/other/2018/01/01/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "/other/2018/01/01/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url =  "https://kurtakon.com/ruby/rails/2018/04/23/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/ruby/rails/2018/04/23/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
