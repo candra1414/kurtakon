@@ -8,7 +8,7 @@
       "category" : "ruby, rails",
       "tags"     : "",
       "date"     : "Apr 23, 2018",
-      "content": "Catatan kali ini saya akan membahas bagainama cara melakukan koneksi untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pada dasarnya telah terkoneksi menggunakan sqlite. Lalu bagaimana jika ingin menggantinya dengan mysql?"
+      "content": "Catatan kali ini saya akan membahas bagaimana cara melakukan koneksi database untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pada dasarnya telah terkoneksi menggunakan sqlite. Lalu bagaimana jika ingin menggantinya dengan mysql?"
 
     } ,
   

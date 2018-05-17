@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1">
 
   <title>Bagaimana cara memasang koneksi database mysql pada Ruby on Rails?</title>
-  <meta name="description" content="Catatan kali ini saya akan membahas bagainama cara melakukan koneksi untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pada dasarn...">
+  <meta name="description" content="Catatan kali ini saya akan membahas bagaimana cara melakukan koneksi database untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pa...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -118,20 +118,20 @@
   </header>
 
   <article class="post-content content container-fluid">
-    <p>Catatan kali ini saya akan membahas bagainama cara melakukan koneksi untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pada dasarnya telah terkoneksi menggunakan <em>sqlite</em>. Lalu bagaimana jika ingin menggantinya dengan mysql?</p>
+    <p>Catatan kali ini saya akan membahas bagaimana cara melakukan koneksi database untuk RoR (Ruby on Rails). Perlu diketahui RoR pada saat kita install secara pada dasarnya telah terkoneksi menggunakan <em>sqlite</em>. Lalu bagaimana jika ingin menggantinya dengan mysql?</p>
 
-<p>Pertama, intall mysql pada ruby</p>
+<p>Pertama, install mysql pada ruby</p>
 
 <pre><code>$ sudo gem install mysql2 
 </code></pre>
 
 <p>Setelah dipastikan telah terinstall dengan benar lalu buka file
-<strong>app_rails/Gemfile</strong> untuk memasangkan repo yang akan di gunakan aplikasi</p>
+<strong>Gemfile</strong> untuk memasangkan repo yang akan di gunakan aplikasi</p>
 
 <pre><code>gem 'mysql2'
 </code></pre>
 
-<p>Tahap selanjutnya kita perlu melakukan perubahan agar  mengacu pada database yang kita gunakan dengan merubah pada file 
+<p>Tahap selanjutnya kita perlu melakukan perubahan agar  mengacu pada database yang kita gunakan dengan merubah file 
 <strong>config/database.yml</strong> untuk melakuan perubahan setting database.</p>
 
 <pre><code>development:
