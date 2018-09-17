@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/adblockcheck.min.js"></script>
+  <script src="/js/adblockcheck.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
   <link rel="canonical" href="https://kurtakon.com/linux/python/2017/11/23/artikel-3/">
@@ -34,21 +35,23 @@
     gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
-    
-    adblock.check(function (active) {
-        console.log(active);
-    }, 500);
+
   })();
+  adblock.check(function (active) {
+      if (active) {
+          alert('Harap matikan block ads. Terimakasih')
+      }
+    }, 500);
 </script>
 <gcse:search></gcse:search>
 
   <body>
     <header>
-<nav class="navbar navbar-default navbar-fixed-top navbar-welcome" style="background:#E3E6F2"role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top navbar-welcome" style="background:#030316"role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand"  href="/"><span class="font-bold" style="color:#000">KurTakon</span></a>
+            <a class="navbar-brand"  href="/"><span class="font-bold" style="color:#fff">KurTakon</span></a>
            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <i class="fa fa-bars"></i>
@@ -59,11 +62,11 @@
             <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="collapse-menu">
              
                 
-                <li><a href="/about/" style="color:#000" >KurTakon?</a></li>
+                <li><a href="/about/" style="color:#fff" >KurTakon?</a></li>
                     
                 
                 
-                <li><a href="/categori/" style="color:#000" >Kategori</a></li>
+                <li><a href="/categori/" style="color:#fff" >Kategori</a></li>
                     
                 
                 
@@ -120,7 +123,7 @@
 
 <div class="post col-md-8">
 
-  <header class="post-header container-fluid">
+  <header class="post-header container-fluid animated fadeInDown">
     <h1 class="content-max-width">Bagaimana cata install Django pada Linux ?</h1>
     <span>Nov 23, 2017 </span>   • <a href="/linux/python/2017/11/23/artikel-3/#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>
     <span class="time label label-danger pull-right"> 
@@ -241,7 +244,7 @@ s.setAttribute('data-timestamp', +new Date());
       
     </div>
       <div class ="center">
-     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"  onerror="adBlockFunction();"></script>
       <!-- p_dev -->
       <ins class="adsbygoogle"
            style="display:block"

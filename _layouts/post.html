@@ -19,7 +19,7 @@ layout: default
 
 <div class="post col-md-8">
 
-  <header class="post-header container-fluid">
+  <header class="post-header container-fluid animated fadeInDown">
     <h1 class="content-max-width">{{ page.title }}</h1>
     <span>{{ page.date | date: "%b %-d, %Y" }} </span> {% if page.author %}• {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} {% if page.comments %} • <a href="{{url}}{{ page.url }}#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>{% endif %}
     <span class="time label label-danger pull-right"> {% for category in page.categories %}
