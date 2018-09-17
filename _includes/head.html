@@ -35,11 +35,11 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
 
-    adblock.check(function (active) {
+  })();
+  adblock.check(function (active) {
       if (active) {
           alert('Harap matikan block ads. Terimakasih')
       }
     }, 500);
-  })();
 </script>
 <gcse:search></gcse:search>
