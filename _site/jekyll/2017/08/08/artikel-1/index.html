@@ -18,6 +18,7 @@
     <!-- Bootstrap Core JavaScript -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/adblockcheck.min.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
   <link rel="canonical" href="https://kurtakon.com/jekyll/2017/08/08/artikel-1/">
@@ -33,6 +34,10 @@
     gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
+    
+    adblock.check(function (active) {
+        console.log(active);
+    }, 500);
   })();
 </script>
 <gcse:search></gcse:search>
