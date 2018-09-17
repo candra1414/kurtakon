@@ -35,7 +35,9 @@
     s.parentNode.insertBefore(gcse, s);
 
     adblock.check(function (active) {
-        alert('Harap matikan block ads. Terimakasih')
+      if (active) {
+          alert('Harap matikan block ads. Terimakasih')
+      }
     }, 500);
   })();
 </script>
