@@ -3,6 +3,18 @@
 
     {
     
+      "title"    : "Bagamana Mengatasi Error mounting: $MFTMirr does not match $MFT (record 0)?",
+      "url"      : "/linux/2018/09/27/artikel-1/",
+      "category" : "linux",
+      "tags"     : "",
+      "date"     : "Sep 27, 2018",
+      "content": "Selamat siang, setelah berpuasa menulis berbulan bulan. Kali ini saya muncul dengan masalah linux. Mungkin kalian juga pernah mengalaminya atau sedang mencari solusi."
+
+    } ,
+  
+
+    {
+    
       "title"    : "Bagaimana cara memasang koneksi database mysql pada Ruby on Rails?",
       "url"      : "/ruby/rails/2018/04/23/artikel-1/",
       "category" : "ruby, rails",

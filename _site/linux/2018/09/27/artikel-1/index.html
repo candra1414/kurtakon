@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Selamat datang</title>
-  <meta name="description" content="Selamat membaca dan semoga bermanfaat.">
+  <title>Bagamana Mengatasi Error mounting: $MFTMirr does not match $MFT (record 0)?</title>
+  <meta name="description" content="Selamat siang, setelah berpuasa menulis berbulan bulan. Kali ini saya muncul dengan masalah linux. Mungkin kalian juga pernah mengalaminya atau sedang mencar...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,7 +22,7 @@
   <script src="/js/adblockcheck.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
-  <link rel="canonical" href="https://kurtakon.com/2017/08/01/welcome/">
+  <link rel="canonical" href="https://kurtakon.com/linux/2018/09/27/artikel-1/">
   <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
 
 </head>
@@ -126,16 +126,66 @@
 <div class="post col-md-8">
 
   <header class="post-header container-fluid animated fadeInDown">
-    <h1 class="content-max-width">Selamat datang</h1>
-    <span>Aug 1, 2017 </span>  
-    <span class="time label label-danger pull-right"> </span>
+    <h1 class="content-max-width">Bagamana Mengatasi Error mounting: $MFTMirr does not match $MFT (record 0)?</h1>
+    <span>Sep 27, 2018 </span>   • <a href="/linux/2018/09/27/artikel-1/#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>
+    <span class="time label label-danger pull-right"> 
+          Linux,
+           </span>
   <hr>
   </header>
 
   <article class="post-content content container-fluid">
-    <p><b>Selamat membaca dan semoga bermanfaat.</b></p>
+    <p>Selamat siang, setelah berpuasa menulis berbulan bulan. Kali ini saya muncul dengan masalah linux. Mungkin kalian juga pernah mengalaminya atau sedang mencari solusi.</p>
 
-<p><b> Trimakasih … </b></p>
+<pre><code>    Apakah kalian pernah melepas hardisk ekstenal tanpa di mounting ?
+</code></pre>
+
+<p>Terus apa yang terjadi?</p>
+
+<p>Pada kasus saya, Hard disk saya tidak bisa di mouting pada linux dan muncul masalah seperti di bawah ini :</p>
+
+<pre><code>Error mounting: mount exited with exit code 13: $MFTMirr does not match $MFT (record 0).
+Failed to mount ‘/dev/sdb2’: Input/output error
+NTFS is either inconsistent, or there is a hardware fault, or it’s a
+SoftRAID/FakeRAID hardware. In the first case run chkdsk /f on Windows
+then reboot into Windows twice. The usage of the /f parameter is very
+important! If the device is a SoftRAID/FakeRAID then first activate
+it and mount a different device under the /dev/mapper/ directory, (e.g.
+/dev/mapper/nvidia_eahaabcc1). Please see the ‘dmraid’ documentation
+for more details.
+</code></pre>
+
+<p>Bagaimana solusinya ?
+Anda bisa menggunakan  <strong>sudo ntfsfix /dev/nama_partisi</strong>.</p>
+
+<pre><code>$ sudo ntfsfix /dev/sdb2
+</code></pre>
+
+<p><strong>/dev/sdb2</strong> adalah letak hd saya yang tidak mau di mounting</p>
+
+<pre><code>kiki@kiki-X450JB:/media/kiki# sudo ntfsfix /dev/sdb2
+Mounting volume... $MFTMirr does not match $MFT (record 0).
+FAILED
+Attempting to correct errors... 
+Processing $MFT and $MFTMirr...
+Reading $MFT... OK
+Reading $MFTMirr... OK
+Comparing $MFTMirr to $MFT... FAILED
+Correcting differences in $MFTMirr record 0...OK
+Correcting differences in $MFTMirr record 1...OK
+Correcting differences in $MFTMirr record 2...OK
+Correcting differences in $MFTMirr record 3...OK
+Processing of $MFT and $MFTMirr completed successfully.
+Setting required flags on partition... OK
+Going to empty the journal ($LogFile)... OK
+Checking the alternate boot sector... OK
+NTFS volume version is 3.1.
+NTFS partition /dev/sdb2 was processed successfully.
+</code></pre>
+
+<p>Setelah selesai anda dapat mengakses file anda.</p>
+
+<p>Semoga berhasil, Terimakasih.</p>
 
 
   </article>
@@ -153,14 +203,32 @@
 		  <div class="row">
 			  <div class=" pull-left">
 				
+				  <a href="/ruby/rails/2018/04/23/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana cara memasang koneksi database mysql pada Ruby on Rails?"> <span class="fa fa-angle-double-left"></span></a>
+				
 			  </div>
 			<div class="pull-right">
-			
-			  <a href="/markdown/2017/08/02/artikel-1/" class="btn btn-primary btn-flat" title="Apa itu Markdown ?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>
   	
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url =  "https://kurtakon.com/linux/2018/09/27/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/linux/2018/09/27/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kurtakon-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
 
 
 
