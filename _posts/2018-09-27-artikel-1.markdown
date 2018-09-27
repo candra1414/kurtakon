@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Bagamana Mengatasi Error mounting: $MFTMirr does not match $MFT (record 0)?"
+title:  "Bagaimana Mengatasi Error mounting: $MFTMirr does not match $MFT (record 0)?"
 date:   2018-09-27 14:06:58
 categories: [Linux]
 ---
