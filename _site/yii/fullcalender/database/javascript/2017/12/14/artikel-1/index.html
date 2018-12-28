@@ -147,14 +147,14 @@
 
 <p>Langkah Pertama, Membuat tabel nya terlabih dahulu pada database (untuk nama tabel saya <strong>Agenda</strong> )</p>
 
-<pre><code>CREATE TABLE `agenda` (
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE `agenda` (
   `id_agenda` int(11) NOT NULL AUTO_INCREMENT,
   `mulai` datetime NOT NULL,
   `selesai` datetime NOT NULL,
   `nama_agenda` text NOT NULL,
   PRIMARY KEY (`id_agenda`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-</code></pre>
+</code></pre></div></div>
 
 <p>Langkah kedua bikin crud (karena menggukan Yii kalian bisa skipt)</p>
 
@@ -180,7 +180,7 @@
 <p>Pada Controller :
 Pada menampilakan data menggukan code json</p>
 
-<pre><code>  $Agenda = Agenda::find()-&gt;all();
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $Agenda = Agenda::find()-&gt;all();
     $arr_agenda =[];
     foreach ($Agenda as $key =&gt; $value) {
           $arr_agenda [] = [
@@ -196,16 +196,16 @@ Pada menampilakan data menggukan code json</p>
     return $this-&gt;render('index', [
         'json' =&gt; $json,
     ]);
-</code></pre>
+</code></pre></div></div>
 
 <p>Pada view (php) tempat link url untuk create baru agenda</p>
 
-<pre><code>$url = Url::to(['agenda/create']);
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$url = Url::to(['agenda/create']);
+</code></pre></div></div>
 
 <p>Pada View (Javascipt):</p>
 
-<pre><code>    var date = new Date();
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    var date = new Date();
     var d = date.getDate(),
         m = date.getMonth(),
         y = date.getFullYear();
@@ -231,7 +231,7 @@ selectable: true,
         $('.modal-header').html('Tambah Agenda');
   },
 });
-</code></pre>
+</code></pre></div></div>
 
 <p>Penjelasan Javascript :</p>
 
@@ -241,8 +241,8 @@ selectable: true,
 
 <p>Digunakan untuk menampilkan agenda yang telah dibuat, pada kasus di atas menggukan <em>$json</em> yang diambil dari controller.</p>
 
-<pre><code>events: $json,
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>events: $json,
+</code></pre></div></div>
 
 <ul>
   <li>select</li>
@@ -250,26 +250,26 @@ selectable: true,
 
 <p>Merupakan fasilitas untuk melakukan <em>select</em> atau bisa bilang ketika memilih (dengan di blok). Pada saat tersebut kita bisa menabahkan javascript untuk kali ini saya gunkan sebagai fasilitas melakukan input agenda dengan menggukan modal.</p>
 
-<pre><code>  select: function(start, end) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  select: function(start, end) {
       $('#modal').modal('show')
             .find('#modalContent')
             .load('$url&amp;start='+start+'&amp;'+'end='+end); // $url adalah link form create
         $('.modal-header').html('Tambah Agenda');
   },
-</code></pre>
+</code></pre></div></div>
 
 <p>Pada view (html) tempat menampilkan hasil load javascript</p>
 
-<pre><code>&lt;div id="calendar"&gt;&lt;/div&gt;
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div id="calendar"&gt;&lt;/div&gt;
+</code></pre></div></div>
 
 <p>Hasilnya :</p>
 
-<p><img src="https://kurtakon.com/asset/img/img-14dec2017-1.gif" alt="alt text" title="hello word" /></p>
+<p><img src="http://127.0.0.1:4000/asset/img/img-14dec2017-1.gif" alt="alt text" title="hello word" /></p>
 
 <p>Controller pada create (berdasarkan link yang dibuat)</p>
 
-<pre><code> $model = new Agenda();
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $model = new Agenda();
     $model-&gt;mulai =  date('Y-m-d H:i:s',strtotime('-7 hour',$start/1000));
     $model-&gt;selesai = date('Y-m-d H:i:s',strtotime('-7 hour',$end/1000));
     if ($model-&gt;load(Yii::$app-&gt;request-&gt;post()) &amp;&amp; $model-&gt;save()) {
@@ -279,11 +279,11 @@ selectable: true,
             'model' =&gt; $model,
         ]);
     }
-</code></pre>
+</code></pre></div></div>
 
 <p>View untuk menampilakan form untuk melakukan input agenda</p>
 
-<pre><code>&lt;div class="agenda-form"&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="agenda-form"&gt;
     &lt;?php $form = ActiveForm::begin(); ?&gt;
     &lt;?= $form-&gt;field($model, 'mulai')-&gt;widget(DateTimePicker::classname(), [
             'options' =&gt; [ 'placeholder' =&gt; 'Tanggal Mulai Agenda'],
@@ -313,7 +313,7 @@ selectable: true,
     &lt;/div&gt;
     &lt;?php ActiveForm::end(); ?&gt;
 &lt;/div&gt;
-</code></pre>
+</code></pre></div></div>
 
 
   </article>

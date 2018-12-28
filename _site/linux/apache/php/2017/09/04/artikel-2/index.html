@@ -144,21 +144,21 @@ Untuk kali ini saya akan membahas <strong>Bagaimana melakukan switch multipel ve
 
 <p>Pada artikel sebelumnya yang berjalan pada terminal kita (# secara gampanya begitu) . Kali ini yang berjalan khusus pada apache sebagai webservice yang digunakan.</p>
 
-<p><img src="https://kurtakon.com/asset/img/img-14.png" alt="alt text" title="view php5" /></p>
+<p><img src="http://127.0.0.1:4000/asset/img/img-14.png" alt="alt text" title="view php5" /></p>
 
 <p>Seperti yang terlihat diatas php yang bejalan saat ini pada apche ada php5.
 Untuk merubah dari php5 di rubah menjadi php7 cukup melakukan a2dimod dan a2enmod</p>
 
 <p>Pertama lakukan disabel untuk php5 terlebih dahulu dengan perintah <strong>a2dimod</strong></p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">a2dismod</span> <span class="n">php5</span>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">a2dismod</span> <span class="n">php5</span>
 <span class="n">Module</span> <span class="n">php5</span> <span class="n">disabled</span><span class="o">.</span>
 <span class="n">To</span> <span class="n">activate</span> <span class="n">the</span> <span class="n">new</span> <span class="n">configuration</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">run</span><span class="p">:</span>
-  <span class="n">service</span> <span class="n">apache2</span> <span class="n">restart</span></code></pre></div>
+  <span class="n">service</span> <span class="n">apache2</span> <span class="n">restart</span></code></pre></figure>
 
 <p>kemudian kita jalankan php7</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">a2enmod</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">a2enmod</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span>
 <span class="n">Considering</span> <span class="n">dependency</span> <span class="n">mpm_prefork</span> <span class="k">for</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span>
 <span class="n">Considering</span> <span class="n">conflict</span> <span class="n">mpm_event</span> <span class="k">for</span> <span class="n">mpm_prefork</span><span class="p">:</span>
 <span class="n">Considering</span> <span class="n">conflict</span> <span class="n">mpm_worker</span> <span class="k">for</span> <span class="n">mpm_prefork</span><span class="p">:</span>
@@ -166,15 +166,15 @@ Untuk merubah dari php5 di rubah menjadi php7 cukup melakukan a2dimod dan a2enmo
 <span class="n">Considering</span> <span class="n">conflict</span> <span class="n">php5</span> <span class="k">for</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span>
 <span class="n">Enabling</span> <span class="n">module</span> <span class="n">php7</span><span class="o">.</span><span class="mf">0.</span>
 <span class="n">To</span> <span class="n">activate</span> <span class="n">the</span> <span class="n">new</span> <span class="n">configuration</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">run</span><span class="p">:</span>
-  <span class="n">service</span> <span class="n">apache2</span> <span class="n">restart</span></code></pre></div>
+  <span class="n">service</span> <span class="n">apache2</span> <span class="n">restart</span></code></pre></figure>
 
 <p>Setelah dijalankan kita harus melakukan restart pada apache agar mengatifkan versi phpnya.</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">service</span> <span class="n">apache2</span> <span class="n">restart</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">service</span> <span class="n">apache2</span> <span class="n">restart</span></code></pre></figure>
 
 <p>Versi php yang berjalan adalah php7 seperti terlihat dibawah ini:</p>
 
-<p><img src="https://kurtakon.com/asset/img/img-15.png" alt="alt text" title="view php7" /></p>
+<p><img src="http://127.0.0.1:4000/asset/img/img-15.png" alt="alt text" title="view php7" /></p>
 
 
 
@@ -198,7 +198,7 @@ Untuk merubah dari php5 di rubah menjadi php7 cukup melakukan a2dimod dan a2enmo
 			  </div>
 			<div class="pull-right">
 			
-			  <a href="/linux/2017/09/05/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana melakukan switch multipel versi aplikasi pada linux?"><span class="fa fa-angle-double-right"></span> </a>
+			  <a href="/linux/2017/09/04/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana melakukan switch multipel versi aplikasi pada linux?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>

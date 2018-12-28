@@ -13,12 +13,16 @@ urlimg: "https://kurtakon.com/asset/img/" # the base hostname & protocol for you
 # Build settings
 markdown: kramdown
 
+future: true
+
 include: ['.htaccess']
 # Google services
 google_analytics: UA-104179765-1
 
 permalink: pretty
 
-plugins: [jekyll-paginate] 
+#plugins: [jekyll-paginate] 
+gems: [jekyll-paginate]
+
 paginate: 3
 paginate_path: /page:num/

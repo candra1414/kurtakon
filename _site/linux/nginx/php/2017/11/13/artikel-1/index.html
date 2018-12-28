@@ -145,19 +145,19 @@
 
 <p>-&gt; untuk php5</p>
 
-<pre><code>    $ apt-get install php5-fpm 
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ apt-get install php5-fpm 
+</code></pre></div></div>
 
 <p>-&gt; untuk php7.0</p>
 
-<pre><code>    $ apt-get install php7-fpm 
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ apt-get install php7-fpm 
+</code></pre></div></div>
 
 <p>Bagaimana merubah settinganya?</p>
 
 <p>Buka file /etc/nginx/sites-available/default:</p>
 
-<pre><code>server {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server {
     listen   80;
     access_log /var/log/nginx/access.log;
     error_log /var/log/nginx/error.log;
@@ -173,13 +173,13 @@
         fastcgi_read_timeout 300;
     }
 }
-</code></pre>
+</code></pre></div></div>
 
-<p><img src="https://kurtakon.com/asset/img/img-13nov2017-2.png" alt="alt text" title="view php5" /></p>
+<p><img src="http://127.0.0.1:4000/asset/img/img-13nov2017-2.png" alt="alt text" title="view php5" /></p>
 
 <p>Pada <strong>location</strong> terdapat <strong>fastcgi_pass unix:</strong>  yang mengacu pada versi <em>php</em> yang berjalan. Terlihat <strong>/var/run/php5-fpm.sock</strong> versi php5 yang saat ini berjalan. Untuk merubahnya, kita harus mencari versi pada folder <strong>/var/run/</strong>   <strong>php7-fpm.sock</strong> berada di folder mana pada di install (pada kasus saya file tersebut terdapat didalam folder php).</p>
 
-<pre><code>server {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server {
     listen   80;
     access_log /var/log/nginx/access.log;
     error_log /var/log/nginx/error.log;
@@ -195,14 +195,14 @@
         fastcgi_read_timeout 300;
     }
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>Setelah serlesai restart nginx</p>
 
-<pre><code>    $ sudo service nginx restart
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ sudo service nginx restart
+</code></pre></div></div>
 
-<p><img src="https://kurtakon.com/asset/img/img-13nov2017-1.png" alt="alt text" title="view php7" /></p>
+<p><img src="http://127.0.0.1:4000/asset/img/img-13nov2017-1.png" alt="alt text" title="view php7" /></p>
 
 
 

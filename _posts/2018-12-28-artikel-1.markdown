@@ -1,0 +1,53 @@
+---
+layout: post
+comments: true
+title:  "Bagaimana install Virtualenv?"
+date:   2018-12-28 10:06:58
+categories: [Linux,Python]
+---
+
+Selamat siang, artikel kali ini akan membahas bagaiman cara install Virtualenv pada linux, Bagi yang akan membuat aplikasi dengan python bertanya-tanya bagaimana membuat vitual agar aplikasi kita tidak mempengaruhi yang lain terutama versi python nya. Secara linux menggunakan phyton, trus jika aplikasi nya harus lebih tinggi atau lebih rendah bagaimana? untuk itu butuh donk aplikasi virtual.
+
+Sebelum install apa itu Virtualenv ? 
+
+Virtualenv adalah tools yang digunakan untuk mengisolasi Python.
+
+Kenapa harus di isolasi kan bisa langsung ?
+
+Seperti yang dibahan sebelumnya,secara gambaran gampangnya jika kita membuat atau jalankan aplikasi misal django dan kita membutuhkan upgrade versi python maka aplikasi sebelumnya dan yang baru tidak mempengaruhi , kenapa ? karena meraka di masukan kedalam vitual yang berbeda-beda.
+
+Bagaimana install Virtualenv ?
+
+	$ sudo apt install virtualenv
+
+Bagaimana menjalankannya ?
+
+
+	$ sudo virtualenv myvirtual (nama virtual yang akan dibuat)
+	
+
+hasil direktori 
+
+	bin  include  lib  lib64  local  pyvenv.cfg  share
+
+Bagaimana mengaktifkannya ?
+
+	$ source bin/activate
+
+Vitual siap digunakan 
+
+
+![alt text][gambar]
+
+[gambar]:{{site.urlimg}}img-28des2018-1.png "view virtual berjalan"
+
+Bagaimana menghentikannya ?
+	
+	$ deactivate
+
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}img-28des2018-2.png "view virtual berhenti"
+
+
+Sekian artikel kali ini semoga membantu.

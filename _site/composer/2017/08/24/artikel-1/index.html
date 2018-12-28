@@ -140,50 +140,50 @@ Anda dapat membuat library dan mengelola projek anda seperti intall, update pake
 
 <p>Cara install commpser cukup mudah bisa download lansung atau lewat terminal.</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="o">-</span><span class="n">r</span> <span class="s">&quot;copy(&#39;https://getcomposer.org/installer&#39;, &#39;composer-setup.php&#39;);&quot;</span>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="o">-</span><span class="n">r</span> <span class="s">"copy('https://getcomposer.org/installer', 'composer-setup.php');"</span>
 
 <span class="err">$</span> <span class="n">ls</span>
-<span class="n">composer</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">php</span></code></pre></div>
+<span class="n">composer</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">php</span></code></pre></figure>
 
 <p>Untuk Mengecek file benar</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span>  <span class="n">php</span> <span class="o">-</span><span class="n">r</span> <span class="s">&quot;if (hash_file(&#39;SHA384&#39;, &#39;composer-setup.php&#39;) === &#39;669656bab3166a7af</span>
-<span class="n">f8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410</span><span class="s">&#39;) { echo &#39;</span><span class="n">Installer</span> <span class="n">verified</span><span class="s">&#39;; } else { echo &#39;</span><span class="n">Installer</span> <span class="n">corrupt</span><span class="s">&#39;; unlink(&#39;</span><span class="n">composer</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">php</span><span class="s">&#39;); } echo PHP_EOL;&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span>  <span class="n">php</span> <span class="o">-</span><span class="n">r</span> <span class="s">"if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7af</span><span class="err">
+</span><span class="s">f8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"</span></code></pre></figure>
 
 <p>Hasil jika benar</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">Installer</span> <span class="n">verified</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">Installer</span> <span class="n">verified</span></code></pre></figure>
 
 <p>Setelah itu download composernya</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="n">composer</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">php</span> 
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="n">composer</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">php</span> 
 <span class="n">All</span> <span class="n">settings</span> <span class="n">correct</span> <span class="k">for</span> <span class="n">using</span> <span class="n">Composer</span>
 <span class="n">Downloading</span><span class="o">...</span>
 
 <span class="n">Composer</span> <span class="p">(</span><span class="n">version</span> <span class="mf">1.5</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span> <span class="n">successfully</span> <span class="n">installed</span> <span class="n">to</span><span class="p">:</span> <span class="o">*****/</span><span class="n">composer</span><span class="o">.</span><span class="n">phar</span>
-<span class="n">Use</span> <span class="n">it</span><span class="p">:</span> <span class="n">php</span> <span class="n">composer</span><span class="o">.</span><span class="n">phar</span></code></pre></div>
+<span class="n">Use</span> <span class="n">it</span><span class="p">:</span> <span class="n">php</span> <span class="n">composer</span><span class="o">.</span><span class="n">phar</span></code></pre></figure>
 
 <p>Untuk menjalankanya</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="n">composer</span><span class="o">.</span><span class="n">phar</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="n">composer</span><span class="o">.</span><span class="n">phar</span></code></pre></figure>
 
 <p>akan muncul :</p>
 
-<p><img src="https://kurtakon.com/asset/img/img-8.png" alt="alt text" title="view composer" /></p>
+<p><img src="http://127.0.0.1:4000/asset/img/img-8.png" alt="alt text" title="view composer" /></p>
 
 <p>Baik lah tinggal hapus link <strong>composer-setup.php</strong> sebelumya karena sudah tidak digunakan.</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="o">-</span><span class="n">r</span> <span class="s">&quot;unlink(&#39;composer-setup.php&#39;);&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="o">-</span><span class="n">r</span> <span class="s">"unlink('composer-setup.php');"</span></code></pre></figure>
 
 <p><strong>Bagaimana agar composer bisa digunakan dimana saja dan tanpa menambahkan php ?</strong></p>
 
 <p>Agar bisa digunakan dimana saja dalam arti bukan di direktori ini anda harus memindahnya ke dalam direktori bin atau pada saat pertama install langsung ke direktori bin.</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">composer</span><span class="o">.</span><span class="n">phar</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">composer</span><span class="o">.</span><span class="n">phar</span></code></pre></figure>
 
 <p>Kita bisa mengganti nama file agar pada saat pemanggilan tidak perlu  <strong>composer.phar</strong> pada saat install misal hanya <strong>composer</strong> saja, yaitu dengan script dibawah ini.</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="n">composer</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">php</span> <span class="o">--</span><span class="n">filename</span><span class="o">=</span><span class="n">composer</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">php</span> <span class="n">composer</span><span class="o">-</span><span class="n">setup</span><span class="o">.</span><span class="n">php</span> <span class="o">--</span><span class="n">filename</span><span class="o">=</span><span class="n">composer</span></code></pre></figure>
 
 <p><em>Sumber</em> :<a href="https://getcomposer.org">https://getcomposer.org</a></p>
 

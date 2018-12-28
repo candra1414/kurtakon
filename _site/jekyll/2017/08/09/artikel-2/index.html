@@ -152,54 +152,54 @@
   <li>Python 2.7.</li>
 </ol>
 
-<h4 id="cara-install-jekyll"><strong>Cara Install Jekyll</strong></h4>
+<p>####<strong>Cara Install Jekyll</strong></p>
 
 <p>Pertama <strong>Ruby</strong> harus diinstall,jika belum terinstall masukan sitak dibawah ini :</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby</span></code></pre></figure>
 
 <p>Jika sudah terinstall maka anda dapat menginstall Jekyll.</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">buider</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">buider</span></code></pre></figure>
 
 <p>Jika anda menemukan error karena versi <strong>ruby</strong> yang tidak sesuai.</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">ERROR</span><span class="p">:</span>  <span class="n">Error</span> <span class="n">installing</span> <span class="n">jekyll</span><span class="p">:</span>
-    <span class="n">liquid</span> <span class="n">requires</span> <span class="n">Ruby</span> <span class="n">version</span> <span class="o">&gt;=</span> <span class="mf">2.1</span><span class="o">.</span><span class="mf">0.</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">ERROR</span><span class="p">:</span>  <span class="n">Error</span> <span class="n">installing</span> <span class="n">jekyll</span><span class="p">:</span>
+    <span class="n">liquid</span> <span class="n">requires</span> <span class="n">Ruby</span> <span class="n">version</span> <span class="o">&gt;=</span> <span class="mf">2.1</span><span class="o">.</span><span class="mf">0.</span></code></pre></figure>
 
 <p>Anda dapat mencoba dengan versi <strong>jekyll</strong> dibawahnya seperti dengan sintak dibawah ini :</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="o">-</span><span class="n">v</span> <span class="mf">2.5</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="o">-</span><span class="n">v</span> <span class="mf">2.5</span></code></pre></figure>
 
 <p>Untuk mengetahui versi <strong>jekyll</strong> yang telah terinstall dapat dengan masukan sintak dibawah ini :</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">jekyll</span> <span class="o">-</span><span class="n">v</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">jekyll</span> <span class="o">-</span><span class="n">v</span> </code></pre></figure>
 
 <p><strong>Bagaimana membuat website dengan Jekyll?</strong></p>
 
 <p>Cara membuat website dengan <strong>Jekyll</strong></p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">jekyll</span> <span class="n">new</span> <span class="n">blog_saya</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">jekyll</span> <span class="n">new</span> <span class="n">blog_saya</span></code></pre></figure>
 
 <p><strong>Bagaimana menjalankan website dengan Jekyll?</strong></p>
 
 <p>Cara menjalakan website dengan masuk ke dalam direktori yang dibuat</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">cd</span> <span class="n">blog_saya</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">cd</span> <span class="n">blog_saya</span></code></pre></figure>
 
 <p>Kemudian jalakan jekyll</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">jekyll</span> <span class="n">serve</span>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">jekyll</span> <span class="n">serve</span>
 
 <span class="n">Configuration</span> <span class="nb">file</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kiki</span><span class="o">/</span><span class="n">blog_saya</span><span class="o">/</span><span class="n">_config</span><span class="o">.</span><span class="n">yml</span>
             <span class="n">Source</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kiki</span><span class="o">/</span><span class="n">blog_saya</span>
        <span class="n">Destination</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kiki</span><span class="o">/</span><span class="n">blog_saya</span><span class="o">/</span><span class="n">_site</span>
       <span class="n">Generating</span><span class="o">...</span> 
                     <span class="n">done</span><span class="o">.</span>
- <span class="n">Auto</span><span class="o">-</span><span class="n">regeneration</span><span class="p">:</span> <span class="n">enabled</span> <span class="k">for</span> <span class="s">&#39;/home/kiki/blog_saya&#39;</span>
+ <span class="n">Auto</span><span class="o">-</span><span class="n">regeneration</span><span class="p">:</span> <span class="n">enabled</span> <span class="k">for</span> <span class="s">'/home/kiki/blog_saya'</span>
 <span class="n">Configuration</span> <span class="nb">file</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kiki</span><span class="o">/</span><span class="n">blog_saya</span><span class="o">/</span><span class="n">_config</span><span class="o">.</span><span class="n">yml</span>
     <span class="n">Server</span> <span class="n">address</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">4000</span><span class="o">/</span>
-  <span class="n">Server</span> <span class="n">running</span><span class="o">...</span> <span class="n">press</span> <span class="n">ctrl</span><span class="o">-</span><span class="n">c</span> <span class="n">to</span> <span class="n">stop</span><span class="o">.</span></code></pre></div>
+  <span class="n">Server</span> <span class="n">running</span><span class="o">...</span> <span class="n">press</span> <span class="n">ctrl</span><span class="o">-</span><span class="n">c</span> <span class="n">to</span> <span class="n">stop</span><span class="o">.</span></code></pre></figure>
 
 <p><strong>Bagaimana tamplan awal website dengan Jekyll?</strong></p>
 

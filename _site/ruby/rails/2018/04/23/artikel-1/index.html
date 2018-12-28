@@ -141,19 +141,19 @@
 
 <p>Pertama, install mysql pada ruby</p>
 
-<pre><code>$ sudo gem install mysql2 
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo gem install mysql2 
+</code></pre></div></div>
 
 <p>Setelah dipastikan telah terinstall dengan benar lalu buka file
 <strong>Gemfile</strong> untuk memasangkan repo yang akan di gunakan aplikasi</p>
 
-<pre><code>gem 'mysql2'
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem 'mysql2'
+</code></pre></div></div>
 
 <p>Tahap selanjutnya kita perlu melakukan perubahan agar  mengacu pada database yang kita gunakan dengan merubah file 
 <strong>config/database.yml</strong> untuk melakuan perubahan setting database.</p>
 
-<pre><code>development:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>development:
   adapter: mysql2
   encoding: utf8
   database: nama_database
@@ -167,7 +167,7 @@ test:
   username: username
   password: password
   host: 127.0.0.1 // atau localhost
-</code></pre>
+</code></pre></div></div>
 
 <p>Sekian catatan kali ini , terima kasih.</p>
 
@@ -192,7 +192,7 @@ test:
 			  </div>
 			<div class="pull-right">
 			
-			  <a href="/linux/2018/09/27/artikel-1/" class="btn btn-primary btn-flat" title="Bagamana Mengatasi Error mounting: $MFTMirr does not match $MFT (record 0)?"><span class="fa fa-angle-double-right"></span> </a>
+			  <a href="/linux/2018/09/27/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana Mengatasi Error mounting: $MFTMirr does not match $MFT (record 0)?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>

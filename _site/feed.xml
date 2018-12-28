@@ -6,22 +6,78 @@
 </description>
     <link>https://kurtakon.com/</link>
     <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Sep 2018 11:17:44 +0700</pubDate>
-    <lastBuildDate>Thu, 27 Sep 2018 11:17:44 +0700</lastBuildDate>
-    <generator>Jekyll v2.5.0</generator>
+    <pubDate>Fri, 28 Dec 2018 11:06:15 +0700</pubDate>
+    <lastBuildDate>Fri, 28 Dec 2018 11:06:15 +0700</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>Bagamana Mengatasi Error mounting: $MFTMirr does not match $MFT (record 0)?</title>
+        <title>Bagaimana install Virtualenv?</title>
+        <description>&lt;p&gt;Selamat siang, artikel kali ini akan membahas bagaiman cara install Virtualenv pada linux, Bagi yang akan membuat aplikasi dengan python bertanya-tanya bagaimana membuat vitual agar aplikasi kita tidak mempengaruhi yang lain terutama versi python nya. Secara linux menggunakan phyton, trus jika aplikasi nya harus lebih tinggi atau lebih rendah bagaimana? untuk itu butuh donk aplikasi virtual.&lt;/p&gt;
+
+&lt;p&gt;Sebelum install apa itu Virtualenv ?&lt;/p&gt;
+
+&lt;p&gt;Virtualenv adalah tools yang digunakan untuk mengisolasi Python.&lt;/p&gt;
+
+&lt;p&gt;Kenapa harus di isolasi kan bisa langsung ?&lt;/p&gt;
+
+&lt;p&gt;Seperti yang dibahan sebelumnya,secara gambaran gampangnya jika kita membuat atau jalankan aplikasi misal django dan kita membutuhkan upgrade versi python maka aplikasi sebelumnya dan yang baru tidak mempengaruhi , kenapa ? karena meraka di masukan kedalam vitual yang berbeda-beda.&lt;/p&gt;
+
+&lt;p&gt;Bagaimana install Virtualenv ?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt install virtualenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Bagaimana menjalankannya ?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo virtualenv myvirtual (nama virtual yang akan dibuat)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;hasil direktori&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bin  include  lib  lib64  local  pyvenv.cfg  share
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Bagaimana mengaktifkannya ?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Vitual siap digunakan&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-28des2018-1.png&quot; alt=&quot;alt text&quot; title=&quot;view virtual berjalan&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bagaimana menghentikannya ?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-28des2018-2.png&quot; alt=&quot;alt text&quot; title=&quot;view virtual berhenti&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekian artikel kali ini semoga membantu.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 28 Dec 2018 17:06:58 +0700</pubDate>
+        <link>https://kurtakon.com/linux/python/2018/12/28/artikel-1/</link>
+        <guid isPermaLink="true">https://kurtakon.com/linux/python/2018/12/28/artikel-1/</guid>
+        
+        
+        <category>Linux</category>
+        
+        <category>Python</category>
+        
+      </item>
+    
+      <item>
+        <title>Bagaimana Mengatasi Error mounting: $MFTMirr does not match $MFT (record 0)?</title>
         <description>&lt;p&gt;Selamat siang, setelah berpuasa menulis berbulan bulan. Kali ini saya muncul dengan masalah linux. Mungkin kalian juga pernah mengalaminya atau sedang mencari solusi.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    Apakah kalian pernah melepas hardisk ekstenal tanpa di mounting ?
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    Apakah kalian pernah melepas hardisk ekstenal tanpa di mounting ?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Terus apa yang terjadi?&lt;/p&gt;
 
 &lt;p&gt;Pada kasus saya, Hard disk saya tidak bisa di mouting pada linux dan muncul masalah seperti di bawah ini :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Error mounting: mount exited with exit code 13: $MFTMirr does not match $MFT (record 0).
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error mounting: mount exited with exit code 13: $MFTMirr does not match $MFT (record 0).
 Failed to mount ‘/dev/sdb2’: Input/output error
 NTFS is either inconsistent, or there is a hardware fault, or it’s a
 SoftRAID/FakeRAID hardware. In the first case run chkdsk /f on Windows
@@ -30,17 +86,17 @@ important! If the device is a SoftRAID/FakeRAID then first activate
 it and mount a different device under the /dev/mapper/ directory, (e.g.
 /dev/mapper/nvidia_eahaabcc1). Please see the ‘dmraid’ documentation
 for more details.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Bagaimana solusinya ?
 Anda bisa menggunakan  &lt;strong&gt;sudo ntfsfix /dev/nama_partisi&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo ntfsfix /dev/sdb2
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo ntfsfix /dev/sdb2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;/dev/sdb2&lt;/strong&gt; adalah letak hd saya yang tidak mau di mounting&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;kiki@kiki-X450JB:/media/kiki# sudo ntfsfix /dev/sdb2
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kiki@kiki-X450JB:/media/kiki# sudo ntfsfix /dev/sdb2
 Mounting volume... $MFTMirr does not match $MFT (record 0).
 FAILED
 Attempting to correct errors... 
@@ -58,7 +114,7 @@ Going to empty the journal ($LogFile)... OK
 Checking the alternate boot sector... OK
 NTFS volume version is 3.1.
 NTFS partition /dev/sdb2 was processed successfully.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Setelah selesai anda dapat mengakses file anda.&lt;/p&gt;
 
@@ -69,7 +125,7 @@ NTFS partition /dev/sdb2 was processed successfully.
         <guid isPermaLink="true">https://kurtakon.com/linux/2018/09/27/artikel-1/</guid>
         
         
-        <category>linux</category>
+        <category>Linux</category>
         
       </item>
     
@@ -79,19 +135,19 @@ NTFS partition /dev/sdb2 was processed successfully.
 
 &lt;p&gt;Pertama, install mysql pada ruby&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ sudo gem install mysql2 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo gem install mysql2 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Setelah dipastikan telah terinstall dengan benar lalu buka file
 &lt;strong&gt;Gemfile&lt;/strong&gt; untuk memasangkan repo yang akan di gunakan aplikasi&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gem &#39;mysql2&#39;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &#39;mysql2&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Tahap selanjutnya kita perlu melakukan perubahan agar  mengacu pada database yang kita gunakan dengan merubah file 
 &lt;strong&gt;config/database.yml&lt;/strong&gt; untuk melakuan perubahan setting database.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;development:
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;development:
   adapter: mysql2
   encoding: utf8
   database: nama_database
@@ -105,7 +161,7 @@ test:
   username: username
   password: password
   host: 127.0.0.1 // atau localhost
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Sekian catatan kali ini , terima kasih.&lt;/p&gt;
 </description>
@@ -114,9 +170,9 @@ test:
         <guid isPermaLink="true">https://kurtakon.com/ruby/rails/2018/04/23/artikel-1/</guid>
         
         
-        <category>ruby</category>
+        <category>Ruby</category>
         
-        <category>rails</category>
+        <category>Rails</category>
         
       </item>
     
@@ -184,7 +240,7 @@ Karena&lt;/p&gt;
         <guid isPermaLink="true">https://kurtakon.com/other/2018/01/01/artikel-1/</guid>
         
         
-        <category>other</category>
+        <category>Other</category>
         
       </item>
     
@@ -196,14 +252,14 @@ Karena&lt;/p&gt;
 
 &lt;p&gt;Langkah Pertama, Membuat tabel nya terlabih dahulu pada database (untuk nama tabel saya &lt;strong&gt;Agenda&lt;/strong&gt; )&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;CREATE TABLE `agenda` (
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE TABLE `agenda` (
   `id_agenda` int(11) NOT NULL AUTO_INCREMENT,
   `mulai` datetime NOT NULL,
   `selesai` datetime NOT NULL,
   `nama_agenda` text NOT NULL,
   PRIMARY KEY (`id_agenda`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Langkah kedua bikin crud (karena menggukan Yii kalian bisa skipt)&lt;/p&gt;
 
@@ -229,7 +285,7 @@ Karena&lt;/p&gt;
 &lt;p&gt;Pada Controller :
 Pada menampilakan data menggukan code json&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  $Agenda = Agenda::find()-&amp;gt;all();
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $Agenda = Agenda::find()-&amp;gt;all();
     $arr_agenda =[];
     foreach ($Agenda as $key =&amp;gt; $value) {
           $arr_agenda [] = [
@@ -245,16 +301,16 @@ Pada menampilakan data menggukan code json&lt;/p&gt;
     return $this-&amp;gt;render(&#39;index&#39;, [
         &#39;json&#39; =&amp;gt; $json,
     ]);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Pada view (php) tempat link url untuk create baru agenda&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$url = Url::to([&#39;agenda/create&#39;]);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$url = Url::to([&#39;agenda/create&#39;]);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Pada View (Javascipt):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    var date = new Date();
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    var date = new Date();
     var d = date.getDate(),
         m = date.getMonth(),
         y = date.getFullYear();
@@ -280,7 +336,7 @@ selectable: true,
         $(&#39;.modal-header&#39;).html(&#39;Tambah Agenda&#39;);
   },
 });
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Penjelasan Javascript :&lt;/p&gt;
 
@@ -290,8 +346,8 @@ selectable: true,
 
 &lt;p&gt;Digunakan untuk menampilkan agenda yang telah dibuat, pada kasus di atas menggukan &lt;em&gt;$json&lt;/em&gt; yang diambil dari controller.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;events: $json,
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;events: $json,
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;select&lt;/li&gt;
@@ -299,26 +355,26 @@ selectable: true,
 
 &lt;p&gt;Merupakan fasilitas untuk melakukan &lt;em&gt;select&lt;/em&gt; atau bisa bilang ketika memilih (dengan di blok). Pada saat tersebut kita bisa menabahkan javascript untuk kali ini saya gunkan sebagai fasilitas melakukan input agenda dengan menggukan modal.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  select: function(start, end) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  select: function(start, end) {
       $(&#39;#modal&#39;).modal(&#39;show&#39;)
             .find(&#39;#modalContent&#39;)
             .load(&#39;$url&amp;amp;start=&#39;+start+&#39;&amp;amp;&#39;+&#39;end=&#39;+end); // $url adalah link form create
         $(&#39;.modal-header&#39;).html(&#39;Tambah Agenda&#39;);
   },
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Pada view (html) tempat menampilkan hasil load javascript&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;calendar&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div id=&quot;calendar&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-14dec2017-1.gif&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-14dec2017-1.gif&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Controller pada create (berdasarkan link yang dibuat)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; $model = new Agenda();
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $model = new Agenda();
     $model-&amp;gt;mulai =  date(&#39;Y-m-d H:i:s&#39;,strtotime(&#39;-7 hour&#39;,$start/1000));
     $model-&amp;gt;selesai = date(&#39;Y-m-d H:i:s&#39;,strtotime(&#39;-7 hour&#39;,$end/1000));
     if ($model-&amp;gt;load(Yii::$app-&amp;gt;request-&amp;gt;post()) &amp;amp;&amp;amp; $model-&amp;gt;save()) {
@@ -328,11 +384,11 @@ selectable: true,
             &#39;model&#39; =&amp;gt; $model,
         ]);
     }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;View untuk menampilakan form untuk melakukan input agenda&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;agenda-form&quot;&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;agenda-form&quot;&amp;gt;
     &amp;lt;?php $form = ActiveForm::begin(); ?&amp;gt;
     &amp;lt;?= $form-&amp;gt;field($model, &#39;mulai&#39;)-&amp;gt;widget(DateTimePicker::classname(), [
             &#39;options&#39; =&amp;gt; [ &#39;placeholder&#39; =&amp;gt; &#39;Tanggal Mulai Agenda&#39;],
@@ -362,20 +418,20 @@ selectable: true,
     &amp;lt;/div&amp;gt;
     &amp;lt;?php ActiveForm::end(); ?&amp;gt;
 &amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 14 Dec 2017 09:06:58 +0700</pubDate>
         <link>https://kurtakon.com/yii/fullcalender/database/javascript/2017/12/14/artikel-1/</link>
         <guid isPermaLink="true">https://kurtakon.com/yii/fullcalender/database/javascript/2017/12/14/artikel-1/</guid>
         
         
-        <category>yii</category>
+        <category>Yii</category>
         
-        <category>fullcalender</category>
+        <category>Fullcalender</category>
         
-        <category>database</category>
+        <category>Database</category>
         
-        <category>javascript</category>
+        <category>Javascript</category>
         
       </item>
     
@@ -391,13 +447,13 @@ selectable: true,
 
 &lt;p&gt;Cara installnya biasa &lt;strong&gt;apt-get&lt;/strong&gt; (_ini dengen syarat Mysql sudah terinstall loh)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# apt-get install python3-mysql.connector
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# apt-get install python3-mysql.connector
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;kalau belum install _mysql-server_atau biar sekalian atau lupa dan biar gak ragu&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# apt-get install mysql-server python3-mysql.connector
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# apt-get install mysql-server python3-mysql.connector
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;membuat database di Mysql misal namanya &lt;strong&gt;mysite&lt;/strong&gt; (bisa sama dengan nama aplikasinya)&lt;/li&gt;
@@ -406,17 +462,17 @@ selectable: true,
 
 &lt;p&gt;Perubahan terjadi&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;DATABASES = {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DATABASES = {
    &#39;default&#39;: {
       &#39;ENGINE&#39;: &#39;django.db.backends.sqlite3&#39;,
       &#39;NAME&#39;: os.path.join(BASE_DIR, &#39;db.sqlite3&#39;),
    }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Menjadi :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;DATABASES = {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DATABASES = {
     &#39;default&#39;: {
         #&#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;,
         &#39;ENGINE&#39;: &#39;mysql.connector.django&#39;,
@@ -426,27 +482,27 @@ selectable: true,
         &#39;HOST&#39;: &#39;localhost&#39;,
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Setelah terkoneksi kalian bisa melakukan migrasi databasenya :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ python manage.py migrate
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python manage.py migrate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Kalau tidak bisa dan  muncul error&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Unknown command: &#39;migrate&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Unknown command: &#39;migrate&#39;
 Type &#39;manage.py help&#39; for usage.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Maka coba dengan sitak dibawah ini&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ python manage.py syncdb
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python manage.py syncdb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;maka akan muncul :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Creating tables ...
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Creating tables ...
 Creating table django_admin_log
 Creating table auth_permission
 Creating table auth_group_permissions
@@ -459,7 +515,7 @@ Creating table django_session
 
 You just installed Django&#39;s auth system, which means you don&#39;t have any superusers defined.
 Would you like to create one now? (yes/no):
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Jika sudah yakin tinggal tulis &lt;strong&gt;yes&lt;/strong&gt; , kemudian ikuti perintahnya untuk memasukan email, user dan password.&lt;/p&gt;
 
@@ -470,13 +526,13 @@ Would you like to create one now? (yes/no):
         <guid isPermaLink="true">https://kurtakon.com/linux/python/django/mysql/2017/11/23/artikel-4/</guid>
         
         
-        <category>linux</category>
+        <category>Linux</category>
         
-        <category>python</category>
+        <category>Python</category>
         
-        <category>django</category>
+        <category>Django</category>
         
-        <category>mysql</category>
+        <category>Mysql</category>
         
       </item>
     
@@ -497,8 +553,8 @@ Would you like to create one now? (yes/no):
 
 &lt;p&gt;Cara install sama sepertai aplikasi lain di linux menggunakan &lt;strong&gt;apt-get&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ apt-get install python-django
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ apt-get install python-django
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Buat aplikasi&lt;/li&gt;
@@ -506,8 +562,8 @@ Would you like to create one now? (yes/no):
 
 &lt;p&gt;Cara membuat aplikasi buka terminal misal nama aplikasi nya &lt;em&gt;mysite&lt;/em&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ django-admin startproject mysite
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ django-admin startproject mysite
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Jalankan Aplikasinya&lt;/li&gt;
@@ -515,25 +571,25 @@ Would you like to create one now? (yes/no):
 
 &lt;p&gt;Cara menjalnkan masih menggunakan terminal, masuk ke direktori aplikasinya (menggunakan &lt;strong&gt;cd&lt;/strong&gt; ) kemudian jalankan sintak dibawah ini :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ python manage.py runserver
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python manage.py runserver
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Kemudian akan muncul :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Validating models...
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Validating models...
 0 errors found
 November 23, 2017 - 15:29:25
 Django version 1.6.11, using settings &#39;mysite.settings&#39;
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 [23/Nov/2017 15:29:30] &quot;GET / HTTP/1.1&quot; 200 1757
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;dari data diatas diketahui aplikasi berjalan pada port 8000. Untuk mengetahui buka web browser dan masukan link &lt;a href=&quot;http://127.0.0.1:8000/&quot;&gt;http://127.0.0.1:8000/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Hasilnya…&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-23nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-23nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
@@ -541,9 +597,9 @@ Quit the server with CONTROL-C.
         <guid isPermaLink="true">https://kurtakon.com/linux/python/2017/11/23/artikel-3/</guid>
         
         
-        <category>linux</category>
+        <category>Linux</category>
         
-        <category>python</category>
+        <category>Python</category>
         
       </item>
     
@@ -559,12 +615,12 @@ Quit the server with CONTROL-C.
 
 &lt;p&gt;Untuk melihat aplikasi yang telah kita install bisa menggunakan &lt;strong&gt;dpkg&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ dpkg --list
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ dpkg --list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;setelah muncul :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;ii  gir1.2-vte-2.90                      1:0.34.9-1ubuntu2       amd64                   GObject introspection data for the VTE library
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ii  gir1.2-vte-2.90                      1:0.34.9-1ubuntu2       amd64                   GObject introspection data for the VTE library
 ii  gir1.2-webkit-3.0                    2.4.10-0ubuntu0.14.04.1 amd64                   Web content engine library for GTK+ - GObject introspection data
 ii  gir1.2-wnck-3.0:amd64                3.14.0-1~14.04~ricotz1  amd64                   GObject introspection data for the WNCK library
 ii  git                                  1:1.9.1-1ubuntu0.7      amd64                   fast, scalable, distributed revision control system
@@ -572,7 +628,7 @@ ii  git-man                              1:1.9.1-1ubuntu0.7      all            
 ii  gitg                                 0.2.7-2                 amd64                   git repository viewer
 ii  gitk                                 1:1.9.1-1ubuntu0.7      all                     fast, scalable, distributed revision control system (revision tree visualizer
 ii  gitkraken                            3.2.2                   amd64                   Unleash your repo
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;setelah muncul, pilih apalikasi yang akan di &lt;em&gt;uninstall&lt;/em&gt;&lt;/p&gt;
 
@@ -582,12 +638,12 @@ ii  gitkraken                            3.2.2                   amd64          
 
 &lt;p&gt;Misal saya mau &lt;em&gt;uninstall&lt;/em&gt;  apliaksi &lt;strong&gt;gitkraken&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ apt-get --purge remove gitkraken
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ apt-get --purge remove gitkraken
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;setelah itu akan mendapatkan perintah konfirmasi , intinya yakin mau di unistall&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Reading package lists... Done
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 The following package was automatically installed and is no longer required:
@@ -598,20 +654,20 @@ The following packages will be REMOVED:
 0 upgraded, 0 newly installed, 1 to remove and 116 not upgraded.
 After this operation, 248 MB disk space will be freed.
 Do you want to continue? [Y/n] 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Jika iya tulis &lt;strong&gt;y&lt;/strong&gt; jika tidak jadi tinggal tulis &lt;strong&gt;n&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Ini jika tulis &lt;strong&gt;y&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;(Reading database ... 1350641 files and directories currently installed.)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(Reading database ... 1350641 files and directories currently installed.)
 Removing gitkraken (3.2.2) ...
 Processing triggers for gnome-menus (3.10.1-0ubuntu2) ...
 Processing triggers for desktop-file-utils (0.22-1ubuntu1) ...
 Processing triggers for bamfdaemon (0.5.1+14.04.20140409-0ubuntu1+elementary2~ubuntu14.04.1) ...
 Rebuilding /usr/share/applications/bamf-2.index...
 Processing triggers for mime-support (3.54ubuntu1.1) ...
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Oke aplikasi berhasil dihapus.. bye..bye…&lt;/p&gt;
 </description>
@@ -620,7 +676,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
         <guid isPermaLink="true">https://kurtakon.com/linux/2017/11/23/artikel-2/</guid>
         
         
-        <category>linux</category>
+        <category>Linux</category>
         
       </item>
     
@@ -630,8 +686,8 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 
 &lt;p&gt;Padahal caranya cukup mudah, buka terminal masukan script dibawah ini :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo dpkg -i nama_aplikasinya.deb 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -i nama_aplikasinya.deb 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Sekian semoga membantu.&lt;/p&gt;
 </description>
@@ -640,7 +696,7 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
         <guid isPermaLink="true">https://kurtakon.com/linux/2017/11/23/artikel-1/</guid>
         
         
-        <category>linux</category>
+        <category>Linux</category>
         
       </item>
     
@@ -652,19 +708,19 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 
 &lt;p&gt;-&amp;gt; untuk php5&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    $ apt-get install php5-fpm 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ apt-get install php5-fpm 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;-&amp;gt; untuk php7.0&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    $ apt-get install php7-fpm 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ apt-get install php7-fpm 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Bagaimana merubah settinganya?&lt;/p&gt;
 
 &lt;p&gt;Buka file /etc/nginx/sites-available/default:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;server {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server {
     listen   80;
     access_log /var/log/nginx/access.log;
     error_log /var/log/nginx/error.log;
@@ -680,13 +736,13 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
         fastcgi_read_timeout 300;
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Pada &lt;strong&gt;location&lt;/strong&gt; terdapat &lt;strong&gt;fastcgi_pass unix:&lt;/strong&gt;  yang mengacu pada versi &lt;em&gt;php&lt;/em&gt; yang berjalan. Terlihat &lt;strong&gt;/var/run/php5-fpm.sock&lt;/strong&gt; versi php5 yang saat ini berjalan. Untuk merubahnya, kita harus mencari versi pada folder &lt;strong&gt;/var/run/&lt;/strong&gt;   &lt;strong&gt;php7-fpm.sock&lt;/strong&gt; berada di folder mana pada di install (pada kasus saya file tersebut terdapat didalam folder php).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;server {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server {
     listen   80;
     access_log /var/log/nginx/access.log;
     error_log /var/log/nginx/error.log;
@@ -702,14 +758,14 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
         fastcgi_read_timeout 300;
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Setelah serlesai restart nginx&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    $ sudo service nginx restart
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ sudo service nginx restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 13 Nov 2017 15:06:58 +0700</pubDate>
@@ -717,151 +773,11 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
         <guid isPermaLink="true">https://kurtakon.com/linux/nginx/php/2017/11/13/artikel-1/</guid>
         
         
-        <category>linux</category>
+        <category>Linux</category>
         
-        <category>nginx</category>
+        <category>Nginx</category>
         
-        <category>php</category>
-        
-      </item>
-    
-      <item>
-        <title>Bagaimana Contoh Menggunakan Onkeyup dan Onkeypress pada Javascript ?</title>
-        <description>&lt;p&gt;Pada Kali ini saya ingin memberikan contoh sederhana menggunakan &lt;strong&gt;Javascript&lt;/strong&gt; . Untuk kali ini saya akan menggukan &lt;strong&gt;Onkeyup&lt;/strong&gt; dan &lt;strong&gt;Onkeypress&lt;/strong&gt; . Pada contoh penggunaan ini saya menggunakan Yii2, Jadi jika anda ingin menggukan untuk code lain silahkan modifikasi sendiri form nya hehehe.&lt;/p&gt;
-
-&lt;p&gt;Form untuk input :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;textInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;nilai&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;form-control nilai&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;placeholder&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Nilai Awal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;nilai_awal&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt; &amp;lt;br&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt; &amp;lt;br&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$jumlah&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
- &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;textInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;input&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;pengurang form-control nilai&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;placeholder&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Input ke-&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;input&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt; &amp;lt;br&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt; &amp;lt;br&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;textInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Jumlah&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;form-control&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;placeholder&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Jumlah&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;jumlah&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;readOnly&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Javascript :&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;$js=&amp;lt;&amp;lt;&amp;lt;JS&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    var numItems = $(&amp;#39;.pengurang&amp;#39;).length;&lt;/span&gt;
-
-&lt;span class=&quot;x&quot;&gt;    $(&amp;#39;.nilai&amp;#39;).on(&amp;#39;keypress&amp;#39;,&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        function (evt) {&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;          evt = (evt) ? evt : window.event;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;          var charCode = (evt.which) ? evt.which : evt.keyCode;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;          if (charCode &amp;gt; 31 &amp;amp;&amp;amp; (charCode &amp;lt; 48 || charCode &amp;gt; 57)) {&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;              return false;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;          }&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;          return true;&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    });&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    var jumlah =0;&lt;/span&gt;
-
-&lt;span class=&quot;x&quot;&gt;    $(&amp;#39;#nilai_awal&amp;#39;).on(&amp;#39;keyup&amp;#39;,function(){&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        jumlah =$(this).val();&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        for (i=1; i &amp;lt;=numItems ; i++) { &lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;            jumlah = jumlah - $(&amp;#39;#input&amp;#39;+i).val();&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        }&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        $(&amp;#39;#jumlah&amp;#39;).val(jumlah);&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    });&lt;/span&gt;
-
-&lt;span class=&quot;x&quot;&gt;    $(&amp;#39;.pengurang&amp;#39;).on(&amp;#39;keyup&amp;#39;,function(){&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        jumlah = $(&amp;#39;#nilai_awal&amp;#39;).val();&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        for (i=1; i &amp;lt;=numItems ; i++) { &lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;            jumlah = jumlah - $(&amp;#39;#input&amp;#39;+i).val();&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        }&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;        $(&amp;#39;#jumlah&amp;#39;).val(jumlah);&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    });&lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;    &lt;/span&gt;
-&lt;span class=&quot;x&quot;&gt;JS;&lt;/span&gt;
-
-&lt;span class=&quot;x&quot;&gt;$this-&amp;gt;registerJs($js, $this::POS_READY);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hasil Code :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Tampilan awal&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Tampilan pada saat input nilai awal&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Tampilan pada saat input nilai pengurangan&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-3.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-26okt2017-4.png&quot; alt=&quot;alt text&quot; title=&quot;view&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Penjelasan :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fungsi di atas digunakan agar nilai yang di inputkan hanya angka saja untuk class nilai pada saat di ketik.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;.nilai&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;keypress&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-          &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;charCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;which&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;which&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;evt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;charCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;charCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;48&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;charCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-              &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-          &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Kita dapat menghitung jumlah variabel yang menggunakan class pada halaman tersebut dengan &lt;strong&gt;length&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numItems&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;.pengurang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Pada saat on keyup untuk form input pada id nilai_awal kita melakukan perulangan untuk mengurangi nilai awal dan memunculkannya pada jumlah.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;#nilai_awal&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;keyup&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;jumlah&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numItems&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-            &lt;span class=&quot;nx&quot;&gt;jumlah&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jumlah&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;#input&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;#jumlah&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jumlah&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Pada saat on keyup untuk form input pada class pengurang kita melakukan perulangan untuk mengurangi nilai awal dan memunculkannya pada jumlah.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;.pengurang&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;keyup&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;jumlah&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numItems&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-            &lt;span class=&quot;nx&quot;&gt;jumlah&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jumlah&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;#input&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;#jumlah&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jumlah&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Semoga membantu.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 26 Oct 2017 10:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/javascript/html/php/2017/10/26/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/javascript/html/php/2017/10/26/artikel-1/</guid>
-        
-        
-        <category>javascript</category>
-        
-        <category>html</category>
-        
-        <category>php</category>
+        <category>Php</category>
         
       </item>
     

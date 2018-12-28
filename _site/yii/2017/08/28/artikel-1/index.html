@@ -138,60 +138,60 @@
     <p>Pada yii terdapat fasilitas migrate database dari file php ke database mysql.
 Letaknya biasa pada consol/migrations/.</p>
 
-<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">use yii\db\Migration;</span>
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="k">use</span> <span class="nx">yii\db\Migration</span><span class="p">;</span>
 
-<span class="x">class m170828_231501_coba extends Migration</span>
-<span class="x">{</span>
-<span class="x">    public function up(){</span>
-<span class="x">        $tableOptions = null;</span>
-<span class="x">        if ($this-&gt;db-&gt;driverName === &#39;mysql&#39;) {</span>
-<span class="x">            $tableOptions = &#39;CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB&#39;;</span>
-<span class="x">        }</span>
+<span class="k">class</span> <span class="nc">m170828_231501_coba</span> <span class="k">extends</span> <span class="nx">Migration</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">up</span><span class="p">(){</span>
+        <span class="nv">$tableOptions</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">driverName</span> <span class="o">===</span> <span class="s1">'mysql'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$tableOptions</span> <span class="o">=</span> <span class="s1">'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB'</span><span class="p">;</span>
+        <span class="p">}</span>
 
-<span class="x">        $this-&gt;createTable(&#39;{ { %coba} } &#39;, [</span>
-<span class="x">        &#39;id_coba&#39; =&gt; $this-&gt;primaryKey(),</span>
-<span class="x">        &#39;data&#39; =&gt; $this-&gt;string()-&gt;notNull()-&gt;unique(),</span>
-<span class="x">        &#39;data_sub&#39; =&gt; $this-&gt;string(32)-&gt;notNull(),</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createTable</span><span class="p">(</span><span class="s1">'{ { %coba} } '</span><span class="p">,</span> <span class="p">[</span>
+        <span class="s1">'id_coba'</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">primaryKey</span><span class="p">(),</span>
+        <span class="s1">'data'</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">notNull</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">unique</span><span class="p">(),</span>
+        <span class="s1">'data_sub'</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">string</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">notNull</span><span class="p">(),</span>
 
-<span class="x">        ], $tableOptions);</span>
-<span class="x">    }</span>
+        <span class="p">],</span> <span class="nv">$tableOptions</span><span class="p">);</span>
+    <span class="p">}</span>
 
-<span class="x">    public function down()</span>
-<span class="x">    {</span>
-<span class="x">        $this-&gt;dropTable(&#39;{ { %coba } }&#39;);</span>
-<span class="x">    }</span>
-<span class="x">}</span></code></pre></div>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">down</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">dropTable</span><span class="p">(</span><span class="s1">'{ { %coba } }'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>Penulisan nama class dengan format m <strong>YYMMDD_HHMMSS</strong>  <strong>Name</strong>
 dan untuk penulisan nama file sama dengan nama class ditambah <strong>.php</strong></p>
 
 <p>Cara melakukan migrasi database silahkan buka terminal, masuk pada projek anda dan tulis script dibawah ini.</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span><span class="n">php</span> <span class="n">yii</span> <span class="n">migrate</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span><span class="n">php</span> <span class="n">yii</span> <span class="n">migrate</span></code></pre></figure>
 
 <p>Akan muncul pilihan file yang bisa anda migrasi ke database</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">Yii</span> <span class="n">Migration</span> <span class="n">Tool</span> <span class="p">(</span><span class="n">based</span> <span class="n">on</span> <span class="n">Yii</span> <span class="n">v2</span><span class="o">.</span><span class="mf">0.12</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">Yii</span> <span class="n">Migration</span> <span class="n">Tool</span> <span class="p">(</span><span class="n">based</span> <span class="n">on</span> <span class="n">Yii</span> <span class="n">v2</span><span class="o">.</span><span class="mf">0.12</span><span class="p">)</span>
 
 <span class="n">Total</span> <span class="mi">1</span> <span class="n">new</span> <span class="n">migration</span> <span class="n">to</span> <span class="n">be</span> <span class="n">applied</span><span class="p">:</span>
     <span class="n">m170828_231501_coba</span>
 
-<span class="n">Apply</span> <span class="n">the</span> <span class="n">above</span> <span class="n">migration</span><span class="err">?</span> <span class="p">(</span><span class="n">yes</span><span class="o">|</span><span class="n">no</span><span class="p">)</span> <span class="p">[</span><span class="n">no</span><span class="p">]:</span></code></pre></div>
+<span class="n">Apply</span> <span class="n">the</span> <span class="n">above</span> <span class="n">migration</span><span class="err">?</span> <span class="p">(</span><span class="n">yes</span><span class="o">|</span><span class="n">no</span><span class="p">)</span> <span class="p">[</span><span class="n">no</span><span class="p">]:</span></code></pre></figure>
 
 <p>Ketika kita tulis <strong>Yes</strong> maka akan tergenerate databse</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="o">***</span> <span class="n">applying</span> <span class="n">m170828_231501_coba</span>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="o">***</span> <span class="n">applying</span> <span class="n">m170828_231501_coba</span>
     <span class="o">&gt;</span> <span class="n">create</span> <span class="n">table</span> <span class="p">{</span> <span class="p">{</span> <span class="o">%</span><span class="n">coba</span> <span class="p">}</span> <span class="p">}</span> <span class="o">...</span> <span class="n">done</span> <span class="p">(</span><span class="n">time</span><span class="p">:</span> <span class="mf">0.105</span><span class="n">s</span><span class="p">)</span>
 <span class="o">***</span> <span class="n">applied</span> <span class="n">m170828_231501_coba</span> <span class="p">(</span><span class="n">time</span><span class="p">:</span> <span class="mf">0.239</span><span class="n">s</span><span class="p">)</span>
 
 
 <span class="mi">1</span> <span class="n">migration</span> <span class="n">was</span> <span class="n">applied</span><span class="o">.</span>
 
-<span class="n">Migrated</span> <span class="n">up</span> <span class="n">successfully</span><span class="o">.</span></code></pre></div>
+<span class="n">Migrated</span> <span class="n">up</span> <span class="n">successfully</span><span class="o">.</span></code></pre></figure>
 
 <p>Tabel <strong>coba</strong> berhasil di buat seperti dibawah ini.</p>
 
-<p><img src="https://kurtakon.com/asset/img/img-12.png" alt="alt text" title="view tabel coba" /></p>
+<p><img src="http://127.0.0.1:4000/asset/img/img-12.png" alt="alt text" title="view tabel coba" /></p>
 
 
 

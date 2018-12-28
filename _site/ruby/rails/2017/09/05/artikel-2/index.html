@@ -151,42 +151,42 @@
 
 <p>Untuk kali ini saya ingin menginstall versi apt-get install ruby2.4-dev</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby2</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">dev</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="err">$</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby2</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">dev</span></code></pre></figure>
 
 <p><strong>Kenapa install versi dev pada ruby ?</strong></p>
 
 <p>Karena pada saat saya install tanpa dev, ketika saya install rails muncul error</p>
 
-<div class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">Building</span> <span class="n">native</span> <span class="n">extensions</span><span class="o">.</span>  <span class="n">This</span> <span class="n">could</span> <span class="n">take</span> <span class="n">a</span> <span class="k">while</span><span class="o">...</span>
+<figure class="highlight"><pre><code class="language-py" data-lang="py"><span class="n">Building</span> <span class="n">native</span> <span class="n">extensions</span><span class="o">.</span>  <span class="n">This</span> <span class="n">could</span> <span class="n">take</span> <span class="n">a</span> <span class="k">while</span><span class="o">...</span>
 <span class="n">ERROR</span><span class="p">:</span>  <span class="n">Error</span> <span class="n">installing</span> <span class="n">rails</span><span class="p">:</span>
     <span class="n">ERROR</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">build</span> <span class="n">gem</span> <span class="n">native</span> <span class="n">extension</span><span class="o">.</span>
 
     <span class="n">current</span> <span class="n">directory</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">nokogiri</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">ext</span><span class="o">/</span><span class="n">nokogiri</span>
 <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ruby2</span><span class="o">.</span><span class="mi">4</span> <span class="o">-</span><span class="n">r</span> <span class="o">./</span><span class="n">siteconf20170905</span><span class="o">-</span><span class="mi">7494</span><span class="o">-</span><span class="n">ci1a7j</span><span class="o">.</span><span class="n">rb</span> <span class="n">extconf</span><span class="o">.</span><span class="n">rb</span>
-<span class="n">mkmf</span><span class="o">.</span><span class="n">rb</span> <span class="n">can</span><span class="s">&#39;t find header files for ruby at /usr/lib/ruby/include/ruby.h</span>
+<span class="n">mkmf</span><span class="o">.</span><span class="n">rb</span> <span class="n">can</span><span class="s">'t find header files for ruby at /usr/lib/ruby/include/ruby.h</span><span class="err">
 
-<span class="n">extconf</span> <span class="n">failed</span><span class="p">,</span> <span class="nb">exit</span> <span class="n">code</span> <span class="mi">1</span>
+</span><span class="s">extconf failed, exit code 1</span><span class="err">
 
-<span class="n">Gem</span> <span class="n">files</span> <span class="n">will</span> <span class="n">remain</span> <span class="n">installed</span> <span class="ow">in</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="n">nokogiri</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span> <span class="k">for</span> <span class="n">inspection</span><span class="o">.</span>
-<span class="n">Results</span> <span class="n">logged</span> <span class="n">to</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gems</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">extensions</span><span class="o">/</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">/</span><span class="mf">2.4</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">nokogiri</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">gem_make</span><span class="o">.</span><span class="n">out</span></code></pre></div>
+</span><span class="s">Gem files will remain installed in /var/lib/gems/2.4.0/gems/nokogiri-1.8.0 for inspection.</span><span class="err">
+</span><span class="s">Results logged to /var/lib/gems/2.4.0/extensions/x86_64-linux/2.4.0/nokogiri-1.8.0/gem_make.out</span></code></pre></figure>
 
 <p>Sebagai solusi saya install versi <strong>dev</strong> dan berhasil.</p>
 
 <p>Setelah install ruby yang baru, kita bisa update gem dengan cara :</p>
 
-<pre><code>$ gem update --system 
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem update --system 
+</code></pre></div></div>
 
 <p><strong>Bagaimana jika kita sudah meinstall versi ruby yang baru tapi ketika lihat versinya masih dengan versi lama?</strong></p>
 
-<pre><code>$ ruby -v
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby -v
 ruby 1.9.3p551 (2014-11-13) [x86_64-linux] Brightbox
-</code></pre>
+</code></pre></div></div>
 
 <p>Caranya menggunakan <a href="https://kurtakon.com/linux/2017/09/04/artikel-1/">update-alternatives</a></p>
 
-<pre><code>$ sudo update-alternatives --config ruby
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo update-alternatives --config ruby
+</code></pre></div></div>
 
 <p>Kemudian pilih versi yang kita butuhkan.</p>
 

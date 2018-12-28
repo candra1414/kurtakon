@@ -151,13 +151,13 @@
 
 <p>Cara installnya biasa <strong>apt-get</strong> (_ini dengen syarat Mysql sudah terinstall loh)</p>
 
-<pre><code># apt-get install python3-mysql.connector
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># apt-get install python3-mysql.connector
+</code></pre></div></div>
 
 <p>kalau belum install _mysql-server_atau biar sekalian atau lupa dan biar gak ragu</p>
 
-<pre><code># apt-get install mysql-server python3-mysql.connector
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># apt-get install mysql-server python3-mysql.connector
+</code></pre></div></div>
 
 <ul>
   <li>membuat database di Mysql misal namanya <strong>mysite</strong> (bisa sama dengan nama aplikasinya)</li>
@@ -166,17 +166,17 @@
 
 <p>Perubahan terjadi</p>
 
-<pre><code>DATABASES = {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DATABASES = {
    'default': {
       'ENGINE': 'django.db.backends.sqlite3',
       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
    }
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>Menjadi :</p>
 
-<pre><code>DATABASES = {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.mysql',
         'ENGINE': 'mysql.connector.django',
@@ -186,27 +186,27 @@
         'HOST': 'localhost',
     }
 }
-</code></pre>
+</code></pre></div></div>
 
 <p>Setelah terkoneksi kalian bisa melakukan migrasi databasenya :</p>
 
-<pre><code>$ python manage.py migrate
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python manage.py migrate
+</code></pre></div></div>
 
 <p>Kalau tidak bisa dan  muncul error</p>
 
-<pre><code>Unknown command: 'migrate'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Unknown command: 'migrate'
 Type 'manage.py help' for usage.
-</code></pre>
+</code></pre></div></div>
 
 <p>Maka coba dengan sitak dibawah ini</p>
 
-<pre><code>$ python manage.py syncdb
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python manage.py syncdb
+</code></pre></div></div>
 
 <p>maka akan muncul :</p>
 
-<pre><code>Creating tables ...
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Creating tables ...
 Creating table django_admin_log
 Creating table auth_permission
 Creating table auth_group_permissions
@@ -219,7 +219,7 @@ Creating table django_session
 
 You just installed Django's auth system, which means you don't have any superusers defined.
 Would you like to create one now? (yes/no):
-</code></pre>
+</code></pre></div></div>
 
 <p>Jika sudah yakin tinggal tulis <strong>yes</strong> , kemudian ikuti perintahnya untuk memasukan email, user dan password.</p>
 

@@ -146,58 +146,60 @@ Kedua, memasangnya pada aplikasi <strong>Jekyll</strong></p>
   <li>Membuat file pada _incudes misal diberinama disqus.html.</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html">{ % if page.comments % }
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;disqus_thread&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    { % if page.comments % }
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"disqus_thread"</span><span class="nt">&gt;&lt;/div&gt;</span>
     <span class="nt">&lt;script&gt;</span>
 
     <span class="kd">var</span> <span class="nx">disqus_config</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span>  <span class="s2">&quot;https://namaweb.com { { page.url } } &quot;</span><span class="p">;</span>  <span class="c1">// diganti dengan PAGE_URL</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">identifier</span> <span class="o">=</span> <span class="s2">&quot;{ { page.id } } &quot;</span><span class="p">;</span> <span class="c1">// diganti dengan  PAGE_IDENTIFIER</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span>  <span class="s2">"https://namaweb.com { { page.url } } "</span><span class="p">;</span>  <span class="c1">// diganti dengan PAGE_URL</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">identifier</span> <span class="o">=</span> <span class="s2">"{ { page.id } } "</span><span class="p">;</span> <span class="c1">// diganti dengan  PAGE_IDENTIFIER</span>
     <span class="p">};</span>
 
-    <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// DON&#39;T EDIT BELOW THIS LINE</span>
-    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
-    <span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;https://nama-aplikasi-disqus.disqus.com/embed.js&#39;</span><span class="p">;</span> <span class="o">&lt;---</span> <span class="nx">dari</span> <span class="nx">Disqus</span>
-    <span class="nx">s</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;data-timestamp&#39;</span><span class="p">,</span> <span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+    <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// DON'T EDIT BELOW THIS LINE</span>
+    <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://nama-aplikasi-disqus.disqus.com/embed.js'</span><span class="p">;</span> <span class="o">&lt;---</span> <span class="nx">dari</span> <span class="nx">Disqus</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'data-timestamp'</span><span class="p">,</span> <span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
     <span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">head</span> <span class="o">||</span> <span class="nx">d</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
     <span class="p">})();</span>
     <span class="nt">&lt;/script&gt;</span>
-    <span class="nt">&lt;noscript&gt;</span>Please enable JavaScript to view the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://disqus.com/?ref_noscript&quot;</span><span class="nt">&gt;</span>comments powered by Disqus.<span class="nt">&lt;/a&gt;&lt;/noscript&gt;</span>
+    <span class="nt">&lt;noscript&gt;</span>Please enable JavaScript to view the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://disqus.com/?ref_noscript"</span><span class="nt">&gt;</span>comments powered by Disqus.<span class="nt">&lt;/a&gt;&lt;/noscript&gt;</span>
                                 
-    { % endif % }</code></pre></div>
+    { % endif % }</code></pre></figure>
 
 <ul>
   <li>Masukan inculde file <strong>disqus.html</strong> pada  post.html pada folder _layouts.</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html">{ % include disqus.html % }</code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">    { % include disqus.html % }</code></pre></figure>
 
 <ul>
   <li>Masukan <strong>comments: true</strong> pada header artikel.</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html">layout: post
-title:  &quot;Bagaimana Memasang Disqus Pada Jekyll?&quot;
+<figure class="highlight"><pre><code class="language-html" data-lang="html">layout: post
+title:  "Bagaimana Memasang Disqus Pada Jekyll?"
 comments: true
 date:   2017-08-30 14:06:58
-categories: [Jekyll,Disqus]</code></pre></div>
+categories: [Jekyll,Disqus]</code></pre></figure>
 
 <p>Jika berhasil maka akan muncul seperti gambar dibawah ini.</p>
 
-<p><img src="https://kurtakon.com/asset/img/img-13.png" alt="alt text" title="view disqus" /></p>
+<p><img src="http://127.0.0.1:4000/asset/img/img-13.png" alt="alt text" title="view disqus" /></p>
 
-<p>Jika kita ingin mengetahui jumlah komentar untuk halaman yang dibuka. 
-- tambahkan file dibawah ini pada header.html untuk memanggil javascript dari disqus.</p>
+<p>Jika kita ingin mengetahui jumlah komentar untuk halaman yang dibuka.</p>
+<ul>
+  <li>tambahkan file dibawah ini pada header.html untuk memanggil javascript dari disqus.</li>
+</ul>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">id=</span><span class="s">&quot;dsq-count-scr&quot;</span> <span class="na">src=</span><span class="s">&quot;//SHORTNAME.disqus.com/count.js&quot;</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">id=</span><span class="s">"dsq-count-scr"</span> <span class="na">src=</span><span class="s">"//SHORTNAME.disqus.com/count.js"</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <ul>
   <li>silahkan masukan script dibawah ini pada _layouts/post.html untuk menampilkan jumlahnya.</li>
 </ul>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span> <span class="o">%</span> <span class="k">if</span> <span class="n">page</span><span class="o">.</span><span class="n">comments</span> <span class="o">%</span> <span class="p">}</span> 
-     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://namaweb.com { { post.url } } #disqus_thread&quot;</span><span class="o">&gt;</span><span class="mi">0</span> <span class="no">Comments</span> <span class="o">&lt;</span><span class="sr">/a&gt;</span>
-<span class="sr">{ % endif % }</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span> <span class="sx">% if </span><span class="n">page</span><span class="p">.</span><span class="nf">comments</span> <span class="o">%</span> <span class="p">}</span> 
+     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"https://namaweb.com { { post.url } } #disqus_thread"</span><span class="o">&gt;</span><span class="mi">0</span> <span class="no">Comments</span> <span class="o">&lt;</span><span class="sr">/a&gt;
+{ % endif % }</span></code></pre></figure>
 
 
 
