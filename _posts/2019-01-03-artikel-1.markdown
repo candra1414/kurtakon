@@ -1,0 +1,46 @@
+---
+layout: post
+comments: true
+title:  "Bagaimana mengatasi error (initramfs) pada Linux ?"
+date:   2019-01-03 14:06:58
+categories: [Linux]
+---
+
+Selamat siang, artikel kali ini saya akan membahasas tentang error pada linux yang saya alami. Sebenarnya ini sudah kedua kalinya saya alami pada laptop saya. Dan pada kali ini saya akan membaginya kali saja ada yang mengalami seperti saya. Kasus yang terjadi ketika booting linux dan tidak muncul linux saya. kemudian muncul hitam putih seperti terminal bertulisan __(initramfs)__. Tak perlu panik atau install ulang. 
+
+
+![alt text][gambar1]
+
+[gambar1]:{{site.urlimg}}img-03jan2019_2.jpg "error linux"
+
+
+
+Apa itu inistramfs ?
+
+The initramfs is a complete set of directories that you would find on a normal root filesystem. It is bundled into a single cpio archive and compressed with one of several compression algorithms. At boot time, the boot loader loads the kernel and the initramfs image into memory and starts the kernel.
+
+
+_Sumber:  <a href="http://www.linuxfromscratch.org/blfs/view/svn/postlfs/initramfs.html">linuxfromscratch.org</a>_
+
+Nah itu, intinya mounting hardisk yang gagal sehingga tidak terbaca mana direktori sistemnya.
+
+Bagaimana mengatasi error (initramfs) pada Linux ?
+
+Cara menggatasinya dengan __fsck__ , ketika dijalankan langsung akan muncul error atau tidak ditemukan. 
+
+Lalu bagaimana? 
+
+Caranya dengan linux portable misal dengan usb instaler linux, jadi caranya kita jalankan linux dengan usb buka terminal dan jalankan __fsck__ ke __sda__ letak sistem linux berada
+
+
+	$ sudo fsck sda -y //sda letak sistem linux nya
+
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}img-03jan2019_1.jpg "linux usb portable"
+
+
+
+Kemudian reboot linux anda dan masuk ke sistem linux asli anda.
+
+Sekian terimakasih, semoga membantu.

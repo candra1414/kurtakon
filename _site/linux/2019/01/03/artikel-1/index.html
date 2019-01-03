@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</title>
-  <meta name="description" content="Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan ctrl+z untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika pe...">
+  <title>Bagaimana mengatasi error (initramfs) pada Linux ?</title>
+  <meta name="description" content="Selamat siang, artikel kali ini saya akan membahasas tentang error pada linux yang saya alami. Sebenarnya ini sudah kedua kalinya saya alami pada laptop saya...">
 	
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,8 +22,8 @@
   <script src="/js/adblockcheck.js"></script>
   <link href="/css/bootstrap.min.css" rel="stylesheet"/>
   <script id="dsq-count-scr" src="//kurtakon-com.disqus.com/count.js" async></script>
-  <link rel="canonical" href="https://kurtakon.com/jekyll/2017/08/03/artikel-1/">
-  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="https://kurtakon.com/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/linux/2019/01/03/artikel-1/">
+  <link rel="alternate" type="application/atom+xml" title="KurTakon" href="http://localhost:4000/feed.xml" />
 
 </head>
 <script>
@@ -126,38 +126,43 @@
 <div class="post col-md-8">
 
   <header class="post-header container-fluid animated fadeInDown">
-    <h1 class="content-max-width">Bagaimana mengatasi  Error:  Address already in use - bind(2) pada Jekyll ?</h1>
-    <span>Aug 3, 2017 </span>   • <a href="/jekyll/2017/08/03/artikel-1/#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>
+    <h1 class="content-max-width">Bagaimana mengatasi error (initramfs) pada Linux ?</h1>
+    <span>Jan 3, 2019 </span>   • <a href="/linux/2019/01/03/artikel-1/#disqus_thread"> <i class="fa fa-comments-o margin-r-5"></i> 0 Comments</a>
     <span class="time label label-danger pull-right"> 
-          Jekyll,
+          Linux,
            </span>
   <hr>
   </header>
 
   <article class="post-content content container-fluid">
-    <p>Sebagai pemula menggunakan menggunakan Jekyll sering penulis menggunakan <strong>ctrl+z</strong> untuk menghentikan proses pada terminal. Hal tersebut mengakibatkan ketika penulis akan mejalankan kembali akan muncul</p>
+    <p>Selamat siang, artikel kali ini saya akan membahasas tentang error pada linux yang saya alami. Sebenarnya ini sudah kedua kalinya saya alami pada laptop saya. Dan pada kali ini saya akan membaginya kali saja ada yang mengalami seperti saya. Kasus yang terjadi ketika booting linux dan tidak muncul linux saya. kemudian muncul hitam putih seperti terminal bertulisan <strong>(initramfs)</strong>. Tak perlu panik atau install ulang.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Error</span><span class="p">:</span>  <span class="no">Address</span> <span class="n">already</span> <span class="k">in</span> <span class="n">use</span> <span class="o">-</span> <span class="n">bind</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></code></pre></figure>
+<p><img src="http://127.0.0.1:4000/asset/img/img-03jan2019_2.jpg" alt="alt text" title="error linux" /></p>
 
-<p>Pada pertama kali akan bertanya-tanya apa maksud <strong>error</strong> diatas, ternyata error tersebut dikarenakan masih ada <strong>port</strong> yang berjalan untuk proses tersebut. Untuk itu harus mematikan terlebih dahulu sebelum menjalankan kembali.</p>
+<p>Apa itu inistramfs ?</p>
 
-<p><strong>Bagaimana mengetahui port berjalan ?</strong></p>
+<p>The initramfs is a complete set of directories that you would find on a normal root filesystem. It is bundled into a single cpio archive and compressed with one of several compression algorithms. At boot time, the boot loader loads the kernel and the initramfs image into memory and starts the kernel.</p>
 
-<p>Untuk mengetahui proses yang berjalan cukup mudah. Kita masukan sintak pada terminal</p>
+<p><em>Sumber:  <a href="http://www.linuxfromscratch.org/blfs/view/svn/postlfs/initramfs.html">linuxfromscratch.org</a></em></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">ps</span> <span class="n">aux</span></code></pre></figure>
+<p>Nah itu, intinya mounting hardisk yang gagal sehingga tidak terbaca mana direktori sistemnya.</p>
 
-<p>Namun sintak diatas akan memuncul banyak proses yang berjalan dan akan membingunkan proses mana yang akan di hentikan.
-Untuk memudahkan kita dapat mencarinya dengan menambah <strong>grep</strong> dan nama prosesnya.</p>
+<p>Bagaimana mengatasi error (initramfs) pada Linux ?</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">ps</span> <span class="n">aux</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">jekyll</span></code></pre></figure>
+<p>Cara menggatasinya dengan <strong>fsck</strong> , ketika dijalankan langsung akan muncul error atau tidak ditemukan.</p>
 
-<p><img src="http://127.0.0.1:4000/asset/img//img-2.png" alt="alt text" title="Porses Berjalan" /></p>
+<p>Lalu bagaimana?</p>
 
-<p>Setelah mengetahui proses yang berjalan kita bisa melihat proses masih pada PID <strong>4980</strong> . Untuk mematikannya dengan menggunakan  sintak <strong>kill -9 PID</strong></p>
+<p>Caranya dengan linux portable misal dengan usb instaler linux, jadi caranya kita jalankan linux dengan usb buka terminal dan jalankan <strong>fsck</strong> ke <strong>sda</strong> letak sistem linux berada</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="mi">4980</span></code></pre></figure>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo fsck sda -y //sda letak sistem linux nya
+</code></pre></div></div>
 
+<p><img src="http://127.0.0.1:4000/asset/img/img-03jan2019_1.jpg" alt="alt text" title="linux usb portable" /></p>
+
+<p>Kemudian reboot linux anda dan masuk ke sistem linux asli anda.</p>
+
+<p>Sekian terimakasih, semoga membantu.</p>
 
 
   </article>
@@ -175,12 +180,10 @@ Untuk memudahkan kita dapat mencarinya dengan menambah <strong>grep</strong> dan
 		  <div class="row">
 			  <div class=" pull-left">
 				
-				  <a href="/markdown/2017/08/02/artikel-1/" class="btn btn-primary btn-flat" title="Apa itu Markdown ?"> <span class="fa fa-angle-double-left"></span></a>
+				  <a href="/linux/python/2018/12/28/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana install Virtualenv?"> <span class="fa fa-angle-double-left"></span></a>
 				
 			  </div>
 			<div class="pull-right">
-			
-			  <a href="/jekyll/2017/08/07/artikel-1/" class="btn btn-primary btn-flat" title="Bagaimana Menggunakan Google Analytic pada Jekyll?"><span class="fa fa-angle-double-right"></span> </a>
 			
 			</div>
 		  </div>
@@ -189,8 +192,8 @@ Untuk memudahkan kita dapat mencarinya dengan menambah <strong>grep</strong> dan
 <script>
 
 var disqus_config = function () {
-this.page.url =  "https://kurtakon.com/jekyll/2017/08/03/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "/jekyll/2017/08/03/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url =  "https://kurtakon.com/linux/2019/01/03/artikel-1/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/linux/2019/01/03/artikel-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

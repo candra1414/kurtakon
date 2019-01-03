@@ -4,15 +4,55 @@
     <title>KurTakon</title>
     <description>Quote : &lt;br&gt; Takonlah sebelum takon itu dilarang.
 </description>
-    <link>https://kurtakon.com/</link>
-    <atom:link href="https://kurtakon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Dec 2018 11:06:15 +0700</pubDate>
-    <lastBuildDate>Fri, 28 Dec 2018 11:06:15 +0700</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 03 Jan 2019 21:25:03 +0700</pubDate>
+    <lastBuildDate>Thu, 03 Jan 2019 21:25:03 +0700</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Bagaimana mengatasi error (initramfs) pada Linux ?</title>
+        <description>&lt;p&gt;Selamat siang, artikel kali ini saya akan membahasas tentang error pada linux yang saya alami. Sebenarnya ini sudah kedua kalinya saya alami pada laptop saya. Dan pada kali ini saya akan membaginya kali saja ada yang mengalami seperti saya. Kasus yang terjadi ketika booting linux dan tidak muncul linux saya. kemudian muncul hitam putih seperti terminal bertulisan &lt;strong&gt;(initramfs)&lt;/strong&gt;. Tak perlu panik atau install ulang.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-03jan2019_2.jpg&quot; alt=&quot;alt text&quot; title=&quot;error linux&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Apa itu inistramfs ?&lt;/p&gt;
+
+&lt;p&gt;The initramfs is a complete set of directories that you would find on a normal root filesystem. It is bundled into a single cpio archive and compressed with one of several compression algorithms. At boot time, the boot loader loads the kernel and the initramfs image into memory and starts the kernel.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Sumber:  &lt;a href=&quot;http://www.linuxfromscratch.org/blfs/view/svn/postlfs/initramfs.html&quot;&gt;linuxfromscratch.org&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Nah itu, intinya mounting hardisk yang gagal sehingga tidak terbaca mana direktori sistemnya.&lt;/p&gt;
+
+&lt;p&gt;Bagaimana mengatasi error (initramfs) pada Linux ?&lt;/p&gt;
+
+&lt;p&gt;Cara menggatasinya dengan &lt;strong&gt;fsck&lt;/strong&gt; , ketika dijalankan langsung akan muncul error atau tidak ditemukan.&lt;/p&gt;
+
+&lt;p&gt;Lalu bagaimana?&lt;/p&gt;
+
+&lt;p&gt;Caranya dengan linux portable misal dengan usb instaler linux, jadi caranya kita jalankan linux dengan usb buka terminal dan jalankan &lt;strong&gt;fsck&lt;/strong&gt; ke &lt;strong&gt;sda&lt;/strong&gt; letak sistem linux berada&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo fsck sda -y //sda letak sistem linux nya
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-03jan2019_1.jpg&quot; alt=&quot;alt text&quot; title=&quot;linux usb portable&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kemudian reboot linux anda dan masuk ke sistem linux asli anda.&lt;/p&gt;
+
+&lt;p&gt;Sekian terimakasih, semoga membantu.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Jan 2019 21:06:58 +0700</pubDate>
+        <link>http://localhost:4000/linux/2019/01/03/artikel-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/linux/2019/01/03/artikel-1/</guid>
+        
+        
+        <category>Linux</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana install Virtualenv?</title>
-        <description>&lt;p&gt;Selamat siang, artikel kali ini akan membahas bagaiman cara install Virtualenv pada linux, Bagi yang akan membuat aplikasi dengan python bertanya-tanya bagaimana membuat vitual agar aplikasi kita tidak mempengaruhi yang lain terutama versi python nya. Secara linux menggunakan phyton, trus jika aplikasi nya harus lebih tinggi atau lebih rendah bagaimana? untuk itu butuh donk aplikasi virtual.&lt;/p&gt;
+        <description>&lt;p&gt;Selamat siang, artikel kali ini akan membahas bagaimana cara install Virtualenv pada linux, Bagi yang akan membuat aplikasi dengan python bertanya-tanya bagaimana membuat vitual agar aplikasi kita tidak mempengaruhi yang lain terutama versi python nya. Secara linux menggunakan phyton, trus jika aplikasi nya harus lebih tinggi atau lebih rendah bagaimana? untuk itu butuh donk aplikasi virtual.&lt;/p&gt;
 
 &lt;p&gt;Sebelum install apa itu Virtualenv ?&lt;/p&gt;
 
@@ -56,8 +96,8 @@
 &lt;p&gt;Sekian artikel kali ini semoga membantu.&lt;/p&gt;
 </description>
         <pubDate>Fri, 28 Dec 2018 17:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/python/2018/12/28/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/python/2018/12/28/artikel-1/</guid>
+        <link>http://localhost:4000/linux/python/2018/12/28/artikel-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/linux/python/2018/12/28/artikel-1/</guid>
         
         
         <category>Linux</category>
@@ -121,8 +161,8 @@ NTFS partition /dev/sdb2 was processed successfully.
 &lt;p&gt;Semoga berhasil, Terimakasih.&lt;/p&gt;
 </description>
         <pubDate>Thu, 27 Sep 2018 21:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/2018/09/27/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/2018/09/27/artikel-1/</guid>
+        <link>http://localhost:4000/linux/2018/09/27/artikel-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/linux/2018/09/27/artikel-1/</guid>
         
         
         <category>Linux</category>
@@ -141,7 +181,7 @@ NTFS partition /dev/sdb2 was processed successfully.
 &lt;p&gt;Setelah dipastikan telah terinstall dengan benar lalu buka file
 &lt;strong&gt;Gemfile&lt;/strong&gt; untuk memasangkan repo yang akan di gunakan aplikasi&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &#39;mysql2&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem 'mysql2'
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Tahap selanjutnya kita perlu melakukan perubahan agar  mengacu pada database yang kita gunakan dengan merubah file 
@@ -166,8 +206,8 @@ test:
 &lt;p&gt;Sekian catatan kali ini , terima kasih.&lt;/p&gt;
 </description>
         <pubDate>Mon, 23 Apr 2018 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/ruby/rails/2018/04/23/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/ruby/rails/2018/04/23/artikel-1/</guid>
+        <link>http://localhost:4000/ruby/rails/2018/04/23/artikel-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/ruby/rails/2018/04/23/artikel-1/</guid>
         
         
         <category>Ruby</category>
@@ -236,8 +276,8 @@ Karena&lt;/p&gt;
 &lt;p&gt;Kau tau pada dasarnya code sama saja terdapat if, else , for (looping),fungsi menampilkan dan hanya saja menggunakan cara berbeda-beda.&lt;/p&gt;
 </description>
         <pubDate>Mon, 01 Jan 2018 21:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/other/2018/01/01/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/other/2018/01/01/artikel-1/</guid>
+        <link>http://localhost:4000/other/2018/01/01/artikel-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/other/2018/01/01/artikel-1/</guid>
         
         
         <category>Other</category>
@@ -289,23 +329,23 @@ Pada menampilakan data menggukan code json&lt;/p&gt;
     $arr_agenda =[];
     foreach ($Agenda as $key =&amp;gt; $value) {
           $arr_agenda [] = [
-            &#39;title&#39;=&amp;gt;$value-&amp;gt;nama_agenda,
-            &#39;start&#39; =&amp;gt;$value-&amp;gt;mulai,
-            &#39;end&#39;=&amp;gt;$value-&amp;gt;selesai,
-            &#39;allDay&#39;=&amp;gt;&#39;false&#39;,
-            &#39;backgroundColor&#39;=&amp;gt; &quot;#FA6969&quot;, 
-            &#39;borderColor&#39;=&amp;gt; &quot;#FA6969&quot;,
+            'title'=&amp;gt;$value-&amp;gt;nama_agenda,
+            'start' =&amp;gt;$value-&amp;gt;mulai,
+            'end'=&amp;gt;$value-&amp;gt;selesai,
+            'allDay'=&amp;gt;'false',
+            'backgroundColor'=&amp;gt; &quot;#FA6969&quot;, 
+            'borderColor'=&amp;gt; &quot;#FA6969&quot;,
         ];
     }
     $json = json_encode($arr_agenda);
-    return $this-&amp;gt;render(&#39;index&#39;, [
-        &#39;json&#39; =&amp;gt; $json,
+    return $this-&amp;gt;render('index', [
+        'json' =&amp;gt; $json,
     ]);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Pada view (php) tempat link url untuk create baru agenda&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$url = Url::to([&#39;agenda/create&#39;]);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$url = Url::to(['agenda/create']);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Pada View (Javascipt):&lt;/p&gt;
@@ -314,14 +354,14 @@ Pada menampilakan data menggukan code json&lt;/p&gt;
     var d = date.getDate(),
         m = date.getMonth(),
         y = date.getFullYear();
-$(&#39;#calendar&#39;).fullCalendar({
+$('#calendar').fullCalendar({
    header: {
-    left: &#39;prev,next today&#39;,
-    center: &#39;title&#39;,
-    right: &#39;month&#39;
+    left: 'prev,next today',
+    center: 'title',
+    right: 'month'
   },
   buttonText: {
-    month: &#39;Agenda&#39;,
+    month: 'Agenda',
   },
 events: $json,
 eventClick: function(event) {
@@ -330,10 +370,10 @@ eventClick: function(event) {
 selectable: true,
   selectHelper: true,
   select: function(start, end) {
-      $(&#39;#modal&#39;).modal(&#39;show&#39;)
-            .find(&#39;#modalContent&#39;)
-            .load(&#39;$url&amp;amp;start=&#39;+start+&#39;&amp;amp;&#39;+&#39;end=&#39;+end); // $url adalah link form create
-        $(&#39;.modal-header&#39;).html(&#39;Tambah Agenda&#39;);
+      $('#modal').modal('show')
+            .find('#modalContent')
+            .load('$url&amp;amp;start='+start+'&amp;amp;'+'end='+end); // $url adalah link form create
+        $('.modal-header').html('Tambah Agenda');
   },
 });
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -356,10 +396,10 @@ selectable: true,
 &lt;p&gt;Merupakan fasilitas untuk melakukan &lt;em&gt;select&lt;/em&gt; atau bisa bilang ketika memilih (dengan di blok). Pada saat tersebut kita bisa menabahkan javascript untuk kali ini saya gunkan sebagai fasilitas melakukan input agenda dengan menggukan modal.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  select: function(start, end) {
-      $(&#39;#modal&#39;).modal(&#39;show&#39;)
-            .find(&#39;#modalContent&#39;)
-            .load(&#39;$url&amp;amp;start=&#39;+start+&#39;&amp;amp;&#39;+&#39;end=&#39;+end); // $url adalah link form create
-        $(&#39;.modal-header&#39;).html(&#39;Tambah Agenda&#39;);
+      $('#modal').modal('show')
+            .find('#modalContent')
+            .load('$url&amp;amp;start='+start+'&amp;amp;'+'end='+end); // $url adalah link form create
+        $('.modal-header').html('Tambah Agenda');
   },
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -375,13 +415,13 @@ selectable: true,
 &lt;p&gt;Controller pada create (berdasarkan link yang dibuat)&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $model = new Agenda();
-    $model-&amp;gt;mulai =  date(&#39;Y-m-d H:i:s&#39;,strtotime(&#39;-7 hour&#39;,$start/1000));
-    $model-&amp;gt;selesai = date(&#39;Y-m-d H:i:s&#39;,strtotime(&#39;-7 hour&#39;,$end/1000));
+    $model-&amp;gt;mulai =  date('Y-m-d H:i:s',strtotime('-7 hour',$start/1000));
+    $model-&amp;gt;selesai = date('Y-m-d H:i:s',strtotime('-7 hour',$end/1000));
     if ($model-&amp;gt;load(Yii::$app-&amp;gt;request-&amp;gt;post()) &amp;amp;&amp;amp; $model-&amp;gt;save()) {
-        return $this-&amp;gt;redirect([&#39;index&#39;]);
+        return $this-&amp;gt;redirect(['index']);
     } else {
-        return $this-&amp;gt;renderAjax(&#39;create&#39;, [
-            &#39;model&#39; =&amp;gt; $model,
+        return $this-&amp;gt;renderAjax('create', [
+            'model' =&amp;gt; $model,
         ]);
     }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -390,29 +430,29 @@ selectable: true,
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;agenda-form&quot;&amp;gt;
     &amp;lt;?php $form = ActiveForm::begin(); ?&amp;gt;
-    &amp;lt;?= $form-&amp;gt;field($model, &#39;mulai&#39;)-&amp;gt;widget(DateTimePicker::classname(), [
-            &#39;options&#39; =&amp;gt; [ &#39;placeholder&#39; =&amp;gt; &#39;Tanggal Mulai Agenda&#39;],
-            &#39;pluginOptions&#39; =&amp;gt; [
-                &#39;autoclose&#39; =&amp;gt; true,
-                &#39;format&#39; =&amp;gt; &#39;yyyy-mm-dd  hh:ii:ss&#39;,
+    &amp;lt;?= $form-&amp;gt;field($model, 'mulai')-&amp;gt;widget(DateTimePicker::classname(), [
+            'options' =&amp;gt; [ 'placeholder' =&amp;gt; 'Tanggal Mulai Agenda'],
+            'pluginOptions' =&amp;gt; [
+                'autoclose' =&amp;gt; true,
+                'format' =&amp;gt; 'yyyy-mm-dd  hh:ii:ss',
             ]
-        ])-&amp;gt;label(&#39;Tanggal Mulai Agenda&#39;) ?&amp;gt;
-    &amp;lt;?= $form-&amp;gt;field($model, &#39;selesai&#39;)-&amp;gt;widget(DateTimePicker::classname(), [
-            &#39;options&#39; =&amp;gt; [ &#39;placeholder&#39; =&amp;gt; &#39;Tanggal Selesai Agenda&#39;],
-            &#39;pluginOptions&#39; =&amp;gt; [
-                &#39;autoclose&#39; =&amp;gt; true,
-                &#39;format&#39; =&amp;gt; &#39;yyyy-mm-dd  hh:ii:ss&#39;,
+        ])-&amp;gt;label('Tanggal Mulai Agenda') ?&amp;gt;
+    &amp;lt;?= $form-&amp;gt;field($model, 'selesai')-&amp;gt;widget(DateTimePicker::classname(), [
+            'options' =&amp;gt; [ 'placeholder' =&amp;gt; 'Tanggal Selesai Agenda'],
+            'pluginOptions' =&amp;gt; [
+                'autoclose' =&amp;gt; true,
+                'format' =&amp;gt; 'yyyy-mm-dd  hh:ii:ss',
             ]
-        ])-&amp;gt;label(&#39;Tanggal Selesai Agenda&#39;) ?&amp;gt;
-    &amp;lt;?= $form-&amp;gt;field($model, &#39;nama_agenda&#39;)-&amp;gt;textarea([&#39;rows&#39; =&amp;gt; 6]) ?&amp;gt;
+        ])-&amp;gt;label('Tanggal Selesai Agenda') ?&amp;gt;
+    &amp;lt;?= $form-&amp;gt;field($model, 'nama_agenda')-&amp;gt;textarea(['rows' =&amp;gt; 6]) ?&amp;gt;
     &amp;lt;div class=&quot;form-group&quot;&amp;gt;
-        &amp;lt;?= Html::submitButton($model-&amp;gt;isNewRecord ? &#39;Simpan&#39; : &#39;Update&#39;, [&#39;class&#39; =&amp;gt; $model-&amp;gt;isNewRecord ? &#39;btn btn-success&#39; : &#39;btn btn-primary&#39;]) ?&amp;gt;
+        &amp;lt;?= Html::submitButton($model-&amp;gt;isNewRecord ? 'Simpan' : 'Update', ['class' =&amp;gt; $model-&amp;gt;isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?&amp;gt;
         &amp;lt;div class=&quot;pull-right&quot;&amp;gt;
         &amp;lt;?=
-            Html::a(&#39;Kembali&#39;,Url::to([&#39;/agenda/index&#39;]), [
-                &#39;id&#39;=&amp;gt;&#39;disposisi&#39;,
-                &#39;class&#39;=&amp;gt;&#39;btn btn-danger&#39;,
-                &#39;title&#39; =&amp;gt;&#39;Kembali&#39;,
+            Html::a('Kembali',Url::to(['/agenda/index']), [
+                'id'=&amp;gt;'disposisi',
+                'class'=&amp;gt;'btn btn-danger',
+                'title' =&amp;gt;'Kembali',
             ]);?&amp;gt;
         &amp;lt;/div&amp;gt;
     &amp;lt;/div&amp;gt;
@@ -421,8 +461,8 @@ selectable: true,
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 14 Dec 2017 09:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/yii/fullcalender/database/javascript/2017/12/14/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/yii/fullcalender/database/javascript/2017/12/14/artikel-1/</guid>
+        <link>http://localhost:4000/yii/fullcalender/database/javascript/2017/12/14/artikel-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/yii/fullcalender/database/javascript/2017/12/14/artikel-1/</guid>
         
         
         <category>Yii</category>
@@ -463,9 +503,9 @@ selectable: true,
 &lt;p&gt;Perubahan terjadi&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DATABASES = {
-   &#39;default&#39;: {
-      &#39;ENGINE&#39;: &#39;django.db.backends.sqlite3&#39;,
-      &#39;NAME&#39;: os.path.join(BASE_DIR, &#39;db.sqlite3&#39;),
+   'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
    }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -473,13 +513,13 @@ selectable: true,
 &lt;p&gt;Menjadi :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DATABASES = {
-    &#39;default&#39;: {
-        #&#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;,
-        &#39;ENGINE&#39;: &#39;mysql.connector.django&#39;,
-        &#39;NAME&#39;: &#39;nama_database&#39;,
-        &#39;USER&#39;: &#39;user_pada_database&#39;,
-        &#39;PASSWORD&#39;: &#39;password_pada_database&#39;,
-        &#39;HOST&#39;: &#39;localhost&#39;,
+    'default': {
+        #'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'nama_database',
+        'USER': 'user_pada_database',
+        'PASSWORD': 'password_pada_database',
+        'HOST': 'localhost',
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -491,8 +531,8 @@ selectable: true,
 
 &lt;p&gt;Kalau tidak bisa dan  muncul error&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Unknown command: &#39;migrate&#39;
-Type &#39;manage.py help&#39; for usage.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Unknown command: 'migrate'
+Type 'manage.py help' for usage.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Maka coba dengan sitak dibawah ini&lt;/p&gt;
@@ -513,7 +553,7 @@ Creating table auth_user
 Creating table django_content_type
 Creating table django_session
 
-You just installed Django&#39;s auth system, which means you don&#39;t have any superusers defined.
+You just installed Django's auth system, which means you don't have any superusers defined.
 Would you like to create one now? (yes/no):
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -522,8 +562,8 @@ Would you like to create one now? (yes/no):
 &lt;p&gt;Selesai… Database berhasil terkoneksi serta termigrasi ke Mysql.&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/python/django/mysql/2017/11/23/artikel-4/</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/python/django/mysql/2017/11/23/artikel-4/</guid>
+        <link>http://localhost:4000/linux/python/django/mysql/2017/11/23/artikel-4/</link>
+        <guid isPermaLink="true">http://localhost:4000/linux/python/django/mysql/2017/11/23/artikel-4/</guid>
         
         
         <category>Linux</category>
@@ -579,7 +619,7 @@ Would you like to create one now? (yes/no):
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Validating models...
 0 errors found
 November 23, 2017 - 15:29:25
-Django version 1.6.11, using settings &#39;mysite.settings&#39;
+Django version 1.6.11, using settings 'mysite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 [23/Nov/2017 15:29:30] &quot;GET / HTTP/1.1&quot; 200 1757
@@ -593,8 +633,8 @@ Quit the server with CONTROL-C.
 
 </description>
         <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/python/2017/11/23/artikel-3/</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/python/2017/11/23/artikel-3/</guid>
+        <link>http://localhost:4000/linux/python/2017/11/23/artikel-3/</link>
+        <guid isPermaLink="true">http://localhost:4000/linux/python/2017/11/23/artikel-3/</guid>
         
         
         <category>Linux</category>
@@ -648,7 +688,7 @@ Building dependency tree
 Reading state information... Done
 The following package was automatically installed and is no longer required:
   libzip4
-Use &#39;apt-get autoremove&#39; to remove it.
+Use 'apt-get autoremove' to remove it.
 The following packages will be REMOVED:
   gitkraken*
 0 upgraded, 0 newly installed, 1 to remove and 116 not upgraded.
@@ -672,8 +712,8 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 &lt;p&gt;Oke aplikasi berhasil dihapus.. bye..bye…&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/2017/11/23/artikel-2/</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/2017/11/23/artikel-2/</guid>
+        <link>http://localhost:4000/linux/2017/11/23/artikel-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/linux/2017/11/23/artikel-2/</guid>
         
         
         <category>Linux</category>
@@ -692,92 +732,11 @@ Processing triggers for mime-support (3.54ubuntu1.1) ...
 &lt;p&gt;Sekian semoga membantu.&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/2017/11/23/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/2017/11/23/artikel-1/</guid>
+        <link>http://localhost:4000/linux/2017/11/23/artikel-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/linux/2017/11/23/artikel-1/</guid>
         
         
         <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Bagaimana merubah versi php pada nginx linux FastCGI?</title>
-        <description>&lt;p&gt;Pada artikel sebelumnnya saya membahas &lt;a href=&quot;https://kurtakon.com/linux/apache/php/2017/09/04/artikel-2/&quot;&gt;Bagaimana melakukan switch multipel versi aplikasi php5 ke php7 pada apache linux??&lt;/a&gt; Untuk kali ini saya akan membahas bagaimana jika merubah versi php untuk web server nginx pada linux?&lt;/p&gt;
-
-&lt;p&gt;Sebelumnya untuk install versi php yang diinginkan,misal php5 dan php7&lt;/p&gt;
-
-&lt;p&gt;-&amp;gt; untuk php5&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ apt-get install php5-fpm 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;-&amp;gt; untuk php7.0&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ apt-get install php7-fpm 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Bagaimana merubah settinganya?&lt;/p&gt;
-
-&lt;p&gt;Buka file /etc/nginx/sites-available/default:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server {
-    listen   80;
-    access_log /var/log/nginx/access.log;
-    error_log /var/log/nginx/error.log;
-    root /var/www/html;
-    index index.php index.html;
-    location / {
-        try_files $uri $uri/ /index.php?$args ;
-    }
-    location ~ \.php$ {
-        fastcgi_pass unix:/var/run/php5-fpm.sock;
-        fastcgi_index index.php;
-        include fastcgi_params;
-        fastcgi_read_timeout 300;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-2.png&quot; alt=&quot;alt text&quot; title=&quot;view php5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pada &lt;strong&gt;location&lt;/strong&gt; terdapat &lt;strong&gt;fastcgi_pass unix:&lt;/strong&gt;  yang mengacu pada versi &lt;em&gt;php&lt;/em&gt; yang berjalan. Terlihat &lt;strong&gt;/var/run/php5-fpm.sock&lt;/strong&gt; versi php5 yang saat ini berjalan. Untuk merubahnya, kita harus mencari versi pada folder &lt;strong&gt;/var/run/&lt;/strong&gt;   &lt;strong&gt;php7-fpm.sock&lt;/strong&gt; berada di folder mana pada di install (pada kasus saya file tersebut terdapat didalam folder php).&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server {
-    listen   80;
-    access_log /var/log/nginx/access.log;
-    error_log /var/log/nginx/error.log;
-    root /var/www/html;
-    index index.php index.html;
-    location / {
-        try_files $uri $uri/ /index.php?$args ;
-    }
-    location ~ \.php$ {
-        fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
-        fastcgi_index index.php;
-        include fastcgi_params;
-        fastcgi_read_timeout 300;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Setelah serlesai restart nginx&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $ sudo service nginx restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-13nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;view php7&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 13 Nov 2017 15:06:58 +0700</pubDate>
-        <link>https://kurtakon.com/linux/nginx/php/2017/11/13/artikel-1/</link>
-        <guid isPermaLink="true">https://kurtakon.com/linux/nginx/php/2017/11/13/artikel-1/</guid>
-        
-        
-        <category>Linux</category>
-        
-        <category>Nginx</category>
-        
-        <category>Php</category>
         
       </item>
     

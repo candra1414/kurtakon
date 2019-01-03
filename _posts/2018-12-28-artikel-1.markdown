@@ -6,7 +6,7 @@ date:   2018-12-28 10:06:58
 categories: [Linux,Python]
 ---
 
-Selamat siang, artikel kali ini akan membahas bagaiman cara install Virtualenv pada linux, Bagi yang akan membuat aplikasi dengan python bertanya-tanya bagaimana membuat vitual agar aplikasi kita tidak mempengaruhi yang lain terutama versi python nya. Secara linux menggunakan phyton, trus jika aplikasi nya harus lebih tinggi atau lebih rendah bagaimana? untuk itu butuh donk aplikasi virtual.
+Selamat siang, artikel kali ini akan membahas bagaimana cara install Virtualenv pada linux, Bagi yang akan membuat aplikasi dengan python bertanya-tanya bagaimana membuat vitual agar aplikasi kita tidak mempengaruhi yang lain terutama versi python nya. Secara linux menggunakan phyton, trus jika aplikasi nya harus lebih tinggi atau lebih rendah bagaimana? untuk itu butuh donk aplikasi virtual.
 
 Sebelum install apa itu Virtualenv ? 
 
