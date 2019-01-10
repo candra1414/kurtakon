@@ -6,15 +6,15 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Jan 2019 21:25:03 +0700</pubDate>
-    <lastBuildDate>Thu, 03 Jan 2019 21:25:03 +0700</lastBuildDate>
+    <pubDate>Tue, 08 Jan 2019 09:05:52 +0700</pubDate>
+    <lastBuildDate>Tue, 08 Jan 2019 09:05:52 +0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Bagaimana mengatasi error (initramfs) pada Linux ?</title>
         <description>&lt;p&gt;Selamat siang, artikel kali ini saya akan membahasas tentang error pada linux yang saya alami. Sebenarnya ini sudah kedua kalinya saya alami pada laptop saya. Dan pada kali ini saya akan membaginya kali saja ada yang mengalami seperti saya. Kasus yang terjadi ketika booting linux dan tidak muncul linux saya. kemudian muncul hitam putih seperti terminal bertulisan &lt;strong&gt;(initramfs)&lt;/strong&gt;. Tak perlu panik atau install ulang.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-03jan2019_2.jpg&quot; alt=&quot;alt text&quot; title=&quot;error linux&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-03jan2019_2.jpg&quot; alt=&quot;alt text&quot; title=&quot;error linux&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Apa itu inistramfs ?&lt;/p&gt;
 
@@ -35,7 +35,7 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo fsck sda -y //sda letak sistem linux nya
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-03jan2019_1.jpg&quot; alt=&quot;alt text&quot; title=&quot;linux usb portable&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-03jan2019_1.jpg&quot; alt=&quot;alt text&quot; title=&quot;linux usb portable&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kemudian reboot linux anda dan masuk ke sistem linux asli anda.&lt;/p&gt;
 
@@ -84,14 +84,14 @@
 
 &lt;p&gt;Vitual siap digunakan&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-28des2018-1.png&quot; alt=&quot;alt text&quot; title=&quot;view virtual berjalan&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-28des2018-1.png&quot; alt=&quot;alt text&quot; title=&quot;view virtual berjalan&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bagaimana menghentikannya ?&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ deactivate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-28des2018-2.png&quot; alt=&quot;alt text&quot; title=&quot;view virtual berhenti&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-28des2018-2.png&quot; alt=&quot;alt text&quot; title=&quot;view virtual berhenti&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sekian artikel kali ini semoga membantu.&lt;/p&gt;
 </description>
@@ -410,7 +410,7 @@ selectable: true,
 
 &lt;p&gt;Hasilnya :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-14dec2017-1.gif&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-14dec2017-1.gif&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Controller pada create (berdasarkan link yang dibuat)&lt;/p&gt;
 
@@ -629,7 +629,7 @@ Quit the server with CONTROL-C.
 
 &lt;p&gt;Hasilnya…&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://127.0.0.1:4000/asset/img/img-23nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-23nov2017-1.png&quot; alt=&quot;alt text&quot; title=&quot;hello word&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
