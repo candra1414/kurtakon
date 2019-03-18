@@ -15,18 +15,6 @@
 
     {
     
-      "title"    : "Bagaimana membuat user login pada Django ?",
-      "url"      : "/django/2019/01/14/artikel-1/",
-      "category" : "Django",
-      "tags"     : "",
-      "date"     : "Jan 14, 2019",
-      "content": ""
-
-    } ,
-  
-
-    {
-    
       "title"    : "Bagaimana mengatasi error (initramfs) pada Linux ?",
       "url"      : "/linux/2019/01/03/artikel-1/",
       "category" : "Linux",
