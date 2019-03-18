@@ -6,9 +6,140 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Jan 2019 09:05:52 +0700</pubDate>
-    <lastBuildDate>Tue, 08 Jan 2019 09:05:52 +0700</lastBuildDate>
+    <pubDate>Mon, 18 Mar 2019 13:36:30 +0700</pubDate>
+    <lastBuildDate>Mon, 18 Mar 2019 13:36:30 +0700</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Bagaimana menjalankan Nginx dan Apache bersama-sama ?</title>
+        <description>&lt;p&gt;Halo dan selamat siang, Ekperiment kali ini saya menjalankan 2 web servis yaitu &lt;em&gt;Apache&lt;/em&gt; dan &lt;em&gt;Nginx&lt;/em&gt; secara bersama-sama.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Apakah Bisa Nginx dan Apache berjalan bersama-sama?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Jawabanya &lt;strong&gt;Bisa&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bagaimana cara Nginx dan Apache berjalan bersama-sama?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Caranya kita bermain port pada settingan Apache dan Nginx&lt;/p&gt;
+
+&lt;p&gt;Untuk kali ini saya mencoba &lt;em&gt;Nginx&lt;/em&gt; dengan &lt;strong&gt;port 81&lt;/strong&gt; dan Apache pada &lt;strong&gt;port 83&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;File mana saja yang dirubah ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nginx&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Perubaan pada file &lt;em&gt;/etc/nginx/site-available/default&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Perubaan pada file tersebut seperti di bawah ini :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server {
+	listen 82 default_server;
+	listen [::]:82 default_server;
+  	access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+    root /var/www/html;
+    index index.php index.html;
+	server_name _;
+	location / {
+		 index index.php index.html index.htm;
+		try_files $uri $uri/ /index.php?$args ;
+	}
+	
+	location ~ \.php$ {
+		fastcgi_split_path_info ^(.+\.php)(/.+)$;
+		fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+		#fastcgi_index index.php;
+	    fastcgi_index index.php;
+	    fastcgi_param SCRIPT_FILENAME $request_filename;
+	    include fastcgi_params;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Restart nginx buka terminal dan jalankan&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ service nginx restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-18maret-2019-1.png&quot; alt=&quot;alt text&quot; title=&quot;nginx&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Apache&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Perubahan pada  &lt;em&gt;/etc/apache2/port.conf&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Perubaan pada file tersebut seperti di bawah ini :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Listen&lt;/span&gt; 81
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt; ssl_module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&lt;/span&gt;	&lt;span class=&quot;nc&quot;&gt;Listen&lt;/span&gt; 443
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt; mod_gnutls.c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&lt;/span&gt;	&lt;span class=&quot;nc&quot;&gt;Listen&lt;/span&gt; 443
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# vim: syntax=apache ts=4 sw=4 sts=4 sr noet&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Perubahan pada &lt;em&gt;/etc/apache2/sites-enabled/000-default.conf&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Perubaan pada file tersebut seperti di bawah ini :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;VirtualHost *:81&amp;gt;
+	&amp;lt;Directory &quot;/var/www/html&quot;&amp;gt;
+  		AllowOverride All
+	&amp;lt;/Directory&amp;gt;
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Restart apache buka terminal dan jalankan&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  $ service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://kurtakon.com/asset/img/img-18maret-2019-2.png&quot; alt=&quot;alt text&quot; title=&quot;apache&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sekian terimakasih dan selamat mencoba&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Mar 2019 21:06:58 +0700</pubDate>
+        <link>http://localhost:4000/apache/nginx/2019/03/18/artikel-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/apache/nginx/2019/03/18/artikel-1/</guid>
+        
+        
+        <category>apache</category>
+        
+        <category>nginx</category>
+        
+      </item>
+    
+      <item>
+        <title>Bagaimana membuat user login pada Django ?</title>
+        <description>
+</description>
+        <pubDate>Mon, 14 Jan 2019 21:06:58 +0700</pubDate>
+        <link>http://localhost:4000/django/2019/01/14/artikel-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/django/2019/01/14/artikel-1/</guid>
+        
+        
+        <category>Django</category>
+        
+      </item>
     
       <item>
         <title>Bagaimana mengatasi error (initramfs) pada Linux ?</title>
@@ -640,103 +771,6 @@ Quit the server with CONTROL-C.
         <category>Linux</category>
         
         <category>Python</category>
-        
-      </item>
-    
-      <item>
-        <title>Bagaimana uninstall aplikasi pada linux dengan terminal ?</title>
-        <description>&lt;p&gt;Sering kita main install aplikasi laptop kita. Padahal tidak penting sama sekali di sentuh juga tidak. Aplikasi tersebut tanpa sadari mengurangi kapasitas hardisk kita. Yang jadi masalah bagaimana cara unistall aplikasi tersebut pada linux ? &lt;em&gt;*karena saya pengguna linux&lt;/em&gt; hehe… heheh…&lt;/p&gt;
-
-&lt;p&gt;Pada artikel kali ini saya akan menulis cara uninstall aplikasi pada linux mengunakan terminal.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;cari pada list nama aplikasinya :&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Untuk melihat aplikasi yang telah kita install bisa menggunakan &lt;strong&gt;dpkg&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ dpkg --list
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;setelah muncul :&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ii  gir1.2-vte-2.90                      1:0.34.9-1ubuntu2       amd64                   GObject introspection data for the VTE library
-ii  gir1.2-webkit-3.0                    2.4.10-0ubuntu0.14.04.1 amd64                   Web content engine library for GTK+ - GObject introspection data
-ii  gir1.2-wnck-3.0:amd64                3.14.0-1~14.04~ricotz1  amd64                   GObject introspection data for the WNCK library
-ii  git                                  1:1.9.1-1ubuntu0.7      amd64                   fast, scalable, distributed revision control system
-ii  git-man                              1:1.9.1-1ubuntu0.7      all                     fast, scalable, distributed revision control system (manual pages)
-ii  gitg                                 0.2.7-2                 amd64                   git repository viewer
-ii  gitk                                 1:1.9.1-1ubuntu0.7      all                     fast, scalable, distributed revision control system (revision tree visualizer
-ii  gitkraken                            3.2.2                   amd64                   Unleash your repo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;setelah muncul, pilih apalikasi yang akan di &lt;em&gt;uninstall&lt;/em&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Unistall aplikasinya :&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Misal saya mau &lt;em&gt;uninstall&lt;/em&gt;  apliaksi &lt;strong&gt;gitkraken&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ apt-get --purge remove gitkraken
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;setelah itu akan mendapatkan perintah konfirmasi , intinya yakin mau di unistall&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following package was automatically installed and is no longer required:
-  libzip4
-Use 'apt-get autoremove' to remove it.
-The following packages will be REMOVED:
-  gitkraken*
-0 upgraded, 0 newly installed, 1 to remove and 116 not upgraded.
-After this operation, 248 MB disk space will be freed.
-Do you want to continue? [Y/n] 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Jika iya tulis &lt;strong&gt;y&lt;/strong&gt; jika tidak jadi tinggal tulis &lt;strong&gt;n&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Ini jika tulis &lt;strong&gt;y&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(Reading database ... 1350641 files and directories currently installed.)
-Removing gitkraken (3.2.2) ...
-Processing triggers for gnome-menus (3.10.1-0ubuntu2) ...
-Processing triggers for desktop-file-utils (0.22-1ubuntu1) ...
-Processing triggers for bamfdaemon (0.5.1+14.04.20140409-0ubuntu1+elementary2~ubuntu14.04.1) ...
-Rebuilding /usr/share/applications/bamf-2.index...
-Processing triggers for mime-support (3.54ubuntu1.1) ...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Oke aplikasi berhasil dihapus.. bye..bye…&lt;/p&gt;
-</description>
-        <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
-        <link>http://localhost:4000/linux/2017/11/23/artikel-2/</link>
-        <guid isPermaLink="true">http://localhost:4000/linux/2017/11/23/artikel-2/</guid>
-        
-        
-        <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Bagaimana install file deb pada linux ?</title>
-        <description>&lt;p&gt;Ketika kita membutukahan aplikasi baru pada linux, kita terkadang mencari pada internet panggil saja mbah google. Aplikasi yang kita dapat berformat &lt;strong&gt;deb&lt;/strong&gt;. dan yang menjadi pertanyaan bagaimana cara installnya. Pasti binggung kan kalau gak binggung tidak akan cari tau donk… hehehe maaf bercanda.&lt;/p&gt;
-
-&lt;p&gt;Padahal caranya cukup mudah, buka terminal masukan script dibawah ini :&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -i nama_aplikasinya.deb 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Sekian semoga membantu.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 23 Nov 2017 15:06:58 +0700</pubDate>
-        <link>http://localhost:4000/linux/2017/11/23/artikel-1/</link>
-        <guid isPermaLink="true">http://localhost:4000/linux/2017/11/23/artikel-1/</guid>
-        
-        
-        <category>Linux</category>
         
       </item>
     

@@ -3,6 +3,30 @@
 
     {
     
+      "title"    : "Bagaimana menjalankan Nginx dan Apache bersama-sama ?",
+      "url"      : "/apache/nginx/2019/03/18/artikel-1/",
+      "category" : "apache, nginx",
+      "tags"     : "",
+      "date"     : "Mar 18, 2019",
+      "content": "Halo dan selamat siang, Ekperiment kali ini saya menjalankan 2 web servis yaitu Apache dan Nginx secara bersama-sama."
+
+    } ,
+  
+
+    {
+    
+      "title"    : "Bagaimana membuat user login pada Django ?",
+      "url"      : "/django/2019/01/14/artikel-1/",
+      "category" : "Django",
+      "tags"     : "",
+      "date"     : "Jan 14, 2019",
+      "content": ""
+
+    } ,
+  
+
+    {
+    
       "title"    : "Bagaimana mengatasi error (initramfs) pada Linux ?",
       "url"      : "/linux/2019/01/03/artikel-1/",
       "category" : "Linux",

@@ -1,0 +1,108 @@
+---
+layout: post
+comments: true
+title:  "Bagaimana menjalankan Nginx dan Apache bersama-sama ?"
+date:   2019-03-18 14:06:58
+categories: [apache,nginx]
+---
+
+Halo dan selamat siang, Ekperiment kali ini saya menjalankan 2 web servis yaitu _Apache_ dan _Nginx_ secara bersama-sama.
+
+ __Apakah Bisa Nginx dan Apache berjalan bersama-sama?__
+	
+Jawabanya __Bisa__ 
+
+ 
+ __Bagaimana cara Nginx dan Apache berjalan bersama-sama?__
+	
+Caranya kita bermain port pada settingan Apache dan Nginx
+
+Untuk kali ini saya mencoba _Nginx_ dengan __port 81__ dan Apache pada __port 83__
+
+ __File mana saja yang dirubah ?__
+
+
+**Nginx**
+
+- Perubaan pada file _/etc/nginx/site-available/default_ 
+
+Perubaan pada file tersebut seperti di bawah ini :
+
+	server {
+		listen 82 default_server;
+		listen [::]:82 default_server;
+	  	access_log /var/log/nginx/access.log;
+	    error_log /var/log/nginx/error.log;
+	    root /var/www/html;
+	    index index.php index.html;
+		server_name _;
+		location / {
+			 index index.php index.html index.htm;
+			try_files $uri $uri/ /index.php?$args ;
+		}
+		
+		location ~ \.php$ {
+			fastcgi_split_path_info ^(.+\.php)(/.+)$;
+			fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+			#fastcgi_index index.php;
+		    fastcgi_index index.php;
+		    fastcgi_param SCRIPT_FILENAME $request_filename;
+		    include fastcgi_params;
+		}
+	}
+
+
+- Restart nginx buka terminal dan jalankan 
+	
+		$ service nginx restart
+
+
+![alt text][gambar1]
+
+[gambar1]:{{site.urlimg}}img-18maret-2019-1.png "nginx"
+
+
+**Apache**
+
+- Perubahan pada  _/etc/apache2/port.conf_
+
+Perubaan pada file tersebut seperti di bawah ini :
+
+	Listen 81
+	<IfModule ssl_module>
+		Listen 443
+	</IfModule>
+	<IfModule mod_gnutls.c>
+		Listen 443
+	</IfModule>
+	# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+
+
+
+
+- Perubahan pada _/etc/apache2/sites-enabled/000-default.conf_
+
+Perubaan pada file tersebut seperti di bawah ini :
+
+	<VirtualHost *:81>
+		<Directory "/var/www/html">
+	  		AllowOverride All
+		</Directory>
+		ServerAdmin webmaster@localhost
+		DocumentRoot /var/www/html
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
+	
+
+- Restart apache buka terminal dan jalankan 
+	
+		$ service apache2 restart
+
+
+![alt text][gambar2]
+
+[gambar2]:{{site.urlimg}}img-18maret-2019-2.png "apache"
+
+
+Sekian terimakasih dan selamat mencoba
